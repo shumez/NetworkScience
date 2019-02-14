@@ -80,6 +80,30 @@ directed
 
 
 
+## [02-04] Adjacency Matrix
+
+*adjacenct matrix*: N rows, N cols
+
+\( A_{ij} = \begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases} \) 
+
+
+undirected
+
+\( k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} \) (2.9)
+
+
+directed
+
+\( k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} \)
+(2.10)
+
+
+\( 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} \) (2.11)
+
+[![fig.2.5][fig-2-5]][fig-2-5]
+
+
+
 
 
 
@@ -104,3 +128,7 @@ directed
 [fig-2-3]: http://networksciencebook.com/images/ch-02/figure-2-3.jpg "Degree Distribution"
 
 [fig-2-4]: http://networksciencebook.com/images/ch-02/figure-2-4.jpg "Degree Distribution of a Real Network "
+
+[02-04]: http://networksciencebook.com/chapter/2#matrix "Adjacency Matrix"
+
+[fig-2-5]: http://networksciencebook.com/images/ch-02/figure-2-5.jpg
