@@ -104,6 +104,18 @@ directed
 
 
 
+## [02-05] Real Networks are Sparse
+
+\( L_{max} = \frac{N(N-1)}{2} \) (2.12)
+
+in a *complete graph* of size \(N\)
+
+[![fig.2.6][fig-2-6]][fig-2-6]
+
+real networks 
+
+[![fig.2.7][fig-2-7]][fig-2-7]
+
 
 
 
@@ -132,3 +144,10 @@ directed
 [02-04]: http://networksciencebook.com/chapter/2#matrix "Adjacency Matrix"
 
 [fig-2-5]: http://networksciencebook.com/images/ch-02/figure-2-5.jpg
+
+
+[02-05]: http://networksciencebook.com/chapter/2#real-networks "Real Networks are Sparse"
+
+[fig-2-6]: http://networksciencebook.com/images/ch-02/figure-2-6.jpg "Complete Graph"
+
+[fig-2-7]: http://networksciencebook.com/images/ch-02/figure-2-7.jpg "The Adjacency Matrix is Sparse"
