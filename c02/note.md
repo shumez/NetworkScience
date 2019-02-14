@@ -118,6 +118,32 @@ real networks
 
 
 
+## [02-06] Weighted Networks
+
+\( A_{ij} = w_{ij} \)
+
+
+### Metcalfe’s Law: the Value of a Network
+
+*Metcalfe's law*:
+
+val \(\propto N^2 \) 
+
+([Gilder, G., 1993])
+
+[![fig.2.8][fig-2-8]][fig-2-8]
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	img{width: 50%; float: right;}
+</style>
 
 
 [Network Science]: http://networksciencebook.com/ "Albert-László Barabási, Network Science"
@@ -151,3 +177,9 @@ real networks
 [fig-2-6]: http://networksciencebook.com/images/ch-02/figure-2-6.jpg "Complete Graph"
 
 [fig-2-7]: http://networksciencebook.com/images/ch-02/figure-2-7.jpg "The Adjacency Matrix is Sparse"
+
+[02-06]: http://networksciencebook.com/chapter/2#weighted-networks "Weighted Networks"
+
+[Gilder, G., 1993]: https://scholar.google.co.jp/scholar?hl=en&num=20&as_sdt=0%2C5&q=Gilder%2C+G.%2C+1993.+Metcalfe’s+law+and+legacy.+Forbes+ASAP%2C+13%2C+p.1993.&btnG= "Gilder, G., 1993. Metcalfe’s law and legacy. Forbes ASAP, 13, p.1993."
+
+[fig-2-8]: http://networksciencebook.com/images/ch-02/figure-2-8.jpg "Metcalfe’s Law"
