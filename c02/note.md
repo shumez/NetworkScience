@@ -235,9 +235,40 @@ for larger networks, determined using the *BFS algorithm*
 
 
 
+## [02-10] Clustering Coefficient
+
+*clustering coefficient*
+
+([[Watts, D.J., Strogatz, S.H., 1998]])
+
+\[ C_i = \frac{2 L_i}{k_i (k_i - 1)} \] (2.15)
+
+\(L_i\): num of links between the \(k_i\) neighbors of node \(i\) 
+
+\(C_i\) [0, 1]
+
+\( C_i = 
+    \begin{cases} 
+        0 & \\
+        1 & 
+    \end{cases} 
+\)
+
+
+[![fig.2.16][fig-2-16]][fig-2-16]
+
+
+*average clustering coefficient* \( \langle C \rangle \)
+
+\[ \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \] (2.16)
 
 
 
+## [02-11] Summary
+
+[![fig.2.17][fig-2-17]][fig-2-17]
+
+[]
 
 
 
@@ -307,3 +338,21 @@ for larger networks, determined using the *BFS algorithm*
 [02-09]: http://networksciencebook.com/chapter/2#connectedness "Connectedness"
 
 [fig-2-15]: http://networksciencebook.com/images/ch-02/figure-2-15.jpg "fig.2.15 Connected and Disconnected Networks"
+
+[02-10]: http://networksciencebook.com/chapter/2#clustering "Clustering Coefficient"
+
+[Watts, D.J., Strogatz, S.H., 1998]: http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf "Watts, D.J. and Strogatz, S.H., 1998. Collective dynamics of ‘small-world’networks. nature, 393(6684), p.440."
+
+[fig-2-16]: http://networksciencebook.com/images/ch-02/figure-2-16.jpg "fig.2.16 Clustering Coefficient"
+
+[02-11]: http://networksciencebook.com/chapter/2#summary2 "Summary"
+
+[fig-2-17]: http://networksciencebook.com/images/ch-02/figure-2-17.jpg "fig.2.17 Graphology "
+
+[Barrat, A., 2004]: https://www.pnas.org/content/pnas/101/11/3747.full.pdf "Barrat, A., Barthelemy, M., Pastor-Satorras, R. and Vespignani, A., 2004. The architecture of complex weighted networks. Proceedings of the national academy of sciences, 101(11), pp.3747-3752."
+
+[Onnela, J.P., 2005]: https://arxiv.org/pdf/cond-mat/0408629.pdf "Onnela, J.P., Saramäki, J., Kertész, J. and Kaski, K., 2005. Intensity and coherence of motifs in weighted complex networks. Physical Review E, 71(6), p.065103."
+
+[Zhang, B., 2005]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9599&rep=rep1&type=pdf "Zhang, B. and Horvath, S., 2005. A general framework for weighted gene co-expression network analysis. Statistical applications in genetics and molecular biology, 4(1)."
+
+[]: "Holme, P., Park, S.M., Kim, B.J. and Edling, C.R., 2007. Korean university life in a network perspective: Dynamics of a large affiliation network. Physica A: Statistical Mechanics and its Applications, 373, pp.821-830."
