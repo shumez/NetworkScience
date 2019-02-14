@@ -224,7 +224,14 @@ for larger networks, determined using the *BFS algorithm*
 
 
 
+## [02-09] Connectedness
 
+*bridge*
+
+[![fig.2.15][fig-2-15]][fig-2-15]
+
+
+### Box 2.6 Finding the Connected Components of a Network
 
 
 
@@ -296,3 +303,7 @@ for larger networks, determined using the *BFS algorithm*
 [fig-2-13]: http://networksciencebook.com/images/ch-02/figure-2-13.jpg "fig.2.13 Pathology"
 
 [fig-2-14]: http://networksciencebook.com/images/ch-02/figure-2-14.jpg "fig.2.14 Applying the BFS Algorithm"
+
+[02-09]: http://networksciencebook.com/chapter/2#connectedness "Connectedness"
+
+[fig-2-15]: http://networksciencebook.com/images/ch-02/figure-2-15.jpg "fig.2.15 Connected and Disconnected Networks"
