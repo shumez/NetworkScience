@@ -135,6 +135,26 @@ val \(\propto N^2 \)
 
 
 
+## [02-07] Bipartite Networks
+
+
+*bipartite graph* (*bigraph*) :
+
+NO U-U / V-V links
+
+[![fig.2.9][fig-2-9]][fig-2-9]
+
+
+([Goh, K.I., 2007])
+
+[![fig.2.10][fig-2-10]][fig-2-10]
+
+
+[![fig.2.11][fig-2-11]][fig-2-11]
+
+
+
+
 
 
 
@@ -183,3 +203,13 @@ val \(\propto N^2 \)
 [Gilder, G., 1993]: https://scholar.google.co.jp/scholar?hl=en&num=20&as_sdt=0%2C5&q=Gilder%2C+G.%2C+1993.+Metcalfe’s+law+and+legacy.+Forbes+ASAP%2C+13%2C+p.1993.&btnG= "Gilder, G., 1993. Metcalfe’s law and legacy. Forbes ASAP, 13, p.1993."
 
 [fig-2-8]: http://networksciencebook.com/images/ch-02/figure-2-8.jpg "Metcalfe’s Law"
+
+[02-07]: http://networksciencebook.com/chapter/2#bipartite-networks
+
+[fig-2-9]: http://networksciencebook.com/images/ch-02/figure-2-9.jpg "Bipartite Network"
+
+[Goh, K.I., 2007]: https://www.pnas.org/content/104/21/8685
+
+[fig-2-10]: http://networksciencebook.com/images/ch-02/figure-2-10.jpg "Human Disease Network"
+
+[fig-2-11]: http://networksciencebook.com/images/ch-02/figure-2-11.jpg "Tripartite Network"
