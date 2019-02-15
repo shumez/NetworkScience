@@ -157,7 +157,7 @@ NO U-U / V-V links
 ## [02-08] Paths and Distances
 
 
-*path length*
+*path length*: num of links the path contains
 
 
 [![fig.2.12][fig-2-12]][fig-2-12]
@@ -175,7 +175,7 @@ directed, \( d_{ij} \neq d_{ji} \)
 [![fig.2.13][fig-2-13]][fig-2-13]
 
 - shortest path (*Geodesic path* \(d\))
-- *diamter* (\(d_{max}\))
+- *diamter* (\(d_{max}\)): longest shortest path in graph
 - *average path length* (\(\langle d \rangle\))
 - *cycle* 
 - *Eulerian path*: transverse each link exactly once
@@ -262,21 +262,48 @@ for larger networks, determined using the *BFS algorithm*
 
 \[ \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \] (2.16)
 
+([Barrat, A., 2004], [Onnela, J.P., 2005], [Zhang, B., 2005], [Holme, P., 2007])
+
 
 
 ## [02-11] Summary
 
 [![fig.2.17][fig-2-17]][fig-2-17]
 
-[]
+*Undirected*
+
+*Self-loops*
+
+*Multigraph / Simple Graphs*
+
+*Directed*
+
+*Wighted*
+
+*Complete*
+
+
+[![fig.2.18][fig-2-18]][fig-2-18]
+
+
+
+## [02-12] Homework
 
 
 
 
 
-<style type="text/css">
+
+
+
+
+
+
+
+
+<!-- <style type="text/css">
 	img{width: 50%; float: right;}
-</style>
+</style> -->
 
 
 [Network Science]: http://networksciencebook.com/ "Albert-László Barabási, Network Science"
@@ -355,4 +382,8 @@ for larger networks, determined using the *BFS algorithm*
 
 [Zhang, B., 2005]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9599&rep=rep1&type=pdf "Zhang, B. and Horvath, S., 2005. A general framework for weighted gene co-expression network analysis. Statistical applications in genetics and molecular biology, 4(1)."
 
-[]: "Holme, P., Park, S.M., Kim, B.J. and Edling, C.R., 2007. Korean university life in a network perspective: Dynamics of a large affiliation network. Physica A: Statistical Mechanics and its Applications, 373, pp.821-830."
+[Holme, P., 2007]: https://arxiv.org/pdf/cond-mat/0411634.pdf "Holme, P., Park, S.M., Kim, B.J. and Edling, C.R., 2007. Korean university life in a network perspective: Dynamics of a large affiliation network. Physica A: Statistical Mechanics and its Applications, 373, pp.821-830."
+
+[fig-2-18]: http://networksciencebook.com/images/ch-02/figure-2-18.jpg "Characterizing a Real Network"
+
+[02-12]: http://networksciencebook.com/chapter/2#homework2 "Homework"
