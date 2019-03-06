@@ -3,14 +3,41 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-02-14 19:18:44
+Modified: 	2019-03-06 20:21:23
 -----
 Copyright (c) 2019 shumez
 -->
 
-# [02] Graph Theory
+# 02 Graph Theory
 
-## [02-01] The Bridges of Königsberg
+## Contents
+
+01. [The Bridges of Königsberg](#0201-The-Bridges-of-Königsberg)
+02. [Networks and Graphs](#0202-Networks-and-Graphs)
+03. [Degree, Average Degree and Degree Distribution](#0203-Degree,-Average-Degree-and-Degree-Distribution)
+    * [Degree](#Degree)
+    * [Average Degree](#Average-Degree)
+    * [Degree Distribution](#Degree-Distribution)
+04. [Adjacency Matrix](#0204-Adjacency-Matrix)
+05. [Real Networks are Sparse](#0205-Real-Networks-are-Sparse)
+06. [Weighted Networks](#0206-Weighted-Networks)
+    * [Metcalfe’s Law: the Value of a Network](#Metcalfe’s-Law:-the-Value-of-a-Network)
+07. [Bipartite Networks](#0207-Bipartite-Networks)
+08. [Paths and Distances](#0208-Paths-and-Distances)
+    * [Shortest Path](#Shortest-Path)
+    * [Box 2.4 Number of Shortest Parths Between Two Nodes](#Box-24-Number-of-Shortest-Parths-Between-Two-Nodes)
+    * [Network Diameter](#Network-Diameter)
+    * [Average Path Length](#Average-Path-Length)
+    * [Box 2.5 Breadth-First Search (BFS) Algorithm](#Box-25-Breadth-First-Search-(BFS)-Algorithm)
+09. [Connectedness](#0209-Connectedness)
+    * [Box 2.6 Finding the Connected Components of a Network](#Box-26-Finding-the-Connected-Components-of-a-Network)
+10. [Clustering Coefficient](#0210-Clustering-Coefficient)
+11. [Summary](#0211-Summary)
+12. [Homework](#0212-Homework)
+
+
+
+## 02.01 The Bridges of Königsberg
 
 [![fig-2-1][fig-2-1]][fig-2-1]
 
@@ -18,7 +45,7 @@ Copyright (c) 2019 shumez
 
 
 
-## [02-02] Networks and Graphs
+## 02.02 Networks and Graphs
 
 - \(N\) *num of nodes*, *size* of the network
 - \(L\) *num of links*, (2, 4)
@@ -27,7 +54,7 @@ Copyright (c) 2019 shumez
 
 <!-- <iframe src="http://networksciencebook.com/images/ch-02/video-2-1.m4v"> -->
 
-## [02-03] Degree, Average Degree and Degree Distribution
+## 02.03 Degree, Average Degree and Degree Distribution
 
 *degree*
 
@@ -80,7 +107,7 @@ directed
 
 
 
-## [02-04] Adjacency Matrix
+## 02.04 Adjacency Matrix
 
 *adjacenct matrix*: N rows, N cols
 
@@ -104,7 +131,7 @@ directed
 
 
 
-## [02-05] Real Networks are Sparse
+## 02.05 Real Networks are Sparse
 
 \[ L_{max} = \frac{N(N-1)}{2} \] (2.12)
 
@@ -118,7 +145,7 @@ real networks
 
 
 
-## [02-06] Weighted Networks
+## 02.06 Weighted Networks
 
 \[ A_{ij} = w_{ij} \]
 
@@ -135,7 +162,7 @@ val \(\propto N^2 \)
 
 
 
-## [02-07] Bipartite Networks
+## 02.07 Bipartite Networks
 
 
 *bipartite graph* (*bigraph*) :
@@ -154,7 +181,7 @@ NO U-U / V-V links
 
 
 
-## [02-08] Paths and Distances
+## 02.08 Paths and Distances
 
 
 *path length*: num of links the path contains
@@ -224,7 +251,7 @@ for larger networks, determined using the *BFS algorithm*
 
 
 
-## [02-09] Connectedness
+## 02.09 Connectedness
 
 *bridge*
 
@@ -235,7 +262,7 @@ for larger networks, determined using the *BFS algorithm*
 
 
 
-## [02-10] Clustering Coefficient
+## 02.10 Clustering Coefficient
 
 *clustering coefficient*
 
@@ -266,7 +293,7 @@ for larger networks, determined using the *BFS algorithm*
 
 
 
-## [02-11] Summary
+## 02.11 Summary
 
 [![fig.2.17][fig-2-17]][fig-2-17]
 
@@ -287,7 +314,7 @@ for larger networks, determined using the *BFS algorithm*
 
 
 
-## [02-12] Homework
+## 02.12 Homework
 
 
 
