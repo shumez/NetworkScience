@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-06 21:52:52
+Modified: 	2019-03-08 16:51:48
 -----
 Copyright (c) 2019 shumez
 -->
@@ -14,8 +14,8 @@ Copyright (c) 2019 shumez
 
 01. [Introduction](#0301-Introduction)
 02. [The Random Network Model](#0302-The-Random-Network-Model)
-    * [Box 3-1 Defining Random Networks](#Box-3-1-Defining-Random-Networks)
-    * [Box 3-2 Random Networks: a Brief History](#Box-3-2-Random-Networks:-a-Brief-History)
+    * [Box 3-1 - Defining Random Networks](#Box-3-1---Defining-Random-Networks)
+    * [Box 3-2 - Random Networks: a Brief History](#Box-3-2---Random-Networks:-a-Brief-History)
 03. [Number of Links](#0303-Number-of-Links)
 
 
@@ -24,7 +24,7 @@ Copyright (c) 2019 shumez
 
 ## 03.02 The Random Network Model
 
-### Box 3-1 Defining Random Networks
+### Box 3-1 - Defining Random Networks
 
 - \( G(N, L) \) model :
     - \(N\) labeled node are connedted with \(L\) randomly placed links
@@ -40,17 +40,25 @@ Copyright (c) 2019 shumez
 **random graph** (**random network**, **Erdős-Rényi network**)
 
 
-### Box 3-2 Random Networks: a Brief History
+### Box 3-2 - Random Networks: a Brief History
 
 
 
 ## 03.03 Number of Links
 
 [![fig.3.3][fig_03_03]][fig_03_03]
+\(p=\frac{1}{6}\), \(N=12\), \(L=10, 18, 8\)
 
 - attempt to \(p^L\)
 
+\( (1 - p)^{\frac{N (N - 1)}{2 - L}} \)
+
+
+conmbinational factor
+
 \[ \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} \tag{3.0} \]
+
+\[ p_L = \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} p^L (1 - p)^{\frac{N (N - 1)}{2 - L}} \tag{3.1} \]
 
 
 
