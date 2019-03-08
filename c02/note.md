@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-03-06 20:21:23
+Modified: 	2019-03-08 16:31:5
 -----
 Copyright (c) 2019 shumez
 -->
@@ -21,14 +21,14 @@ Copyright (c) 2019 shumez
 04. [Adjacency Matrix](#0204-Adjacency-Matrix)
 05. [Real Networks are Sparse](#0205-Real-Networks-are-Sparse)
 06. [Weighted Networks](#0206-Weighted-Networks)
-    * [Metcalfe’s Law: the Value of a Network](#Metcalfe’s-Law:-the-Value-of-a-Network)
+    * [Metcalfe’s Law: the Value of a Network](#Metcalfe’s-Law--the-Value-of-a-Network)
 07. [Bipartite Networks](#0207-Bipartite-Networks)
 08. [Paths and Distances](#0208-Paths-and-Distances)
     * [Shortest Path](#Shortest-Path)
     * [Box 2.4 Number of Shortest Parths Between Two Nodes](#Box-24-Number-of-Shortest-Parths-Between-Two-Nodes)
     * [Network Diameter](#Network-Diameter)
     * [Average Path Length](#Average-Path-Length)
-    * [Box 2.5 Breadth-First Search (BFS) Algorithm](#Box-25-Breadth-First-Search-(BFS)-Algorithm)
+    * [Box 2.5 Breadth-First Search Algorithm](#Box-25-Breadth-First-Search-Algorithm)
 09. [Connectedness](#0209-Connectedness)
     * [Box 2.6 Finding the Connected Components of a Network](#Box-26-Finding-the-Connected-Components-of-a-Network)
 10. [Clustering Coefficient](#0210-Clustering-Coefficient)
@@ -150,7 +150,7 @@ real networks
 \[ A_{ij} = w_{ij} \]
 
 
-### Metcalfe’s Law: the Value of a Network
+### Metcalfe’s Law  the Value of a Network
 
 *Metcalfe's law*:
 
@@ -245,7 +245,7 @@ for larger networks, determined using the *BFS algorithm*
 (2.14)
 
 
-### Box 2.5 Breadth-First Search (BFS) Algorithm
+### Box 2.5 Breadth-First Search Algorithm
 
 [![fig.2.14][fig-2-14]][fig-2-14]
 
