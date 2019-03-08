@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-03-08 16:32:44
+Modified: 	2019-03-08 16:33:45
 -----
 Copyright (c) 2019 shumez
 -->
@@ -21,7 +21,7 @@ Copyright (c) 2019 shumez
 04. [Adjacency Matrix](#0204-Adjacency-Matrix)
 05. [Real Networks are Sparse](#0205-Real-Networks-are-Sparse)
 06. [Weighted Networks](#0206-Weighted-Networks)
-    * [Metcalfe Law: the Value of a Network](#Metcalfe-Law:-the-Value-of-a-Network)
+    * [Metcalfe Law - the Value of a Network](#Metcalfe-Law---the-Value-of-a-Network)
 07. [Bipartite Networks](#0207-Bipartite-Networks)
 08. [Paths and Distances](#0208-Paths-and-Distances)
     * [Shortest Path](#Shortest-Path)
@@ -150,7 +150,7 @@ real networks
 \[ A_{ij} = w_{ij} \]
 
 
-### Metcalfe Law: the Value of a Network
+### Metcalfe Law - the Value of a Network
 
 *Metcalfe's law*:
 
