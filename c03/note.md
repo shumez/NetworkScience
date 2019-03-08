@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-08 16:51:48
+Modified: 	2019-03-08 18:10:26
 -----
 Copyright (c) 2019 shumez
 -->
@@ -14,8 +14,8 @@ Copyright (c) 2019 shumez
 
 01. [Introduction](#0301-Introduction)
 02. [The Random Network Model](#0302-The-Random-Network-Model)
-    * [Box 3-1 - Defining Random Networks](#Box-3-1---Defining-Random-Networks)
-    * [Box 3-2 - Random Networks: a Brief History](#Box-3-2---Random-Networks:-a-Brief-History)
+    * [Box 3-1 Defining Random Networks](#Box-3-1-Defining-Random-Networks)
+    * [Box 3-2 Random Networks: a Brief History](#Box-3-2-Random-Networks:-a-Brief-History)
 03. [Number of Links](#0303-Number-of-Links)
 
 
@@ -24,7 +24,7 @@ Copyright (c) 2019 shumez
 
 ## 03.02 The Random Network Model
 
-### Box 3-1 - Defining Random Networks
+### Box 3-1 Defining Random Networks
 
 - \( G(N, L) \) model :
     - \(N\) labeled node are connedted with \(L\) randomly placed links
@@ -40,7 +40,7 @@ Copyright (c) 2019 shumez
 **random graph** (**random network**, **Erdős-Rényi network**)
 
 
-### Box 3-2 - Random Networks: a Brief History
+### Box 3-2 Random Networks: a Brief History
 
 
 
