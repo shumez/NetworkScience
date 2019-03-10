@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-08 18:54:13
+Modified: 	2019-03-10 21:30:38
 -----
 Copyright (c) 2019 shumez
 -->
@@ -18,6 +18,9 @@ Copyright (c) 2019 shumez
     * [Box 3-2 Random Networks - a Brief History](#Box-3-2-Random-Networks---a-Brief-History)
 03. [Number of Links](#0303-Number-of-Links)
     * [Box 3-3 Binomial Distribution - Mean and Variance](#Box-3-3-Binomial-Distribution---Mean-and-Variance)
+04. [Degree Distribution](#0304-Degree-Distribution)
+    * [Binomial Distribution](#Binomial-Distribution)
+    * [Poisson Distribution](#Poisson-Distribution)
 
 
 ## 03.01 Introduction
@@ -83,10 +86,47 @@ standard deviation
 \[ \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} \]
 
 
+## 03.04 Degree Distribution
+
+|         | Binominal | Poisson |
+|---------|:---------:|:--------|
+| degree dist \(p_k\) | \( \begin{pmatrix}N-1 \\ k\end{pmatrix} p_k (1-p)^{N-1-k} \) | \( e^{-\langle k \rangle} \frac{\langle k \rangle}{k!} \) |
+| peak at \(k\) | \( \langle k \rangle = p(N-1) \) | \( \langle k \rangle \) |
+| width \( \sigma_k \) | \( p(1-p)(N-1) \) | \( \langle k \rangle^{\frac{1}{2}} \) |
 
 
 
-[fig_03_03]: http://networksciencebook.com/images/ch-03/figure-3-3.jpg "Random Networks are Truly Random"
+[![fit.3.4][fig_03_04]][fig_03_04]
+
+
+### Binomial Distribution
+
+node \(i\) has \(k\)
+
+- prob that \(k\) of its links are present / \(p^k\)
+- prob that remaining \( (N-1-k) \) links are missing / \((1-p)^{N-1-k}\)
+- 
+
+\[ \begin{pmatrix} N-1 \\ k \end{pmatrix} \]
+
+\[ p_k = \begin{pmatrix}N-1\\k\end{pmatrix} p^k (1-p)^{N-1-k} \tag{3.7} \]
+
+
+### Poisson Distribution
+
+\[ p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} \]
+
+*degree distributioin of a random network*
+
+
+
+
+
+
+
+
+[fig_03_03]: http://networksciencebook.com/images/ch-03/figure-3-3.jpg "Fig.3.3 Random Networks are Truly Random"
+[fig_03_04]: http://networksciencebook.com/images/ch-03/figure-3-4.jpg "Fig.3.4 Binomial vs. Poisson Degree Distribution"
 
 <style type="text/css">
 	img{width: 50%; float: right;}
