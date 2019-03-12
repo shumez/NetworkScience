@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-12 15:26:13
+Modified: 	2019-03-12 16:33:26
 -----
 Copyright (c) 2019 shumez
 -->
@@ -21,6 +21,7 @@ Copyright (c) 2019 shumez
 04. [Degree Distribution](#0304-Degree-Distribution)
     * [Binomial Distribution](#Binomial-Distribution)
     * [Poisson Distribution](#Poisson-Distribution)
+05. [Real Networks are Not Poisson](#0305-Real-Networks-are-Not-Poisson)
 
 
 ## 03.01 Introduction
@@ -30,13 +31,13 @@ Copyright (c) 2019 shumez
 
 ### Box 3-1 Defining Random Networks
 
-- \( G(N, L) \) model :
-    - \(N\) labeled node are connedted with \(L\) randomly placed links
-    - fixes the total num of links \(L\)
-    - average degree of node \( \langle k \rangle = \frac{2L}{N} \)
-- \( G(N, p) \) model :
-    - \(N\) labeled nodes is connected with probability \(p\)
-    - fixes prob \(p\)
+- ![][G(N,L)] model :
+    - ![][N] labeled node are connedted with ![][L] randomly placed links
+    - fixes the total num of links ![][L]
+    - average degree of node ![][\langle&space;k\rangle=\frac{2L}{N}]
+- ![][G(N,p)] model :
+    - ![][N] labeled nodes is connected with probability ![][p]
+    - fixes prob ![][p]
 
 
 ### 
@@ -50,9 +51,9 @@ Copyright (c) 2019 shumez
 
 ## 03.03 Number of Links
 
-- prob that \(L\) of attempts to connect \( \frac{N(N-1)}{2} \) pairs of nodes have result in link, is \(p^L\)
-- prob that the remaining \( \frac{N(N-1)}{2} \) pairs of nodes have  not resulted in a link is
-    \( (1 - p)^{\frac{N (N - 1)}{2} - L} \)
+- prob that ![][L] of attempts to connect ![][\frac{N(N-1)}{2}] pairs of nodes have result in link, is ![][p^L]
+- prob that the remaining ![][\frac{N(N-1)}{2}] pairs of nodes have  not resulted in a link is
+    ![][(1-p)^{\frac{N(N-1)}{2}-L}]
 - conmbinational factor
     <!-- \[ \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} \tag{3.0} \] -->
     ![eq.3.0][eq_3_00]
@@ -67,20 +68,22 @@ expected num of links
 ![eq.3.2][eq_3_02]
 
 <!-- \( L_{max} = \frac{N(N-1)}{2} \) -->
-<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L_{max}&space;=&space;\frac{N(N-1)}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;L_{max}&space;=&space;\frac{N(N-1)}{2}" title="L_{max} = \frac{N(N-1)}{2}" /></a>
+![][L_{max}=\frac{N(N-1)}{2}]
+
 
 <!-- \[ \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} \] -->
 ![eq.3.3][eq_3_03]
 
 [![fig.3.3][fig_03_03]][fig_03_03]
-\(p=\frac{1}{6}\), \(N=12\), \(L=10, 18, 8\)
+![][p=\frac{1}{6}], ![][N=12], ![][L=10,&space;18,&space;8]
 
-\( p = .03\), \( N = 100 \)
+![][p=.03], \( N = 100 \)
 
 
 ### Box 3-3 Binomial Distribution - Mean and Variance
 
-\[ p_x = \begin{pmatrix}N \\ x\end{pmatrix} p^x (1-p)^{N-x} \]
+<!-- \[ p_x = \begin{pmatrix}N \\ x\end{pmatrix} p^x (1-p)^{N-x} \] -->
+![][p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]
 
 <!-- \[ \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} \] -->
 ![eq.3.4][eq_3_04]
@@ -96,14 +99,14 @@ standard deviation
 
 ## 03.04 Degree Distribution
 
-degree dist \(p_k\), degree \(k\)
+degree dist ![][p_k], degree ![][k]
 
 
 |         | Binominal | Poisson |
 |---------|:---------:|:--------|
-| degree dist \(p_k\) | \( \begin{pmatrix}N-1 \\ k\end{pmatrix} p_k (1-p)^{N-1-k} \) | \( e^{-\langle k \rangle} \frac{\langle k \rangle}{k!} \) |
-| peak at \(k\) | \( \langle k \rangle = p(N-1) \) | \( \langle k \rangle \) |
-| width \( \sigma_k \) | \( p(1-p)(N-1) \) | \( \langle k \rangle^{\frac{1}{2}} \) |
+| degree dist ![][p_k] | ![][\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}] | ![][e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}] |
+| peak at ![][k] | ![][\langle&space;k\rangle=p(N-1)] | ![][\langle&space;k\rangle] |
+| width ![][\sigma_k] | ![][p(1-p)(N-1)] | ![][\langle&space;k\rangle^{\frac{1}{2}}] |
 
 
 
@@ -146,6 +149,20 @@ eq.3.7 is approx'd by Poisson dist
 > For larger networks (N = 103, 104) the degree distribution becomes indistinguishable from the Poisson prediction (3.8), shown as a continuous grey line. Therefore for large N the degree distribution is independent of the network size. In the figure we averaged over 1,000 independently generated random networks to decrease the noise.
 
 
+## 03.05 Real Networks are Not Poisson
+
+social network
+![][\langle&space;k\rangle\approx1000], ![][N\approx&space;7\times10^9] of individuals
+
+![][k_{\text{max}}=1185] accuaitances
+
+![][k_{\text{min}}=816]
+
+despersion of random network is ![][\sigma_k=\langle&space;k\rangle^{\frac{1}{2}}], 
+for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
+
+
+
 
 ## 
 
@@ -153,20 +170,51 @@ eq.3.7 is approx'd by Poisson dist
 
 
 
-
+[G(N,L)]: https://latex.codecogs.com/gif.latex?\inline&space;G(N,L)
+[N]: https://latex.codecogs.com/gif.latex?\inline&space;N
+[L]: https://latex.codecogs.com/gif.latex?\inline&space;L
+[\langle&space;k\rangle=\frac{2L}{N}]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle=\frac{2L}{N}
+[G(N,p)]: https://latex.codecogs.com/gif.latex?\inline&space;G(N,p)
+[p]: https://latex.codecogs.com/gif.latex?\inline&space;p
+[\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\inline&space;\frac{N(N-1)}{2}
+[p^L]: https://latex.codecogs.com/gif.latex?\inline&space;p^L
+[\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\inline&space;\frac{N(N-1)}{2}
+[(1-p)^{\frac{N(N-1)}{2}-L}]: https://latex.codecogs.com/gif.latex?\inline&space;(1-p)^{\frac{N(N-1)}{2}-L}
 [eq_3_00]: https://latex.codecogs.com/gif.latex?\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix} "eq.3.0"
 [eq_3_01]: https://latex.codecogs.com/gif.latex?p_L=\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix}p^L(1-p)^{\frac{N(N-1)}{2}-L} "eq.3.1"
 [eq_3_02]: https://latex.codecogs.com/gif.latex?\langle&space;L\rangle=\sum_{L=0}^{\frac{N(N-1)}{2}}LP_L=p\frac{N(N-1)}{2} "eq.3.2"
+[L_{max}=\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\inline&space;L_{max}=\frac{N(N-1)}{2}
 [eq_3_03]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1) "eq.3.3"
 [fig_03_03]: http://networksciencebook.com/images/ch-03/figure-3-3.jpg "Fig.3.3 Random Networks are Truly Random"
+[p=\frac{1}{6}]: https://latex.codecogs.com/gif.latex?\inline&space;p=\frac{1}{6}
+[N=12]: https://latex.codecogs.com/gif.latex?\inline&space;N=12
+[L=10,&space;18,&space;8]: https://latex.codecogs.com/gif.latex?\inline&space;L=10,&space;18,&space;8
+[p=.03]: https://latex.codecogs.com/gif.latex?\inline&space;p=.03
+[p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]: https://latex.codecogs.com/gif.latex?\inline&space;p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}
 [eq_3_04]: https://latex.codecogs.com/gif.latex?\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np
 [eq_3_05]: https://latex.codecogs.com/gif.latex?\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2
 [eq_3_06]: https://latex.codecogs.com/gif.latex?\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=[p(1-p)N]^{\frac{1}{2}}
+[p_k]: https://latex.codecogs.com/gif.latex?\inline&space;p_k
+[\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\inline&space;\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}
+[e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}]: https://latex.codecogs.com/gif.latex?\inline&space;e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}
+[\langle&space;k\rangle=p(N-1)]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle=p(N-1)
+[\langle&space;k\rangle]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle
+[\sigma_k]: https://latex.codecogs.com/gif.latex?\inline&space;\sigma_k
+[p(1-p)(N-1)]: https://latex.codecogs.com/gif.latex?\inline&space;p(1-p)(N-1)
+[\langle&space;k\rangle^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle^{\frac{1}{2}}
+
 [fig_03_04]: http://networksciencebook.com/images/ch-03/figure-3-4.jpg "Fig.3.4 Binomial vs. Poisson Degree Distribution"
 [eq_3_07]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k}
 [\langle&space;k\rangle<<N]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle<<N
 [eq_3_08]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!}
 [fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Degree Distribution is Independent of the Network Size "
+[\langle&space;k\rangle\approx1000]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle\approx1000
+[N\approx&space;7\times10^9]: https://latex.codecogs.com/gif.latex?\inline&space;N\approx&space;7\times10^9
+[k_{\text{max}}=1185]: https://latex.codecogs.com/gif.latex?\inline&space;k_{\text{max}}=1185
+[k_{\text{min}}=816]: https://latex.codecogs.com/gif.latex?\inline&space;k_{\text{min}}=816
+[\sigma_k=\langle&space;k\rangle^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?\inline&space;\sigma_k=\langle&space;k\rangle^{\frac{1}{2}}
+[\langle&space;k\rangle=1000]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle=1000
+[\sigma_k=31.62]: https://latex.codecogs.com/gif.latex?\inline&space;\sigma_k=31.62
 
 
 <!-- 
