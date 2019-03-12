@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-12 16:46:7
+Modified: 	2019-03-12 17:54:5
 -----
 Copyright (c) 2019 shumez
 -->
@@ -22,6 +22,7 @@ Copyright (c) 2019 shumez
     * [Binomial Distribution](#Binomial-Distribution)
     * [Poisson Distribution](#Poisson-Distribution)
 05. [Real Networks are Not Poisson](#0305-Real-Networks-are-Not-Poisson)
+    * [Box 3-4 Why are Hubs Missing?](#Box-3-4-Why-are-Hubs-Missing?)
 
 
 ## 03.01 Introduction
@@ -56,23 +57,23 @@ Copyright (c) 2019 shumez
     ![][(1-p)^{\frac{N(N-1)}{2}-L}]
 - conmbinational factor
     <!-- \[ \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} \tag{3.0} \] -->
-    ![eq.3.0][eq_3_00]
+    ![eq.3.0][eq_03_00]
 
 <!-- \[ p_L = \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} \] -->
-![eq.3.1][eq_3_01]
+![eq.3.1][eq_03_01]
 
 
 expected num of links
 
 <!-- \[ \langle L \rangle = \sum_{L=0}^{\frac{N(N-1)}{2}} LP_L = p \frac{N(N-1)}{2} \tag{3.2} \] -->
-![eq.3.2][eq_3_02]
+![eq.3.2][eq_03_02]
 
 <!-- \( L_{max} = \frac{N(N-1)}{2} \) -->
 ![][L_{max}=\frac{N(N-1)}{2}]
 
 
 <!-- \[ \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} \] -->
-![eq.3.3][eq_3_03]
+![eq.3.3][eq_03_03]
 
 [![fig.3.3][fig_03_03]][fig_03_03]
 ![][p=\frac{1}{6}], ![][N=12], ![][L=10,&space;18,&space;8]
@@ -86,15 +87,15 @@ expected num of links
 ![][p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]
 
 <!-- \[ \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} \] -->
-![eq.3.4][eq_3_04]
+![eq.3.4][eq_03_04]
 
 <!-- \[ \langle x^2 \rangle = \sum_{x=0}^N x^2 p_x = p(1-p)N + p^2 N^2 \tag{3.5} \] -->
-![eq.3.5][eq_3_05]
+![eq.3.5][eq_03_05]
 
 standard deviation
 
 <!-- \[ \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} \] -->
-![eq.3.6][eq_3_06]
+![eq.3.6][eq_03_06]
 
 
 ## 03.04 Degree Distribution
@@ -126,7 +127,7 @@ node ![][i] has ![][k]
 
 
 <!-- \[ p_k = \begin{pmatrix}N-1\\k\end{pmatrix} p^k (1-p)^{N-1-k} \tag{3.7} \] -->
-![eq.3.7][eq_3_07]
+![eq.3.7][eq_03_07]
 
 
 ### Poisson Distribution
@@ -136,7 +137,7 @@ node ![][i] has ![][k]
 eq.3.7 is approx'd by Poisson dist
 
 <!-- \[ p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} \] -->
-![eq.3.8][eq_3_08]
+![eq.3.8][eq_03_08]
 
 *degree distributioin of a random network*
 
@@ -160,7 +161,25 @@ social network
 
 despersion of random network is ![][\sigma_k=\langle&space;k\rangle^{\frac{1}{2}}], 
 for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
+![][\langle&space;k\rangle\pm\sigma_k] range 
 
+
+### Box 3-4 Why are Hubs Missing?
+
+![][\frac{1}{k!}]
+
+the Stirling approx
+
+![][k!\sim\sqrt{2\pi&space;k}\bigg(\frac{k}{e}\bigg)^k]
+
+![eq.3.9][eq_03_09]
+
+![][k>e\langle&space;k\rangle]
+
+
+### 
+
+[![figure.3.6][fig_03_06]][fig_03_06]
 
 
 
@@ -180,11 +199,11 @@ for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 [p^L]: https://latex.codecogs.com/gif.latex?\inline&space;p^L
 [\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\inline&space;\frac{N(N-1)}{2}
 [(1-p)^{\frac{N(N-1)}{2}-L}]: https://latex.codecogs.com/gif.latex?\inline&space;(1-p)^{\frac{N(N-1)}{2}-L}
-[eq_3_00]: https://latex.codecogs.com/gif.latex?\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix} "eq.3.0"
-[eq_3_01]: https://latex.codecogs.com/gif.latex?p_L=\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix}p^L(1-p)^{\frac{N(N-1)}{2}-L} "eq.3.1"
-[eq_3_02]: https://latex.codecogs.com/gif.latex?\langle&space;L\rangle=\sum_{L=0}^{\frac{N(N-1)}{2}}LP_L=p\frac{N(N-1)}{2} "eq.3.2"
+[eq_03_00]: https://latex.codecogs.com/gif.latex?\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix} "eq.3.0"
+[eq_03_01]: https://latex.codecogs.com/gif.latex?p_L=\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix}p^L(1-p)^{\frac{N(N-1)}{2}-L} "eq.3.1"
+[eq_03_02]: https://latex.codecogs.com/gif.latex?\langle&space;L\rangle=\sum_{L=0}^{\frac{N(N-1)}{2}}LP_L=p\frac{N(N-1)}{2} "eq.3.2"
 [L_{max}=\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\inline&space;L_{max}=\frac{N(N-1)}{2}
-[eq_3_03]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1) "eq.3.3"
+[eq_03_03]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1) "eq.3.3"
 [fig_03_03]: http://networksciencebook.com/images/ch-03/figure-3-3.jpg "Fig.3.3 Random Networks are Truly Random"
 [p=\frac{1}{6}]: https://latex.codecogs.com/gif.latex?\inline&space;p=\frac{1}{6}
 [N=12]: https://latex.codecogs.com/gif.latex?\inline&space;N=12
@@ -192,9 +211,9 @@ for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 [p=.03]: https://latex.codecogs.com/gif.latex?\inline&space;p=.03
 [N=100]: https://latex.codecogs.com/gif.latex?\inline&space;N=100
 [p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]: https://latex.codecogs.com/gif.latex?\inline&space;p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}
-[eq_3_04]: https://latex.codecogs.com/gif.latex?\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np
-[eq_3_05]: https://latex.codecogs.com/gif.latex?\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2
-[eq_3_06]: https://latex.codecogs.com/gif.latex?\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=[p(1-p)N]^{\frac{1}{2}}
+[eq_03_04]: https://latex.codecogs.com/gif.latex?\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np "eq.3.4"
+[eq_03_05]: https://latex.codecogs.com/gif.latex?\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2 "eq.3.5"
+[eq_03_06]: https://latex.codecogs.com/gif.latex?\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=[p(1-p)N]^{\frac{1}{2}} "eq.3.6"
 [p_k]: https://latex.codecogs.com/gif.latex?\inline&space;p_k
 [k]: https://latex.codecogs.com/gif.latex?\inline&space;k
 [\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\inline&space;\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}
@@ -210,12 +229,10 @@ for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 [N-1-k]: https://latex.codecogs.com/gif.latex?\inline&space;N-1-k
 [(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\inline&space;(1-p)^{N-1-k}
 [\begin{pmatrix}N-1\\k\end{pmatrix}]: https://latex.codecogs.com/gif.latex?\inline&space;\begin{pmatrix}N-1\\k\end{pmatrix}
-
-
-[eq_3_07]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k}
+[eq_03_07]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k} "eq.3.7"
 [\langle&space;k\rangle<<N]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle<<N
-[eq_3_08]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!}
-[fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Degree Distribution is Independent of the Network Size "
+[eq_03_08]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!} "eq.3.8"
+[fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Fig.3.5 Degree Distribution is Independent of the Network Size "
 [\langle&space;k\rangle\approx1000]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle\approx1000
 [N\approx&space;7\times10^9]: https://latex.codecogs.com/gif.latex?\inline&space;N\approx&space;7\times10^9
 [k_{\text{max}}=1185]: https://latex.codecogs.com/gif.latex?\inline&space;k_{\text{max}}=1185
@@ -223,6 +240,12 @@ for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 [\sigma_k=\langle&space;k\rangle^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?\inline&space;\sigma_k=\langle&space;k\rangle^{\frac{1}{2}}
 [\langle&space;k\rangle=1000]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle=1000
 [\sigma_k=31.62]: https://latex.codecogs.com/gif.latex?\inline&space;\sigma_k=31.62
+[\langle&space;k\rangle\pm\sigma_k]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle\pm\sigma_k
+[\frac{1}{k!}]: https://latex.codecogs.com/gif.latex?\inline&space;\frac{1}{k!}
+[k!\sim\sqrt{2\pi&space;k}\bigg(\frac{k}{e}\bigg)^k]: https://latex.codecogs.com/gif.latex?k!\sim\sqrt{2\pi&space;k}\bigg(\frac{k}{e}\bigg)^k
+[eq_03_09]: https://latex.codecogs.com/gif.latex?p_k=\frac{e^{-\langle&space;k\rangle}}{\sqrt{2\pi&space;k}}\bigg(\frac{e\langle&space;k\rangle}{k}\bigg)^k "eq.3.9"
+[k>e\langle&space;k\rangle]: https://latex.codecogs.com/gif.latex?\inline&space;k>e\langle&space;k\rangle "\(k>e\langle&space;k\rangle\)"
+[fig_03_06]: http://networksciencebook.com/images/ch-03/figure-3-6.jpg "Fig.3.6 Degree Distribution of Real Networks "
 
 
 <!-- 
@@ -230,6 +253,6 @@ https://latex.codecogs.com/gif.latex?\inline&space;
 https://latex.codecogs.com/gif.latex?
 -->
 
-<style type="text/css">
-	/* img{width: 50%; float: right;} */
-</style>
+<!-- <style type="text/css">
+	img{width: 50%; float: right;}
+</style> -->
