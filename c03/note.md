@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-12 16:33:26
+Modified: 	2019-03-12 16:46:7
 -----
 Copyright (c) 2019 shumez
 -->
@@ -77,7 +77,7 @@ expected num of links
 [![fig.3.3][fig_03_03]][fig_03_03]
 ![][p=\frac{1}{6}], ![][N=12], ![][L=10,&space;18,&space;8]
 
-![][p=.03], \( N = 100 \)
+![][p=.03], ![][N=100]
 
 
 ### Box 3-3 Binomial Distribution - Mean and Variance
@@ -115,14 +115,14 @@ degree dist ![][p_k], degree ![][k]
 
 ### Binomial Distribution
 
-node <!--\(i\)--><img src="https://latex.codecogs.com/gif.latex?\inline&space;i"> has <!--\(k\)--><img src="https://latex.codecogs.com/gif.latex?\inline&space;k">
+node ![][i] has ![][k]
 
-- prob that \(k\) of its links are present / \(p^k\) 
-- prob that remaining \( (N-1-k) \) links are missing / \((1-p)^{N-1-k}\)
+- prob that ![][k] of its links are present / ![][p^k]
+- prob that remaining (![][N-1-k]) links are missing / ![][(1-p)^{N-1-k}]
 - 
 
 <!-- \[ \begin{pmatrix} N-1 \\ k \end{pmatrix} \] -->
-<img src="https://latex.codecogs.com/gif.latex?\begin{pmatrix}N-1\\k\end{pmatrix}">
+![][\begin{pmatrix}N-1\\k\end{pmatrix}]
 
 
 <!-- \[ p_k = \begin{pmatrix}N-1\\k\end{pmatrix} p^k (1-p)^{N-1-k} \tag{3.7} \] -->
@@ -190,11 +190,13 @@ for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 [N=12]: https://latex.codecogs.com/gif.latex?\inline&space;N=12
 [L=10,&space;18,&space;8]: https://latex.codecogs.com/gif.latex?\inline&space;L=10,&space;18,&space;8
 [p=.03]: https://latex.codecogs.com/gif.latex?\inline&space;p=.03
+[N=100]: https://latex.codecogs.com/gif.latex?\inline&space;N=100
 [p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]: https://latex.codecogs.com/gif.latex?\inline&space;p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}
 [eq_3_04]: https://latex.codecogs.com/gif.latex?\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np
 [eq_3_05]: https://latex.codecogs.com/gif.latex?\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2
 [eq_3_06]: https://latex.codecogs.com/gif.latex?\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=[p(1-p)N]^{\frac{1}{2}}
 [p_k]: https://latex.codecogs.com/gif.latex?\inline&space;p_k
+[k]: https://latex.codecogs.com/gif.latex?\inline&space;k
 [\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\inline&space;\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}
 [e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}]: https://latex.codecogs.com/gif.latex?\inline&space;e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}
 [\langle&space;k\rangle=p(N-1)]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle=p(N-1)
@@ -202,8 +204,14 @@ for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 [\sigma_k]: https://latex.codecogs.com/gif.latex?\inline&space;\sigma_k
 [p(1-p)(N-1)]: https://latex.codecogs.com/gif.latex?\inline&space;p(1-p)(N-1)
 [\langle&space;k\rangle^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle^{\frac{1}{2}}
-
 [fig_03_04]: http://networksciencebook.com/images/ch-03/figure-3-4.jpg "Fig.3.4 Binomial vs. Poisson Degree Distribution"
+[i]: https://latex.codecogs.com/gif.latex?\inline&space;i
+[p^k]: https://latex.codecogs.com/gif.latex?\inline&space;p^k
+[N-1-k]: https://latex.codecogs.com/gif.latex?\inline&space;N-1-k
+[(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\inline&space;(1-p)^{N-1-k}
+[\begin{pmatrix}N-1\\k\end{pmatrix}]: https://latex.codecogs.com/gif.latex?\inline&space;\begin{pmatrix}N-1\\k\end{pmatrix}
+
+
 [eq_3_07]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k}
 [\langle&space;k\rangle<<N]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle<<N
 [eq_3_08]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!}
