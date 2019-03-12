@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-12 14:33:29
+Modified: 	2019-03-12 15:26:13
 -----
 Copyright (c) 2019 shumez
 -->
@@ -128,12 +128,22 @@ node <!--\(i\)--><img src="https://latex.codecogs.com/gif.latex?\inline&space;i"
 
 ### Poisson Distribution
 
+![][\langle&space;k\rangle<<N]
+
+eq.3.7 is approx'd by Poisson dist
+
 <!-- \[ p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} \] -->
 ![eq.3.8][eq_3_08]
 
-
 *degree distributioin of a random network*
 
+[![fig.3.5][fig_03_05]][fig_03_05]
+> The degree distribution of a random network with ‹k› = 50 and N = 102, 103, 104.
+> Small Networks: Binomial
+> For a small network (N = 102) the degree distribution deviates significantly from the Poisson form (3.8), as the condition for the Poisson approximation, N»‹k›, is not satisfied. Hence for small networks one needs to use the exact binomial form (3.7) (green line).
+
+> Large Networks: Poisson
+> For larger networks (N = 103, 104) the degree distribution becomes indistinguishable from the Poisson prediction (3.8), shown as a continuous grey line. Therefore for large N the degree distribution is independent of the network size. In the figure we averaged over 1,000 independently generated random networks to decrease the noise.
 
 
 
@@ -154,11 +164,14 @@ node <!--\(i\)--><img src="https://latex.codecogs.com/gif.latex?\inline&space;i"
 [eq_3_06]: https://latex.codecogs.com/gif.latex?\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=[p(1-p)N]^{\frac{1}{2}}
 [fig_03_04]: http://networksciencebook.com/images/ch-03/figure-3-4.jpg "Fig.3.4 Binomial vs. Poisson Degree Distribution"
 [eq_3_07]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k}
+[\langle&space;k\rangle<<N]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle<<N
 [eq_3_08]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!}
+[fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Degree Distribution is Independent of the Network Size "
+
 
 <!-- 
-https://latex.codecogs.com/gif.latex?\inline&space;"
-https://latex.codecogs.com/gif.latex?"
+https://latex.codecogs.com/gif.latex?\inline&space;
+https://latex.codecogs.com/gif.latex?
 -->
 
 <style type="text/css">
