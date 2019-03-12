@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-10 21:30:38
+Modified: 	2019-03-12 13:30:0
 -----
 Copyright (c) 2019 shumez
 -->
@@ -64,6 +64,7 @@ expected num of links
 \[ \langle L \rangle = \sum_{L=0}^{\frac{N(N-1)}{2}} LP_L = p \frac{N(N-1)}{2} \tag{3.2} \]
 
 \( L_{max} = \frac{N(N-1)}{2} \)
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;L_{max}&space;=&space;\frac{N(N-1)}{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;L_{max}&space;=&space;\frac{N(N-1)}{2}" title="L_{max} = \frac{N(N-1)}{2}" /></a>
 
 \[ \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} \]
 
@@ -88,6 +89,9 @@ standard deviation
 
 ## 03.04 Degree Distribution
 
+degree dist \(p_k\), degree \(k\)
+
+
 |         | Binominal | Poisson |
 |---------|:---------:|:--------|
 | degree dist \(p_k\) | \( \begin{pmatrix}N-1 \\ k\end{pmatrix} p_k (1-p)^{N-1-k} \) | \( e^{-\langle k \rangle} \frac{\langle k \rangle}{k!} \) |
@@ -103,7 +107,7 @@ standard deviation
 
 node \(i\) has \(k\)
 
-- prob that \(k\) of its links are present / \(p^k\)
+- prob that \(k\) of its links are present / \(p^k\) <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;p_k" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;p_k" title="p_k" /></a>
 - prob that remaining \( (N-1-k) \) links are missing / \((1-p)^{N-1-k}\)
 - 
 
@@ -120,6 +124,8 @@ node \(i\) has \(k\)
 
 
 
+
+## 
 
 
 
