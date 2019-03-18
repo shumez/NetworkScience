@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-18 19:51:10
+Modified: 	2019-03-18 20:31:4
 -----
 Copyright (c) 2019 shumez
 -->
@@ -49,6 +49,12 @@ Copyright (c) 2019 shumez
 
 
 ### Box 3-2 Random Networks - a Brief History
+
+Anatol Rapoport
+
+*Random graph theory* Pál Erdős and Alfréd Rényi
+
+Edgar Nelson Gilbert 
 
 
 
