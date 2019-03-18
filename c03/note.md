@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-12 17:54:5
+Modified: 	2019-03-18 19:51:10
 -----
 Copyright (c) 2019 shumez
 -->
@@ -29,6 +29,8 @@ Copyright (c) 2019 shumez
 
 
 ## 03.02 The Random Network Model
+
+![][N] nodes, connected w probability ![][p] 
 
 ### Box 3-1 Defining Random Networks
 
@@ -103,11 +105,11 @@ standard deviation
 degree dist ![][p_k], degree ![][k]
 
 
-|         | Binominal | Poisson |
-|---------|:---------:|:--------|
-| degree dist ![][p_k] | ![][\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}] | ![][e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}] |
-| peak at ![][k] | ![][\langle&space;k\rangle=p(N-1)] | ![][\langle&space;k\rangle] |
-| width ![][\sigma_k] | ![][p(1-p)(N-1)] | ![][\langle&space;k\rangle^{\frac{1}{2}}] |
+|               |               | Binominal                                                 | Poisson |
+|--------------:|:-------------:|:---------------------------------------------------------:|:------------------------------------------:|
+| degree dist   | ![][p_k]      | ![][\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}]   | ![][e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}] |
+| peak at       | ![][k]        | ![][\langle&space;k\rangle=p(N-1)]                        | ![][\langle&space;k\rangle]               |
+| width         | ![][\sigma_k] | ![][p(1-p)(N-1)]                                          | ![][\langle&space;k\rangle^{\frac{1}{2}}] |
 
 
 
@@ -132,7 +134,7 @@ node ![][i] has ![][k]
 
 ### Poisson Distribution
 
-![][\langle&space;k\rangle<<N]
+![][\langle&space;k\rangle\ll&space;N]
 
 eq.3.7 is approx'd by Poisson dist
 
@@ -186,15 +188,17 @@ the Stirling approx
 ## 
 
 
+<!-- eq -->
 
-
-
+<!-- 03.02 -->
+<!-- Box 3-1 -->
 [G(N,L)]: https://latex.codecogs.com/gif.latex?\inline&space;G(N,L)
-[N]: https://latex.codecogs.com/gif.latex?\inline&space;N
+[N]: https://latex.codecogs.com/gif.latex?N
 [L]: https://latex.codecogs.com/gif.latex?\inline&space;L
 [\langle&space;k\rangle=\frac{2L}{N}]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle=\frac{2L}{N}
 [G(N,p)]: https://latex.codecogs.com/gif.latex?\inline&space;G(N,p)
-[p]: https://latex.codecogs.com/gif.latex?\inline&space;p
+[p]: https://latex.codecogs.com/gif.latex?p
+
 [\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\inline&space;\frac{N(N-1)}{2}
 [p^L]: https://latex.codecogs.com/gif.latex?\inline&space;p^L
 [\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\inline&space;\frac{N(N-1)}{2}
@@ -230,7 +234,7 @@ the Stirling approx
 [(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\inline&space;(1-p)^{N-1-k}
 [\begin{pmatrix}N-1\\k\end{pmatrix}]: https://latex.codecogs.com/gif.latex?\inline&space;\begin{pmatrix}N-1\\k\end{pmatrix}
 [eq_03_07]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k} "eq.3.7"
-[\langle&space;k\rangle<<N]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle<<N
+[\langle&space;k\rangle\ll&space;N]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle\ll&space;N
 [eq_03_08]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!} "eq.3.8"
 [fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Fig.3.5 Degree Distribution is Independent of the Network Size "
 [\langle&space;k\rangle\approx1000]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle\approx1000
