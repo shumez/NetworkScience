@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-18 20:33:28
+Modified: 	2019-03-18 21:41:2
 -----
 Copyright (c) 2019 shumez
 -->
@@ -59,7 +59,7 @@ Copyright (c) 2019 shumez
 
 - prob that ![][L] of attempts to connect ![][\frac{N(N-1)}{2}] pairs of nodes have result in link, is ![][p^L]
 - prob that the remaining ![][\frac{N(N-1)}{2}] pairs of nodes have  not resulted in a link is
-    ![][(1-p)^{\frac{N(N-1)}{2}-L}]
+    ![(1-p)^{\frac{N(N-1)}{2}-L}][(1-p)^{\frac{N(N-1)}{2}-L}]
 - conmbinational factor
     <!-- \[ \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} \tag{3.0} \] -->
     ![eq.3.0][eq_03_00]
@@ -121,7 +121,7 @@ degree dist ![][p_k], degree ![][k]
 
 ### Binomial Distribution
 
-node ![][i] has ![][k]
+prob that node ![][i] has ![][k] links is...
 
 - prob that ![][k] of its links are present / ![][p^k]
 - prob that remaining (![][N-1-k]) links are missing / ![][(1-p)^{N-1-k}]
@@ -133,6 +133,9 @@ node ![][i] has ![][k]
 
 <!-- \[ p_k = \begin{pmatrix}N-1\\k\end{pmatrix} p^k (1-p)^{N-1-k} \tag{3.7} \] -->
 ![eq.3.7][eq_03_07]
+
+average degree ![][\langle&space;k\rangle]
+second moment ![][\langle&space;k^2\rangle] & variance ![][\sigma_k]
 
 
 ### Poisson Distribution
