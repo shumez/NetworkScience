@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-18 21:41:2
+Modified: 	2019-03-21 15:21:30
 -----
 Copyright (c) 2019 shumez
 -->
@@ -240,6 +240,8 @@ the Stirling approx
 [(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\inline&space;(1-p)^{N-1-k}
 [\begin{pmatrix}N-1\\k\end{pmatrix}]: https://latex.codecogs.com/gif.latex?\inline&space;\begin{pmatrix}N-1\\k\end{pmatrix}
 [eq_03_07]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k} "eq.3.7"
+[\langle&space;k^2\rangle]: https://latex.codecogs.com/gif.latex?\langle&space;k^2\rangle
+<!-- #Poisson-Distribution -->
 [\langle&space;k\rangle\ll&space;N]: https://latex.codecogs.com/gif.latex?\inline&space;\langle&space;k\rangle\ll&space;N
 [eq_03_08]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!} "eq.3.8"
 [fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Fig.3.5 Degree Distribution is Independent of the Network Size "
