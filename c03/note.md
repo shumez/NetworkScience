@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-21 15:21:30
+Modified: 	2019-03-21 15:45:27
 -----
 Copyright (c) 2019 shumez
 -->
@@ -220,7 +220,7 @@ the Stirling approx
 [L=10,&space;18,&space;8]: https://latex.codecogs.com/gif.latex?\inline&space;L=10,&space;18,&space;8
 [p=.03]: https://latex.codecogs.com/gif.latex?\inline&space;p=.03
 [N=100]: https://latex.codecogs.com/gif.latex?\inline&space;N=100
-[p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]: https://latex.codecogs.com/gif.latex?\inline&space;p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}
+[p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]: https://latex.codecogs.com/gif.latex?p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}
 [eq_03_04]: https://latex.codecogs.com/gif.latex?\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np "eq.3.4"
 [eq_03_05]: https://latex.codecogs.com/gif.latex?\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2 "eq.3.5"
 [eq_03_06]: https://latex.codecogs.com/gif.latex?\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=[p(1-p)N]^{\frac{1}{2}} "eq.3.6"
