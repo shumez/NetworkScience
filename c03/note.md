@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-22 15:43:38
+Modified: 	2019-03-22 16:27:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -23,6 +23,7 @@ Copyright (c) 2019 shumez
     * [Poisson Distribution](#Poisson-Distribution)
 05. [Real Networks are Not Poisson](#0305-Real-Networks-are-Not-Poisson)
     * [Box 3-4 Why are Hubs Missing?](#Box-3-4-Why-are-Hubs-Missing?)
+06. [The Evolution of a Random Network](#0306-The-Evolution-of-a-Random-Network)
 
 
 ## 03.01 Introduction
@@ -170,6 +171,8 @@ despersion of random network is ![][\sigma_k=\langle&space;k\rangle^{\frac{1}{2}
 for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 ![][\langle&space;k\rangle\pm\sigma_k] range 
 
+*in a large random network the degree of most nodes is in the narrow vicinity of* ![][\langle&space;k\rangle]
+
 
 ### Box 3-4 Why are Hubs Missing?
 
@@ -178,6 +181,8 @@ for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
 the Stirling approx
 
 ![][k!\sim\sqrt{2\pi&space;k}\bigg(\frac{k}{e}\bigg)^k]
+
+rewrite eq.3.8  as:
 
 ![eq.3.9][p_k=\frac{e^{-\langle&space;k\rangle}}{\sqrt{2\pi&space;k}}\bigg(\frac{e\langle&space;k\rangle}{k}\bigg)^k]
 
@@ -189,9 +194,12 @@ the Stirling approx
 [![figure.3.6][fig_03_06]][fig_03_06]
 
 
+## 03.06 The Evolution of a Random Network
+
+
+
 
 ## 
-
 
 <!-- eq -->
 
