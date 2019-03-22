@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-22 16:27:41
+Modified: 	2019-03-22 18:27:11
 -----
 Copyright (c) 2019 shumez
 -->
@@ -196,10 +196,43 @@ rewrite eq.3.8  as:
 
 ## 03.06 The Evolution of a Random Network
 
+the size of the largest conneted cluster w/i the network, ![][N_G] varies w/ ![][\langle&space;k\rangle]
+
+- for ![][p=0] we have ![][\langle&space;k\rangle=0], &there4; ![][N_G=1] and ![][\frac{N_G}{N}\rightarrow0] for large ![][N]
+- for ![][p=1] we have ![][\langle&space;k\rangle=N-1], complete graph, &there4; ![][N_G=N] and ![][\frac{N_G}{N}=1]
+
+![video.3.2][vid_03_02]
+
+![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{N}]
+
+
+
+
+
+![fig.3.7][fig_03_07]
+
+
+
+
+
+**Supercritical Regime**: ![][\langle&space;k\rangle>1] ()
 
 
 
 ## 
+
+
+<!-- figure -->
+
+[fig_03_03]: http://networksciencebook.com/images/ch-03/figure-3-3.jpg "Fig.3.3 Random Networks are Truly Random"
+[fig_03_04]: http://networksciencebook.com/images/ch-03/figure-3-4.jpg "Fig.3.4 Binomial vs. Poisson Degree Distribution"
+[fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Fig.3.5 Degree Distribution is Independent of the Network Size"
+[fig_03_06]: http://networksciencebook.com/images/ch-03/figure-3-6.jpg "Fig.3.6 Degree Distribution of Real Networks "
+[fig_03_07]: http://networksciencebook.com/images/ch-03/figure-3-7.jpg "Fig.3.7 Evolution of a Random Network"
+
+
+<!-- video -->
+[vid_03_02]: http://networksciencebook.com/images/ch-03/video-3-2.m4v "Video.3.2 Evolution of a Random Network"
 
 <!-- eq -->
 
@@ -223,7 +256,8 @@ rewrite eq.3.8  as:
 [\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1)]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1) "eq.3.3"
 [\langle&space;k\rangle=0]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=0
 [\langle&space;k\rangle=N-1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=N-1
-[fig_03_03]: http://networksciencebook.com/images/ch-03/figure-3-3.jpg "Fig.3.3 Random Networks are Truly Random"
+
+
 [p=\frac{1}{6}]: https://latex.codecogs.com/gif.latex?p=\frac{1}{6}
 [N=12]: https://latex.codecogs.com/gif.latex?N=12
 [L=10,&space;18,&space;8]: https://latex.codecogs.com/gif.latex?L=10,&space;18,&space;8
@@ -242,7 +276,7 @@ rewrite eq.3.8  as:
 [\sigma_k]: https://latex.codecogs.com/gif.latex?\sigma_k
 [p(1-p)(N-1)]: https://latex.codecogs.com/gif.latex?p(1-p)(N-1)
 [\langle&space;k\rangle^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle^{\frac{1}{2}}
-[fig_03_04]: http://networksciencebook.com/images/ch-03/figure-3-4.jpg "Fig.3.4 Binomial vs. Poisson Degree Distribution"
+
 [i]: https://latex.codecogs.com/gif.latex?i
 [p^k]: https://latex.codecogs.com/gif.latex?p^k
 [N-1-k]: https://latex.codecogs.com/gif.latex?N-1-k
@@ -253,7 +287,7 @@ rewrite eq.3.8  as:
 <!-- #Poisson-Distribution -->
 [\langle&space;k\rangle\ll&space;N]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle\ll&space;N
 [p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!}]: https://latex.codecogs.com/gif.latex?p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!} "eq.3.8"
-[fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Fig.3.5 Degree Distribution is Independent of the Network Size "
+
 [\langle&space;k\rangle\approx1000]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle\approx1000
 [N\approx&space;7\times10^9]: https://latex.codecogs.com/gif.latex?N\approx&space;7\times10^9
 [k_{\text{max}}=1185]: https://latex.codecogs.com/gif.latex?k_{\text{max}}=1185
@@ -266,7 +300,21 @@ rewrite eq.3.8  as:
 [k!\sim\sqrt{2\pi&space;k}\bigg(\frac{k}{e}\bigg)^k]: https://latex.codecogs.com/gif.latex?k!\sim\sqrt{2\pi&space;k}\bigg(\frac{k}{e}\bigg)^k
 [p_k=\frac{e^{-\langle&space;k\rangle}}{\sqrt{2\pi&space;k}}\bigg(\frac{e\langle&space;k\rangle}{k}\bigg)^k]: https://latex.codecogs.com/gif.latex?p_k=\frac{e^{-\langle&space;k\rangle}}{\sqrt{2\pi&space;k}}\bigg(\frac{e\langle&space;k\rangle}{k}\bigg)^k "eq.3.9"
 [k>e\langle&space;k\rangle]: https://latex.codecogs.com/gif.latex?k>e\langle&space;k\rangle "\(k>e\langle&space;k\rangle\)"
-[fig_03_06]: http://networksciencebook.com/images/ch-03/figure-3-6.jpg "Fig.3.6 Degree Distribution of Real Networks "
+
+
+<!-- 03.06 -->
+[N_G]: https://latex.codecogs.com/gif.latex?N_G "N_G"
+[p=0]: https://latex.codecogs.com/gif.latex?p=0 "p=0"
+[\langle&space;k\rangle=0]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=0 "\langle&space;k\rangle=0"
+[N_G=1]: https://latex.codecogs.com/gif.latex?N_G=1 "N_G=1"
+[\frac{N_G}{N}\rightarrow0]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\rightarrow0 "\frac{N_G}{N}\rightarrow0"
+[p=1]: https://latex.codecogs.com/gif.latex?p=1 "p=1"
+[\langle&space;k\rangle=N-1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=N-1 "\langle&space;k\rangle=N-1"
+[N_G=N]: https://latex.codecogs.com/gif.latex?N_G=N "N_G=N"
+[\frac{N_G}{N}=1]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}=1 "\frac{N_G}{N}=1"
+
+
+[p_c=\frac{1}{N-1}\approx\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p_c=\frac{1}{N-1}\approx\frac{1}{N} "p_c=\frac{1}{N-1}\approx\frac{1}{N}"
 
 
 <!-- 
