@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-22 18:27:11
+Modified: 	2019-03-23 16:08:11
 -----
 Copyright (c) 2019 shumez
 -->
@@ -201,10 +201,30 @@ the size of the largest conneted cluster w/i the network, ![][N_G] varies w/ ![]
 - for ![][p=0] we have ![][\langle&space;k\rangle=0], &there4; ![][N_G=1] and ![][\frac{N_G}{N}\rightarrow0] for large ![][N]
 - for ![][p=1] we have ![][\langle&space;k\rangle=N-1], complete graph, &there4; ![][N_G=N] and ![][\frac{N_G}{N}=1]
 
-![video.3.2][vid_03_02]
+<!-- ![video.3.2][video_03_02] -->
+<iframe src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02"></iframe>
 
+grow from ![][N_G=1] to ![][N_G=N] if ![][\langle&space;k\rangle] increase from ![][0] to ![][N-1]
+
+
+[Erdős P., Rényi A., 1960][1960RényiA_ErdősP] condition for teh emergence of the giant component is ([Erdős P., Rényi A., 1960][1960RényiA_ErdősP]):
+
+![eq.3.10][\langle&space;k\rangle=1]
+
+express eq.3.10 in terms of ![][p] using eq.3.3
 ![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{N}]
 
+**Subcritical regime**: ![][0<\langle&space;k\rangle<1] (![][p<\frac{1}{N}])
+
+![][N_G\sim\ln{N}]
+
+&there4; ![][\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0], ![][N\rightarrow\infty]
+
+
+**Critical point**: ![][\langle&space;k\rangle=1] (![][p=\frac{1}{N}])
+
+size of the largest component is
+![][N_G\sim&space;N^{\frac{2}{3}}]
 
 
 
@@ -221,6 +241,11 @@ the size of the largest conneted cluster w/i the network, ![][N_G] varies w/ ![]
 
 ## 
 
+<!-- link -->
+
+[1960RényiA_ErdősP]: http://www.leonidzhukov.net/hse/2016/networks/papers/erdos-1959-11.pdf "Erdős, P. and Rényi, A., 1960. On the evolution of random graphs. Publ. Math. Inst. Hung. Acad. Sci, 5(1), pp.17-60."
+
+
 
 <!-- figure -->
 
@@ -232,7 +257,7 @@ the size of the largest conneted cluster w/i the network, ![][N_G] varies w/ ![]
 
 
 <!-- video -->
-[vid_03_02]: http://networksciencebook.com/images/ch-03/video-3-2.m4v "Video.3.2 Evolution of a Random Network"
+[video_03_02]: http://networksciencebook.com/images/ch-03/video-3-2.m4v "Video.3.2 Evolution of a Random Network"
 
 <!-- eq -->
 
@@ -314,7 +339,21 @@ the size of the largest conneted cluster w/i the network, ![][N_G] varies w/ ![]
 [\frac{N_G}{N}=1]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}=1 "\frac{N_G}{N}=1"
 
 
-[p_c=\frac{1}{N-1}\approx\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p_c=\frac{1}{N-1}\approx\frac{1}{N} "p_c=\frac{1}{N-1}\approx\frac{1}{N}"
+[\langle&space;k\rangle=1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=1 "eq.3.10"
+[0]: https://latex.codecogs.com/gif.latex?0
+[N-1]: https://latex.codecogs.com/gif.latex?N-1
+
+[p_c=\frac{1}{N-1}\approx\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p_c=\frac{1}{N-1}\approx\frac{1}{N} "eq.3.11"
+
+[0<\langle&space;k\rangle<1]: https://latex.codecogs.com/gif.latex?0<\langle&space;k\rangle<1 "0<\langle&space;k\rangle<1"
+[p<\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p<\frac{1}{N} "p<\frac{1}{N}"
+[N_G\sim\ln{N}]: https://latex.codecogs.com/gif.latex?N_G\sim\ln{N} "N_G\sim\ln{N}"
+[\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0 "\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0"
+[N\rightarrow\infty]: https://latex.codecogs.com/gif.latex?N\rightarrow\infty "N\rightarrow\infty"
+[\langle&space;k\rangle=1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=1 "\langle&space;k\rangle=1"
+[p=\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p=\frac{1}{N}
+[\langle&space;k\rangle>1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle>1 "\langle&space;k\rangle>1"
+[N_G\sim&space;N^{\frac{2}{3}}]: https://latex.codecogs.com/gif.latex?N_G\sim&space;N^{\frac{2}{3}} "N_G\sim&space;N^{\frac{2}{3}}"
 
 
 <!-- 
