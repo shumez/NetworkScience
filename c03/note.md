@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-23 16:08:11
+Modified: 	2019-03-23 16:47:1
 -----
 Copyright (c) 2019 shumez
 -->
@@ -202,7 +202,8 @@ the size of the largest conneted cluster w/i the network, ![][N_G] varies w/ ![]
 - for ![][p=1] we have ![][\langle&space;k\rangle=N-1], complete graph, &there4; ![][N_G=N] and ![][\frac{N_G}{N}=1]
 
 <!-- ![video.3.2][video_03_02] -->
-<iframe src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02"></iframe>
+
+<iframe width="560" height="315" src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02" allowfullscreen></iframe>
 
 grow from ![][N_G=1] to ![][N_G=N] if ![][\langle&space;k\rangle] increase from ![][0] to ![][N-1]
 
@@ -211,10 +212,12 @@ grow from ![][N_G=1] to ![][N_G=N] if ![][\langle&space;k\rangle] increase from 
 
 ![eq.3.10][\langle&space;k\rangle=1]
 
-express eq.3.10 in terms of ![][p] using eq.3.3
+express eq.3.10 in terms of ![][p] using eq.3.3 ![eq.3.3][\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1)]
+
 ![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{N}]
 
-**Subcritical regime**: ![][0<\langle&space;k\rangle<1] (![][p<\frac{1}{N}])
+**Subcritical regime**: 
+![][0<\langle&space;k\rangle<1] (![][p<\frac{1}{N}])
 
 ![][N_G\sim\ln{N}]
 
