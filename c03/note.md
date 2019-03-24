@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-23 16:47:1
+Modified: 	2019-03-24 16:54:45
 -----
 Copyright (c) 2019 shumez
 -->
@@ -24,6 +24,7 @@ Copyright (c) 2019 shumez
 05. [Real Networks are Not Poisson](#0305-Real-Networks-are-Not-Poisson)
     * [Box 3-4 Why are Hubs Missing?](#Box-3-4-Why-are-Hubs-Missing?)
 06. [The Evolution of a Random Network](#0306-The-Evolution-of-a-Random-Network)
+    * [Box 3-5 Network Evolution in Graph Theory](#Box-3-5-Network-Evolution-in-Graph-Theory)
 
 
 ## 03.01 Introduction
@@ -216,9 +217,13 @@ express eq.3.10 in terms of ![][p] using eq.3.3 ![eq.3.3][\langle&space;k\rangle
 
 ![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{N}]
 
-**Subcritical regime**: 
-![][0<\langle&space;k\rangle<1] (![][p<\frac{1}{N}])
+the larger network, the smaller ![][p] is sufficient for the giant component
 
+4 regimes: 
+
+**Subcritical regime**: ![][0<\langle&space;k\rangle<1] (![][p<\frac{1}{N}])
+
+for ![][\langle&space;k\rangle<1], 
 ![][N_G\sim\ln{N}]
 
 &there4; ![][\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0], ![][N\rightarrow\infty]
@@ -229,16 +234,49 @@ express eq.3.10 in terms of ![][p] using eq.3.3 ![eq.3.3][\langle&space;k\rangle
 size of the largest component is
 ![][N_G\sim&space;N^{\frac{2}{3}}]
 
+![][\frac{N_G}{N}\sim&space;N^{-\frac{1}{3}}] in the ![][N\rightarrow\infty] limit
 
+e.g., ![][N=7\times10^9] nodes
+
+for ![][\langle&space;k\rangle<1], 
+![][N_G\simeq\ln{N}=\ln{(7\times10^9)}\simeq22.7]
+
+for ![][\langle&space;k\rangle=1], 
+![][N_G\sim&space;N^{\frac{2}{3}}=(7\times10^9)^{\frac{2}{3}}\simeq3\times10^6]
 
 
 ![fig.3.7][fig_03_07]
 
 
+**Supercritical Regime**: ![][\langle&space;k\rangle>1] (![][p>\frac{1}{N}])
+
+![eq.3.12][\frac{N_G}{N}\sim\langle&space;k\rangle-1]
+
+or
+
+![eq.3.13][N_G\sim(p-p_c)N]
+
+where ![][p_c] is given by eq.3.11 (![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{N}])
+
+
+**Connected Regime**: ![][\langle&space;k\rangle>\ln{N}] (![][p>\frac{\ln{N}}{N}])
+
+![][N_G\simeq&space;N]
+
+![eq.3.14][\langle&space;k\rangle=\ln{N}]
+
+![][\frac{\ln{N}}{N}\rightarrow0] for large ![][N]
+
+
+### Box 3-5 Network Evolution in Graph Theory
+
+![][p(N)] scales as ![][N^z] where ![][z] is tunable param ![][-\infty,0]
+
+![fig.3.8][fig_03_08]
 
 
 
-**Supercritical Regime**: ![][\langle&space;k\rangle>1] ()
+
 
 
 
@@ -257,6 +295,7 @@ size of the largest component is
 [fig_03_05]: http://networksciencebook.com/images/ch-03/figure-3-5.jpg "Fig.3.5 Degree Distribution is Independent of the Network Size"
 [fig_03_06]: http://networksciencebook.com/images/ch-03/figure-3-6.jpg "Fig.3.6 Degree Distribution of Real Networks "
 [fig_03_07]: http://networksciencebook.com/images/ch-03/figure-3-7.jpg "Fig.3.7 Evolution of a Random Network"
+[fig_03_08]: http://networksciencebook.com/images/ch-03/figure-3-8.jpg "Fig.3.8 Evolution of a Random Graph "
 
 
 <!-- video -->
@@ -350,13 +389,33 @@ size of the largest component is
 
 [0<\langle&space;k\rangle<1]: https://latex.codecogs.com/gif.latex?0<\langle&space;k\rangle<1 "0<\langle&space;k\rangle<1"
 [p<\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p<\frac{1}{N} "p<\frac{1}{N}"
+[\langle&space;k\rangle<1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle<1 "\langle&space;k\rangle<1"
 [N_G\sim\ln{N}]: https://latex.codecogs.com/gif.latex?N_G\sim\ln{N} "N_G\sim\ln{N}"
 [\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0 "\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0"
 [N\rightarrow\infty]: https://latex.codecogs.com/gif.latex?N\rightarrow\infty "N\rightarrow\infty"
 [\langle&space;k\rangle=1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=1 "\langle&space;k\rangle=1"
 [p=\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p=\frac{1}{N}
-[\langle&space;k\rangle>1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle>1 "\langle&space;k\rangle>1"
 [N_G\sim&space;N^{\frac{2}{3}}]: https://latex.codecogs.com/gif.latex?N_G\sim&space;N^{\frac{2}{3}} "N_G\sim&space;N^{\frac{2}{3}}"
+[\frac{N_G}{N}\sim&space;N^{-\frac{1}{3}}]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\sim&space;N^{-\frac{1}{3}} "\frac{N_G}{N}\sim&space;N^{-\frac{1}{3}}"
+[N\rightarrow\infty]: https://latex.codecogs.com/gif.latex?N\rightarrow\infty "N\rightarrow\infty"
+[N=7\times10^9]: https://latex.codecogs.com/gif.latex?N=7\times10^9 "N=7\times10^9"
+[N_G\simeq\ln{N}=\ln{(7\times10^9)}\simeq22.7]: https://latex.codecogs.com/gif.latex?N_G\simeq\ln{N}=\ln{(7\times10^9)}\simeq22.7 "N_G\simeq\ln{N}=\ln{(7\times10^9)}\simeq22.7"
+[N_G\sim&space;N^{\frac{2}{3}}=(7\times10^9)^{\frac{2}{3}}\simeq3\times10^6]: https://latex.codecogs.com/gif.latex?N_G\sim&space;N^{\frac{2}{3}}=(7\times10^9)^{\frac{2}{3}}\simeq3\times10^6 "N_G\sim&space;N^{\frac{2}{3}}=(7\times10^9)^{\frac{2}{3}}\simeq3\times10^6"
+[\langle&space;k\rangle>1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle>1 "\langle&space;k\rangle>1"
+[p>\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p>\frac{1}{N} "p>\frac{1}{N}"
+[\frac{N_G}{N}\sim\langle&space;k\rangle-1]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\sim\langle&space;k\rangle-1 "eq.3.12"
+[N_G\sim(p-p_c)N]: https://latex.codecogs.com/gif.latex?N_G\sim(p-p_c)N "eq.3.13"
+[\langle&space;k\rangle>\ln{N}]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle>\ln{N} "\langle&space;k\rangle>\ln{N}"
+[p>\frac{\ln{N}}{N}]: https://latex.codecogs.com/gif.latex?p>\frac{\ln{N}}{N} "p>\frac{\ln{N}}{N}"
+[N_G\simeq&space;N]: https://latex.codecogs.com/gif.latex?N_G\simeq&space;N "N_G\simeq&space;N"
+[\langle&space;k\rangle=\ln{N}]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=\ln{N} "eq.3.14"
+[\frac{\ln{N}}{N}\rightarrow0]: https://latex.codecogs.com/gif.latex?\frac{\ln{N}}{N}\rightarrow0 "\frac{\ln{N}}{N}\rightarrow0"
+
+<!-- Box 3-5 Network Evolution in Graph Theory -->
+[p(N)]: https://latex.codecogs.com/gif.latex?p(N) "p(N)"
+[N^z]: https://latex.codecogs.com/gif.latex?N^z "N^z"
+[z]: https://latex.codecogs.com/gif.latex?z "z"
+[-\infty,0]: https://latex.codecogs.com/gif.latex?[-\infty,0] "[-\infty,0]"
 
 
 <!-- 
