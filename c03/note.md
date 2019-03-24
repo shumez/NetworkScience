@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-24 16:54:45
+Modified: 	2019-03-24 17:46:38
 -----
 Copyright (c) 2019 shumez
 -->
@@ -25,6 +25,7 @@ Copyright (c) 2019 shumez
     * [Box 3-4 Why are Hubs Missing?](#Box-3-4-Why-are-Hubs-Missing?)
 06. [The Evolution of a Random Network](#0306-The-Evolution-of-a-Random-Network)
     * [Box 3-5 Network Evolution in Graph Theory](#Box-3-5-Network-Evolution-in-Graph-Theory)
+07. [Real Networks are Supercritical](#0307-Real-Networks-are-Supercritical)
 
 
 ## 03.01 Introduction
@@ -273,6 +274,20 @@ where ![][p_c] is given by eq.3.11 (![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{
 ![][p(N)] scales as ![][N^z] where ![][z] is tunable param ![][-\infty,0]
 
 ![fig.3.8][fig_03_08]
+
+
+## 03.07 Real Networks are Supercritical
+
+
+Network	                | N	        | L	            | ‹K›	| lnN   |
+------------------------|----------:|--------------:|------:|------:|
+Internet	            | 192,244	| 609,066	    | 6.34	| 12.17 |
+Power Grid	            | 4,941	    | 6,594	        | 2.67	| 8.51  |
+Science Collaboration	| 23,133	| 94,437	    | 8.08	| 10.05 |
+Actor Network	        | 702,388	| 29,397,908	| 83.71	| 13.46 |
+Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 7.61  |
+
+
 
 
 
