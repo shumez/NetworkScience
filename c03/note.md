@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-25 20:55:34
+Modified: 	2019-03-25 21:39:36
 -----
 Copyright (c) 2019 shumez
 -->
@@ -26,8 +26,8 @@ Copyright (c) 2019 shumez
 06. [The Evolution of a Random Network](#0306-The-Evolution-of-a-Random-Network)
     * [Box 3-5 Network Evolution in Graph Theory](#Box-3-5-Network-Evolution-in-Graph-Theory)
 07. [Real Networks are Supercritical](#0307-Real-Networks-are-Supercritical)
-
-16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
+08. [Small Worlds](#0308-Small-Worlds)
+- 16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
 
 
 ## 03.01 Introduction
@@ -300,6 +300,48 @@ giant component coexist w/ many disconnected components
 [![Fig.3.9][fig_03_09]][fig_03_09]
 
 
+## 03.08 Small Worlds
+
+**small world phenomenon** aka, **six degrees of separation**
+
+[![fig.3.10][fig_03_10]][fig_03_10]
+
+*the distance between two randomly chosen nodes in a network is short*
+
+2 questions:
+- short mean
+- existenxe of these shord distances
+
+
+- ![][\langle&space;k\rangle] nodes at distance ![][d=1]
+- ![][\langle&space;k\rangle^2] nodes at distance ![][d=2]
+- ![][\langle&space;k\rangle^3] nodes at distance ![][d=3]
+- ...
+- ![][\langle&space;k\rangle^d] nodes at distance ![][d]
+
+
+num of nodes up to distance ![][d]
+
+![eq.3.15][N(d)\approx1+\langle&space;k\rangle+\langle&space;k\rangle^2+\cdots+\langle&space;k\rangle^d=\frac{\langle&space;k\rangle^{d+1}-1}{\langle&space;k\rangle-1}]
+
+max distance ![][d_{max}] or the network's diameter
+
+![eq.3.16][N(d_{max})\approx&space;N]
+
+assuming the ![][\langle&space;k\rangle\gg1], 
+
+![eq.3.17][\langle&space;k\rangle^{d_{max}}\approx&space;N]
+
+&there4; the diamter of network follows
+
+![eq.3.18][d_{max}\approx\frac{\ln{N}}{\ln{k}}]
+
+
+
+
+
+
+
 
 
 ## 03.16 Advanced Topic 3.E Fully Connected Regime
@@ -341,7 +383,8 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [fig_03_06]: http://networksciencebook.com/images/ch-03/figure-3-6.jpg "Fig.3.6 Degree Distribution of Real Networks "
 [fig_03_07]: http://networksciencebook.com/images/ch-03/figure-3-7.jpg "Fig.3.7 Evolution of a Random Network"
 [fig_03_08]: http://networksciencebook.com/images/ch-03/figure-3-8.jpg "Fig.3.8 Evolution of a Random Graph "
-[fig_03_09]: http://networksciencebook.com/images/ch-03/figure-3-9.jpg "FIg.3.9 Most Real Networks are Supercritical"
+[fig_03_09]: http://networksciencebook.com/images/ch-03/figure-3-9.jpg "Fig.3.9 Most Real Networks are Supercritical"
+[fig_03_10]: http://networksciencebook.com/images/ch-03/figure-3-10.jpg "Fig.3.10 Six Deegree of Separation"
 
 
 <!-- video -->
@@ -467,8 +510,28 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [z]: https://latex.codecogs.com/gif.latex?z "z"
 [-\infty,0]: https://latex.codecogs.com/gif.latex?[-\infty,0] "[-\infty,0]"
 
+
 <!-- 03.07 -->
 [\ln{N}]: https://latex.codecogs.com/gif.latex?\ln{N} "\ln{N}"
+
+
+<!-- 03.08 -->
+[d=1]: https://latex.codecogs.com/gif.latex?d=1 "d=1"
+[\langle&space;k\rangle^2]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle^2 "\langle&space;k\rangle^2"
+[d=2]: https://latex.codecogs.com/gif.latex?d=2 "d=2"
+[\langle&space;k\rangle^3]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle^3 "\langle&space;k\rangle^3"
+[d=3]: https://latex.codecogs.com/gif.latex?d=3 "d=3"
+[\langle&space;k\rangle^d]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle^d "\langle&space;k\rangle^d"
+[d]: https://latex.codecogs.com/gif.latex?d "d"
+[N(d)\approx1+\langle&space;k\rangle+\langle&space;k\rangle^2+\cdots+\langle&space;k\rangle^d=\frac{\langle&space;k\rangle^{d+1}-1}{\langle&space;k\rangle-1}]: https://latex.codecogs.com/gif.latex?N(d)\approx1+\langle&space;k\rangle+\langle&space;k\rangle^2+\cdots+\langle&space;k\rangle^d=\frac{\langle&space;k\rangle^{d+1}-1}{\langle&space;k\rangle-1} "eq.3.15"
+[d_{max}]: https://latex.codecogs.com/gif.latex?d_{max} "d_{max}"
+[N(d_{max})\approx&space;N]: https://latex.codecogs.com/gif.latex?N(d_{max})\approx&space;N "eq.3.16"
+[\langle&space;k\rangle\gg1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle\gg1 "\langle&space;k\rangle\gg1"
+[\langle&space;k\rangle^{d_{max}}\approx&space;N]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle^{d_{max}}\approx&space;N "eq.3.17"
+[d_{max}\approx\frac{\ln{N}}{\ln{k}}]: https://latex.codecogs.com/gif.latex?d_{max}\approx\frac{\ln{N}}{\ln{k}} "eq.3.18"
+
+
+
 
 
 
@@ -480,6 +543,10 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [I_N=1]: https://latex.codecogs.com/gif.latex?I_N=1 "I_N=1"
 [Ne^{-Np}=1]: https://latex.codecogs.com/gif.latex?Ne^{-Np}=1 "Ne^{-Np}=1"
 [p=\frac{\ln{N}}{N}]: https://latex.codecogs.com/gif.latex?p=\frac{\ln{N}}{N} "p=\frac{\ln{N}}{N}"
+
+
+
+
 
 <!-- 
 https://latex.codecogs.com/gif.latex?\inline&space;
