@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-24 17:46:38
+Modified: 	2019-03-25 20:08:18
 -----
 Copyright (c) 2019 shumez
 -->
@@ -26,6 +26,8 @@ Copyright (c) 2019 shumez
 06. [The Evolution of a Random Network](#0306-The-Evolution-of-a-Random-Network)
     * [Box 3-5 Network Evolution in Graph Theory](#Box-3-5-Network-Evolution-in-Graph-Theory)
 07. [Real Networks are Supercritical](#0307-Real-Networks-are-Supercritical)
+
+16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
 
 
 ## 03.01 Introduction
@@ -279,7 +281,10 @@ where ![][p_c] is given by eq.3.11 (![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{
 ## 03.07 Real Networks are Supercritical
 
 
-Network	                | N	        | L	            | ‹K›	| lnN   |
+- ![][\langle&space;k\rangle=1] 
+- ![][\langle&space;k\rangle>\ln{N}]
+
+Network	                | ![][N]	| ![][L]	    | ![][\langle&space;K\rangle]| ![][\ln{N}]   |
 ------------------------|----------:|--------------:|------:|------:|
 Internet	            | 192,244	| 609,066	    | 6.34	| 12.17 |
 Power Grid	            | 4,941	    | 6,594	        | 2.67	| 8.51  |
@@ -291,8 +296,22 @@ Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 7.61  |
 
 
 
+## 03.16 Advanced Topic 3.E Fully Connected Regime
 
+![][(1-p)^{N_G}\approx(1-p)^N] in the ![][N_G\simeq&space;N]
 
+the num of isolated nodes is 
+
+![eq.3.40][I_N=N(1-p)^N=N\Big(1-\frac{N\cdot&space;p}{N}\Big)^N\approx&space;Ne^{-Np}]
+
+for large ![][n]
+![][(1-\frac{x}{n})^n\approx&space;e^{-x}]
+
+only one node is disconnected
+
+![][I_N=1], eq.3.40, ![][Ne^{-Np}=1]
+
+![eq.3.41][p=\frac{\ln{N}}{N}]
 
 
 ## 
@@ -432,6 +451,19 @@ Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 7.61  |
 [z]: https://latex.codecogs.com/gif.latex?z "z"
 [-\infty,0]: https://latex.codecogs.com/gif.latex?[-\infty,0] "[-\infty,0]"
 
+<!-- 03.07 -->
+[\ln{N}]: https://latex.codecogs.com/gif.latex?\ln{N} "\ln{N}"
+
+
+
+<!-- 03.16 -->
+[(1-p)^{N_G}\approx(1-p)^N]: https://latex.codecogs.com/gif.latex?(1-p)^{N_G}\approx(1-p)^N "(1-p)^{N_G}\approx(1-p)^N"
+[N_G\simeq&space;N]: https://latex.codecogs.com/gif.latex?N_G\simeq&space;N "N_G\simeq&space;N"
+[I_N=N(1-p)^N=N\Big(1-\frac{N\cdot&space;p}{N}\Big)^N\approx&space;Ne^{-Np}]: https://latex.codecogs.com/gif.latex?I_N=N(1-p)^N=N\Big(1-\frac{N\cdot&space;p}{N}\Big)^N\approx&space;Ne^{-Np} "eq.3.40"
+[(1-\frac{x}{n})^n\approx&space;e^{-x}]: https://latex.codecogs.com/gif.latex?(1-\frac{x}{n})^n\approx&space;e^{-x} "(1-\frac{x}{n})^n\approx&space;e^{-x}"
+[I_N=1]: https://latex.codecogs.com/gif.latex?I_N=1 "I_N=1"
+[Ne^{-Np}=1]: https://latex.codecogs.com/gif.latex?Ne^{-Np}=1 "Ne^{-Np}=1"
+[p=\frac{\ln{N}}{N}]: https://latex.codecogs.com/gif.latex?p=\frac{\ln{N}}{N} "p=\frac{\ln{N}}{N}"
 
 <!-- 
 https://latex.codecogs.com/gif.latex?\inline&space;
