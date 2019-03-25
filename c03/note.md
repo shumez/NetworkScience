@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-25 20:08:18
+Modified: 	2019-03-25 20:55:34
 -----
 Copyright (c) 2019 shumez
 -->
@@ -293,6 +293,12 @@ Actor Network	        | 702,388	| 29,397,908	| 83.71	| 13.46 |
 Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 7.61  |
 
 
+most real networks are in the supercritical regime
+
+giant component coexist w/ many disconnected components
+
+[![Fig.3.9][fig_03_09]][fig_03_09]
+
 
 
 
@@ -304,7 +310,7 @@ the num of isolated nodes is
 
 ![eq.3.40][I_N=N(1-p)^N=N\Big(1-\frac{N\cdot&space;p}{N}\Big)^N\approx&space;Ne^{-Np}]
 
-for large ![][n]
+for large ![][n],   
 ![][(1-\frac{x}{n})^n\approx&space;e^{-x}]
 
 only one node is disconnected
@@ -313,16 +319,21 @@ only one node is disconnected
 
 ![eq.3.41][p=\frac{\ln{N}}{N}]
 
+leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 
-## 
+
+
+
+##
 
 <!-- link -->
+###
 
 [1960RényiA_ErdősP]: http://www.leonidzhukov.net/hse/2016/networks/papers/erdos-1959-11.pdf "Erdős, P. and Rényi, A., 1960. On the evolution of random graphs. Publ. Math. Inst. Hung. Acad. Sci, 5(1), pp.17-60."
 
 
-
 <!-- figure -->
+###
 
 [fig_03_03]: http://networksciencebook.com/images/ch-03/figure-3-3.jpg "Fig.3.3 Random Networks are Truly Random"
 [fig_03_04]: http://networksciencebook.com/images/ch-03/figure-3-4.jpg "Fig.3.4 Binomial vs. Poisson Degree Distribution"
@@ -330,12 +341,16 @@ only one node is disconnected
 [fig_03_06]: http://networksciencebook.com/images/ch-03/figure-3-6.jpg "Fig.3.6 Degree Distribution of Real Networks "
 [fig_03_07]: http://networksciencebook.com/images/ch-03/figure-3-7.jpg "Fig.3.7 Evolution of a Random Network"
 [fig_03_08]: http://networksciencebook.com/images/ch-03/figure-3-8.jpg "Fig.3.8 Evolution of a Random Graph "
+[fig_03_09]: http://networksciencebook.com/images/ch-03/figure-3-9.jpg "FIg.3.9 Most Real Networks are Supercritical"
 
 
 <!-- video -->
+###
 [video_03_02]: http://networksciencebook.com/images/ch-03/video-3-2.m4v "Video.3.2 Evolution of a Random Network"
 
+
 <!-- eq -->
+###
 
 <!-- 03.02 -->
 <!-- Box 3-1 -->
@@ -439,6 +454,7 @@ only one node is disconnected
 [p>\frac{1}{N}]: https://latex.codecogs.com/gif.latex?p>\frac{1}{N} "p>\frac{1}{N}"
 [\frac{N_G}{N}\sim\langle&space;k\rangle-1]: https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\sim\langle&space;k\rangle-1 "eq.3.12"
 [N_G\sim(p-p_c)N]: https://latex.codecogs.com/gif.latex?N_G\sim(p-p_c)N "eq.3.13"
+[p_c]: https://latex.codecogs.com/gif.latex?p_c "p_c"
 [\langle&space;k\rangle>\ln{N}]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle>\ln{N} "\langle&space;k\rangle>\ln{N}"
 [p>\frac{\ln{N}}{N}]: https://latex.codecogs.com/gif.latex?p>\frac{\ln{N}}{N} "p>\frac{\ln{N}}{N}"
 [N_G\simeq&space;N]: https://latex.codecogs.com/gif.latex?N_G\simeq&space;N "N_G\simeq&space;N"
