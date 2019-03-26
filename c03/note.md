@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-25 21:39:36
+Modified: 	2019-03-26 14:30:40
 -----
 Copyright (c) 2019 shumez
 -->
@@ -66,11 +66,11 @@ Copyright (c) 2019 shumez
 - prob that the remaining ![][\frac{N(N-1)}{2}] pairs of nodes have  not resulted in a link is
     ![(1-p)^{\frac{N(N-1)}{2}-L}][(1-p)^{\frac{N(N-1)}{2}-L}]
 - conmbinational factor
-    <!-- \[ \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} \tag{3.0} \] -->
-    ![eq.3.0][eq_03_00]
+    <!-- \[ \binom{\frac{N(N-1)}{2}}{L} \tag{3.0} \] -->
+    ![eq.3.0][\binom{\frac{N(N-1)}{2}}{L}]
 
-<!-- \[ p_L = \begin{pmatrix} \frac{N(N-1)}{2} \\ L \end{pmatrix} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} \] -->
-![eq.3.1][p_L=\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix}p^L(1-p)^{\frac{N(N-1)}{2}-L}]
+<!-- \[ p_L = \binom{\frac{N(N-1)}{2}}{L} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} \] -->
+![eq.3.1][p_L=\binom{\frac{N(N-1)}{2}}{L}p^L(1-p)^{\frac{N(N-1)}{2}-L}]
 
 
 expected num of links
@@ -95,8 +95,8 @@ from ![][\langle&space;k\rangle=0] to ![][\langle&space;k\rangle=N-1]
 
 ### Box 3-3 Binomial Distribution - Mean and Variance
 
-<!-- \[ p_x = \begin{pmatrix}N \\ x\end{pmatrix} p^x (1-p)^{N-x} \] -->
-![][p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]
+<!-- \[ p_x = \binom{N}{x} p^x (1-p)^{N-x} \] -->
+![][p_x=\binom{N}{x}p^x(1-p)^{N-x}]
 
 <!-- \[ \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} \] -->
 ![eq.3.4][\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np]
@@ -117,7 +117,7 @@ degree dist ![][p_k], degree ![][k]
 
 |               |               | Binominal                                                 | Poisson |
 |--------------:|:-------------:|:---------------------------------------------------------:|:------------------------------------------:|
-| degree dist   | ![][p_k]      | ![][\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}]   | ![][e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}] |
+| degree dist   | ![][p_k]      | ![][\binom{N-1}{k}p_k(1-p)^{N-1-k}]   | ![][e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}] |
 | peak at       | ![][k]        | ![][\langle&space;k\rangle=p(N-1)]                        | ![][\langle&space;k\rangle]               |
 | width         | ![][\sigma_k] | ![][p(1-p)(N-1)]                                          | ![][\langle&space;k\rangle^{\frac{1}{2}}] |
 
@@ -132,11 +132,11 @@ prob that node ![][i] has ![][k] links is product of 3 terms:
 
 1. prob that ![][k] of its links are present / ![][p^k]
 2. prob that remaining (![][N-1-k]) links are missing / ![][(1-p)^{N-1-k}]
-3. ![][\begin{pmatrix}N-1\\k\end{pmatrix}]
-<!-- \[ \begin{pmatrix} N-1 \\ k \end{pmatrix} \] -->
+3. ![][\binom{N-1}{k}]
+<!-- \[ \binom{N-1}{k} \] -->
 
-<!-- \[ p_k = \begin{pmatrix}N-1\\k\end{pmatrix} p^k (1-p)^{N-1-k} \tag{3.7} \] -->
-![eq.3.7][p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k}]
+<!-- \[ p_k = \binom{N-1}{k} p^k (1-p)^{N-1-k} \tag{3.7} \] -->
+![eq.3.7][p_k=\binom{N-1}{k}p^k(1-p)^{N-1-k}]
 
 average degree ![][\langle&space;k\rangle]
 second moment ![][\langle&space;k^2\rangle] & variance ![][\sigma_k]
@@ -408,8 +408,8 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [p^L]: https://latex.codecogs.com/gif.latex?p^L
 [\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\frac{N(N-1)}{2}
 [(1-p)^{\frac{N(N-1)}{2}-L}]: https://latex.codecogs.com/gif.latex?(1-p)^{\frac{N(N-1)}{2}-L}
-[eq_03_00]: https://latex.codecogs.com/gif.latex?\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix} "eq.3.0"
-[p_L=\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix}p^L(1-p)^{\frac{N(N-1)}{2}-L}]: https://latex.codecogs.com/gif.latex?p_L=\begin{pmatrix}\frac{N(N-1)}{2}\\L\end{pmatrix}p^L(1-p)^{\frac{N(N-1)}{2}-L} "eq.3.1"
+[\binom{\frac{N(N-1)}{2}}{L}]: https://latex.codecogs.com/gif.latex?\binom{\frac{N(N-1)}{2}}{L} "eq.3.0"
+[p_L=\binom{\frac{N(N-1)}{2}}{L}p^L(1-p)^{\frac{N(N-1)}{2}-L}]: https://latex.codecogs.com/gif.latex?p_L=\binom{\frac{N(N-1)}{2}}{L}p^L(1-p)^{\frac{N(N-1)}{2}-L} "eq.3.1"
 [\langle&space;L\rangle=\sum_{L=0}^{\frac{N(N-1)}{2}}LP_L=p\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?\langle&space;L\rangle=\sum_{L=0}^{\frac{N(N-1)}{2}}LP_L=p\frac{N(N-1)}{2} "eq.3.2"
 [L_{max}=\frac{N(N-1)}{2}]: https://latex.codecogs.com/gif.latex?L_{max}=\frac{N(N-1)}{2}
 [\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1)]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1) "eq.3.3"
@@ -422,13 +422,13 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [L=10,&space;18,&space;8]: https://latex.codecogs.com/gif.latex?L=10,&space;18,&space;8
 [p=.03]: https://latex.codecogs.com/gif.latex?p=.03
 [N=100]: https://latex.codecogs.com/gif.latex?N=100
-[p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}]: https://latex.codecogs.com/gif.latex?p_x=\begin{pmatrix}N\\x\end{pmatrix}p^x(1-p)^{N-x}
+[p_x=\binom{N}{x}p^x(1-p)^{N-x}]: https://latex.codecogs.com/gif.latex?p_x=\binom{N}{x}p^x(1-p)^{N-x}
 [\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np]: https://latex.codecogs.com/gif.latex?\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np "eq.3.4"
 [\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2]: https://latex.codecogs.com/gif.latex?\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2 "eq.3.5"
 [\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=\Big(p(1-p)N\Big)^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=\Big(p(1-p)N\Big)^{\frac{1}{2}} "eq.3.6"
 [p_k]: https://latex.codecogs.com/gif.latex?p_k
 [k]: https://latex.codecogs.com/gif.latex?k
-[\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\begin{pmatrix}N-1\\k\end{pmatrix}p_k(1-p)^{N-1-k}
+[\binom{N-1}{k}p_k(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?\binom{N-1}{k}p_k(1-p)^{N-1-k}
 [e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}]: https://latex.codecogs.com/gif.latex?e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}
 [\langle&space;k\rangle=p(N-1)]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle=p(N-1)
 [\langle&space;k\rangle]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle
@@ -440,8 +440,8 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [p^k]: https://latex.codecogs.com/gif.latex?p^k
 [N-1-k]: https://latex.codecogs.com/gif.latex?N-1-k
 [(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?(1-p)^{N-1-k}
-[\begin{pmatrix}N-1\\k\end{pmatrix}]: https://latex.codecogs.com/gif.latex?\begin{pmatrix}N-1\\k\end{pmatrix}
-[p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?p_k=\begin{pmatrix}N-1\\k\end{pmatrix}p^k(1-p)^{N-1-k} "eq.3.7"
+[\binom{N-1}{k}]: https://latex.codecogs.com/gif.latex?\binom{N-1}{k}
+[p_k=\binom{N-1}{k}p^k(1-p)^{N-1-k}]: https://latex.codecogs.com/gif.latex?p_k=\binom{N-1}{k}p^k(1-p)^{N-1-k} "eq.3.7"
 [\langle&space;k^2\rangle]: https://latex.codecogs.com/gif.latex?\langle&space;k^2\rangle
 <!-- #Poisson-Distribution -->
 [\langle&space;k\rangle\ll&space;N]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle\ll&space;N
