@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-26 17:41:20
+Modified: 	2019-03-26 20:59:42
 -----
 Copyright (c) 2019 shumez
 -->
@@ -28,6 +28,8 @@ Copyright (c) 2019 shumez
 07. [Real Networks are Supercritical](#0307-Real-Networks-are-Supercritical)
 08. [Small Worlds](#0308-Small-Worlds)
     * [Box 3-6 19 Degrees of Separation](#Box-3-6-19-Degrees-of-Separation)
+    * [Box 3-7 Six Degrees - Experimental Confirmation](#Box-3-7-Six-Degrees---Experimental-Confirmation)
+    * [Box 3-8 19 Degrees of the WWW](#Box-3-8-19-Degrees-of-the-WWW)
 - 16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
 
 
@@ -346,7 +348,7 @@ assuming the ![][\langle&space;k\rangle\gg1],
 - ![][\ln{N}\ll&space;N], 
     *average path length or the diameter depends logarithmically on the system size*
 
-- ![][\frac{1}{\ln{\langle&space;k\rangle}}] imply the denser the network, the smakker the distance
+- ![][\frac{1}{\ln{\langle&space;k\rangle}}] imply the denser the network, the smaller the distance
 
 - in real networks, systematic corrections to eq.3.19
 
@@ -378,6 +380,27 @@ assuming the ![][\langle&space;k\rangle\gg1],
 
 ### 
 
+Network	| ![][N]| ![][L]| ![][\langle&space;k\rangle]| ![][\langle&space;d\rangle]| ![][d_{max}]| ![][\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]
+--------|--:|--:|------:|------:|------:|----------:
+Internet	            | 192,244	| 609,066	    | 6.34	| 6.98	| 26	| 6.58
+WWW	                    | 325,729	| 1,497,134	    | 4.60	| 11.27	| 93	| 8.31
+Power Grid	            | 4,941	    | 6,594	        | 2.67	| 18.99	| 46	| 8.66
+Mobile-Phone Calls	    | 36,595	| 91,826	    | 2.51	| 11.72	| 39	| 11.42
+Email	                | 57,194	| 103,731	    | 1.81	| 5.88	| 18	| 18.4
+Science Collaboration	| 23,133	| 93,437	    | 8.08	| 5.35	| 15	| 4.81
+Actor Network	        | 702,388	| 29,397,908	| 83.71	| 3.91	| 14	| 3.04
+Citation Network	    | 449,673	| 4,707,958	    | 10.43	| 11.21	| 42	| 5.55
+E. Coli Metabolism	    | 1,039	    | 5,802	        | 5.58	| 2.98	| 8	    | 4.04
+Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 5.61	| 14	| 7.14
+
+
+### Box 3-7 Six Degrees - Experimental Confirmation
+
+[![fig.3.12][fig_03_12]][fig_03_12]
+
+
+### Box 3-8 19 Degrees of the WWW
+[![fig.box.3.8][fig_box_3_8]][fig_box_3_8]
 
 
 
@@ -428,7 +451,8 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [fig_03_09]: http://networksciencebook.com/images/ch-03/figure-3-9.jpg "Fig.3.9 Most Real Networks are Supercritical"
 [fig_03_10]: http://networksciencebook.com/images/ch-03/figure-3-10.jpg "Fig.3.10 Six Deegree of Separation"
 [fig_03_11]: http://networksciencebook.com/images/ch-03/figure-3-11.jpg "Fig.3.11 Why are Small Worlds Surprising?"
-
+[fig_03_12]: http://networksciencebook.com/images/ch-03/figure-3-12.jpg "Fig.3.12 Six Degrees? From Milgram to Facebook"
+[fig_box_3_8]: http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg "19 Degrees of the WWW"
 
 <!-- video -->
 ###
@@ -585,9 +609,9 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28 "\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28"
 
 <!-- Box 3.6 -->
-[\langle&space;d\rangle\approx0.35+0.89\ln{N}]: \langle&space;d\rangle\approx0.35+0.89\ln{N} "\langle&space;d\rangle\approx0.35+0.89\ln{N}"
+[\langle&space;d\rangle\approx0.35+0.89\ln{N}]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx0.35+0.89\ln{N} "\langle&space;d\rangle\approx0.35+0.89\ln{N}"
 [\langle&space;d\rangle\approx18.69]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx18.69 "\langle&space;d\rangle\approx18.69"
-
+[\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]: https://latex.codecogs.com/gif.latex?\frac{\ln{N}}{\ln{\langle&space;k\rangle}} "\frac{\ln{N}}{\ln{\langle&space;k\rangle}}"
 
 
 
