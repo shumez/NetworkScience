@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-26 14:30:40
+Modified: 	2019-03-26 16:27:1
 -----
 Copyright (c) 2019 shumez
 -->
@@ -336,10 +336,26 @@ assuming the ![][\langle&space;k\rangle\gg1],
 
 ![eq.3.18][d_{max}\approx\frac{\ln{N}}{\ln{k}}]
 
+- average distance between 2 randomly chosen nodes ![][\langle&space;d\rangle]
+
+    the small world property is defined by
+    
+    ![eq.3.19][\langle&space;d\rangle\approx\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]
+
+- ![][\ln{N}\ll&space;N], 
+    *average path length or the diameter depends logarithmically on the system size*
+
+- ![][\frac{1}{\ln{\langle&space;k\rangle}}] imply the denser the network, the smakker the distance
+
+- in real networks, systematic corrections to eq.3.19
 
 
+[![fig.3.11][fig_03_11]][fig_03_11]
 
-
+- 1D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N]
+- 2D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}]
+- 3D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}]
+- 4D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}]
 
 
 
@@ -385,6 +401,7 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [fig_03_08]: http://networksciencebook.com/images/ch-03/figure-3-8.jpg "Fig.3.8 Evolution of a Random Graph "
 [fig_03_09]: http://networksciencebook.com/images/ch-03/figure-3-9.jpg "Fig.3.9 Most Real Networks are Supercritical"
 [fig_03_10]: http://networksciencebook.com/images/ch-03/figure-3-10.jpg "Fig.3.10 Six Deegree of Separation"
+[fig_03_11]: http://networksciencebook.com/images/ch-03/figure-3-11.jpg "Fig.3.11 Why are Small Worlds Surprising?"
 
 
 <!-- video -->
@@ -529,7 +546,14 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [\langle&space;k\rangle\gg1]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle\gg1 "\langle&space;k\rangle\gg1"
 [\langle&space;k\rangle^{d_{max}}\approx&space;N]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle^{d_{max}}\approx&space;N "eq.3.17"
 [d_{max}\approx\frac{\ln{N}}{\ln{k}}]: https://latex.codecogs.com/gif.latex?d_{max}\approx\frac{\ln{N}}{\ln{k}} "eq.3.18"
-
+[\langle&space;d\rangle]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle "\langle&space;d\rangle"
+[\langle&space;d\rangle\approx\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx\frac{\ln{N}}{\ln{\langle&space;k\rangle}} "eq.3.19"
+[\ln{N}\ll&space;N]: https://latex.codecogs.com/gif.latex?\ln{N}\ll&space;N "\ln{N}\ll&space;N"
+[\frac{1}{\ln{\langle&space;k\rangle}]: https://latex.codecogs.com/gif.latex?\frac{1}{\ln{\langle&space;k\rangle}} "\frac{1}{\ln{\langle&space;k\rangle}"
+[d_{max}\sim\langle&space;d\rangle\sim&space;N]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N "d_{max}\sim\langle&space;d\rangle\sim&space;N"
+[d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}"
+[d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}"
+[d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}"
 
 
 
