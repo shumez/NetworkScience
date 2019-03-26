@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-26 20:59:42
+Modified: 	2019-03-26 21:19:24
 -----
 Copyright (c) 2019 shumez
 -->
@@ -30,6 +30,7 @@ Copyright (c) 2019 shumez
     * [Box 3-6 19 Degrees of Separation](#Box-3-6-19-Degrees-of-Separation)
     * [Box 3-7 Six Degrees - Experimental Confirmation](#Box-3-7-Six-Degrees---Experimental-Confirmation)
     * [Box 3-8 19 Degrees of the WWW](#Box-3-8-19-Degrees-of-the-WWW)
+09. [Clustering Coefficient](#0309-Clustering-Coefficient)
 - 16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
 
 
@@ -403,6 +404,9 @@ Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 5.61	| 14	| 7.14
 [![fig.box.3.8][fig_box_3_8]][fig_box_3_8]
 
 
+## 03.09 Clustering Coefficient
+
+
 
 
 
@@ -599,13 +603,13 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [\langle&space;d\rangle]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle "\langle&space;d\rangle"
 [\langle&space;d\rangle\approx\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx\frac{\ln{N}}{\ln{\langle&space;k\rangle}} "eq.3.19"
 [\ln{N}\ll&space;N]: https://latex.codecogs.com/gif.latex?\ln{N}\ll&space;N "\ln{N}\ll&space;N"
-[\frac{1}{\ln{\langle&space;k\rangle}]: https://latex.codecogs.com/gif.latex?\frac{1}{\ln{\langle&space;k\rangle}} "\frac{1}{\ln{\langle&space;k\rangle}"
+[\frac{1}{\ln{\langle&space;k\rangle}}]: https://latex.codecogs.com/gif.latex?\frac{1}{\ln{\langle&space;k\rangle}} "\frac{1}{\ln{\langle&space;k\rangle}}"
 [d_{max}\sim\langle&space;d\rangle\sim&space;N]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N "d_{max}\sim\langle&space;d\rangle\sim&space;N"
 [d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}"
 [d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}"
 [d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}"
 [N\approx7\times10^9]: https://latex.codecogs.com/gif.latex?N\approx7\times10^9 "N\approx7\times10^9"
-[langle&space;k\rangle\approx10^3]: https://latex.codecogs.com/gif.latex?langle&space;k\rangle\approx10^3 "langle&space;k\rangle\approx10^3"
+[\langle&space;k\rangle\approx10^3]: https://latex.codecogs.com/gif.latex?\langle&space;k\rangle\approx10^3 "\langle&space;k\rangle\approx10^3"
 [\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28 "\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28"
 
 <!-- Box 3.6 -->
