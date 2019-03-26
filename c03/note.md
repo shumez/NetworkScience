@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-26 16:27:1
+Modified: 	2019-03-26 17:41:20
 -----
 Copyright (c) 2019 shumez
 -->
@@ -27,6 +27,7 @@ Copyright (c) 2019 shumez
     * [Box 3-5 Network Evolution in Graph Theory](#Box-3-5-Network-Evolution-in-Graph-Theory)
 07. [Real Networks are Supercritical](#0307-Real-Networks-are-Supercritical)
 08. [Small Worlds](#0308-Small-Worlds)
+    * [Box 3-6 19 Degrees of Separation](#Box-3-6-19-Degrees-of-Separation)
 - 16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
 
 
@@ -357,6 +358,28 @@ assuming the ![][\langle&space;k\rangle\gg1],
 - 3D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}]
 - 4D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}]
 
+![][N\approx7\times10^9], ![][\langle&space;k\rangle\approx10^3]
+
+![][\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28]
+
+([de Sola Pool, I., Kochen, M., 1978][1978KochenM_deSolaPoolI] [20])
+
+
+### Box 3-6 19 Degrees of Separation
+
+**finite size scaling** ([Albert, R., 1999][1999BarabásiAL_JeongH_AlbertR])
+
+![][\langle&space;d\rangle\approx0.35+0.89\ln{N}]
+
+![][\langle&space;d\rangle\approx18.69] ([Lawrence, S., Giles, C.L., 1999][1999GilesCL_LawreneceS])
+
+*19 degrees of separation*
+
+
+### 
+
+
+
 
 
 
@@ -388,6 +411,9 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 ###
 
 [1960RényiA_ErdősP]: http://www.leonidzhukov.net/hse/2016/networks/papers/erdos-1959-11.pdf "Erdős, P. and Rényi, A., 1960. On the evolution of random graphs. Publ. Math. Inst. Hung. Acad. Sci, 5(1), pp.17-60."
+[1978KochenM_deSolaPoolI]: https://www.sfu.ca/cmns/courses/marontate/2009/801/ClassFolders/jmckinnon/(0)%20Contacts%20and%20influence.pdf "de Sola Pool, I. and Kochen, M., 1978. Contacts and influence. Social networks, 1(1), pp.5-51."
+[1999BarabásiAL_JeongH_AlbertR]: http://barabasi.com/f/65.pdf "21"
+[1999GilesCL_LawreneceS]: https://homepage.univie.ac.at/juan.gorraiz/Vortrag/21987.pdf "Lawrence, S. and Giles, C.L., 1999. Accessibility of information on the web. Nature, 400(6740), p.107."
 
 
 <!-- figure -->
@@ -554,6 +580,14 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}"
 [d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}"
 [d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}]: https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}} "d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}"
+[N\approx7\times10^9]: https://latex.codecogs.com/gif.latex?N\approx7\times10^9 "N\approx7\times10^9"
+[langle&space;k\rangle\approx10^3]: https://latex.codecogs.com/gif.latex?langle&space;k\rangle\approx10^3 "langle&space;k\rangle\approx10^3"
+[\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28 "\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28"
+
+<!-- Box 3.6 -->
+[\langle&space;d\rangle\approx0.35+0.89\ln{N}]: \langle&space;d\rangle\approx0.35+0.89\ln{N} "\langle&space;d\rangle\approx0.35+0.89\ln{N}"
+[\langle&space;d\rangle\approx18.69]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx18.69 "\langle&space;d\rangle\approx18.69"
+
 
 
 
@@ -567,6 +601,7 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [I_N=1]: https://latex.codecogs.com/gif.latex?I_N=1 "I_N=1"
 [Ne^{-Np}=1]: https://latex.codecogs.com/gif.latex?Ne^{-Np}=1 "Ne^{-Np}=1"
 [p=\frac{\ln{N}}{N}]: https://latex.codecogs.com/gif.latex?p=\frac{\ln{N}}{N} "p=\frac{\ln{N}}{N}"
+
 
 
 
