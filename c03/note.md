@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-26 21:19:24
+Modified: 	2019-03-27 21:08:17
 -----
 Copyright (c) 2019 shumez
 -->
@@ -31,6 +31,7 @@ Copyright (c) 2019 shumez
     * [Box 3-7 Six Degrees - Experimental Confirmation](#Box-3-7-Six-Degrees---Experimental-Confirmation)
     * [Box 3-8 19 Degrees of the WWW](#Box-3-8-19-Degrees-of-the-WWW)
 09. [Clustering Coefficient](#0309-Clustering-Coefficient)
+    * [Box 3-9 Watts-Strogatz Model](#Box-3-9-Watts-Strogatz-Model)
 - 16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
 
 
@@ -406,6 +407,31 @@ Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 5.61	| 14	| 7.14
 
 ## 03.09 Clustering Coefficient
 
+clustering coefficient ![][C_i], the density of the links in node ![][i]'s immediate neighborhood
+
+expected number of links ![][L_i] 
+
+![eq.3.20][\langle&space;L_i\rangle=p\frac{k_i(k_i-1)}{2}]
+
+local clustering coefficient:
+
+![eq.3.21][C_i=\frac{2\langle&space;L_i\rangle}{k_i(k_i-1)}=p=\frac{\langle&space;k\rangle}{N}]
+
+
+plot ![][\frac{\langle&space;C\rangle}{\langle&space;k\rangle}] in fn of ![][N] 
+
+![][\frac{\langle&space;C\rangle}{\langle&space;k\rangle}] NOT decrease as ![][N^{-1}]
+
+
+[![fig.3.13][fig_03_13]][fig_03_13]
+
+
+### Box 3-9 Watts-Strogatz Model
+
+[![fig.3.14][fig_03_14]][fig_03_14]
+
+
+
 
 
 
@@ -457,6 +483,9 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [fig_03_11]: http://networksciencebook.com/images/ch-03/figure-3-11.jpg "Fig.3.11 Why are Small Worlds Surprising?"
 [fig_03_12]: http://networksciencebook.com/images/ch-03/figure-3-12.jpg "Fig.3.12 Six Degrees? From Milgram to Facebook"
 [fig_box_3_8]: http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg "19 Degrees of the WWW"
+[fig_03_13]: http://networksciencebook.com/images/ch-03/figure-3-13.jpg "Fig.3.13 Clustering in Real Networks"
+[fig_03_14]: http://networksciencebook.com/images/ch-03/figure-3-14.jpg "Fig.3.14 The Watts-Strogatz Model"
+
 
 <!-- video -->
 ###
@@ -616,6 +645,15 @@ leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
 [\langle&space;d\rangle\approx0.35+0.89\ln{N}]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx0.35+0.89\ln{N} "\langle&space;d\rangle\approx0.35+0.89\ln{N}"
 [\langle&space;d\rangle\approx18.69]: https://latex.codecogs.com/gif.latex?\langle&space;d\rangle\approx18.69 "\langle&space;d\rangle\approx18.69"
 [\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]: https://latex.codecogs.com/gif.latex?\frac{\ln{N}}{\ln{\langle&space;k\rangle}} "\frac{\ln{N}}{\ln{\langle&space;k\rangle}}"
+
+
+<!-- 03.09 -->
+[C_i]: https://latex.codecogs.com/gif.latex?C_i "C_i"
+[L_i]: https://latex.codecogs.com/gif.latex?L_i "L_i"
+[\langle&space;L_i\rangle=p\frac{k_i(k_i-1)}{2}]: https://latex.codecogs.com/gif.latex?\langle&space;L_i\rangle=p\frac{k_i(k_i-1)}{2} "eq.3.20"
+[C_i=\frac{2\langle&space;L_i\rangle}{k_i(k_i-1)}=p=\frac{\langle&space;k\rangle}{N}]: https://latex.codecogs.com/gif.latex?C_i=\frac{2\langle&space;L_i\rangle}{k_i(k_i-1)}=p=\frac{\langle&space;k\rangle}{N} "eq.3.21"
+[\frac{\langle&space;C\rangle}{\langle&space;k\rangle}]: https://latex.codecogs.com/gif.latex?\frac{\langle&space;C\rangle}{\langle&space;k\rangle} "\frac{\langle&space;C\rangle}{\langle&space;k\rangle}"
+[N^{-1}]: https://latex.codecogs.com/gif.latex?N^{-1} "N^{-1}"
 
 
 
