@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-03-28 20:31:23
+Modified: 	2019-03-28 21:24:34
 -----
 Copyright (c) 2019 shumez
 -->
@@ -13,6 +13,7 @@ Copyright (c) 2019 shumez
 ## Contents
 
 01. [Introduction](#01-Introduction)
+02. [Power Laws and Scale-Free Networks](#02-Power-Laws-and-Scale-Free-Networks)
 
 
 ## 01 Introduction
@@ -20,6 +21,22 @@ Copyright (c) 2019 shumez
 [![fig.4.1][fig_04_01]][fig_04_01]
 
 
+## 02 Power Laws and Scale-Free Networks
+
+![eq.4.1][p_k\sim&space;k^{-\gamma}]
+
+**power law dist** 
+
+**degree exponent** ![][\gamma]
+
+![eq.4.2][\log{p_k}\sim-\gamma\log{k}]
+
+![][\log{p_k}] depends linealy on ![][\log{k}]
+
+
+![eq.4.3][p_{k_{in}}\sim&space;k^{-\gamma_{in}}]
+
+![eq.4.4][p_{k_{out}}\sim&space;k^{-\gamma_{out}}]
 
 
 
@@ -29,8 +46,16 @@ Copyright (c) 2019 shumez
 [fig_04_01]: http://networksciencebook.com/images/ch-04/figure-4-1.jpg "Fig.4.1 The Topology of the World Wide Web"
 
 
-[x+\frac{1}{x}=1]: https://latex.codecogs.com/gif.latex?\inline&space;x+\frac{1}{x}=1
-<!-- [x+\frac{1}{x}=1]: https://latex.codecogs.com/gif.latex?x+\frac{1}{x}=1 -->
+<!-- eq -->
+[p_k\sim&space;k^{-\gamma}]: https://latex.codecogs.com/gif.latex?p_k\sim&space;k^{-\gamma} "eq.4.1"
+[\log{p_k}\sim-\gamma\log{k}]: https://latex.codecogs.com/gif.latex?\log{p_k}\sim-\gamma\log{k} "eq.4.2" 
+[\gamma]: https://latex.codecogs.com/gif.latex?\gamma "\gamma"
+[\log{p_k}]: https://latex.codecogs.com/gif.latex?\log{p_k} "\log{p_k}"
+[\log{k}]: https://latex.codecogs.com/gif.latex?\log{k} "\log{k}"
+[p_{k_{in}}\sim&space;k^{-\gamma_{in}}]: https://latex.codecogs.com/gif.latex?p_{k_{in}}\sim&space;k^{-\gamma_{in}} "eq.4.3" 
+[p_{k_{out}}\sim&space;k^{-\gamma_{out}}]: https://latex.codecogs.com/gif.latex?p_{k_{out}}\sim&space;k^{-\gamma_{out}} "eq.4.4"
+
+
 
 <!-- <style type="text/css">
 	img{width: 50%; float: right;}
