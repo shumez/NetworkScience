@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-27 21:08:17
+Modified: 	2019-03-28 15:29:31
 -----
 Copyright (c) 2019 shumez
 -->
@@ -430,8 +430,19 @@ plot ![][\frac{\langle&space;C\rangle}{\langle&space;k\rangle}] in fn of ![][N]
 
 [![fig.3.14][fig_03_14]][fig_03_14]
 
+- Small World Property
+    average distance depends logarithmically on ![][N]
+- High Clustering
+    average clustering coef of real netw is higher than expected for a rand netw of similar ![][N] and ![][L]
 
-
+**Watts-Strogatz model** (small-world model) 
+interpolate 
+- Regular lattice: 
+    - High clustering
+    - Small-world property(-)
+- Random netw: 
+    - Low clustering
+    - Small-world property(+)
 
 
 
