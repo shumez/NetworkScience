@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>02 Graph Theory - Network Science</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "02 Graph Theory";
+    var mkdocs_page_input_path = "c02/note.md";
+    var mkdocs_page_url = "/NetworkScience/c02/note/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Network Science</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c01/note/">01 Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">02 Graph Theory</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#contents">Contents</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0201_the_bridges_of_konigsberg">02.01 The Bridges of Königsberg</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0202_networks_and_graphs">02.02 Networks and Graphs</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0203_degree_average_degree_and_degree_distribution">02.03 Degree, Average Degree and Degree Distribution</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#degree">Degree</a></li>
+        
+            <li><a class="toctree-l3" href="#average_degree">Average Degree</a></li>
+        
+            <li><a class="toctree-l3" href="#degree_distribution">Degree Distribution</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0204_adjacency_matrix">02.04 Adjacency Matrix</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0205_real_networks_are_sparse">02.05 Real Networks are Sparse</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0206_weighted_networks">02.06 Weighted Networks</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#metcalfe_law_-_the_value_of_a_network">Metcalfe Law - the Value of a Network</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0207_bipartite_networks">02.07 Bipartite Networks</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0208_paths_and_distances">02.08 Paths and Distances</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#shortest_path">Shortest Path</a></li>
+        
+            <li><a class="toctree-l3" href="#box_2-4_-_number_of_shortest_parths_between_two_nodes">Box 2-4 - Number of Shortest Parths Between Two Nodes</a></li>
+        
+            <li><a class="toctree-l3" href="#network_diameter">Network Diameter</a></li>
+        
+            <li><a class="toctree-l3" href="#average_path_length">Average Path Length</a></li>
+        
+            <li><a class="toctree-l3" href="#box_2-5_-_breadth-first_search_algorithm">Box 2-5 - Breadth-First Search Algorithm</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0209_connectedness">02.09 Connectedness</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#box_2-6_-_finding_the_connected_components_of_a_network">Box 2-6 - Finding the Connected Components of a Network</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0210_clustering_coefficient">02.10 Clustering Coefficient</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0211_summary">02.11 Summary</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0212_homework">02.12 Homework</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c03/note/">03 Random Networks</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c04/note/">04 The Scale-Free Property</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Network Science</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>02 Graph Theory</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!--
+Filename:   note.md
+Project:    /Users/shume/Developer/NetworkScience/c02
+Author:     shumez <https://github.com/shumez>
+Created:    2019-02-13 17:10:6
+Modified:   2019-04-05 16:59:3
+-----
+Copyright (c) 2019 shumez
+-->
+
+<h1 id="02_graph_theory">02 Graph Theory<a class="headerlink" href="#02_graph_theory" title="Permanent link">&para;</a></h1>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#0201-The-Bridges-of-Königsberg">The Bridges of Königsberg</a></li>
+<li><a href="#0202-Networks-and-Graphs">Networks and Graphs</a></li>
+<li><a href="#0203-Degree,-Average-Degree-and-Degree-Distribution">Degree, Average Degree and Degree Distribution</a><ul>
+<li><a href="#Degree">Degree</a></li>
+<li><a href="#Average-Degree">Average Degree</a></li>
+<li><a href="#Degree-Distribution">Degree Distribution</a></li>
+</ul>
+</li>
+<li><a href="#0204-Adjacency-Matrix">Adjacency Matrix</a></li>
+<li><a href="#0205-Real-Networks-are-Sparse">Real Networks are Sparse</a></li>
+<li><a href="#0206-Weighted-Networks">Weighted Networks</a><ul>
+<li><a href="#Metcalfe-Law---the-Value-of-a-Network">Metcalfe Law - the Value of a Network</a></li>
+</ul>
+</li>
+<li><a href="#0207-Bipartite-Networks">Bipartite Networks</a></li>
+<li><a href="#0208-Paths-and-Distances">Paths and Distances</a><ul>
+<li><a href="#Shortest-Path">Shortest Path</a></li>
+<li><a href="#Box-2-4---Number-of-Shortest-Parths-Between-Two-Nodes">Box 2-4 - Number of Shortest Parths Between Two Nodes</a></li>
+<li><a href="#Network-Diameter">Network Diameter</a></li>
+<li><a href="#Average-Path-Length">Average Path Length</a></li>
+<li><a href="#Box-2-5-Breadth-First-Search-Algorithm">Box 2-5 - Breadth-First Search Algorithm</a></li>
+</ul>
+</li>
+<li><a href="#0209-Connectedness">Connectedness</a><ul>
+<li><a href="#Box-2-6---Finding-the-Connected-Components-of-a-Network">Box 2-6 - Finding the Connected Components of a Network</a></li>
+</ul>
+</li>
+<li><a href="#0210-Clustering-Coefficient">Clustering Coefficient</a></li>
+<li><a href="#0211-Summary">Summary</a></li>
+<li><a href="#0212-Homework">Homework</a></li>
+</ol>
+<h2 id="0201_the_bridges_of_konigsberg">02.01 The Bridges of Königsberg<a class="headerlink" href="#0201_the_bridges_of_konigsberg" title="Permanent link">&para;</a></h2>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-1.jpg" title="fig.2.1 The Bridges of Königsberg"><img alt="fig-2-1" src="http://networksciencebook.com/images/ch-02/figure-2-1.jpg" title="fig.2.1 The Bridges of Königsberg" /></a></p>
+<p>(<a href="https://www.ams.org/journals/bull/2006-43-04/S0273-0979-06-01130-X/S0273-0979-06-01130-X.pdf" title="Alexanderson, G., 2006. About the cover: Euler and Königsberg’s Bridges: A historical view. Bulletin of the american mathematical society, 43(4), pp.567-573.">Alexanderson, G., 2006</a>)</p>
+<h2 id="0202_networks_and_graphs">02.02 Networks and Graphs<a class="headerlink" href="#0202_networks_and_graphs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<script type="math/tex">N</script>
+<em>num of nodes</em>, <em>size</em> of the network</li>
+<li>
+<script type="math/tex">L</script>
+<em>num of links</em>, (2, 4)</li>
+</ul>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-2.jpg" title="fig.2.2 Different Networks, Same Graph"><img alt="fig-2-2" src="http://networksciencebook.com/images/ch-02/figure-2-2.jpg" title="fig.2.2 Different Networks, Same Graph" /></a></p>
+<!-- <iframe src="http://networksciencebook.com/images/ch-02/video-2-1.m4v"> -->
+
+<h2 id="0203_degree_average_degree_and_degree_distribution">02.03 Degree, Average Degree and Degree Distribution<a class="headerlink" href="#0203_degree_average_degree_and_degree_distribution" title="Permanent link">&para;</a></h2>
+<p><em>degree</em></p>
+<h3 id="degree">Degree<a class="headerlink" href="#degree" title="Permanent link">&para;</a></h3>
+<p>
+<script type="math/tex">k_i</script>: degree of <script type="math/tex">i</script>-th node </p>
+<p>
+<script type="math/tex">k_1=2, k_2=3, k_3=2, k_4=1 </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> L = \frac{1}{2} \sum_{i=1}^N k_i </script> (2.1)</p>
+<h3 id="average_degree">Average Degree<a class="headerlink" href="#average_degree" title="Permanent link">&para;</a></h3>
+<p>undirected</p>
+<p>
+<script type="math/tex; mode=display"> \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_j = \frac{2L}{N} </script> (2.2)</p>
+<p>directed</p>
+<ul>
+<li>
+<script type="math/tex">k_i^{in}</script>: incoming degree</li>
+<li>
+<script type="math/tex">k_i^{out}</script>: outgoing degree</li>
+</ul>
+<p>
+<script type="math/tex; mode=display"> k_i = k_i^{in} + k_i^{out} </script> (2.3)</p>
+<p>
+<script type="math/tex; mode=display"> L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} </script> (2.4)</p>
+<p>
+<script type="math/tex; mode=display"> \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} </script> (2.5)</p>
+<h3 id="degree_distribution">Degree Distribution<a class="headerlink" href="#degree_distribution" title="Permanent link">&para;</a></h3>
+<p>
+<script type="math/tex"> p_k </script>: <em>degree distribution</em>, a randomly selected node in the network has degree <script type="math/tex">k</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \sum_{k=1}^\infty p_k = 1 </script> (2.6)</p>
+<p>
+<script type="math/tex; mode=display"> p_k = \frac{N_k}{N} </script> (2.7)</p>
+<ul>
+<li>
+<script type="math/tex">N_k</script>: num of degree-k nodes</li>
+</ul>
+<p>
+<script type="math/tex; mode=display"> \langle k \rangle = \sum_{k=0}^\infty kp_k </script> (2.8)</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-3.jpg" title="fig.2.3 Degree Distribution"><img alt="fig.2.3" src="http://networksciencebook.com/images/ch-02/figure-2-3.jpg" title="fig.2.3 Degree Distribution" /></a></p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-4.jpg" title="fig.2.4 Degree Distribution of a Real Network "><img alt="fig.2.4" src="http://networksciencebook.com/images/ch-02/figure-2-4.jpg" title="fig.2.4 Degree Distribution of a Real Network " /></a></p>
+<h2 id="0204_adjacency_matrix">02.04 Adjacency Matrix<a class="headerlink" href="#0204_adjacency_matrix" title="Permanent link">&para;</a></h2>
+<p><em>adjacenct matrix</em>: N rows, N cols</p>
+<p>
+<script type="math/tex"> A_{ij} = <script type="math/tex; mode=display">\begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases}</script>
+</script>
+</p>
+<p>undirected</p>
+<p>
+<script type="math/tex; mode=display"> k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} </script> (2.9)</p>
+<p>directed</p>
+<p>
+<script type="math/tex; mode=display"> k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} </script>
+(2.10)</p>
+<p>
+<script type="math/tex; mode=display"> 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} </script> (2.11)</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-5.jpg" title="fig.2.5 The Adjacency Matrix"><img alt="fig.2.5" src="http://networksciencebook.com/images/ch-02/figure-2-5.jpg" title="fig.2.5 The Adjacency Matrix" /></a></p>
+<h2 id="0205_real_networks_are_sparse">02.05 Real Networks are Sparse<a class="headerlink" href="#0205_real_networks_are_sparse" title="Permanent link">&para;</a></h2>
+<p>
+<script type="math/tex; mode=display"> L_{max} = \frac{N(N-1)}{2} </script> (2.12)</p>
+<p>in a <em>complete graph</em> of size <script type="math/tex">N</script>
+</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-6.jpg" title="fig.2.6 Complete Graph"><img alt="fig.2.6" src="http://networksciencebook.com/images/ch-02/figure-2-6.jpg" title="fig.2.6 Complete Graph" /></a></p>
+<p>real networks </p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-7.jpg" title="fig.2.7 The Adjacency Matrix is Sparse"><img alt="fig.2.7" src="http://networksciencebook.com/images/ch-02/figure-2-7.jpg" title="fig.2.7 The Adjacency Matrix is Sparse" /></a></p>
+<h2 id="0206_weighted_networks">02.06 Weighted Networks<a class="headerlink" href="#0206_weighted_networks" title="Permanent link">&para;</a></h2>
+<p>
+<script type="math/tex; mode=display"> A_{ij} = w_{ij} </script>
+</p>
+<h3 id="metcalfe_law_-_the_value_of_a_network">Metcalfe Law - the Value of a Network<a class="headerlink" href="#metcalfe_law_-_the_value_of_a_network" title="Permanent link">&para;</a></h3>
+<p><em>Metcalfe's law</em>:</p>
+<p>val <script type="math/tex">\propto N^2 </script>
+</p>
+<p>(<a href="https://scholar.google.co.jp/scholar?hl=en&amp;num=20&amp;as_sdt=0%2C5&amp;q=Gilder%2C+G.%2C+1993.+Metcalfe’s+law+and+legacy.+Forbes+ASAP%2C+13%2C+p.1993.&amp;btnG=" title="Gilder, G., 1993. Metcalfe’s law and legacy. Forbes ASAP, 13, p.1993.">Gilder, G., 1993</a>)</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-8.jpg" title="fig.2.8 Metcalfe’s Law"><img alt="fig.2.8" src="http://networksciencebook.com/images/ch-02/figure-2-8.jpg" title="fig.2.8 Metcalfe’s Law" /></a></p>
+<h2 id="0207_bipartite_networks">02.07 Bipartite Networks<a class="headerlink" href="#0207_bipartite_networks" title="Permanent link">&para;</a></h2>
+<p><em>bipartite graph</em> (<em>bigraph</em>) :</p>
+<p>NO U-U / V-V links</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-9.jpg" title="fig.2.9 Bipartite Network"><img alt="fig.2.9" src="http://networksciencebook.com/images/ch-02/figure-2-9.jpg" title="fig.2.9 Bipartite Network" /></a></p>
+<p>(<a href="https://www.pnas.org/content/104/21/8685">Goh, K.I., 2007</a>)</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-10.jpg" title="fig.2.10 Human Disease Network"><img alt="fig.2.10" src="http://networksciencebook.com/images/ch-02/figure-2-10.jpg" title="fig.2.10 Human Disease Network" /></a></p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-11.jpg" title="fig.2.11 Tripartite Network"><img alt="fig.2.11" src="http://networksciencebook.com/images/ch-02/figure-2-11.jpg" title="fig.2.11 Tripartite Network" /></a></p>
+<h2 id="0208_paths_and_distances">02.08 Paths and Distances<a class="headerlink" href="#0208_paths_and_distances" title="Permanent link">&para;</a></h2>
+<p><em>path length</em>: num of links the path contains</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-12.jpg" title="fig.2.12 Paths"><img alt="fig.2.12" src="http://networksciencebook.com/images/ch-02/figure-2-12.jpg" title="fig.2.12 Paths" /></a></p>
+<h3 id="shortest_path">Shortest Path<a class="headerlink" href="#shortest_path" title="Permanent link">&para;</a></h3>
+<p><em>distance</em>: <script type="math/tex">d_{ij}</script> shortest path </p>
+<p>undirected, <script type="math/tex"> d_{ij} = d_{ji} </script>
+</p>
+<p>directed, <script type="math/tex"> d_{ij} \neq d_{ji} </script>
+</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-13.jpg" title="fig.2.13 Pathology"><img alt="fig.2.13" src="http://networksciencebook.com/images/ch-02/figure-2-13.jpg" title="fig.2.13 Pathology" /></a></p>
+<ul>
+<li>shortest path (<em>Geodesic path</em> <script type="math/tex">d</script>)</li>
+<li><em>diamter</em> (<script type="math/tex">d_{max}</script>): longest shortest path in graph</li>
+<li><em>average path length</em> (<script type="math/tex">\langle d \rangle</script>)</li>
+<li><em>cycle</em> </li>
+<li><em>Eulerian path</em>: transverse each link exactly once</li>
+<li><em>Hamiltonian path</em>: visit each node exactly </li>
+</ul>
+<h3 id="box_2-4_-_number_of_shortest_parths_between_two_nodes">Box 2-4 - Number of Shortest Parths Between Two Nodes<a class="headerlink" href="#box_2-4_-_number_of_shortest_parths_between_two_nodes" title="Permanent link">&para;</a></h3>
+<p>
+<script type="math/tex">N_{ij}</script> (num of shortest paths)
+<script type="math/tex">d_{ij}</script> (distance)
+<script type="math/tex">A_{ij}</script> (adjacency mat)</p>
+<p>
+<script type="math/tex">d_{ij} = 1</script> if direct link, <script type="math/tex">A_{ij} = 1</script>
+</p>
+<p>
+<script type="math/tex">d_{ij} = 2 </script> if path of length two, <script type="math/tex">A_{ik}A_{kj} = 1</script>
+</p>
+<p>num of <script type="math/tex">d_{ij}=2</script> paths between <script type="math/tex">i</script> and <script type="math/tex">j</script> is </p>
+<p>
+<script type="math/tex; mode=display"> N_{ij}^{(2)} = \sum_{k=1}^N A_{ik}A_{jk} = A_{ij}^2 </script>
+</p>
+<p>
+<script type="math/tex">d_{ij} = d</script>, <script type="math/tex">A_{ik}\cdots A_{lj} = 1</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> N_{ij}^{(d)} = A_{ij}^d </script>
+</p>
+<h3 id="network_diameter">Network Diameter<a class="headerlink" href="#network_diameter" title="Permanent link">&para;</a></h3>
+<p><em>diameter</em> <script type="math/tex">d_{max}</script>: max shortest path </p>
+<p>for larger networks, determined using the <em>BFS algorithm</em></p>
+<h3 id="average_path_length">Average Path Length<a class="headerlink" href="#average_path_length" title="Permanent link">&para;</a></h3>
+<p><em>average path length</em> <script type="math/tex">\langle d \rangle </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} </script>
+(2.14)</p>
+<h3 id="box_2-5_-_breadth-first_search_algorithm">Box 2-5 - Breadth-First Search Algorithm<a class="headerlink" href="#box_2-5_-_breadth-first_search_algorithm" title="Permanent link">&para;</a></h3>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm"><img alt="fig.2.14" src="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm" /></a></p>
+<h2 id="0209_connectedness">02.09 Connectedness<a class="headerlink" href="#0209_connectedness" title="Permanent link">&para;</a></h2>
+<p><em>bridge</em></p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-15.jpg" title="fig.2.15 Connected and Disconnected Networks"><img alt="fig.2.15" src="http://networksciencebook.com/images/ch-02/figure-2-15.jpg" title="fig.2.15 Connected and Disconnected Networks" /></a></p>
+<h3 id="box_2-6_-_finding_the_connected_components_of_a_network">Box 2-6 - Finding the Connected Components of a Network<a class="headerlink" href="#box_2-6_-_finding_the_connected_components_of_a_network" title="Permanent link">&para;</a></h3>
+<h2 id="0210_clustering_coefficient">02.10 Clustering Coefficient<a class="headerlink" href="#0210_clustering_coefficient" title="Permanent link">&para;</a></h2>
+<p><em>clustering coefficient</em></p>
+<p>(<a href="http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf" title="Watts, D.J. and Strogatz, S.H., 1998. Collective dynamics of ‘small-world’networks. nature, 393(6684), p.440.">Watts, D.J., Strogatz, S.H., 1998</a>)</p>
+<p>
+<script type="math/tex; mode=display"> C_i = \frac{2 L_i}{k_i (k_i - 1)} </script> (2.15)</p>
+<p>
+<script type="math/tex">L_i</script>: num of links between the <script type="math/tex">k_i</script> neighbors of node <script type="math/tex">i</script>
+</p>
+<p>
+<script type="math/tex">C_i</script> [0, 1]</p>
+<p>
+<script type="math/tex"> C_i = 
+    <script type="math/tex; mode=display">\begin{cases} 
+        0 & \\
+        1 & 
+    \end{cases}</script>
+</script>
+</p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-16.jpg" title="fig.2.16 Clustering Coefficient"><img alt="fig.2.16" src="http://networksciencebook.com/images/ch-02/figure-2-16.jpg" title="fig.2.16 Clustering Coefficient" /></a></p>
+<p><em>average clustering coefficient</em> <script type="math/tex"> \langle C \rangle </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i </script> (2.16)</p>
+<p>(<a href="https://www.pnas.org/content/pnas/101/11/3747.full.pdf" title="Barrat, A., Barthelemy, M., Pastor-Satorras, R. and Vespignani, A., 2004. The architecture of complex weighted networks. Proceedings of the national academy of sciences, 101(11), pp.3747-3752.">Barrat, A., 2004</a>, <a href="https://arxiv.org/pdf/cond-mat/0408629.pdf" title="Onnela, J.P., Saramäki, J., Kertész, J. and Kaski, K., 2005. Intensity and coherence of motifs in weighted complex networks. Physical Review E, 71(6), p.065103.">Onnela, J.P., 2005</a>, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9599&amp;rep=rep1&amp;type=pdf" title="Zhang, B. and Horvath, S., 2005. A general framework for weighted gene co-expression network analysis. Statistical applications in genetics and molecular biology, 4(1).">Zhang, B., 2005</a>, <a href="https://arxiv.org/pdf/cond-mat/0411634.pdf" title="Holme, P., Park, S.M., Kim, B.J. and Edling, C.R., 2007. Korean university life in a network perspective: Dynamics of a large affiliation network. Physica A: Statistical Mechanics and its Applications, 373, pp.821-830.">Holme, P., 2007</a>)</p>
+<h2 id="0211_summary">02.11 Summary<a class="headerlink" href="#0211_summary" title="Permanent link">&para;</a></h2>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-17.jpg" title="fig.2.17 Graphology "><img alt="fig.2.17" src="http://networksciencebook.com/images/ch-02/figure-2-17.jpg" title="fig.2.17 Graphology " /></a></p>
+<p><em>Undirected</em></p>
+<p><em>Self-loops</em></p>
+<p><em>Multigraph / Simple Graphs</em></p>
+<p><em>Directed</em></p>
+<p><em>Wighted</em></p>
+<p><em>Complete</em></p>
+<p><a href="http://networksciencebook.com/images/ch-02/figure-2-18.jpg" title="Characterizing a Real Network"><img alt="fig.2.18" src="http://networksciencebook.com/images/ch-02/figure-2-18.jpg" title="Characterizing a Real Network" /></a></p>
+<h2 id="0212_homework">02.12 Homework<a class="headerlink" href="#0212_homework" title="Permanent link">&para;</a></h2>
+<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<!-- <style type="text/css">
+    img{width: 50%; float: right;}
+</style> -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../c03/note/" class="btn btn-neutral float-right" title="03 Random Networks">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../c01/note/" class="btn btn-neutral" title="01 Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 - 2019 <a href="https://github.com/shumez">shumez</a>
+</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../c01/note/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../c03/note/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>04 The Scale-Free Property - Network Science</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "04 The Scale-Free Property";
+    var mkdocs_page_input_path = "c04/note.md";
+    var mkdocs_page_url = "/NetworkScience/c04/note/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Network Science</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c01/note/">01 Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c02/note/">02 Graph Theory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c03/note/">03 Random Networks</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">04 The Scale-Free Property</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#contents">Contents</a></li>
+    
+
+    <li class="toctree-l2"><a href="#01_introduction">01 Introduction</a></li>
+    
+
+    <li class="toctree-l2"><a href="#02_power_laws_and_scale-free_networks">02 Power Laws and Scale-Free Networks</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#discrete_formalism">Discrete Formalism</a></li>
+        
+            <li><a class="toctree-l3" href="#continuum_formalism">Continuum Formalism</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Network Science</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>04 The Scale-Free Property</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!--
+Filename:   note.md
+Project:    /Users/shume/Developer/NetworkScience/c04
+Author:     shumez <https://github.com/shumez>
+Created:    2019-03-28 19:54:5
+Modified:   2019-03-29 17:21:33
+-----
+Copyright (c) 2019 shumez
+-->
+
+<h1 id="04_the_scale-free_property">04 The Scale-Free Property<a class="headerlink" href="#04_the_scale-free_property" title="Permanent link">&para;</a></h1>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#01-Introduction">Introduction</a></li>
+<li><a href="#02-Power-Laws-and-Scale-Free-Networks">Power Laws and Scale-Free Networks</a><ul>
+<li><a href="#Discrete-Formalism">Discrete Formalism</a></li>
+<li><a href="#Continuum-Formalism">Continuum Formalism</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="01_introduction">01 Introduction<a class="headerlink" href="#01_introduction" title="Permanent link">&para;</a></h2>
+<p><a href="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web"><img alt="fig.4.1" src="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web" /></a></p>
+<h2 id="02_power_laws_and_scale-free_networks">02 Power Laws and Scale-Free Networks<a class="headerlink" href="#02_power_laws_and_scale-free_networks" title="Permanent link">&para;</a></h2>
+<p><img alt="eq.4.1" src="https://latex.codecogs.com/gif.latex?p_k\sim&amp;space;k^{-\gamma}" title="eq.4.1" /></p>
+<p><strong>power law dist</strong> </p>
+<p><strong>degree exponent</strong> <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma" title="\gamma" /></p>
+<p><img alt="eq.4.2" src="https://latex.codecogs.com/gif.latex?\log{p_k}\sim-\gamma\log{k}" title="eq.4.2" /></p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\log{p_k}" title="\log{p_k}" /> depends linealy on <img alt="" src="https://latex.codecogs.com/gif.latex?\log{k}" title="\log{k}" /></p>
+<p>out-degree <img alt="" src="https://latex.codecogs.com/gif.latex?k_{out}" title="k_{out}" />, in-degree <img alt="" src="https://latex.codecogs.com/gif.latex?k_{in}" title="k_{in}" /></p>
+<p><img alt="eq.4.3" src="https://latex.codecogs.com/gif.latex?p_{k_{in}}\sim&amp;space;k^{-\gamma_{in}}" title="eq.4.3" /></p>
+<p><img alt="eq.4.4" src="https://latex.codecogs.com/gif.latex?p_{k_{out}}\sim&amp;space;k^{-\gamma_{out}}" title="eq.4.4" /></p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{in}" title="\gamma_{in}" /> and <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{out}" title="\gamma_{out}" /> </p>
+<p>e.g., <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{in}\approx2.1" title="\gamma_{in}\approx2.1" />, <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{out}\approx2.45" title="\gamma_{out}\approx2.45" /></p>
+<p><strong>scale-free</strong> (<a href="https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail" title="Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512.">Barabási, A.L., Albert R., 1999</a>) defined as:</p>
+<p>A scale-free network is a network whose <strong>degree distribution follows a power law</strong></p>
+<h3 id="discrete_formalism">Discrete Formalism<a class="headerlink" href="#discrete_formalism" title="Permanent link">&para;</a></h3>
+<p>prob <img alt="" src="https://latex.codecogs.com/gif.latex?p_k" title="p_k" />, <img alt="" src="https://latex.codecogs.com/gif.latex?k" title="k" /> links</p>
+<p><img alt="eq.4.5" src="https://latex.codecogs.com/gif.latex?p_k=Ck^{-\gamma}" title="eq.4.5" /></p>
+<p>constant <img alt="" src="https://latex.codecogs.com/gif.latex?C" title="C" /> is determined by the normalization cond</p>
+<p><img alt="eq.4.6" src="https://latex.codecogs.com/gif.latex?\sum_{k=1}^\imfty{p_k}=1" title="eq.4.6" /></p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?C\sum_{k=1}^\infty{k^{-\gamma}}=1" title="C\sum_{k=1}^\infty{k^{-\gamma}}=1" /></p>
+<p>hence</p>
+<p><img alt="eq.4.7" src="https://latex.codecogs.com/gif.latex?C=\frac{1}{\sum_{k=1}^\infty{k^{\gamma}}}=\frac{1}{\zeta(\gamma)}" title="eq.4.7" /></p>
+<p><strong>Riemann-zeta fn</strong> <img alt="" src="https://latex.codecogs.com/gif.latex?\zeta(\gamma)" title="\zeta(\gamma)" /></p>
+<p><img alt="eq.4.8" src="https://latex.codecogs.com/gif.latex?p_k=\frac{k^{-\gamma}}{\zeta(\gamma)}" title="eq.4.8" /></p>
+<h3 id="continuum_formalism">Continuum Formalism<a class="headerlink" href="#continuum_formalism" title="Permanent link">&para;</a></h3>
+<!-- link -->
+
+<!-- figure -->
+
+<!-- eq -->
+
+<!-- 02 -->
+
+<!-- Discrete Formalism -->
+
+<!-- <style type="text/css">
+    img{width: 50%; float: right;}
+</style> -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../c03/note/" class="btn btn-neutral" title="03 Random Networks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 - 2019 <a href="https://github.com/shumez">shumez</a>
+</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../c03/note/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

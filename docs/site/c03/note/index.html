@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>03 Random Networks - Network Science</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "03 Random Networks";
+    var mkdocs_page_input_path = "c03/note.md";
+    var mkdocs_page_url = "/NetworkScience/c03/note/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Network Science</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c01/note/">01 Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c02/note/">02 Graph Theory</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">03 Random Networks</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#contents">Contents</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0301_introduction">03.01 Introduction</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0302_the_random_network_model">03.02 The Random Network Model</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#box_3-1_defining_random_networks">Box 3-1 Defining Random Networks</a></li>
+        
+            <li><a class="toctree-l3" href="#box_3-2_random_networks_-_a_brief_history">Box 3-2 Random Networks - a Brief History</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0303_number_of_links">03.03 Number of Links</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#box_3-3_binomial_distribution_-_mean_and_variance">Box 3-3 Binomial Distribution - Mean and Variance</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0304_degree_distribution">03.04 Degree Distribution</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#binomial_distribution">Binomial Distribution</a></li>
+        
+            <li><a class="toctree-l3" href="#poisson_distribution">Poisson Distribution</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0305_real_networks_are_not_poisson">03.05 Real Networks are Not Poisson</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#box_3-4_why_are_hubs_missing">Box 3-4 Why are Hubs Missing?</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0306_the_evolution_of_a_random_network">03.06 The Evolution of a Random Network</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#box_3-5_network_evolution_in_graph_theory">Box 3-5 Network Evolution in Graph Theory</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0307_real_networks_are_supercritical">03.07 Real Networks are Supercritical</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0308_small_worlds">03.08 Small Worlds</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#box_3-6_19_degrees_of_separation">Box 3-6 19 Degrees of Separation</a></li>
+        
+            <li><a class="toctree-l3" href="#box_3-7_six_degrees_-_experimental_confirmation">Box 3-7 Six Degrees - Experimental Confirmation</a></li>
+        
+            <li><a class="toctree-l3" href="#box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0309_clustering_coefficient">03.09 Clustering Coefficient</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#box_3-9_watts-strogatz_model">Box 3-9 Watts-Strogatz Model</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0310_summary_-_real_networks_are_not_random">03.10 Summary - Real Networks are Not Random</a></li>
+    
+
+    <li class="toctree-l2"><a href="#0316_advanced_topic_3e_fully_connected_regime">03.16 Advanced Topic 3.E Fully Connected Regime</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../c04/note/">04 The Scale-Free Property</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Network Science</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>03 Random Networks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!--
+Filename:   note.md
+Project:    /Users/shume/Developer/NetworkScience/c03
+Author:     shumez <https://github.com/shumez>
+Created:    2019-03-06 20:27:3
+Modified:   2019-04-05 17:18:55
+-----
+Copyright (c) 2019 shumez
+-->
+
+<h1 id="03_random_networks">03 Random Networks<a class="headerlink" href="#03_random_networks" title="Permanent link">&para;</a></h1>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#0301-Introduction">Introduction</a></li>
+<li><a href="#0302-The-Random-Network-Model">The Random Network Model</a><ul>
+<li><a href="#Box-3-1-Defining-Random-Networks">Box 3-1 Defining Random Networks</a></li>
+<li><a href="#Box-3-2-Random-Networks---a-Brief-History">Box 3-2 Random Networks - a Brief History</a></li>
+</ul>
+</li>
+<li><a href="#0303-Number-of-Links">Number of Links</a><ul>
+<li><a href="#Box-3-3-Binomial-Distribution---Mean-and-Variance">Box 3-3 Binomial Distribution - Mean and Variance</a></li>
+</ul>
+</li>
+<li><a href="#0304-Degree-Distribution">Degree Distribution</a><ul>
+<li><a href="#Binomial-Distribution">Binomial Distribution</a></li>
+<li><a href="#Poisson-Distribution">Poisson Distribution</a></li>
+</ul>
+</li>
+<li><a href="#0305-Real-Networks-are-Not-Poisson">Real Networks are Not Poisson</a><ul>
+<li><a href="#Box-3-4-Why-are-Hubs-Missing?">Box 3-4 Why are Hubs Missing?</a></li>
+</ul>
+</li>
+<li><a href="#0306-The-Evolution-of-a-Random-Network">The Evolution of a Random Network</a><ul>
+<li><a href="#Box-3-5-Network-Evolution-in-Graph-Theory">Box 3-5 Network Evolution in Graph Theory</a></li>
+</ul>
+</li>
+<li><a href="#0307-Real-Networks-are-Supercritical">Real Networks are Supercritical</a></li>
+<li><a href="#0308-Small-Worlds">Small Worlds</a><ul>
+<li><a href="#Box-3-6-19-Degrees-of-Separation">Box 3-6 19 Degrees of Separation</a></li>
+<li><a href="#Box-3-7-Six-Degrees---Experimental-Confirmation">Box 3-7 Six Degrees - Experimental Confirmation</a></li>
+<li><a href="#Box-3-8-19-Degrees-of-the-WWW">Box 3-8 19 Degrees of the WWW</a></li>
+</ul>
+</li>
+<li><a href="#0309-Clustering-Coefficient">Clustering Coefficient</a><ul>
+<li><a href="#Box-3-9-Watts-Strogatz-Model">Box 3-9 Watts-Strogatz Model</a></li>
+</ul>
+</li>
+<li><a href="#0310-Summary---Real-Networks-are-Not-Random">Summary - Real Networks are Not Random</a></li>
+<li>
+<ol>
+<li><a href="#0316-Advanced-Topic-3E-Fully-Connected-Regime">Advanced Topic 3.E Fully Connected Regime</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="0301_introduction">03.01 Introduction<a class="headerlink" href="#0301_introduction" title="Permanent link">&para;</a></h2>
+<h2 id="0302_the_random_network_model">03.02 The Random Network Model<a class="headerlink" href="#0302_the_random_network_model" title="Permanent link">&para;</a></h2>
+<p>
+<script type="math/tex">N</script> nodes, connected w/ probability <script type="math/tex">p</script>
+</p>
+<h3 id="box_3-1_defining_random_networks">Box 3-1 Defining Random Networks<a class="headerlink" href="#box_3-1_defining_random_networks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<script type="math/tex">G(N,L)</script> model :<ul>
+<li>
+<script type="math/tex">N</script> labeled node are connedted with <script type="math/tex">L</script> randomly placed links</li>
+<li>fixes the total num of links <script type="math/tex">L</script>
+</li>
+<li>average degree of node <script type="math/tex">\langle k \rangle = \frac{2L}{N}</script>
+</li>
+</ul>
+</li>
+<li>
+<script type="math/tex">G(N,p)</script> model :<ul>
+<li>
+<script type="math/tex">N</script> labeled nodes is connected with probability <script type="math/tex">p</script>
+</li>
+<li>fixes prob <script type="math/tex">p</script>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><strong>random graph</strong> (<strong>random network</strong>, <strong>Erdős-Rényi network</strong>)</p>
+<h3 id="box_3-2_random_networks_-_a_brief_history">Box 3-2 Random Networks - a Brief History<a class="headerlink" href="#box_3-2_random_networks_-_a_brief_history" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Anatol Rapoport</li>
+<li><em>Random graph theory</em> Pál Erdős and Alfréd Rényi</li>
+<li>Edgar Nelson Gilbert </li>
+</ul>
+<h2 id="0303_number_of_links">03.03 Number of Links<a class="headerlink" href="#0303_number_of_links" title="Permanent link">&para;</a></h2>
+<ul>
+<li>prob that <script type="math/tex">L</script> of attempts to connect <script type="math/tex">\frac{N(N-1)}{2}</script> pairs of nodes have result in link, is <script type="math/tex">p^L</script>
+</li>
+<li>prob that the remaining <script type="math/tex">\frac{N(N-1)}{2}</script> pairs of nodes have  not resulted in a link is
+    <script type="math/tex">(1-p)^{\frac{N(N-1)}{2}-L}</script>
+</li>
+<li>conmbinational factor
+    <!-- <script type="math/tex; mode=display"> \binom{\frac{N(N-1)}{2}}{L} \tag{3.0} </script> -->
+    <script type="math/tex; mode=display">\binom{\frac{N(N-1)}{2}}{L} \tag{3.0}</script>
+</li>
+</ul>
+<p>
+<script type="math/tex; mode=display"> p_L = \binom{\frac{N(N-1)}{2}}{L} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} </script>
+</p>
+<p>expected num of links</p>
+<p>
+<script type="math/tex; mode=display"> \langle L \rangle = \sum_{L=0}^{\frac{N(N-1)}{2}} LP_L = p \frac{N(N-1)}{2} \tag{3.2} </script>
+</p>
+<p>
+<script type="math/tex"> L_{max} = \frac{N(N-1)}{2} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} </script>
+</p>
+<p>from <script type="math/tex">\langle k \rangle = 0</script> to <script type="math/tex">\langle k\rangle = N-1</script>
+</p>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-3.jpg" title="Fig.3.3 Random Networks are Truly Random"><img alt="fig.3.3" src="http://networksciencebook.com/images/ch-03/figure-3-3.jpg" title="Fig.3.3 Random Networks are Truly Random" /></a></p>
+<p>
+<script type="math/tex">p = \frac{1}{6}</script>, <script type="math/tex">N=12</script>, <script type="math/tex">L = 10, 18, 8</script>
+</p>
+<p>
+<script type="math/tex">p = .03</script>, <script type="math/tex">N = 100</script>
+</p>
+<h3 id="box_3-3_binomial_distribution_-_mean_and_variance">Box 3-3 Binomial Distribution - Mean and Variance<a class="headerlink" href="#box_3-3_binomial_distribution_-_mean_and_variance" title="Permanent link">&para;</a></h3>
+<p>
+<script type="math/tex; mode=display"> p_x = \binom{N}{x} p^x (1-p)^{N-x} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \langle x^2 \rangle = \sum_{x=0}^N x^2 p_x = p(1-p)N + p^2 N^2 \tag{3.5} </script>
+</p>
+<p>standard deviation</p>
+<p>
+<script type="math/tex; mode=display"> \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} </script>
+</p>
+<h2 id="0304_degree_distribution">03.04 Degree Distribution<a class="headerlink" href="#0304_degree_distribution" title="Permanent link">&para;</a></h2>
+<p>degree dist <script type="math/tex">p_k</script>, degree <script type="math/tex">k</script>
+</p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="center"></th>
+<th align="center">Binominal</th>
+<th align="center">Poisson</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">degree dist</td>
+<td align="center">
+<script type="math/tex">p_k</script>
+</td>
+<td align="center">
+<script type="math/tex">\binom{N-1}{k}p_k(1-p)^{N-1-k}</script>
+</td>
+<td align="center">
+<script type="math/tex">e^{-\langle k \rangle} \frac{\langle k \rangle}{k!}</script>
+</td>
+</tr>
+<tr>
+<td align="right">peak at</td>
+<td align="center">
+<script type="math/tex">k</script>
+</td>
+<td align="center">
+<script type="math/tex">\langle k \rangle = p(N-1)</script>
+</td>
+<td align="center">
+<script type="math/tex">\langle k \rangle</script>
+</td>
+</tr>
+<tr>
+<td align="right">width</td>
+<td align="center">
+<script type="math/tex">\sigma_k</script>
+</td>
+<td align="center">
+<script type="math/tex">p(1-p)(N-1)</script>
+</td>
+<td align="center">
+<script type="math/tex">\langle k \rangle^{\frac{1}{2}}</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-4.jpg" title="Fig.3.4 Binomial vs. Poisson Degree Distribution"><img alt="fig.3.4" src="http://networksciencebook.com/images/ch-03/figure-3-4.jpg" title="Fig.3.4 Binomial vs. Poisson Degree Distribution" /></a></p>
+<h3 id="binomial_distribution">Binomial Distribution<a class="headerlink" href="#binomial_distribution" title="Permanent link">&para;</a></h3>
+<p>prob that node <script type="math/tex">i</script> has <script type="math/tex">k</script> links is product of 3 terms:</p>
+<ol>
+<li>prob that <script type="math/tex">k</script> of its links are present / <script type="math/tex">p^k</script>
+</li>
+<li>prob that remaining (<script type="math/tex">N-1-k</script>) links are missing / <script type="math/tex">(1-p)^{N-1-k}</script>
+</li>
+<li>
+<p>
+<script type="math/tex; mode=display"> \binom{N-1}{k} </script>
+</p>
+</li>
+</ol>
+<p>
+<script type="math/tex; mode=display"> p_k = \binom{N-1}{k} p^k (1-p)^{N-1-k} \tag{3.7} </script>
+</p>
+<p>average degree <script type="math/tex">\langle k \rangle</script>
+second moment <script type="math/tex">\langle k^2 \rangle</script> &amp; variance <script type="math/tex">\sigma_k</script>
+</p>
+<h3 id="poisson_distribution">Poisson Distribution<a class="headerlink" href="#poisson_distribution" title="Permanent link">&para;</a></h3>
+<p>sparse networks: <script type="math/tex">\langle k \rangle \ll N</script>
+</p>
+<p>eq.3.7 is approx'd by Poisson dist</p>
+<p>
+<script type="math/tex; mode=display"> p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} </script>
+</p>
+<p><strong>degree distributioin of a random network</strong></p>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-5.jpg" title="Fig.3.5 Degree Distribution is Independent of the Network Size"><img alt="fig.3.5" src="http://networksciencebook.com/images/ch-03/figure-3-5.jpg" title="Fig.3.5 Degree Distribution is Independent of the Network Size" /></a></p>
+<blockquote>
+<p>The degree distribution of a random network with ‹k› = 50 and N = 102, 103, 104.
+Small Networks: Binomial
+For a small network (N = 102) the degree distribution deviates significantly from the Poisson form (3.8), as the condition for the Poisson approximation, N»‹k›, is not satisfied. Hence for small networks one needs to use the exact binomial form (3.7) (green line).</p>
+<p>Large Networks: Poisson
+For larger networks (N = 103, 104) the degree distribution becomes indistinguishable from the Poisson prediction (3.8), shown as a continuous grey line. Therefore for large N the degree distribution is independent of the network size. In the figure we averaged over 1,000 independently generated random networks to decrease the noise.</p>
+</blockquote>
+<h2 id="0305_real_networks_are_not_poisson">03.05 Real Networks are Not Poisson<a class="headerlink" href="#0305_real_networks_are_not_poisson" title="Permanent link">&para;</a></h2>
+<p>social network
+<script type="math/tex">\langle k \rangle \approx 1000</script>, <script type="math/tex">N \approx 7 \times10^9</script> of individuals</p>
+<p>
+<script type="math/tex">k_{\text{max}} = 1185</script> accuaitances</p>
+<p>
+<script type="math/tex">k_{\text{min}} = 816</script>
+</p>
+<p>despersion of random network is <script type="math/tex">\sigma_k = \langle k \rangle^{\frac{1}{2}}</script>, 
+for <script type="math/tex">\langle k \rangle = 1000</script>
+<script type="math/tex">\sigma_k = 31.62</script>
+<script type="math/tex">\langle k \rangle \pm \sigma_k</script> range </p>
+<p><em>in a large random network the degree of most nodes is in the narrow vicinity of</em> <script type="math/tex">\langle k \rangle</script>
+</p>
+<h3 id="box_3-4_why_are_hubs_missing">Box 3-4 Why are Hubs Missing?<a class="headerlink" href="#box_3-4_why_are_hubs_missing" title="Permanent link">&para;</a></h3>
+<p>
+<script type="math/tex">\frac{1}{k!}</script>
+</p>
+<p>the Stirling approx</p>
+<p>
+<script type="math/tex">k! \sim \sqrt{2\pi k} \bigg(\frac{k}{e}\bigg)^k</script>
+</p>
+<p>rewrite eq.3.8  as:</p>
+<p>
+<script type="math/tex; mode=display">p_k = \frac{e^{- \langle k \rangle}}{\sqrt{2\pi k}}\bigg(\frac{e\langle k \rangle}{k}\bigg)^k \tag{3.9} </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> k > e \langle k \rangle </script>
+</p>
+<h3 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-6.jpg" title="Fig.3.6 Degree Distribution of Real Networks "><img alt="figure.3.6" src="http://networksciencebook.com/images/ch-03/figure-3-6.jpg" title="Fig.3.6 Degree Distribution of Real Networks " /></a></p>
+<h2 id="0306_the_evolution_of_a_random_network">03.06 The Evolution of a Random Network<a class="headerlink" href="#0306_the_evolution_of_a_random_network" title="Permanent link">&para;</a></h2>
+<p>the size of the largest conneted cluster w/i the network, <img alt="" src="https://latex.codecogs.com/gif.latex?N_G" title="N_G" /> varies w/ <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle" /></p>
+<ul>
+<li>for <img alt="" src="https://latex.codecogs.com/gif.latex?p=0" title="p=0" /> we have <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=0" title="\langle&amp;space;k\rangle=0" />, &there4; <img alt="" src="https://latex.codecogs.com/gif.latex?N_G=1" title="N_G=1" /> and <img alt="" src="https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\rightarrow0" title="\frac{N_G}{N}\rightarrow0" /> for large <img alt="" src="https://latex.codecogs.com/gif.latex?N" /></li>
+<li>for <img alt="" src="https://latex.codecogs.com/gif.latex?p=1" title="p=1" /> we have <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=N-1" title="\langle&amp;space;k\rangle=N-1" />, complete graph, &there4; <img alt="" src="https://latex.codecogs.com/gif.latex?N_G=N" title="N_G=N" /> and <img alt="" src="https://latex.codecogs.com/gif.latex?\frac{N_G}{N}=1" title="\frac{N_G}{N}=1" /></li>
+</ul>
+<!-- ![video.3.2][video_03_02] -->
+
+<iframe width="560" height="315" src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02" allowfullscreen></iframe>
+
+<p>grow from <img alt="" src="https://latex.codecogs.com/gif.latex?N_G=1" title="N_G=1" /> to <img alt="" src="https://latex.codecogs.com/gif.latex?N_G=N" title="N_G=N" /> if <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle" /> increase from <img alt="" src="https://latex.codecogs.com/gif.latex?0" /> to <img alt="" src="https://latex.codecogs.com/gif.latex?N-1" /></p>
+<p><a href="http://www.leonidzhukov.net/hse/2016/networks/papers/erdos-1959-11.pdf" title="Erdős, P. and Rényi, A., 1960. On the evolution of random graphs. Publ. Math. Inst. Hung. Acad. Sci, 5(1), pp.17-60.">Erdős P., Rényi A., 1960</a> condition for teh emergence of the giant component is (<a href="http://www.leonidzhukov.net/hse/2016/networks/papers/erdos-1959-11.pdf" title="Erdős, P. and Rényi, A., 1960. On the evolution of random graphs. Publ. Math. Inst. Hung. Acad. Sci, 5(1), pp.17-60.">Erdős P., Rényi A., 1960</a>):</p>
+<p><img alt="eq.3.10" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=1" title="\langle&amp;space;k\rangle=1" /></p>
+<p>express eq.3.10 in terms of <img alt="" src="https://latex.codecogs.com/gif.latex?p" /> using eq.3.3 <img alt="eq.3.3" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=\frac{2\langle&amp;space;L\rangle}{N}=p(N-1)" title="eq.3.3" /></p>
+<p><img alt="eq.3.11" src="https://latex.codecogs.com/gif.latex?p_c=\frac{1}{N-1}\approx\frac{1}{N}" title="eq.3.11" /></p>
+<p>the larger network, the smaller <img alt="" src="https://latex.codecogs.com/gif.latex?p" /> is sufficient for the giant component</p>
+<p>4 regimes: </p>
+<p><strong>Subcritical regime</strong>: <img alt="" src="https://latex.codecogs.com/gif.latex?0&lt;\langle&amp;space;k\rangle&lt;1" title="0&lt;\langle&amp;space;k\rangle&lt;1" /> (<img alt="" src="https://latex.codecogs.com/gif.latex?p&lt;\frac{1}{N}" title="p&lt;\frac{1}{N}" />)</p>
+<p>for <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle&lt;1" title="\langle&amp;space;k\rangle&lt;1" />, 
+<img alt="" src="https://latex.codecogs.com/gif.latex?N_G\sim\ln{N}" title="N_G\sim\ln{N}" /></p>
+<p>&there4; <img alt="" src="https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0" title="\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0" />, <img alt="" src="https://latex.codecogs.com/gif.latex?N\rightarrow\infty" title="N\rightarrow\infty" /></p>
+<p><strong>Critical point</strong>: <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=1" title="\langle&amp;space;k\rangle=1" /> (<img alt="" src="https://latex.codecogs.com/gif.latex?p=\frac{1}{N}" />)</p>
+<p>size of the largest component is
+<img alt="" src="https://latex.codecogs.com/gif.latex?N_G\sim&amp;space;N^{\frac{2}{3}}" title="N_G\sim&amp;space;N^{\frac{2}{3}}" /></p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\sim&amp;space;N^{-\frac{1}{3}}" title="\frac{N_G}{N}\sim&amp;space;N^{-\frac{1}{3}}" /> in the <img alt="" src="https://latex.codecogs.com/gif.latex?N\rightarrow\infty" title="N\rightarrow\infty" /> limit</p>
+<p>e.g., <img alt="" src="https://latex.codecogs.com/gif.latex?N=7\times10^9" title="N=7\times10^9" /> nodes</p>
+<p>for <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle&lt;1" title="\langle&amp;space;k\rangle&lt;1" />, 
+<img alt="" src="https://latex.codecogs.com/gif.latex?N_G\simeq\ln{N}=\ln{(7\times10^9)}\simeq22.7" title="N_G\simeq\ln{N}=\ln{(7\times10^9)}\simeq22.7" /></p>
+<p>for <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=1" title="\langle&amp;space;k\rangle=1" />, 
+<img alt="" src="https://latex.codecogs.com/gif.latex?N_G\sim&amp;space;N^{\frac{2}{3}}=(7\times10^9)^{\frac{2}{3}}\simeq3\times10^6" title="N_G\sim&amp;space;N^{\frac{2}{3}}=(7\times10^9)^{\frac{2}{3}}\simeq3\times10^6" /></p>
+<p><img alt="fig.3.7" src="http://networksciencebook.com/images/ch-03/figure-3-7.jpg" title="Fig.3.7 Evolution of a Random Network" /></p>
+<p><strong>Supercritical Regime</strong>: <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle&gt;1" title="\langle&amp;space;k\rangle&gt;1" /> (<img alt="" src="https://latex.codecogs.com/gif.latex?p&gt;\frac{1}{N}" title="p&gt;\frac{1}{N}" />)</p>
+<p><img alt="eq.3.12" src="https://latex.codecogs.com/gif.latex?\frac{N_G}{N}\sim\langle&amp;space;k\rangle-1" title="eq.3.12" /></p>
+<p>or</p>
+<p><img alt="eq.3.13" src="https://latex.codecogs.com/gif.latex?N_G\sim(p-p_c)N" title="eq.3.13" /></p>
+<p>where <img alt="" src="https://latex.codecogs.com/gif.latex?p_c" title="p_c" /> is given by eq.3.11 (<img alt="eq.3.11" src="https://latex.codecogs.com/gif.latex?p_c=\frac{1}{N-1}\approx\frac{1}{N}" title="eq.3.11" />)</p>
+<p><strong>Connected Regime</strong>: <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle&gt;\ln{N}" title="\langle&amp;space;k\rangle&gt;\ln{N}" /> (<img alt="" src="https://latex.codecogs.com/gif.latex?p&gt;\frac{\ln{N}}{N}" title="p&gt;\frac{\ln{N}}{N}" />)</p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?N_G\simeq&amp;space;N" title="N_G\simeq&amp;space;N" /></p>
+<p><img alt="eq.3.14" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=\ln{N}" title="eq.3.14" /></p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\frac{\ln{N}}{N}\rightarrow0" title="\frac{\ln{N}}{N}\rightarrow0" /> for large <img alt="" src="https://latex.codecogs.com/gif.latex?N" /></p>
+<h3 id="box_3-5_network_evolution_in_graph_theory">Box 3-5 Network Evolution in Graph Theory<a class="headerlink" href="#box_3-5_network_evolution_in_graph_theory" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?p(N)" title="p(N)" /> scales as <img alt="" src="https://latex.codecogs.com/gif.latex?N^z" title="N^z" /> where <img alt="" src="https://latex.codecogs.com/gif.latex?z" title="z" /> is tunable param <img alt="" src="https://latex.codecogs.com/gif.latex?[-\infty,0]" title="[-\infty,0]" /></p>
+<p><img alt="fig.3.8" src="http://networksciencebook.com/images/ch-03/figure-3-8.jpg" title="Fig.3.8 Evolution of a Random Graph " /></p>
+<h2 id="0307_real_networks_are_supercritical">03.07 Real Networks are Supercritical<a class="headerlink" href="#0307_real_networks_are_supercritical" title="Permanent link">&para;</a></h2>
+<ul>
+<li><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=1" title="\langle&amp;space;k\rangle=1" /> </li>
+<li><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle&gt;\ln{N}" title="\langle&amp;space;k\rangle&gt;\ln{N}" /></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?N" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?L" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?\ln{N}" title="\ln{N}" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet</td>
+<td align="right">192,244</td>
+<td align="right">609,066</td>
+<td align="right">6.34</td>
+<td align="right">12.17</td>
+</tr>
+<tr>
+<td>Power Grid</td>
+<td align="right">4,941</td>
+<td align="right">6,594</td>
+<td align="right">2.67</td>
+<td align="right">8.51</td>
+</tr>
+<tr>
+<td>Science Collaboration</td>
+<td align="right">23,133</td>
+<td align="right">94,437</td>
+<td align="right">8.08</td>
+<td align="right">10.05</td>
+</tr>
+<tr>
+<td>Actor Network</td>
+<td align="right">702,388</td>
+<td align="right">29,397,908</td>
+<td align="right">83.71</td>
+<td align="right">13.46</td>
+</tr>
+<tr>
+<td>Protein Interactions</td>
+<td align="right">2,018</td>
+<td align="right">2,930</td>
+<td align="right">2.90</td>
+<td align="right">7.61</td>
+</tr>
+</tbody>
+</table>
+<p>most real networks are in the supercritical regime</p>
+<p>giant component coexist w/ many disconnected components</p>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-9.jpg" title="Fig.3.9 Most Real Networks are Supercritical"><img alt="Fig.3.9" src="http://networksciencebook.com/images/ch-03/figure-3-9.jpg" title="Fig.3.9 Most Real Networks are Supercritical" /></a></p>
+<h2 id="0308_small_worlds">03.08 Small Worlds<a class="headerlink" href="#0308_small_worlds" title="Permanent link">&para;</a></h2>
+<p><strong>small world phenomenon</strong> aka, <strong>six degrees of separation</strong></p>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-10.jpg" title="Fig.3.10 Six Deegree of Separation"><img alt="fig.3.10" src="http://networksciencebook.com/images/ch-03/figure-3-10.jpg" title="Fig.3.10 Six Deegree of Separation" /></a></p>
+<p><em>the distance between two randomly chosen nodes in a network is short</em></p>
+<p>2 questions:
+- short mean
+- existenxe of these shord distances</p>
+<ul>
+<li><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle" /> nodes at distance <img alt="" src="https://latex.codecogs.com/gif.latex?d=1" title="d=1" /></li>
+<li><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle^2" title="\langle&amp;space;k\rangle^2" /> nodes at distance <img alt="" src="https://latex.codecogs.com/gif.latex?d=2" title="d=2" /></li>
+<li><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle^3" title="\langle&amp;space;k\rangle^3" /> nodes at distance <img alt="" src="https://latex.codecogs.com/gif.latex?d=3" title="d=3" /></li>
+<li>...</li>
+<li><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle^d" title="\langle&amp;space;k\rangle^d" /> nodes at distance <img alt="" src="https://latex.codecogs.com/gif.latex?d" title="d" /></li>
+</ul>
+<p>num of nodes up to distance <img alt="" src="https://latex.codecogs.com/gif.latex?d" title="d" /></p>
+<p><img alt="eq.3.15" src="https://latex.codecogs.com/gif.latex?N(d)\approx1+\langle&amp;space;k\rangle+\langle&amp;space;k\rangle^2+\cdots+\langle&amp;space;k\rangle^d=\frac{\langle&amp;space;k\rangle^{d+1}-1}{\langle&amp;space;k\rangle-1}" title="eq.3.15" /></p>
+<p>max distance <img alt="" src="https://latex.codecogs.com/gif.latex?d_{max}" title="d_{max}" /> or the network's diameter</p>
+<p><img alt="eq.3.16" src="https://latex.codecogs.com/gif.latex?N(d_{max})\approx&amp;space;N" title="eq.3.16" /></p>
+<p>assuming the <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle\gg1" title="\langle&amp;space;k\rangle\gg1" />, </p>
+<p><img alt="eq.3.17" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle^{d_{max}}\approx&amp;space;N" title="eq.3.17" /></p>
+<p>&there4; the diamter of network follows</p>
+<p><img alt="eq.3.18" src="https://latex.codecogs.com/gif.latex?d_{max}\approx\frac{\ln{N}}{\ln{k}}" title="eq.3.18" /></p>
+<ul>
+<li>
+<p>average distance between 2 randomly chosen nodes <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;d\rangle" title="\langle&amp;space;d\rangle" /></p>
+<p>the small world property is defined by</p>
+<p><img alt="eq.3.19" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;d\rangle\approx\frac{\ln{N}}{\ln{\langle&amp;space;k\rangle}}" title="eq.3.19" /></p>
+</li>
+<li>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\ln{N}\ll&amp;space;N" title="\ln{N}\ll&amp;space;N" />, 
+    <em>average path length or the diameter depends logarithmically on the system size</em></p>
+</li>
+<li>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\frac{1}{\ln{\langle&amp;space;k\rangle}}" title="\frac{1}{\ln{\langle&amp;space;k\rangle}}" /> imply the denser the network, the smaller the distance</p>
+</li>
+<li>
+<p>in real networks, systematic corrections to eq.3.19</p>
+</li>
+</ul>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-11.jpg" title="Fig.3.11 Why are Small Worlds Surprising?"><img alt="fig.3.11" src="http://networksciencebook.com/images/ch-03/figure-3-11.jpg" title="Fig.3.11 Why are Small Worlds Surprising?" /></a></p>
+<ul>
+<li>1D: <img alt="" src="https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N" title="d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N" /></li>
+<li>2D: <img alt="" src="https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N^{\frac{1}{2}}" title="d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N^{\frac{1}{2}}" /></li>
+<li>3D: <img alt="" src="https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N^{\frac{1}{3}}" title="d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N^{\frac{1}{3}}" /></li>
+<li>4D: <img alt="" src="https://latex.codecogs.com/gif.latex?d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N^{\frac{1}{d}}" title="d_{max}\sim\langle&amp;space;d\rangle\sim&amp;space;N^{\frac{1}{d}}" /></li>
+</ul>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?N\approx7\times10^9" title="N\approx7\times10^9" />, <img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle\approx10^3" title="\langle&amp;space;k\rangle\approx10^3" /></p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28" title="\langle&amp;space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28" /></p>
+<p>(<a href="https://www.sfu.ca/cmns/courses/marontate/2009/801/ClassFolders/jmckinnon/(0)%20Contacts%20and%20influence.pdf" title="de Sola Pool, I. and Kochen, M., 1978. Contacts and influence. Social networks, 1(1), pp.5-51.">de Sola Pool, I., Kochen, M., 1978</a> [20])</p>
+<h3 id="box_3-6_19_degrees_of_separation">Box 3-6 19 Degrees of Separation<a class="headerlink" href="#box_3-6_19_degrees_of_separation" title="Permanent link">&para;</a></h3>
+<p><strong>finite size scaling</strong> (<a href="http://barabasi.com/f/65.pdf" title="21">Albert, R., 1999</a>)</p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;d\rangle\approx0.35+0.89\ln{N}" title="\langle&amp;space;d\rangle\approx0.35+0.89\ln{N}" /></p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;d\rangle\approx18.69" title="\langle&amp;space;d\rangle\approx18.69" /> (<a href="https://homepage.univie.ac.at/juan.gorraiz/Vortrag/21987.pdf" title="Lawrence, S. and Giles, C.L., 1999. Accessibility of information on the web. Nature, 400(6740), p.107.">Lawrence, S., Giles, C.L., 1999</a>)</p>
+<p><em>19 degrees of separation</em></p>
+<h3 id="_3"><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?N" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?L" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;d\rangle" title="\langle&amp;space;d\rangle" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?d_{max}" title="d_{max}" /></th>
+<th align="right"><img alt="" src="https://latex.codecogs.com/gif.latex?\frac{\ln{N}}{\ln{\langle&amp;space;k\rangle}}" title="\frac{\ln{N}}{\ln{\langle&amp;space;k\rangle}}" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet</td>
+<td align="right">192,244</td>
+<td align="right">609,066</td>
+<td align="right">6.34</td>
+<td align="right">6.98</td>
+<td align="right">26</td>
+<td align="right">6.58</td>
+</tr>
+<tr>
+<td>WWW</td>
+<td align="right">325,729</td>
+<td align="right">1,497,134</td>
+<td align="right">4.60</td>
+<td align="right">11.27</td>
+<td align="right">93</td>
+<td align="right">8.31</td>
+</tr>
+<tr>
+<td>Power Grid</td>
+<td align="right">4,941</td>
+<td align="right">6,594</td>
+<td align="right">2.67</td>
+<td align="right">18.99</td>
+<td align="right">46</td>
+<td align="right">8.66</td>
+</tr>
+<tr>
+<td>Mobile-Phone Calls</td>
+<td align="right">36,595</td>
+<td align="right">91,826</td>
+<td align="right">2.51</td>
+<td align="right">11.72</td>
+<td align="right">39</td>
+<td align="right">11.42</td>
+</tr>
+<tr>
+<td>Email</td>
+<td align="right">57,194</td>
+<td align="right">103,731</td>
+<td align="right">1.81</td>
+<td align="right">5.88</td>
+<td align="right">18</td>
+<td align="right">18.4</td>
+</tr>
+<tr>
+<td>Science Collaboration</td>
+<td align="right">23,133</td>
+<td align="right">93,437</td>
+<td align="right">8.08</td>
+<td align="right">5.35</td>
+<td align="right">15</td>
+<td align="right">4.81</td>
+</tr>
+<tr>
+<td>Actor Network</td>
+<td align="right">702,388</td>
+<td align="right">29,397,908</td>
+<td align="right">83.71</td>
+<td align="right">3.91</td>
+<td align="right">14</td>
+<td align="right">3.04</td>
+</tr>
+<tr>
+<td>Citation Network</td>
+<td align="right">449,673</td>
+<td align="right">4,707,958</td>
+<td align="right">10.43</td>
+<td align="right">11.21</td>
+<td align="right">42</td>
+<td align="right">5.55</td>
+</tr>
+<tr>
+<td>E. Coli Metabolism</td>
+<td align="right">1,039</td>
+<td align="right">5,802</td>
+<td align="right">5.58</td>
+<td align="right">2.98</td>
+<td align="right">8</td>
+<td align="right">4.04</td>
+</tr>
+<tr>
+<td>Protein Interactions</td>
+<td align="right">2,018</td>
+<td align="right">2,930</td>
+<td align="right">2.90</td>
+<td align="right">5.61</td>
+<td align="right">14</td>
+<td align="right">7.14</td>
+</tr>
+</tbody>
+</table>
+<h3 id="box_3-7_six_degrees_-_experimental_confirmation">Box 3-7 Six Degrees - Experimental Confirmation<a class="headerlink" href="#box_3-7_six_degrees_-_experimental_confirmation" title="Permanent link">&para;</a></h3>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-12.jpg" title="Fig.3.12 Six Degrees? From Milgram to Facebook"><img alt="fig.3.12" src="http://networksciencebook.com/images/ch-03/figure-3-12.jpg" title="Fig.3.12 Six Degrees? From Milgram to Facebook" /></a></p>
+<h3 id="box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW<a class="headerlink" href="#box_3-8_19_degrees_of_the_www" title="Permanent link">&para;</a></h3>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW"><img alt="fig.box.3.8" src="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW" /></a></p>
+<h2 id="0309_clustering_coefficient">03.09 Clustering Coefficient<a class="headerlink" href="#0309_clustering_coefficient" title="Permanent link">&para;</a></h2>
+<p>clustering coefficient <img alt="" src="https://latex.codecogs.com/gif.latex?C_i" title="C_i" />, the density of the links in node <img alt="" src="https://latex.codecogs.com/gif.latex?i" />'s immediate neighborhood</p>
+<p>expected number of links <img alt="" src="https://latex.codecogs.com/gif.latex?L_i" title="L_i" /> </p>
+<p><img alt="eq.3.20" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;L_i\rangle=p\frac{k_i(k_i-1)}{2}" title="eq.3.20" /></p>
+<p>local clustering coefficient:</p>
+<p><img alt="eq.3.21" src="https://latex.codecogs.com/gif.latex?C_i=\frac{2\langle&amp;space;L_i\rangle}{k_i(k_i-1)}=p=\frac{\langle&amp;space;k\rangle}{N}" title="eq.3.21" /></p>
+<p>plot <img alt="" src="https://latex.codecogs.com/gif.latex?\frac{\langle&amp;space;C\rangle}{\langle&amp;space;k\rangle}" title="\frac{\langle&amp;space;C\rangle}{\langle&amp;space;k\rangle}" /> in fn of <img alt="" src="https://latex.codecogs.com/gif.latex?N" /> </p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?\frac{\langle&amp;space;C\rangle}{\langle&amp;space;k\rangle}" title="\frac{\langle&amp;space;C\rangle}{\langle&amp;space;k\rangle}" /> NOT decrease as <img alt="" src="https://latex.codecogs.com/gif.latex?N^{-1}" title="N^{-1}" /></p>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-13.jpg" title="Fig.3.13 Clustering in Real Networks"><img alt="fig.3.13" src="http://networksciencebook.com/images/ch-03/figure-3-13.jpg" title="Fig.3.13 Clustering in Real Networks" /></a></p>
+<h3 id="box_3-9_watts-strogatz_model">Box 3-9 Watts-Strogatz Model<a class="headerlink" href="#box_3-9_watts-strogatz_model" title="Permanent link">&para;</a></h3>
+<p><a href="http://networksciencebook.com/images/ch-03/figure-3-14.jpg" title="Fig.3.14 The Watts-Strogatz Model"><img alt="fig.3.14" src="http://networksciencebook.com/images/ch-03/figure-3-14.jpg" title="Fig.3.14 The Watts-Strogatz Model" /></a></p>
+<ul>
+<li>Small World Property
+    average distance depends logarithmically on <img alt="" src="https://latex.codecogs.com/gif.latex?N" /></li>
+<li>High Clustering
+    average clustering coef of real netw is higher than expected for a rand netw of similar <img alt="" src="https://latex.codecogs.com/gif.latex?N" /> and <img alt="" src="https://latex.codecogs.com/gif.latex?L" /></li>
+</ul>
+<p><strong>Watts-Strogatz model</strong> (small-world model) 
+interpolate 
+- Regular lattice: 
+    - High clustering
+    - Small-world property(-)
+- Random netw: 
+    - Low clustering
+    - Small-world property(+)</p>
+<h2 id="0310_summary_-_real_networks_are_not_random">03.10 Summary - Real Networks are Not Random<a class="headerlink" href="#0310_summary_-_real_networks_are_not_random" title="Permanent link">&para;</a></h2>
+<h2 id="0316_advanced_topic_3e_fully_connected_regime">03.16 Advanced Topic 3.E Fully Connected Regime<a class="headerlink" href="#0316_advanced_topic_3e_fully_connected_regime" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?(1-p)^{N_G}\approx(1-p)^N" title="(1-p)^{N_G}\approx(1-p)^N" /> in the <img alt="" src="https://latex.codecogs.com/gif.latex?N_G\simeq&amp;space;N" title="N_G\simeq&amp;space;N" /></p>
+<p>the num of isolated nodes is </p>
+<p><img alt="eq.3.40" src="https://latex.codecogs.com/gif.latex?I_N=N(1-p)^N=N\Big(1-\frac{N\cdot&amp;space;p}{N}\Big)^N\approx&amp;space;Ne^{-Np}" title="eq.3.40" /></p>
+<p>for large <img alt="" src="https://latex.codecogs.com/gif.latex?N" />, <br />
+<img alt="" src="https://latex.codecogs.com/gif.latex?(1-\frac{x}{n})^n\approx&amp;space;e^{-x}" title="(1-\frac{x}{n})^n\approx&amp;space;e^{-x}" /></p>
+<p>only one node is disconnected</p>
+<p><img alt="" src="https://latex.codecogs.com/gif.latex?I_N=1" title="I_N=1" />, eq.3.40, <img alt="" src="https://latex.codecogs.com/gif.latex?Ne^{-Np}=1" title="Ne^{-Np}=1" /></p>
+<p><img alt="eq.3.41" src="https://latex.codecogs.com/gif.latex?p=\frac{\ln{N}}{N}" title="p=\frac{\ln{N}}{N}" /></p>
+<p>leads to eq.3.14 <img alt="eq.3.14" src="https://latex.codecogs.com/gif.latex?\langle&amp;space;k\rangle=\ln{N}" title="eq.3.14" /></p>
+<h2 id="_4"><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<!-- link -->
+
+<h3 id="_5"><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<!-- figure -->
+
+<h3 id="_6"><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<!-- video -->
+
+<h3 id="_7"><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<!-- eq -->
+
+<h3 id="_8"><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<!-- 03.02 -->
+
+<!-- Box 3-1 -->
+
+<!-- #Poisson-Distribution -->
+
+<!-- 03.06 -->
+
+<!-- Box 3-5 Network Evolution in Graph Theory -->
+
+<!-- 03.07 -->
+
+<!-- 03.08 -->
+
+<!-- Box 3.6 -->
+
+<!-- 03.09 -->
+
+<!-- 03.16 -->
+
+<!-- 
+https://latex.codecogs.com/gif.latex?\inline&space;
+https://latex.codecogs.com/gif.latex?
+-->
+
+<!-- <style type="text/css">
+    img{width: 50%; float: right;}
+</style> -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../c04/note/" class="btn btn-neutral float-right" title="04 The Scale-Free Property">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../c02/note/" class="btn btn-neutral" title="02 Graph Theory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 - 2019 <a href="https://github.com/shumez">shumez</a>
+</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../c02/note/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../c04/note/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
