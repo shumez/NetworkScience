@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-03-28 15:29:31
+Modified: 	2019-04-05 17:18:55
 -----
 Copyright (c) 2019 shumez
 -->
@@ -32,6 +32,7 @@ Copyright (c) 2019 shumez
     * [Box 3-8 19 Degrees of the WWW](#Box-3-8-19-Degrees-of-the-WWW)
 09. [Clustering Coefficient](#0309-Clustering-Coefficient)
     * [Box 3-9 Watts-Strogatz Model](#Box-3-9-Watts-Strogatz-Model)
+10. [Summary - Real Networks are Not Random](#0310-Summary---Real-Networks-are-Not-Random)
 - 16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
 
 
@@ -40,17 +41,17 @@ Copyright (c) 2019 shumez
 
 ## 03.02 The Random Network Model
 
-![][N] nodes, connected w/ probability ![][p] 
+\(N\) nodes, connected w/ probability \(p\) 
 
 ### Box 3-1 Defining Random Networks
 
-- ![][G(N,L)] model :
-    - ![][N] labeled node are connedted with ![][L] randomly placed links
-    - fixes the total num of links ![][L]
-    - average degree of node ![][\langle&space;k\rangle=\frac{2L}{N}]
-- ![][G(N,p)] model :
-    - ![][N] labeled nodes is connected with probability ![][p]
-    - fixes prob ![][p]
+- \(G(N,L)\) model :
+    - \(N\) labeled node are connedted with \(L\) randomly placed links
+    - fixes the total num of links \(L\)
+    - average degree of node \(\langle k \rangle = \frac{2L}{N}\)
+- \(G(N,p)\) model :
+    - \(N\) labeled nodes is connected with probability \(p\)
+    - fixes prob \(p\)
 
 
 ### 
@@ -67,64 +68,63 @@ Copyright (c) 2019 shumez
 
 ## 03.03 Number of Links
 
-- prob that ![][L] of attempts to connect ![][\frac{N(N-1)}{2}] pairs of nodes have result in link, is ![][p^L]
-- prob that the remaining ![][\frac{N(N-1)}{2}] pairs of nodes have  not resulted in a link is
-    ![(1-p)^{\frac{N(N-1)}{2}-L}][(1-p)^{\frac{N(N-1)}{2}-L}]
+- prob that \(L\) of attempts to connect \(\frac{N(N-1)}{2}\) pairs of nodes have result in link, is \(p^L\)
+- prob that the remaining \(\frac{N(N-1)}{2}\) pairs of nodes have  not resulted in a link is
+    \((1-p)^{\frac{N(N-1)}{2}-L}\)
 - conmbinational factor
     <!-- \[ \binom{\frac{N(N-1)}{2}}{L} \tag{3.0} \] -->
-    ![eq.3.0][\binom{\frac{N(N-1)}{2}}{L}]
+    \[\binom{\frac{N(N-1)}{2}}{L} \tag{3.0}\]
 
-<!-- \[ p_L = \binom{\frac{N(N-1)}{2}}{L} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} \] -->
-![eq.3.1][p_L=\binom{\frac{N(N-1)}{2}}{L}p^L(1-p)^{\frac{N(N-1)}{2}-L}]
+\[ p_L = \binom{\frac{N(N-1)}{2}}{L} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} \]
+
 
 
 expected num of links
 
-<!-- \[ \langle L \rangle = \sum_{L=0}^{\frac{N(N-1)}{2}} LP_L = p \frac{N(N-1)}{2} \tag{3.2} \] -->
-![eq.3.2][\langle&space;L\rangle=\sum_{L=0}^{\frac{N(N-1)}{2}}LP_L=p\frac{N(N-1)}{2}]
-
-<!-- \( L_{max} = \frac{N(N-1)}{2} \) -->
-![][L_{max}=\frac{N(N-1)}{2}]
+\[ \langle L \rangle = \sum_{L=0}^{\frac{N(N-1)}{2}} LP_L = p \frac{N(N-1)}{2} \tag{3.2} \]
 
 
-<!-- \[ \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} \] -->
-![eq.3.3][\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1)]
+\( L_{max} = \frac{N(N-1)}{2} \)
 
-from ![][\langle&space;k\rangle=0] to ![][\langle&space;k\rangle=N-1]
+
+
+\[ \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} \]
+
+
+from \(\langle k \rangle = 0\) to \(\langle k\rangle = N-1\)
 
 [![fig.3.3][fig_03_03]][fig_03_03]
-![][p=\frac{1}{6}], ![][N=12], ![][L=10,&space;18,&space;8]
 
-![][p=.03], ![][N=100]
+\(p = \frac{1}{6}\), \(N=12\), \(L = 10, 18, 8\)
+
+\(p = .03\), \(N = 100\)
 
 
 ### Box 3-3 Binomial Distribution - Mean and Variance
 
-<!-- \[ p_x = \binom{N}{x} p^x (1-p)^{N-x} \] -->
-![][p_x=\binom{N}{x}p^x(1-p)^{N-x}]
+\[ p_x = \binom{N}{x} p^x (1-p)^{N-x} \]
 
-<!-- \[ \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} \] -->
-![eq.3.4][\langle&space;x\rangle=\sum_{x=0}^Nxp_x=Np]
+\[ \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} \]
 
-<!-- \[ \langle x^2 \rangle = \sum_{x=0}^N x^2 p_x = p(1-p)N + p^2 N^2 \tag{3.5} \] -->
-![eq.3.5][\langle&space;x^2\rangle=\sum_{x=0}^Nx^2p_x=p(1-p)N+p^2&space;N^2]
+\[ \langle x^2 \rangle = \sum_{x=0}^N x^2 p_x = p(1-p)N + p^2 N^2 \tag{3.5} \]
+
 
 standard deviation
 
-<!-- \[ \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} \] -->
-![eq.3.6][\sigma_x=\big(\langle&space;x^2\rangle-\langle&space;x\rangle^2\big)^{\frac{1}{2}}=\Big(p(1-p)N\Big)^{\frac{1}{2}}]
+\[ \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} \]
+
 
 
 ## 03.04 Degree Distribution
 
-degree dist ![][p_k], degree ![][k]
+degree dist \(p_k\), degree \(k\)
 
 
 |               |               | Binominal                                                 | Poisson |
 |--------------:|:-------------:|:---------------------------------------------------------:|:------------------------------------------:|
-| degree dist   | ![][p_k]      | ![][\binom{N-1}{k}p_k(1-p)^{N-1-k}]   | ![][e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle}{k!}] |
-| peak at       | ![][k]        | ![][\langle&space;k\rangle=p(N-1)]                        | ![][\langle&space;k\rangle]               |
-| width         | ![][\sigma_k] | ![][p(1-p)(N-1)]                                          | ![][\langle&space;k\rangle^{\frac{1}{2}}] |
+| degree dist   | \(p_k\)      | \(\binom{N-1}{k}p_k(1-p)^{N-1-k}\)   | \(e^{-\langle k \rangle} \frac{\langle k \rangle}{k!}\) |
+| peak at       | \(k\)        | \(\langle k \rangle = p(N-1)\)                        | \(\langle k \rangle\)               |
+| width         | \(\sigma_k\) | \(p(1-p)(N-1)\)                                          | \(\langle k \rangle^{\frac{1}{2}}\) |
 
 
 
@@ -133,28 +133,27 @@ degree dist ![][p_k], degree ![][k]
 
 ### Binomial Distribution
 
-prob that node ![][i] has ![][k] links is product of 3 terms:
+prob that node \(i\) has \(k\) links is product of 3 terms:
 
-1. prob that ![][k] of its links are present / ![][p^k]
-2. prob that remaining (![][N-1-k]) links are missing / ![][(1-p)^{N-1-k}]
-3. ![][\binom{N-1}{k}]
-<!-- \[ \binom{N-1}{k} \] -->
+1. prob that \(k\) of its links are present / \(p^k\)
+2. prob that remaining (\(N-1-k\)) links are missing / \((1-p)^{N-1-k}\)
+3. 
+    \[ \binom{N-1}{k} \]
 
-<!-- \[ p_k = \binom{N-1}{k} p^k (1-p)^{N-1-k} \tag{3.7} \] -->
-![eq.3.7][p_k=\binom{N-1}{k}p^k(1-p)^{N-1-k}]
+\[ p_k = \binom{N-1}{k} p^k (1-p)^{N-1-k} \tag{3.7} \]
 
-average degree ![][\langle&space;k\rangle]
-second moment ![][\langle&space;k^2\rangle] & variance ![][\sigma_k]
+average degree \(\langle k \rangle\)
+second moment \(\langle k^2 \rangle\) & variance \(\sigma_k\)
 
 
 ### Poisson Distribution
 
-sparse networks: ![][\langle&space;k\rangle\ll&space;N]
+sparse networks: \(\langle k \rangle \ll N\)
 
 eq.3.7 is approx'd by Poisson dist
 
-<!-- \[ p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} \] -->
-![eq.3.8][p_k=e^{-\langle&space;k\rangle}\frac{\langle&space;k\rangle^k}{k!}]
+\[ p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} \]
+
 
 **degree distributioin of a random network**
 
@@ -170,32 +169,32 @@ eq.3.7 is approx'd by Poisson dist
 ## 03.05 Real Networks are Not Poisson
 
 social network
-![][\langle&space;k\rangle\approx1000], ![][N\approx&space;7\times10^9] of individuals
+\(\langle k \rangle \approx 1000\), \(N \approx 7 \times10^9\) of individuals
 
-![][k_{\text{max}}=1185] accuaitances
+\(k_{\text{max}} = 1185\) accuaitances
 
-![][k_{\text{min}}=816]
+\(k_{\text{min}} = 816\)
 
-despersion of random network is ![][\sigma_k=\langle&space;k\rangle^{\frac{1}{2}}], 
-for ![][\langle&space;k\rangle=1000] ![][\sigma_k=31.62]
-![][\langle&space;k\rangle\pm\sigma_k] range 
+despersion of random network is \(\sigma_k = \langle k \rangle^{\frac{1}{2}}\), 
+for \(\langle k \rangle = 1000\) \(\sigma_k = 31.62\)
+\(\langle k \rangle \pm \sigma_k\) range 
 
-*in a large random network the degree of most nodes is in the narrow vicinity of* ![][\langle&space;k\rangle]
+*in a large random network the degree of most nodes is in the narrow vicinity of* \(\langle k \rangle\)
 
 
 ### Box 3-4 Why are Hubs Missing?
 
-![][\frac{1}{k!}]
+\(\frac{1}{k!}\)
 
 the Stirling approx
 
-![][k!\sim\sqrt{2\pi&space;k}\bigg(\frac{k}{e}\bigg)^k]
+\(k! \sim \sqrt{2\pi k} \bigg(\frac{k}{e}\bigg)^k\)
 
 rewrite eq.3.8  as:
 
-![eq.3.9][p_k=\frac{e^{-\langle&space;k\rangle}}{\sqrt{2\pi&space;k}}\bigg(\frac{e\langle&space;k\rangle}{k}\bigg)^k]
+\[p_k = \frac{e^{- \langle k \rangle}}{\sqrt{2\pi k}}\bigg(\frac{e\langle k \rangle}{k}\bigg)^k \tag{3.9} \]
 
-![][k>e\langle&space;k\rangle]
+\[ k > e \langle k \rangle \]
 
 
 ### 
@@ -443,6 +442,12 @@ interpolate
 - Random netw: 
     - Low clustering
     - Small-world property(+)
+
+
+## 03.10 Summary - Real Networks are Not Random
+
+
+
 
 
 
