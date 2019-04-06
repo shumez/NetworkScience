@@ -250,18 +250,28 @@ Copyright (c) 2019 shumez
 </ol>
 <h2 id="0301_introduction">03.01 Introduction<a class="headerlink" href="#0301_introduction" title="Permanent link">&para;</a></h2>
 <h2 id="0302_the_random_network_model">03.02 The Random Network Model<a class="headerlink" href="#0302_the_random_network_model" title="Permanent link">&para;</a></h2>
-<p><span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> nodes, connected w/ probability <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> </p>
+<p>
+<script type="math/tex">N</script> nodes, connected w/ probability <script type="math/tex">p</script>
+</p>
 <h3 id="box_3-1_defining_random_networks">Box 3-1 Defining Random Networks<a class="headerlink" href="#box_3-1_defining_random_networks" title="Permanent link">&para;</a></h3>
 <ul>
-<li><span><span class="MathJax_Preview">G(N,L)</span><script type="math/tex">G(N,L)</script></span> model :<ul>
-<li><span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> labeled node are connedted with <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> randomly placed links</li>
-<li>fixes the total num of links <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></li>
-<li>average degree of node <span><span class="MathJax_Preview">\langle k \rangle = \frac{2L}{N}</span><script type="math/tex">\langle k \rangle = \frac{2L}{N}</script></span></li>
+<li>
+<script type="math/tex">G(N,L)</script> model :<ul>
+<li>
+<script type="math/tex">N</script> labeled node are connedted with <script type="math/tex">L</script> randomly placed links</li>
+<li>fixes the total num of links <script type="math/tex">L</script>
+</li>
+<li>average degree of node <script type="math/tex">\langle k \rangle = \frac{2L}{N}</script>
+</li>
 </ul>
 </li>
-<li><span><span class="MathJax_Preview">G(N,p)</span><script type="math/tex">G(N,p)</script></span> model :<ul>
-<li><span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> labeled nodes is connected with probability <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></li>
-<li>fixes prob <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span></li>
+<li>
+<script type="math/tex">G(N,p)</script> model :<ul>
+<li>
+<script type="math/tex">N</script> labeled nodes is connected with probability <script type="math/tex">p</script>
+</li>
+<li>fixes prob <script type="math/tex">p</script>
+</li>
 </ul>
 </li>
 </ul>
@@ -275,52 +285,55 @@ Copyright (c) 2019 shumez
 </ul>
 <h2 id="0303_number_of_links">03.03 Number of Links<a class="headerlink" href="#0303_number_of_links" title="Permanent link">&para;</a></h2>
 <ul>
-<li>prob that <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> of attempts to connect <span><span class="MathJax_Preview">\frac{N(N-1)}{2}</span><script type="math/tex">\frac{N(N-1)}{2}</script></span> pairs of nodes have result in link, is <span><span class="MathJax_Preview">p^L</span><script type="math/tex">p^L</script></span></li>
-<li>prob that the remaining <span><span class="MathJax_Preview">\frac{N(N-1)}{2}</span><script type="math/tex">\frac{N(N-1)}{2}</script></span> pairs of nodes have  not resulted in a link is
-    <span><span class="MathJax_Preview">(1-p)^{\frac{N(N-1)}{2}-L}</span><script type="math/tex">(1-p)^{\frac{N(N-1)}{2}-L}</script></span></li>
+<li>prob that <script type="math/tex">L</script> of attempts to connect <script type="math/tex">\frac{N(N-1)}{2}</script> pairs of nodes have result in link, is <script type="math/tex">p^L</script>
+</li>
+<li>prob that the remaining <script type="math/tex">\frac{N(N-1)}{2}</script> pairs of nodes have  not resulted in a link is
+    <script type="math/tex">(1-p)^{\frac{N(N-1)}{2}-L}</script>
+</li>
 <li>conmbinational factor
     <!-- <script type="math/tex; mode=display"> \binom{\frac{N(N-1)}{2}}{L} \tag{3.0} </script> -->
     <script type="math/tex; mode=display">\binom{\frac{N(N-1)}{2}}{L} \tag{3.0}</script>
 </li>
 </ul>
-<div>
-<div class="MathJax_Preview"> p_L = \binom{\frac{N(N-1)}{2}}{L} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} </div>
+<p>
 <script type="math/tex; mode=display"> p_L = \binom{\frac{N(N-1)}{2}}{L} p^L (1 - p)^{\frac{N (N - 1)}{2} - L} \tag{3.1} </script>
-</div>
+</p>
 <p>expected num of links</p>
-<div>
-<div class="MathJax_Preview"> \langle L \rangle = \sum_{L=0}^{\frac{N(N-1)}{2}} LP_L = p \frac{N(N-1)}{2} \tag{3.2} </div>
+<p>
 <script type="math/tex; mode=display"> \langle L \rangle = \sum_{L=0}^{\frac{N(N-1)}{2}} LP_L = p \frac{N(N-1)}{2} \tag{3.2} </script>
-</div>
-<p><span><span class="MathJax_Preview"> L_{max} = \frac{N(N-1)}{2} </span><script type="math/tex"> L_{max} = \frac{N(N-1)}{2} </script></span></p>
-<div>
-<div class="MathJax_Preview"> \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} </div>
+</p>
+<p>
+<script type="math/tex"> L_{max} = \frac{N(N-1)}{2} </script>
+</p>
+<p>
 <script type="math/tex; mode=display"> \langle k \rangle = \frac{2 \langle L \rangle}{N} = p (N - 1) \tag{3.3} </script>
-</div>
-<p>from <span><span class="MathJax_Preview">\langle k \rangle = 0</span><script type="math/tex">\langle k \rangle = 0</script></span> to <span><span class="MathJax_Preview">\langle k\rangle = N-1</span><script type="math/tex">\langle k\rangle = N-1</script></span></p>
+</p>
+<p>from <script type="math/tex">\langle k \rangle = 0</script> to <script type="math/tex">\langle k\rangle = N-1</script>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-3.jpg" title="Fig.3.3 Random Networks are Truly Random"><img alt="fig.3.3" src="http://networksciencebook.com/images/ch-03/figure-3-3.jpg" title="Fig.3.3 Random Networks are Truly Random" /></a></p>
-<p><span><span class="MathJax_Preview">p = \frac{1}{6}</span><script type="math/tex">p = \frac{1}{6}</script></span>, <span><span class="MathJax_Preview">N=12</span><script type="math/tex">N=12</script></span>, <span><span class="MathJax_Preview">L = 10, 18, 8</span><script type="math/tex">L = 10, 18, 8</script></span></p>
-<p><span><span class="MathJax_Preview">p = .03</span><script type="math/tex">p = .03</script></span>, <span><span class="MathJax_Preview">N = 100</span><script type="math/tex">N = 100</script></span></p>
+<p>
+<script type="math/tex">p = \frac{1}{6}</script>, <script type="math/tex">N=12</script>, <script type="math/tex">L = 10, 18, 8</script>
+</p>
+<p>
+<script type="math/tex">p = .03</script>, <script type="math/tex">N = 100</script>
+</p>
 <h3 id="box_3-3_binomial_distribution_-_mean_and_variance">Box 3-3 Binomial Distribution - Mean and Variance<a class="headerlink" href="#box_3-3_binomial_distribution_-_mean_and_variance" title="Permanent link">&para;</a></h3>
-<div>
-<div class="MathJax_Preview"> p_x = \binom{N}{x} p^x (1-p)^{N-x} </div>
+<p>
 <script type="math/tex; mode=display"> p_x = \binom{N}{x} p^x (1-p)^{N-x} </script>
-</div>
-<div>
-<div class="MathJax_Preview"> \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} </div>
+</p>
+<p>
 <script type="math/tex; mode=display"> \langle x \rangle = \sum_{x=0}^N xp_x = Np \tag{3.4} </script>
-</div>
-<div>
-<div class="MathJax_Preview"> \langle x^2 \rangle = \sum_{x=0}^N x^2 p_x = p(1-p)N + p^2 N^2 \tag{3.5} </div>
+</p>
+<p>
 <script type="math/tex; mode=display"> \langle x^2 \rangle = \sum_{x=0}^N x^2 p_x = p(1-p)N + p^2 N^2 \tag{3.5} </script>
-</div>
+</p>
 <p>standard deviation</p>
-<div>
-<div class="MathJax_Preview"> \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} </div>
+<p>
 <script type="math/tex; mode=display"> \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} </script>
-</div>
+</p>
 <h2 id="0304_degree_distribution">03.04 Degree Distribution<a class="headerlink" href="#0304_degree_distribution" title="Permanent link">&para;</a></h2>
-<p>degree dist <span><span class="MathJax_Preview">p_k</span><script type="math/tex">p_k</script></span>, degree <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></p>
+<p>degree dist <script type="math/tex">p_k</script>, degree <script type="math/tex">k</script>
+</p>
 <table>
 <thead>
 <tr>
@@ -333,50 +346,69 @@ Copyright (c) 2019 shumez
 <tbody>
 <tr>
 <td align="right">degree dist</td>
-<td align="center"><span><span class="MathJax_Preview">p_k</span><script type="math/tex">p_k</script></span></td>
-<td align="center"><span><span class="MathJax_Preview">\binom{N-1}{k}p_k(1-p)^{N-1-k}</span><script type="math/tex">\binom{N-1}{k}p_k(1-p)^{N-1-k}</script></span></td>
-<td align="center"><span><span class="MathJax_Preview">e^{-\langle k \rangle} \frac{\langle k \rangle}{k!}</span><script type="math/tex">e^{-\langle k \rangle} \frac{\langle k \rangle}{k!}</script></span></td>
+<td align="center">
+<script type="math/tex">p_k</script>
+</td>
+<td align="center">
+<script type="math/tex">\binom{N-1}{k}p_k(1-p)^{N-1-k}</script>
+</td>
+<td align="center">
+<script type="math/tex">e^{-\langle k \rangle} \frac{\langle k \rangle}{k!}</script>
+</td>
 </tr>
 <tr>
 <td align="right">peak at</td>
-<td align="center"><span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></td>
-<td align="center"><span><span class="MathJax_Preview">\langle k \rangle = p(N-1)</span><script type="math/tex">\langle k \rangle = p(N-1)</script></span></td>
-<td align="center"><span><span class="MathJax_Preview">\langle k \rangle</span><script type="math/tex">\langle k \rangle</script></span></td>
+<td align="center">
+<script type="math/tex">k</script>
+</td>
+<td align="center">
+<script type="math/tex">\langle k \rangle = p(N-1)</script>
+</td>
+<td align="center">
+<script type="math/tex">\langle k \rangle</script>
+</td>
 </tr>
 <tr>
 <td align="right">width</td>
-<td align="center"><span><span class="MathJax_Preview">\sigma_k</span><script type="math/tex">\sigma_k</script></span></td>
-<td align="center"><span><span class="MathJax_Preview">p(1-p)(N-1)</span><script type="math/tex">p(1-p)(N-1)</script></span></td>
-<td align="center"><span><span class="MathJax_Preview">\langle k \rangle^{\frac{1}{2}}</span><script type="math/tex">\langle k \rangle^{\frac{1}{2}}</script></span></td>
+<td align="center">
+<script type="math/tex">\sigma_k</script>
+</td>
+<td align="center">
+<script type="math/tex">p(1-p)(N-1)</script>
+</td>
+<td align="center">
+<script type="math/tex">\langle k \rangle^{\frac{1}{2}}</script>
+</td>
 </tr>
 </tbody>
 </table>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-4.jpg" title="Fig.3.4 Binomial vs. Poisson Degree Distribution"><img alt="fig.3.4" src="http://networksciencebook.com/images/ch-03/figure-3-4.jpg" title="Fig.3.4 Binomial vs. Poisson Degree Distribution" /></a></p>
 <h3 id="binomial_distribution">Binomial Distribution<a class="headerlink" href="#binomial_distribution" title="Permanent link">&para;</a></h3>
-<p>prob that node <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> has <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> links is product of 3 terms:</p>
+<p>prob that node <script type="math/tex">i</script> has <script type="math/tex">k</script> links is product of 3 terms:</p>
 <ol>
-<li>prob that <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> of its links are present / <span><span class="MathJax_Preview">p^k</span><script type="math/tex">p^k</script></span></li>
-<li>prob that remaining (<span><span class="MathJax_Preview">N-1-k</span><script type="math/tex">N-1-k</script></span>) links are missing / <span><span class="MathJax_Preview">(1-p)^{N-1-k}</span><script type="math/tex">(1-p)^{N-1-k}</script></span></li>
+<li>prob that <script type="math/tex">k</script> of its links are present / <script type="math/tex">p^k</script>
+</li>
+<li>prob that remaining (<script type="math/tex">N-1-k</script>) links are missing / <script type="math/tex">(1-p)^{N-1-k}</script>
+</li>
 <li>
-<div>
-<div class="MathJax_Preview"> \binom{N-1}{k} </div>
+<p>
 <script type="math/tex; mode=display"> \binom{N-1}{k} </script>
-</div>
+</p>
 </li>
 </ol>
-<div>
-<div class="MathJax_Preview"> p_k = \binom{N-1}{k} p^k (1-p)^{N-1-k} \tag{3.7} </div>
+<p>
 <script type="math/tex; mode=display"> p_k = \binom{N-1}{k} p^k (1-p)^{N-1-k} \tag{3.7} </script>
-</div>
-<p>average degree <span><span class="MathJax_Preview">\langle k \rangle</span><script type="math/tex">\langle k \rangle</script></span>
-second moment <span><span class="MathJax_Preview">\langle k^2 \rangle</span><script type="math/tex">\langle k^2 \rangle</script></span> &amp; variance <span><span class="MathJax_Preview">\sigma_k</span><script type="math/tex">\sigma_k</script></span></p>
+</p>
+<p>average degree <script type="math/tex">\langle k \rangle</script>
+second moment <script type="math/tex">\langle k^2 \rangle</script> &amp; variance <script type="math/tex">\sigma_k</script>
+</p>
 <h3 id="poisson_distribution">Poisson Distribution<a class="headerlink" href="#poisson_distribution" title="Permanent link">&para;</a></h3>
-<p>sparse networks: <span><span class="MathJax_Preview">\langle k \rangle \ll N</span><script type="math/tex">\langle k \rangle \ll N</script></span></p>
+<p>sparse networks: <script type="math/tex">\langle k \rangle \ll N</script>
+</p>
 <p>eq.3.7 is approx'd by Poisson dist</p>
-<div>
-<div class="MathJax_Preview"> p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} </div>
+<p>
 <script type="math/tex; mode=display"> p_k = e^{- \langle k \rangle } \frac{\langle k \rangle^k}{k!} \tag{3.8} </script>
-</div>
+</p>
 <p><strong>degree distributioin of a random network</strong></p>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-5.jpg" title="Fig.3.5 Degree Distribution is Independent of the Network Size"><img alt="fig.3.5" src="http://networksciencebook.com/images/ch-03/figure-3-5.jpg" title="Fig.3.5 Degree Distribution is Independent of the Network Size" /></a></p>
 <blockquote>
@@ -388,102 +420,130 @@ For larger networks (N = 103, 104) the degree distribution becomes indistinguish
 </blockquote>
 <h2 id="0305_real_networks_are_not_poisson">03.05 Real Networks are Not Poisson<a class="headerlink" href="#0305_real_networks_are_not_poisson" title="Permanent link">&para;</a></h2>
 <p>social network
-<span><span class="MathJax_Preview">\langle k \rangle \approx 1000</span><script type="math/tex">\langle k \rangle \approx 1000</script></span>, <span><span class="MathJax_Preview">N \approx 7 \times10^9</span><script type="math/tex">N \approx 7 \times10^9</script></span> of individuals</p>
-<p><span><span class="MathJax_Preview">k_{\text{max}} = 1185</span><script type="math/tex">k_{\text{max}} = 1185</script></span> accuaitances</p>
-<p><span><span class="MathJax_Preview">k_{\text{min}} = 816</span><script type="math/tex">k_{\text{min}} = 816</script></span></p>
-<p>despersion of random network is <span><span class="MathJax_Preview">\sigma_k = \langle k \rangle^{\frac{1}{2}}</span><script type="math/tex">\sigma_k = \langle k \rangle^{\frac{1}{2}}</script></span>, 
-for <span><span class="MathJax_Preview">\langle k \rangle = 1000</span><script type="math/tex">\langle k \rangle = 1000</script></span> <span><span class="MathJax_Preview">\sigma_k = 31.62</span><script type="math/tex">\sigma_k = 31.62</script></span>
-<span><span class="MathJax_Preview">\langle k \rangle \pm \sigma_k</span><script type="math/tex">\langle k \rangle \pm \sigma_k</script></span> range </p>
-<p><em>in a large random network the degree of most nodes is in the narrow vicinity of</em> <span><span class="MathJax_Preview">\langle k \rangle</span><script type="math/tex">\langle k \rangle</script></span></p>
+<script type="math/tex">\langle k \rangle \approx 1000</script>, <script type="math/tex">N \approx 7 \times10^9</script> of individuals</p>
+<p>
+<script type="math/tex">k_{\text{max}} = 1185</script> accuaitances</p>
+<p>
+<script type="math/tex">k_{\text{min}} = 816</script>
+</p>
+<p>despersion of random network is <script type="math/tex">\sigma_k = \langle k \rangle^{\frac{1}{2}}</script>, 
+for <script type="math/tex">\langle k \rangle = 1000</script>
+<script type="math/tex">\sigma_k = 31.62</script>
+<script type="math/tex">\langle k \rangle \pm \sigma_k</script> range </p>
+<p><em>in a large random network the degree of most nodes is in the narrow vicinity of</em> <script type="math/tex">\langle k \rangle</script>
+</p>
 <h3 id="box_3-4_why_are_hubs_missing">Box 3-4 Why are Hubs Missing?<a class="headerlink" href="#box_3-4_why_are_hubs_missing" title="Permanent link">&para;</a></h3>
-<p><span><span class="MathJax_Preview">\frac{1}{k!}</span><script type="math/tex">\frac{1}{k!}</script></span></p>
+<p>
+<script type="math/tex">\frac{1}{k!}</script>
+</p>
 <p>the Stirling approx</p>
-<p><span><span class="MathJax_Preview">k! \sim \sqrt{2\pi k} \bigg(\frac{k}{e}\bigg)^k</span><script type="math/tex">k! \sim \sqrt{2\pi k} \bigg(\frac{k}{e}\bigg)^k</script></span></p>
+<p>
+<script type="math/tex">k! \sim \sqrt{2\pi k} \bigg(\frac{k}{e}\bigg)^k</script>
+</p>
 <p>rewrite eq.3.8  as:</p>
-<div>
-<div class="MathJax_Preview">p_k = \frac{e^{- \langle k \rangle}}{\sqrt{2\pi k}}\bigg(\frac{e\langle k \rangle}{k}\bigg)^k \tag{3.9} </div>
+<p>
 <script type="math/tex; mode=display">p_k = \frac{e^{- \langle k \rangle}}{\sqrt{2\pi k}}\bigg(\frac{e\langle k \rangle}{k}\bigg)^k \tag{3.9} </script>
-</div>
-<div>
-<div class="MathJax_Preview"> k &gt; e \langle k \rangle </div>
+</p>
+<p>
 <script type="math/tex; mode=display"> k > e \langle k \rangle </script>
-</div>
+</p>
 <h3 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-6.jpg" title="Fig.3.6 Degree Distribution of Real Networks "><img alt="figure.3.6" src="http://networksciencebook.com/images/ch-03/figure-3-6.jpg" title="Fig.3.6 Degree Distribution of Real Networks " /></a></p>
 <h2 id="0306_the_evolution_of_a_random_network">03.06 The Evolution of a Random Network<a class="headerlink" href="#0306_the_evolution_of_a_random_network" title="Permanent link">&para;</a></h2>
-<p>the size of the largest conneted cluster w/i the network, <span><span class="MathJax_Preview">N_G</span><script type="math/tex">N_G</script></span> varies w/ <span><span class="MathJax_Preview">\langle k \rangle</span><script type="math/tex">\langle k \rangle</script></span></p>
+<p>the size of the largest conneted cluster w/i the network, <script type="math/tex">N_G</script> varies w/ <script type="math/tex">\langle k \rangle</script>
+</p>
 <ul>
-<li>for <span><span class="MathJax_Preview">p=0</span><script type="math/tex">p=0</script></span> we have <span><span class="MathJax_Preview">\langle k \rangle = 0</span><script type="math/tex">\langle k \rangle = 0</script></span>, &there4; <span><span class="MathJax_Preview">N_G = 1</span><script type="math/tex">N_G = 1</script></span> and <span><span class="MathJax_Preview">\frac{N_G}{N} \rightarrow 0 </span><script type="math/tex">\frac{N_G}{N} \rightarrow 0 </script></span> for large <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span></li>
-<li>for <span><span class="MathJax_Preview">p = 1</span><script type="math/tex">p = 1</script></span> we have <span><span class="MathJax_Preview">\langle k \rangle = N-1</span><script type="math/tex">\langle k \rangle = N-1</script></span>, complete graph, &there4; <span><span class="MathJax_Preview">N_G = N</span><script type="math/tex">N_G = N</script></span> and <span><span class="MathJax_Preview">\frac{N_G}{N} = 1</span><script type="math/tex">\frac{N_G}{N} = 1</script></span></li>
+<li>for <script type="math/tex">p=0</script> we have <script type="math/tex">\langle k \rangle = 0</script>, &there4; <script type="math/tex">N_G = 1</script> and <script type="math/tex">\frac{N_G}{N} \rightarrow 0 </script> for large <script type="math/tex">N</script>
+</li>
+<li>for <script type="math/tex">p = 1</script> we have <script type="math/tex">\langle k \rangle = N-1</script>, complete graph, &there4; <script type="math/tex">N_G = N</script> and <script type="math/tex">\frac{N_G}{N} = 1</script>
+</li>
 </ul>
 <!-- ![video.3.2][video_03_02] -->
 
 <iframe width="560" height="315" src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02" allowfullscreen></iframe>
 
-<p>grow from <span><span class="MathJax_Preview">N_G = 1</span><script type="math/tex">N_G = 1</script></span> to <span><span class="MathJax_Preview">N_G = N</span><script type="math/tex">N_G = N</script></span> if <span><span class="MathJax_Preview">\langle k \rangle</span><script type="math/tex">\langle k \rangle</script></span> increase from <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> to <span><span class="MathJax_Preview">N-1</span><script type="math/tex">N-1</script></span></p>
+<p>grow from <script type="math/tex">N_G = 1</script> to <script type="math/tex">N_G = N</script> if <script type="math/tex">\langle k \rangle</script> increase from <script type="math/tex">0</script> to <script type="math/tex">N-1</script>
+</p>
 <p><a href="http://www.leonidzhukov.net/hse/2016/networks/papers/erdos-1959-11.pdf" title="Erdős, P. and Rényi, A., 1960. On the evolution of random graphs. Publ. Math. Inst. Hung. Acad. Sci, 5(1), pp.17-60.">Erdős P., Rényi A., 1960</a> condition for teh emergence of the giant component is (<a href="http://www.leonidzhukov.net/hse/2016/networks/papers/erdos-1959-11.pdf" title="Erdős, P. and Rényi, A., 1960. On the evolution of random graphs. Publ. Math. Inst. Hung. Acad. Sci, 5(1), pp.17-60.">Erdős P., Rényi A., 1960</a>):</p>
-<div>
-<div class="MathJax_Preview">\langle k \rangle = 1 \tag{3.10}</div>
+<p>
 <script type="math/tex; mode=display">\langle k \rangle = 1 \tag{3.10}</script>
-</div>
-<p>express eq.3.10 in terms of <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> using eq.3.3 <span><span class="MathJax_Preview">\langle k \rangle = \frac{2 \langle L \rangle}{N} = p(N-1) </span><script type="math/tex">\langle k \rangle = \frac{2 \langle L \rangle}{N} = p(N-1) </script></span></p>
-<div>
-<div class="MathJax_Preview"> p_c=\frac{1}{N-1}\approx\frac{1}{N} \tag{3.11}</div>
+</p>
+<p>express eq.3.10 in terms of <script type="math/tex">p</script> using eq.3.3 <script type="math/tex">\langle k \rangle = \frac{2 \langle L \rangle}{N} = p(N-1) </script>
+</p>
+<p>
 <script type="math/tex; mode=display"> p_c=\frac{1}{N-1}\approx\frac{1}{N} \tag{3.11}</script>
-</div>
-<p>the larger network, the smaller <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> is sufficient for the giant component</p>
+</p>
+<p>the larger network, the smaller <script type="math/tex">p</script> is sufficient for the giant component</p>
 <p>4 regimes: </p>
-<p><strong>Subcritical regime</strong>: <span><span class="MathJax_Preview">0 &lt; \langle k \rangle &lt; 1</span><script type="math/tex">0 < \langle k \rangle < 1</script></span> (<span><span class="MathJax_Preview">p &lt; \frac{1}{N}</span><script type="math/tex">p < \frac{1}{N}</script></span>)</p>
-<p>for <span><span class="MathJax_Preview">\langle k \rangle &lt; 1</span><script type="math/tex">\langle k \rangle < 1</script></span>, 
-<span><span class="MathJax_Preview">N_G \sim \ln{N}</span><script type="math/tex">N_G \sim \ln{N}</script></span></p>
-<p>&there4; <span><span class="MathJax_Preview">\frac{N_G}{N} \simeq \frac{\ln{N}}{N} \rightarrow 0</span><script type="math/tex">\frac{N_G}{N} \simeq \frac{\ln{N}}{N} \rightarrow 0</script></span>, <span><span class="MathJax_Preview">[N \rightarrow \infty</span><script type="math/tex">[N \rightarrow \infty</script></span></p>
-<p><strong>Critical point</strong>: <span><span class="MathJax_Preview">\langle k \rangle = 1</span><script type="math/tex">\langle k \rangle = 1</script></span> (<span><span class="MathJax_Preview">p = \frac{1}{N}</span><script type="math/tex">p = \frac{1}{N}</script></span>)</p>
+<p><strong>Subcritical regime</strong>: <script type="math/tex">0 < \langle k \rangle < 1</script> (<script type="math/tex">p < \frac{1}{N}</script>)</p>
+<p>for <script type="math/tex">\langle k \rangle < 1</script>, 
+<script type="math/tex">N_G \sim \ln{N}</script>
+</p>
+<p>&there4; <script type="math/tex">\frac{N_G}{N} \simeq \frac{\ln{N}}{N} \rightarrow 0</script>, <script type="math/tex">[N \rightarrow \infty</script>
+</p>
+<p><strong>Critical point</strong>: <script type="math/tex">\langle k \rangle = 1</script> (<script type="math/tex">p = \frac{1}{N}</script>)</p>
 <p>size of the largest component is
-<span><span class="MathJax_Preview">N_G \sim N^{\frac{2}{3}}</span><script type="math/tex">N_G \sim N^{\frac{2}{3}}</script></span></p>
-<p><span><span class="MathJax_Preview">\frac{N_G}{N} \sim N^{-\frac{1}{3}}</span><script type="math/tex">\frac{N_G}{N} \sim N^{-\frac{1}{3}}</script></span> in the <span><span class="MathJax_Preview">N \rightarrow \infty</span><script type="math/tex">N \rightarrow \infty</script></span> limit</p>
-<p>e.g., <span><span class="MathJax_Preview">N = 7 \times 10^9</span><script type="math/tex">N = 7 \times 10^9</script></span> nodes</p>
-<p>for <span><span class="MathJax_Preview">\langle k \rangle &lt; 1</span><script type="math/tex">\langle k \rangle < 1</script></span>, 
-<span><span class="MathJax_Preview">N_G \simeq \ln{N} = \ln{(7\times10^9)} \simeq 22.7</span><script type="math/tex">N_G \simeq \ln{N} = \ln{(7\times10^9)} \simeq 22.7</script></span></p>
-<p>for <span><span class="MathJax_Preview">\langle k \rangle = 1</span><script type="math/tex">\langle k \rangle = 1</script></span>, 
-<span><span class="MathJax_Preview">N_G \sim N^{\frac{2}{3}} = (7 \times 10^9)^{\frac{2}{3}} \simeq 3\times10^6</span><script type="math/tex">N_G \sim N^{\frac{2}{3}} = (7 \times 10^9)^{\frac{2}{3}} \simeq 3\times10^6</script></span></p>
+<script type="math/tex">N_G \sim N^{\frac{2}{3}}</script>
+</p>
+<p>
+<script type="math/tex">\frac{N_G}{N} \sim N^{-\frac{1}{3}}</script> in the <script type="math/tex">N \rightarrow \infty</script> limit</p>
+<p>e.g., <script type="math/tex">N = 7 \times 10^9</script> nodes</p>
+<p>for <script type="math/tex">\langle k \rangle < 1</script>, 
+<script type="math/tex">N_G \simeq \ln{N} = \ln{(7\times10^9)} \simeq 22.7</script>
+</p>
+<p>for <script type="math/tex">\langle k \rangle = 1</script>, 
+<script type="math/tex">N_G \sim N^{\frac{2}{3}} = (7 \times 10^9)^{\frac{2}{3}} \simeq 3\times10^6</script>
+</p>
 <p><img alt="fig.3.7" src="http://networksciencebook.com/images/ch-03/figure-3-7.jpg" title="Fig.3.7 Evolution of a Random Network" /></p>
-<p><strong>Supercritical Regime</strong>: <span><span class="MathJax_Preview">\langle k \rangle &gt; 1</span><script type="math/tex">\langle k \rangle > 1</script></span> (<span><span class="MathJax_Preview">p &gt; \frac{1}{N}</span><script type="math/tex">p > \frac{1}{N}</script></span>)</p>
-<div>
-<div class="MathJax_Preview">\frac{N_G}{N} \sim \langle k \rangle-1 \tag{3.12}</div>
+<p><strong>Supercritical Regime</strong>: <script type="math/tex">\langle k \rangle > 1</script> (<script type="math/tex">p > \frac{1}{N}</script>)</p>
+<p>
 <script type="math/tex; mode=display">\frac{N_G}{N} \sim \langle k \rangle-1 \tag{3.12}</script>
-</div>
+</p>
 <p>or</p>
-<div>
-<div class="MathJax_Preview">N_G \sim (p-p_c)N \tag{3.13}</div>
+<p>
 <script type="math/tex; mode=display">N_G \sim (p-p_c)N \tag{3.13}</script>
-</div>
-<p>where <span><span class="MathJax_Preview">p_c</span><script type="math/tex">p_c</script></span> is given by eq.3.11 (<span><span class="MathJax_Preview">p_c = \frac{1}{N-1} \approx \frac{1}{N}</span><script type="math/tex">p_c = \frac{1}{N-1} \approx \frac{1}{N}</script></span>)</p>
-<p><strong>Connected Regime</strong>: <span><span class="MathJax_Preview">\langle k \rangle &gt; \ln{N}</span><script type="math/tex">\langle k \rangle > \ln{N}</script></span> (<span><span class="MathJax_Preview">p &gt; \frac{\ln{N}}{N}</span><script type="math/tex">p > \frac{\ln{N}}{N}</script></span>)</p>
-<div>
-<div class="MathJax_Preview">N_G \simeq N</div>
+</p>
+<p>where <script type="math/tex">p_c</script> is given by eq.3.11 (<script type="math/tex">p_c = \frac{1}{N-1} \approx \frac{1}{N}</script>)</p>
+<p><strong>Connected Regime</strong>: <script type="math/tex">\langle k \rangle > \ln{N}</script> (<script type="math/tex">p > \frac{\ln{N}}{N}</script>)</p>
+<p>
 <script type="math/tex; mode=display">N_G \simeq N</script>
-</div>
-<div>
-<div class="MathJax_Preview">\langle k \rangle = \ln{N} \tag{3.14}</div>
+</p>
+<p>
 <script type="math/tex; mode=display">\langle k \rangle = \ln{N} \tag{3.14}</script>
-</div>
-<p><span><span class="MathJax_Preview">\frac{\ln{N}}{N} \rightarrow 0</span><script type="math/tex">\frac{\ln{N}}{N} \rightarrow 0</script></span> for large <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span></p>
+</p>
+<p>
+<script type="math/tex">\frac{\ln{N}}{N} \rightarrow 0</script> for large <script type="math/tex">N</script>
+</p>
 <h3 id="box_3-5_network_evolution_in_graph_theory">Box 3-5 Network Evolution in Graph Theory<a class="headerlink" href="#box_3-5_network_evolution_in_graph_theory" title="Permanent link">&para;</a></h3>
-<p><span><span class="MathJax_Preview">p(N)</span><script type="math/tex">p(N)</script></span> scales as <span><span class="MathJax_Preview">N^z</span><script type="math/tex">N^z</script></span> where <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> is tunable param <span><span class="MathJax_Preview">[-\infty, 0]</span><script type="math/tex">[-\infty, 0]</script></span></p>
+<p>
+<script type="math/tex">p(N)</script> scales as <script type="math/tex">N^z</script> where <script type="math/tex">z</script> is tunable param <script type="math/tex">[-\infty, 0]</script>
+</p>
 <p><img alt="fig.3.8" src="http://networksciencebook.com/images/ch-03/figure-3-8.jpg" title="Fig.3.8 Evolution of a Random Graph " /></p>
 <h2 id="0307_real_networks_are_supercritical">03.07 Real Networks are Supercritical<a class="headerlink" href="#0307_real_networks_are_supercritical" title="Permanent link">&para;</a></h2>
 <ul>
-<li><span><span class="MathJax_Preview">\langle k \rangle = 1</span><script type="math/tex">\langle k \rangle = 1</script></span> </li>
-<li><span><span class="MathJax_Preview">\langle k \rangle &gt; \ln{N}</span><script type="math/tex">\langle k \rangle > \ln{N}</script></span></li>
+<li>
+<script type="math/tex">\langle k \rangle = 1</script>
+</li>
+<li>
+<script type="math/tex">\langle k \rangle > \ln{N}</script>
+</li>
 </ul>
 <table>
 <thead>
 <tr>
 <th>Network</th>
-<th align="right"><span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">\langle K \rangle</span><script type="math/tex">\langle K \rangle</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">\ln{N}</span><script type="math/tex">\ln{N}</script></span></th>
+<th align="right">
+<script type="math/tex">N</script>
+</th>
+<th align="right">
+<script type="math/tex">L</script>
+</th>
+<th align="right">
+<script type="math/tex">\langle K \rangle</script>
+</th>
+<th align="right">
+<script type="math/tex">\ln{N}</script>
+</th>
 </tr>
 </thead>
 <tbody>
@@ -535,47 +595,54 @@ for <span><span class="MathJax_Preview">\langle k \rangle = 1000</span><script t
 - short mean
 - existenxe of these shord distances</p>
 <ul>
-<li><span><span class="MathJax_Preview">\langle k \rangle</span><script type="math/tex">\langle k \rangle</script></span> nodes at distance <span><span class="MathJax_Preview">d = 1</span><script type="math/tex">d = 1</script></span></li>
-<li><span><span class="MathJax_Preview">\langle k \rangle^2</span><script type="math/tex">\langle k \rangle^2</script></span> nodes at distance <span><span class="MathJax_Preview">d = 2</span><script type="math/tex">d = 2</script></span></li>
-<li><span><span class="MathJax_Preview">\langle k \rangle^3</span><script type="math/tex">\langle k \rangle^3</script></span> nodes at distance <span><span class="MathJax_Preview">d = 3</span><script type="math/tex">d = 3</script></span></li>
-<li>...</li>
-<li><span><span class="MathJax_Preview">\langle k \rangle^d</span><script type="math/tex">\langle k \rangle^d</script></span> nodes at distance <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></li>
-</ul>
-<p>num of nodes up to distance <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span></p>
-<div>
-<div class="MathJax_Preview"> N(d) \approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d = \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}\tag{3.15}</div>
-<script type="math/tex; mode=display"> N(d) \approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d = \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}\tag{3.15}</script>
-</div>
-<p>max distance <span><span class="MathJax_Preview">d_{max}</span><script type="math/tex">d_{max}</script></span> or the network's diameter</p>
-<div>
-<div class="MathJax_Preview">N(d_{max}) \approx N \tag{3.16}</div>
-<script type="math/tex; mode=display">N(d_{max}) \approx N \tag{3.16}</script>
-</div>
-<p>assuming the <span><span class="MathJax_Preview">\langle k \rangle \gg 1</span><script type="math/tex">\langle k \rangle \gg 1</script></span>, </p>
-<div>
-<div class="MathJax_Preview">\langle k \rangle^{d_{max}} \approx N \tag{3.17}</div>
-<script type="math/tex; mode=display">\langle k \rangle^{d_{max}} \approx N \tag{3.17}</script>
-</div>
-<p>&there4; the diamter of network follows</p>
-<div>
-<div class="MathJax_Preview">d_{max} \approx \frac{\ln{N}}{\ln{k}} \tag{3.18}</div>
-<script type="math/tex; mode=display">d_{max} \approx \frac{\ln{N}}{\ln{k}} \tag{3.18}</script>
-</div>
-<ul>
 <li>
-<p>average distance between 2 randomly chosen nodes <span><span class="MathJax_Preview">\langle d \rangle</span><script type="math/tex">\langle d \rangle</script></span></p>
-<p>the small world property is defined by</p>
-<div>
-<div class="MathJax_Preview">\langle d \rangle \approx \frac{\ln{N}}{\ln{\langle k \rangle}} \tag{3.19}</div>
-<script type="math/tex; mode=display">\langle d \rangle \approx \frac{\ln{N}}{\ln{\langle k \rangle}} \tag{3.19}</script>
-</div>
+<script type="math/tex">\langle k \rangle</script> nodes at distance <script type="math/tex">d = 1</script>
 </li>
 <li>
-<p><span><span class="MathJax_Preview">\ln{N} \ll N</span><script type="math/tex">\ln{N} \ll N</script></span>, 
+<script type="math/tex">\langle k \rangle^2</script> nodes at distance <script type="math/tex">d = 2</script>
+</li>
+<li>
+<script type="math/tex">\langle k \rangle^3</script> nodes at distance <script type="math/tex">d = 3</script>
+</li>
+<li>...</li>
+<li>
+<script type="math/tex">\langle k \rangle^d</script> nodes at distance <script type="math/tex">d</script>
+</li>
+</ul>
+<p>num of nodes up to distance <script type="math/tex">d</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> N(d) \approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d = \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}\tag{3.15}</script>
+</p>
+<p>max distance <script type="math/tex">d_{max}</script> or the network's diameter</p>
+<p>
+<script type="math/tex; mode=display">N(d_{max}) \approx N \tag{3.16}</script>
+</p>
+<p>assuming the <script type="math/tex">\langle k \rangle \gg 1</script>, </p>
+<p>
+<script type="math/tex; mode=display">\langle k \rangle^{d_{max}} \approx N \tag{3.17}</script>
+</p>
+<p>&there4; the diamter of network follows</p>
+<p>
+<script type="math/tex; mode=display">d_{max} \approx \frac{\ln{N}}{\ln{k}} \tag{3.18}</script>
+</p>
+<ul>
+<li>
+<p>average distance between 2 randomly chosen nodes <script type="math/tex">\langle d \rangle</script>
+</p>
+<p>the small world property is defined by</p>
+<p>
+<script type="math/tex; mode=display">\langle d \rangle \approx \frac{\ln{N}}{\ln{\langle k \rangle}} \tag{3.19}</script>
+</p>
+</li>
+<li>
+<p>
+<script type="math/tex">\ln{N} \ll N</script>, 
     <em>average path length or the diameter depends logarithmically on the system size</em></p>
 </li>
 <li>
-<p><span><span class="MathJax_Preview">\frac{1}{\ln{\langle k \rangle}}</span><script type="math/tex">\frac{1}{\ln{\langle k \rangle}}</script></span> imply the denser the network, the smaller the distance</p>
+<p>
+<script type="math/tex">\frac{1}{\ln{\langle k \rangle}}</script> imply the denser the network, the smaller the distance</p>
 </li>
 <li>
 <p>in real networks, systematic corrections to eq.3.19</p>
@@ -583,30 +650,53 @@ for <span><span class="MathJax_Preview">\langle k \rangle = 1000</span><script t
 </ul>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-11.jpg" title="Fig.3.11 Why are Small Worlds Surprising?"><img alt="fig.3.11" src="http://networksciencebook.com/images/ch-03/figure-3-11.jpg" title="Fig.3.11 Why are Small Worlds Surprising?" /></a></p>
 <ul>
-<li>1D: <span><span class="MathJax_Preview">d_{max} \sim \langle d \rangle \sim N</span><script type="math/tex">d_{max} \sim \langle d \rangle \sim N</script></span></li>
-<li>2D: <span><span class="MathJax_Preview">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{2}}</span><script type="math/tex">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{2}}</script></span></li>
-<li>3D: <span><span class="MathJax_Preview">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{3}}</span><script type="math/tex">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{3}}</script></span></li>
-<li>4D: <span><span class="MathJax_Preview">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{d}}</span><script type="math/tex">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{d}}</script></span></li>
+<li>1D: <script type="math/tex">d_{max} \sim \langle d \rangle \sim N</script>
+</li>
+<li>2D: <script type="math/tex">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{2}}</script>
+</li>
+<li>3D: <script type="math/tex">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{3}}</script>
+</li>
+<li>4D: <script type="math/tex">d_{max} \sim \langle d \rangle \sim N^{\frac{1}{d}}</script>
+</li>
 </ul>
-<p><span><span class="MathJax_Preview">N \approx 7 \times 10^9</span><script type="math/tex">N \approx 7 \times 10^9</script></span>, <span><span class="MathJax_Preview">\langle k \rangle \approx 10^3</span><script type="math/tex">\langle k \rangle \approx 10^3</script></span></p>
-<p><span><span class="MathJax_Preview">\langle d \rangle \approx \frac{\ln{7\times10^9}}{\ln{10^3}} = 3.28</span><script type="math/tex">\langle d \rangle \approx \frac{\ln{7\times10^9}}{\ln{10^3}} = 3.28</script></span></p>
+<p>
+<script type="math/tex">N \approx 7 \times 10^9</script>, <script type="math/tex">\langle k \rangle \approx 10^3</script>
+</p>
+<p>
+<script type="math/tex">\langle d \rangle \approx \frac{\ln{7\times10^9}}{\ln{10^3}} = 3.28</script>
+</p>
 <p>(<a href="https://www.sfu.ca/cmns/courses/marontate/2009/801/ClassFolders/jmckinnon/(0)%20Contacts%20and%20influence.pdf" title="de Sola Pool, I. and Kochen, M., 1978. Contacts and influence. Social networks, 1(1), pp.5-51.">de Sola Pool, I., Kochen, M., 1978</a> [20])</p>
 <h3 id="box_3-6_19_degrees_of_separation">Box 3-6 19 Degrees of Separation<a class="headerlink" href="#box_3-6_19_degrees_of_separation" title="Permanent link">&para;</a></h3>
 <p><strong>finite size scaling</strong> (<a href="http://barabasi.com/f/65.pdf" title="21">Albert, R., 1999</a>)</p>
-<p><span><span class="MathJax_Preview">\langle d \rangle \approx 0.35 + 0.89 \ln{N}</span><script type="math/tex">\langle d \rangle \approx 0.35 + 0.89 \ln{N}</script></span></p>
-<p><span><span class="MathJax_Preview">\langle d \rangle \approx 18.69</span><script type="math/tex">\langle d \rangle \approx 18.69</script></span> (<a href="https://homepage.univie.ac.at/juan.gorraiz/Vortrag/21987.pdf" title="Lawrence, S. and Giles, C.L., 1999. Accessibility of information on the web. Nature, 400(6740), p.107.">Lawrence, S., Giles, C.L., 1999</a>)</p>
+<p>
+<script type="math/tex">\langle d \rangle \approx 0.35 + 0.89 \ln{N}</script>
+</p>
+<p>
+<script type="math/tex">\langle d \rangle \approx 18.69</script> (<a href="https://homepage.univie.ac.at/juan.gorraiz/Vortrag/21987.pdf" title="Lawrence, S. and Giles, C.L., 1999. Accessibility of information on the web. Nature, 400(6740), p.107.">Lawrence, S., Giles, C.L., 1999</a>)</p>
 <p><em>19 degrees of separation</em></p>
 <h3 id="_3"><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Network</th>
-<th align="right"><span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">\langle k \rangle</span><script type="math/tex">\langle k \rangle</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">\langle d \rangle</span><script type="math/tex">\langle d \rangle</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">d_{max}</span><script type="math/tex">d_{max}</script></span></th>
-<th align="right"><span><span class="MathJax_Preview">\frac{\ln{N}}{\ln{\langle k \rangle}}</span><script type="math/tex">\frac{\ln{N}}{\ln{\langle k \rangle}}</script></span></th>
+<th align="right">
+<script type="math/tex">N</script>
+</th>
+<th align="right">
+<script type="math/tex">L</script>
+</th>
+<th align="right">
+<script type="math/tex">\langle k \rangle</script>
+</th>
+<th align="right">
+<script type="math/tex">\langle d \rangle</script>
+</th>
+<th align="right">
+<script type="math/tex">d_{max}</script>
+</th>
+<th align="right">
+<script type="math/tex">\frac{\ln{N}}{\ln{\langle k \rangle}}</script>
+</th>
 </tr>
 </thead>
 <tbody>
@@ -707,27 +797,31 @@ for <span><span class="MathJax_Preview">\langle k \rangle = 1000</span><script t
 <h3 id="box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW<a class="headerlink" href="#box_3-8_19_degrees_of_the_www" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW"><img alt="fig.box.3.8" src="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW" /></a></p>
 <h2 id="0309_clustering_coefficient">03.09 Clustering Coefficient<a class="headerlink" href="#0309_clustering_coefficient" title="Permanent link">&para;</a></h2>
-<p>clustering coefficient <span><span class="MathJax_Preview">C_i</span><script type="math/tex">C_i</script></span>, the density of the links in node <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>'s immediate neighborhood</p>
-<p>expected number of links <span><span class="MathJax_Preview">L_i</span><script type="math/tex">L_i</script></span> </p>
-<div>
-<div class="MathJax_Preview">\langle\ L_i \rangle = p \frac{k_i(k_i-1)}{2} \tag{3.20}</div>
+<p>clustering coefficient <script type="math/tex">C_i</script>, the density of the links in node <script type="math/tex">i</script>'s immediate neighborhood</p>
+<p>expected number of links <script type="math/tex">L_i</script>
+</p>
+<p>
 <script type="math/tex; mode=display">\langle\ L_i \rangle = p \frac{k_i(k_i-1)}{2} \tag{3.20}</script>
-</div>
+</p>
 <p>local clustering coefficient:</p>
-<div>
-<div class="MathJax_Preview">C_i = \frac{2\langle L_i \rangle}{k_i(k_i - 1)} = p = \frac{\langle k \rangle}{N} \tag{3.21}</div>
+<p>
 <script type="math/tex; mode=display">C_i = \frac{2\langle L_i \rangle}{k_i(k_i - 1)} = p = \frac{\langle k \rangle}{N} \tag{3.21}</script>
-</div>
-<p>plot <span><span class="MathJax_Preview">\frac{\langle C \rangle}{\langle k \rangle}</span><script type="math/tex">\frac{\langle C \rangle}{\langle k \rangle}</script></span> in fn of <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> </p>
-<p><span><span class="MathJax_Preview">\frac{\langle C \rangle}{\langle k \rangle}</span><script type="math/tex">\frac{\langle C \rangle}{\langle k \rangle}</script></span> NOT decrease as <span><span class="MathJax_Preview">N^{-1}</span><script type="math/tex">N^{-1}</script></span></p>
+</p>
+<p>plot <script type="math/tex">\frac{\langle C \rangle}{\langle k \rangle}</script> in fn of <script type="math/tex">N</script>
+</p>
+<p>
+<script type="math/tex">\frac{\langle C \rangle}{\langle k \rangle}</script> NOT decrease as <script type="math/tex">N^{-1}</script>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-13.jpg" title="Fig.3.13 Clustering in Real Networks"><img alt="fig.3.13" src="http://networksciencebook.com/images/ch-03/figure-3-13.jpg" title="Fig.3.13 Clustering in Real Networks" /></a></p>
 <h3 id="box_3-9_watts-strogatz_model">Box 3-9 Watts-Strogatz Model<a class="headerlink" href="#box_3-9_watts-strogatz_model" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-14.jpg" title="Fig.3.14 The Watts-Strogatz Model"><img alt="fig.3.14" src="http://networksciencebook.com/images/ch-03/figure-3-14.jpg" title="Fig.3.14 The Watts-Strogatz Model" /></a></p>
 <ul>
 <li>Small World Property
-    average distance depends logarithmically on <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span></li>
+    average distance depends logarithmically on <script type="math/tex">N</script>
+</li>
 <li>High Clustering
-    average clustering coef of real netw is higher than expected for a rand netw of similar <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> and <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span></li>
+    average clustering coef of real netw is higher than expected for a rand netw of similar <script type="math/tex">N</script> and <script type="math/tex">L</script>
+</li>
 </ul>
 <p><strong>Watts-Strogatz model</strong> (small-world model) 
 interpolate 
@@ -739,21 +833,25 @@ interpolate
     - Small-world property(+)</p>
 <h2 id="0310_summary_-_real_networks_are_not_random">03.10 Summary - Real Networks are Not Random<a class="headerlink" href="#0310_summary_-_real_networks_are_not_random" title="Permanent link">&para;</a></h2>
 <h2 id="0316_advanced_topic_3e_fully_connected_regime">03.16 Advanced Topic 3.E Fully Connected Regime<a class="headerlink" href="#0316_advanced_topic_3e_fully_connected_regime" title="Permanent link">&para;</a></h2>
-<p><span><span class="MathJax_Preview">(1-p)^{N_G} \approx (1-p)^N</span><script type="math/tex">(1-p)^{N_G} \approx (1-p)^N</script></span> in the <span><span class="MathJax_Preview">N_G \simeq N</span><script type="math/tex">N_G \simeq N</script></span></p>
+<p>
+<script type="math/tex">(1-p)^{N_G} \approx (1-p)^N</script> in the <script type="math/tex">N_G \simeq N</script>
+</p>
 <p>the num of isolated nodes is </p>
-<div>
-<div class="MathJax_Preview">I_N = N (1-p)^N = N \Big(1 - \frac{N \cdot p}{N} \Big)^N \approx Ne^{-Np} \tag{3.40}</div>
+<p>
 <script type="math/tex; mode=display">I_N = N (1-p)^N = N \Big(1 - \frac{N \cdot p}{N} \Big)^N \approx Ne^{-Np} \tag{3.40}</script>
-</div>
-<p>for large <span><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>, <br />
-<span><span class="MathJax_Preview">(1 - \frac{x}{n})^n \approx e^{-x}</span><script type="math/tex">(1 - \frac{x}{n})^n \approx e^{-x}</script></span></p>
+</p>
+<p>for large <script type="math/tex">n</script>, <br />
+<script type="math/tex">(1 - \frac{x}{n})^n \approx e^{-x}</script>
+</p>
 <p>only one node is disconnected</p>
-<p><span><span class="MathJax_Preview">I_N = 1</span><script type="math/tex">I_N = 1</script></span>, eq.3.40, <span><span class="MathJax_Preview">Ne^{-Np} = 1</span><script type="math/tex">Ne^{-Np} = 1</script></span></p>
-<div>
-<div class="MathJax_Preview">p = \frac{\ln{N}}{N} \tag{3.41}</div>
+<p>
+<script type="math/tex">I_N = 1</script>, eq.3.40, <script type="math/tex">Ne^{-Np} = 1</script>
+</p>
+<p>
 <script type="math/tex; mode=display">p = \frac{\ln{N}}{N} \tag{3.41}</script>
-</div>
-<p>leads to eq.3.14 <span><span class="MathJax_Preview">\langle k \rangle = \ln{N}</span><script type="math/tex">\langle k \rangle = \ln{N}</script></span></p>
+</p>
+<p>leads to eq.3.14 <script type="math/tex">\langle k \rangle = \ln{N}</script>
+</p>
 <h2 id="_4"><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <!-- link -->
 

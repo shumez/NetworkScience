@@ -232,8 +232,12 @@ Copyright (c) 2019 shumez
 <p>(<a href="https://www.ams.org/journals/bull/2006-43-04/S0273-0979-06-01130-X/S0273-0979-06-01130-X.pdf" title="Alexanderson, G., 2006. About the cover: Euler and Königsberg’s Bridges: A historical view. Bulletin of the american mathematical society, 43(4), pp.567-573.">Alexanderson, G., 2006</a>)</p>
 <h2 id="0202_networks_and_graphs">02.02 Networks and Graphs<a class="headerlink" href="#0202_networks_and_graphs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span> <em>num of nodes</em>, <em>size</em> of the network</li>
-<li><span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> <em>num of links</em>, (2, 4)</li>
+<li>
+<script type="math/tex">N</script>
+<em>num of nodes</em>, <em>size</em> of the network</li>
+<li>
+<script type="math/tex">L</script>
+<em>num of links</em>, (2, 4)</li>
 </ul>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-2.jpg" title="fig.2.2 Different Networks, Same Graph"><img alt="fig-2-2" src="http://networksciencebook.com/images/ch-02/figure-2-2.jpg" title="fig.2.2 Different Networks, Same Graph" /></a></p>
 <!-- <iframe src="http://networksciencebook.com/images/ch-02/video-2-1.m4v"> -->
@@ -241,89 +245,89 @@ Copyright (c) 2019 shumez
 <h2 id="0203_degree_average_degree_and_degree_distribution">02.03 Degree, Average Degree and Degree Distribution<a class="headerlink" href="#0203_degree_average_degree_and_degree_distribution" title="Permanent link">&para;</a></h2>
 <p><em>degree</em></p>
 <h3 id="degree">Degree<a class="headerlink" href="#degree" title="Permanent link">&para;</a></h3>
-<p><span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span>: degree of <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>-th node </p>
-<p><span><span class="MathJax_Preview">k_1=2, k_2=3, k_3=2, k_4=1 </span><script type="math/tex">k_1=2, k_2=3, k_3=2, k_4=1 </script></span></p>
-<div>
-<div class="MathJax_Preview"> L = \frac{1}{2} \sum_{i=1}^N k_i \tag{2.1} </div>
+<p>
+<script type="math/tex">k_i</script>: degree of <script type="math/tex">i</script>-th node </p>
+<p>
+<script type="math/tex">k_1=2, k_2=3, k_3=2, k_4=1 </script>
+</p>
+<p>
 <script type="math/tex; mode=display"> L = \frac{1}{2} \sum_{i=1}^N k_i \tag{2.1} </script>
-</div>
+</p>
 <h3 id="average_degree">Average Degree<a class="headerlink" href="#average_degree" title="Permanent link">&para;</a></h3>
 <p>undirected</p>
-<div>
-<div class="MathJax_Preview"> \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_j = \frac{2L}{N} \tag{2.2} </div>
+<p>
 <script type="math/tex; mode=display"> \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_j = \frac{2L}{N} \tag{2.2} </script>
-</div>
+</p>
 <p>directed</p>
 <ul>
-<li><span><span class="MathJax_Preview">k_i^{in}</span><script type="math/tex">k_i^{in}</script></span>: incoming degree</li>
-<li><span><span class="MathJax_Preview">k_i^{out}</span><script type="math/tex">k_i^{out}</script></span>: outgoing degree</li>
+<li>
+<script type="math/tex">k_i^{in}</script>: incoming degree</li>
+<li>
+<script type="math/tex">k_i^{out}</script>: outgoing degree</li>
 </ul>
-<div>
-<div class="MathJax_Preview"> k_i = k_i^{in} + k_i^{out} \tag{2.3} </div>
+<p>
 <script type="math/tex; mode=display"> k_i = k_i^{in} + k_i^{out} \tag{2.3} </script>
-</div>
-<div>
-<div class="MathJax_Preview"> L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} \tag{2.4} </div>
+</p>
+<p>
 <script type="math/tex; mode=display"> L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} \tag{2.4} </script>
-</div>
-<div>
-<div class="MathJax_Preview"> \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} \tag{2.5} </div>
+</p>
+<p>
 <script type="math/tex; mode=display"> \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} \tag{2.5} </script>
-</div>
+</p>
 <h3 id="degree_distribution">Degree Distribution<a class="headerlink" href="#degree_distribution" title="Permanent link">&para;</a></h3>
-<p><span><span class="MathJax_Preview"> p_k </span><script type="math/tex"> p_k </script></span>: <em>degree distribution</em>, a randomly selected node in the network has degree <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span></p>
-<div>
-<div class="MathJax_Preview"> \sum_{k=1}^\infty p_k = 1 \tag{2.6} </div>
+<p>
+<script type="math/tex"> p_k </script>: <em>degree distribution</em>, a randomly selected node in the network has degree <script type="math/tex">k</script>
+</p>
+<p>
 <script type="math/tex; mode=display"> \sum_{k=1}^\infty p_k = 1 \tag{2.6} </script>
-</div>
-<div>
-<div class="MathJax_Preview"> p_k = \frac{N_k}{N} \tag{2.7} </div>
+</p>
+<p>
 <script type="math/tex; mode=display"> p_k = \frac{N_k}{N} \tag{2.7} </script>
-</div>
+</p>
 <ul>
-<li><span><span class="MathJax_Preview">N_k</span><script type="math/tex">N_k</script></span>: num of degree-k nodes</li>
+<li>
+<script type="math/tex">N_k</script>: num of degree-k nodes</li>
 </ul>
-<div>
-<div class="MathJax_Preview"> \langle k \rangle = \sum_{k=0}^\infty kp_k \tag{2.8} </div>
+<p>
 <script type="math/tex; mode=display"> \langle k \rangle = \sum_{k=0}^\infty kp_k \tag{2.8} </script>
-</div>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-3.jpg" title="fig.2.3 Degree Distribution"><img alt="fig.2.3" src="http://networksciencebook.com/images/ch-02/figure-2-3.jpg" title="fig.2.3 Degree Distribution" /></a></p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-4.jpg" title="fig.2.4 Degree Distribution of a Real Network "><img alt="fig.2.4" src="http://networksciencebook.com/images/ch-02/figure-2-4.jpg" title="fig.2.4 Degree Distribution of a Real Network " /></a></p>
 <h2 id="0204_adjacency_matrix">02.04 Adjacency Matrix<a class="headerlink" href="#0204_adjacency_matrix" title="Permanent link">&para;</a></h2>
 <p><em>adjacenct matrix</em>: N rows, N cols</p>
-<p><span><span class="MathJax_Preview"> A_{ij} = \begin{cases} 1 &amp;\text{there is a link} \\ 0 &amp;\text{there is not} \end{cases} </span><script type="math/tex"> A_{ij} = \begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases} </script></span> </p>
+<p>
+<script type="math/tex"> A_{ij} = <script type="math/tex; mode=display">\begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases}</script>
+</script>
+</p>
 <p>undirected</p>
-<div>
-<div class="MathJax_Preview"> k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} \tag{2.9} </div>
+<p>
 <script type="math/tex; mode=display"> k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} \tag{2.9} </script>
-</div>
+</p>
 <p>directed</p>
-<div>
-<div class="MathJax_Preview"> k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} \tag{2.10} </div>
+<p>
 <script type="math/tex; mode=display"> k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} \tag{2.10} </script>
-</div>
-<div>
-<div class="MathJax_Preview"> 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} \tag{2.11} </div>
+</p>
+<p>
 <script type="math/tex; mode=display"> 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} \tag{2.11} </script>
-</div>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-5.jpg" title="fig.2.5 The Adjacency Matrix"><img alt="fig.2.5" src="http://networksciencebook.com/images/ch-02/figure-2-5.jpg" title="fig.2.5 The Adjacency Matrix" /></a></p>
 <h2 id="0205_real_networks_are_sparse">02.05 Real Networks are Sparse<a class="headerlink" href="#0205_real_networks_are_sparse" title="Permanent link">&para;</a></h2>
-<div>
-<div class="MathJax_Preview"> L_{max} = \frac{N(N-1)}{2} \tag{2.12} </div>
+<p>
 <script type="math/tex; mode=display"> L_{max} = \frac{N(N-1)}{2} \tag{2.12} </script>
-</div>
-<p>in a <em>complete graph</em> of size <span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span></p>
+</p>
+<p>in a <em>complete graph</em> of size <script type="math/tex">N</script>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-6.jpg" title="fig.2.6 Complete Graph"><img alt="fig.2.6" src="http://networksciencebook.com/images/ch-02/figure-2-6.jpg" title="fig.2.6 Complete Graph" /></a></p>
 <p>real networks </p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-7.jpg" title="fig.2.7 The Adjacency Matrix is Sparse"><img alt="fig.2.7" src="http://networksciencebook.com/images/ch-02/figure-2-7.jpg" title="fig.2.7 The Adjacency Matrix is Sparse" /></a></p>
 <h2 id="0206_weighted_networks">02.06 Weighted Networks<a class="headerlink" href="#0206_weighted_networks" title="Permanent link">&para;</a></h2>
-<div>
-<div class="MathJax_Preview"> A_{ij} = w_{ij} </div>
+<p>
 <script type="math/tex; mode=display"> A_{ij} = w_{ij} </script>
-</div>
+</p>
 <h3 id="metcalfe_law_-_the_value_of_a_network">Metcalfe Law - the Value of a Network<a class="headerlink" href="#metcalfe_law_-_the_value_of_a_network" title="Permanent link">&para;</a></h3>
 <p><em>Metcalfe's law</em>:</p>
-<p>val <span><span class="MathJax_Preview">\propto N^2 </span><script type="math/tex">\propto N^2 </script></span> </p>
+<p>val <script type="math/tex">\propto N^2 </script>
+</p>
 <p>(<a href="https://scholar.google.co.jp/scholar?hl=en&amp;num=20&amp;as_sdt=0%2C5&amp;q=Gilder%2C+G.%2C+1993.+Metcalfe’s+law+and+legacy.+Forbes+ASAP%2C+13%2C+p.1993.&amp;btnG=" title="Gilder, G., 1993. Metcalfe’s law and legacy. Forbes ASAP, 13, p.1993.">Gilder, G., 1993</a>)</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-8.jpg" title="fig.2.8 Metcalfe’s Law"><img alt="fig.2.8" src="http://networksciencebook.com/images/ch-02/figure-2-8.jpg" title="fig.2.8 Metcalfe’s Law" /></a></p>
 <h2 id="0207_bipartite_networks">02.07 Bipartite Networks<a class="headerlink" href="#0207_bipartite_networks" title="Permanent link">&para;</a></h2>
@@ -337,43 +341,50 @@ Copyright (c) 2019 shumez
 <p><em>path length</em>: num of links the path contains</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-12.jpg" title="fig.2.12 Paths"><img alt="fig.2.12" src="http://networksciencebook.com/images/ch-02/figure-2-12.jpg" title="fig.2.12 Paths" /></a></p>
 <h3 id="shortest_path">Shortest Path<a class="headerlink" href="#shortest_path" title="Permanent link">&para;</a></h3>
-<p><em>distance</em>: <span><span class="MathJax_Preview">d_{ij}</span><script type="math/tex">d_{ij}</script></span> shortest path </p>
-<p>undirected, <span><span class="MathJax_Preview"> d_{ij} = d_{ji} </span><script type="math/tex"> d_{ij} = d_{ji} </script></span></p>
-<p>directed, <span><span class="MathJax_Preview"> d_{ij} \neq d_{ji} </span><script type="math/tex"> d_{ij} \neq d_{ji} </script></span></p>
+<p><em>distance</em>: <script type="math/tex">d_{ij}</script> shortest path </p>
+<p>undirected, <script type="math/tex"> d_{ij} = d_{ji} </script>
+</p>
+<p>directed, <script type="math/tex"> d_{ij} \neq d_{ji} </script>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-13.jpg" title="fig.2.13 Pathology"><img alt="fig.2.13" src="http://networksciencebook.com/images/ch-02/figure-2-13.jpg" title="fig.2.13 Pathology" /></a></p>
 <ul>
-<li>shortest path (<em>Geodesic path</em> <span><span class="MathJax_Preview">d</span><script type="math/tex">d</script></span>)</li>
-<li><em>diamter</em> (<span><span class="MathJax_Preview">d_{max}</span><script type="math/tex">d_{max}</script></span>): longest shortest path in graph</li>
-<li><em>average path length</em> (<span><span class="MathJax_Preview">\langle d \rangle</span><script type="math/tex">\langle d \rangle</script></span>)</li>
+<li>shortest path (<em>Geodesic path</em> <script type="math/tex">d</script>)</li>
+<li><em>diamter</em> (<script type="math/tex">d_{max}</script>): longest shortest path in graph</li>
+<li><em>average path length</em> (<script type="math/tex">\langle d \rangle</script>)</li>
 <li><em>cycle</em> </li>
 <li><em>Eulerian path</em>: transverse each link exactly once</li>
 <li><em>Hamiltonian path</em>: visit each node exactly </li>
 </ul>
 <h3 id="box_2-4_-_number_of_shortest_parths_between_two_nodes">Box 2-4 - Number of Shortest Parths Between Two Nodes<a class="headerlink" href="#box_2-4_-_number_of_shortest_parths_between_two_nodes" title="Permanent link">&para;</a></h3>
-<p><span><span class="MathJax_Preview">N_{ij}</span><script type="math/tex">N_{ij}</script></span> (num of shortest paths)
-<span><span class="MathJax_Preview">d_{ij}</span><script type="math/tex">d_{ij}</script></span> (distance)
-<span><span class="MathJax_Preview">A_{ij}</span><script type="math/tex">A_{ij}</script></span> (adjacency mat)</p>
-<p><span><span class="MathJax_Preview">d_{ij} = 1</span><script type="math/tex">d_{ij} = 1</script></span> if direct link, <span><span class="MathJax_Preview">A_{ij} = 1</span><script type="math/tex">A_{ij} = 1</script></span></p>
-<p><span><span class="MathJax_Preview">d_{ij} = 2 </span><script type="math/tex">d_{ij} = 2 </script></span> if path of length two, <span><span class="MathJax_Preview">A_{ik}A_{kj} = 1</span><script type="math/tex">A_{ik}A_{kj} = 1</script></span></p>
-<p>num of <span><span class="MathJax_Preview">d_{ij}=2</span><script type="math/tex">d_{ij}=2</script></span> paths between <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> and <span><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> is </p>
-<div>
-<div class="MathJax_Preview"> N_{ij}^{(2)} = \sum_{k=1}^N A_{ik}A_{jk} = A_{ij}^2 </div>
+<p>
+<script type="math/tex">N_{ij}</script> (num of shortest paths)
+<script type="math/tex">d_{ij}</script> (distance)
+<script type="math/tex">A_{ij}</script> (adjacency mat)</p>
+<p>
+<script type="math/tex">d_{ij} = 1</script> if direct link, <script type="math/tex">A_{ij} = 1</script>
+</p>
+<p>
+<script type="math/tex">d_{ij} = 2 </script> if path of length two, <script type="math/tex">A_{ik}A_{kj} = 1</script>
+</p>
+<p>num of <script type="math/tex">d_{ij}=2</script> paths between <script type="math/tex">i</script> and <script type="math/tex">j</script> is </p>
+<p>
 <script type="math/tex; mode=display"> N_{ij}^{(2)} = \sum_{k=1}^N A_{ik}A_{jk} = A_{ij}^2 </script>
-</div>
-<p><span><span class="MathJax_Preview">d_{ij} = d</span><script type="math/tex">d_{ij} = d</script></span>, <span><span class="MathJax_Preview">A_{ik}\cdots A_{lj} = 1</span><script type="math/tex">A_{ik}\cdots A_{lj} = 1</script></span></p>
-<div>
-<div class="MathJax_Preview"> N_{ij}^{(d)} = A_{ij}^d </div>
+</p>
+<p>
+<script type="math/tex">d_{ij} = d</script>, <script type="math/tex">A_{ik}\cdots A_{lj} = 1</script>
+</p>
+<p>
 <script type="math/tex; mode=display"> N_{ij}^{(d)} = A_{ij}^d </script>
-</div>
+</p>
 <h3 id="network_diameter">Network Diameter<a class="headerlink" href="#network_diameter" title="Permanent link">&para;</a></h3>
-<p><em>diameter</em> <span><span class="MathJax_Preview">d_{max}</span><script type="math/tex">d_{max}</script></span>: max shortest path </p>
+<p><em>diameter</em> <script type="math/tex">d_{max}</script>: max shortest path </p>
 <p>for larger networks, determined using the <em>BFS algorithm</em></p>
 <h3 id="average_path_length">Average Path Length<a class="headerlink" href="#average_path_length" title="Permanent link">&para;</a></h3>
-<p><em>average path length</em> <span><span class="MathJax_Preview">\langle d \rangle </span><script type="math/tex">\langle d \rangle </script></span></p>
-<div>
-<div class="MathJax_Preview"> \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \tag{2.14} </div>
+<p><em>average path length</em> <script type="math/tex">\langle d \rangle </script>
+</p>
+<p>
 <script type="math/tex; mode=display"> \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \tag{2.14} </script>
-</div>
+</p>
 <h3 id="box_2-5_-_breadth-first_search_algorithm">Box 2-5 - Breadth-First Search Algorithm<a class="headerlink" href="#box_2-5_-_breadth-first_search_algorithm" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm"><img alt="fig.2.14" src="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm" /></a></p>
 <h2 id="0209_connectedness">02.09 Connectedness<a class="headerlink" href="#0209_connectedness" title="Permanent link">&para;</a></h2>
@@ -383,30 +394,27 @@ Copyright (c) 2019 shumez
 <h2 id="0210_clustering_coefficient">02.10 Clustering Coefficient<a class="headerlink" href="#0210_clustering_coefficient" title="Permanent link">&para;</a></h2>
 <p><em>clustering coefficient</em></p>
 <p>(<a href="http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf" title="Watts, D.J. and Strogatz, S.H., 1998. Collective dynamics of ‘small-world’networks. nature, 393(6684), p.440.">Watts, D.J., Strogatz, S.H., 1998</a>)</p>
-<div>
-<div class="MathJax_Preview"> C_i = \frac{2 L_i}{k_i (k_i - 1)} \tag{2.15} </div>
+<p>
 <script type="math/tex; mode=display"> C_i = \frac{2 L_i}{k_i (k_i - 1)} \tag{2.15} </script>
-</div>
-<p><span><span class="MathJax_Preview">L_i</span><script type="math/tex">L_i</script></span>: num of links between the <span><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span> neighbors of node <span><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> </p>
-<p><span><span class="MathJax_Preview">C_i</span><script type="math/tex">C_i</script></span> [0, 1]</p>
-<div>
-<div class="MathJax_Preview"> C_i = 
-    \begin{cases} 
-        0  \\ 
-        1 
-    \end{cases} </div>
+</p>
+<p>
+<script type="math/tex">L_i</script>: num of links between the <script type="math/tex">k_i</script> neighbors of node <script type="math/tex">i</script>
+</p>
+<p>
+<script type="math/tex">C_i</script> [0, 1]</p>
+<p>
 <script type="math/tex; mode=display"> C_i = 
     \begin{cases} 
         0  \\ 
         1 
     \end{cases} </script>
-</div>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-16.jpg" title="fig.2.16 Clustering Coefficient"><img alt="fig.2.16" src="http://networksciencebook.com/images/ch-02/figure-2-16.jpg" title="fig.2.16 Clustering Coefficient" /></a></p>
-<p><em>average clustering coefficient</em> <span><span class="MathJax_Preview"> \langle C \rangle </span><script type="math/tex"> \langle C \rangle </script></span></p>
-<div>
-<div class="MathJax_Preview"> \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \tag{2.16} </div>
+<p><em>average clustering coefficient</em> <script type="math/tex"> \langle C \rangle </script>
+</p>
+<p>
 <script type="math/tex; mode=display"> \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \tag{2.16} </script>
-</div>
+</p>
 <p>(<a href="https://www.pnas.org/content/pnas/101/11/3747.full.pdf" title="Barrat, A., Barthelemy, M., Pastor-Satorras, R. and Vespignani, A., 2004. The architecture of complex weighted networks. Proceedings of the national academy of sciences, 101(11), pp.3747-3752.">Barrat, A., 2004</a>, <a href="https://arxiv.org/pdf/cond-mat/0408629.pdf" title="Onnela, J.P., Saramäki, J., Kertész, J. and Kaski, K., 2005. Intensity and coherence of motifs in weighted complex networks. Physical Review E, 71(6), p.065103.">Onnela, J.P., 2005</a>, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9599&amp;rep=rep1&amp;type=pdf" title="Zhang, B. and Horvath, S., 2005. A general framework for weighted gene co-expression network analysis. Statistical applications in genetics and molecular biology, 4(1).">Zhang, B., 2005</a>, <a href="https://arxiv.org/pdf/cond-mat/0411634.pdf" title="Holme, P., Park, S.M., Kim, B.J. and Edling, C.R., 2007. Korean university life in a network perspective: Dynamics of a large affiliation network. Physica A: Statistical Mechanics and its Applications, 373, pp.821-830.">Holme, P., 2007</a>)</p>
 <h2 id="0211_summary">02.11 Summary<a class="headerlink" href="#0211_summary" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-17.jpg" title="fig.2.17 Graphology "><img alt="fig.2.17" src="http://networksciencebook.com/images/ch-02/figure-2-17.jpg" title="fig.2.17 Graphology " /></a></p>
