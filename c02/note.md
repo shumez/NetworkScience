@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-04-06 11:30:34
+Modified: 	2019-04-06 18:21:40
 -----
 Copyright (c) 2019 shumez
 -->
@@ -47,7 +47,7 @@ Copyright (c) 2019 shumez
 
 ## 02.02 Networks and Graphs
 
-- \(N\) *num of nodes*, *size* of the network
+- $N$ *num of nodes*, *size* of the network
 - \(L\) *num of links*, (2, 4)
 
 [![fig-2-2][fig-2-2]][fig-2-2]
@@ -109,9 +109,9 @@ directed
 
 ## 02.04 Adjacency Matrix
 
-*adjacenct matrix*: N rows, N cols
+*adjacenct matrix*: \(N\) rows, \(N\) cols
 
-\( A_{ij} = \begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases} \) 
+\[ A_{ij} = \begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases} \]
 
 
 undirected
@@ -134,7 +134,7 @@ directed
 
 \[ L_{max} = \frac{N(N-1)}{2} \tag{2.12} \]
 
-in a *complete graph* of size \(N\)
+in a **complete graph** of size \(N\)
 
 [![fig.2.6][fig-2-6]][fig-2-6]
 
@@ -149,9 +149,9 @@ real networks
 \[ A_{ij} = w_{ij} \]
 
 
-### Metcalfe Law - the Value of a Network
+### Metcalfe Law: the Value of a Network
 
-*Metcalfe's law*:
+**Metcalfe's law**:
 
 val \(\propto N^2 \) 
 
@@ -164,7 +164,7 @@ val \(\propto N^2 \)
 ## 02.07 Bipartite Networks
 
 
-*bipartite graph* (*bigraph*) :
+**bipartite graph** (**bigraph**) :
 
 NO U-U / V-V links
 
@@ -183,7 +183,7 @@ NO U-U / V-V links
 ## 02.08 Paths and Distances
 
 
-*path length*: num of links the path contains
+**path length**: num of links the path contains
 
 
 [![fig.2.12][fig-2-12]][fig-2-12]
@@ -191,7 +191,7 @@ NO U-U / V-V links
 
 ### Shortest Path
 
-*distance*: \(d_{ij}\) shortest path 
+**distance**: \(d_{ij}\) shortest path 
 
 undirected, \( d_{ij} = d_{ji} \)
 
@@ -200,12 +200,12 @@ directed, \( d_{ij} \neq d_{ji} \)
 
 [![fig.2.13][fig-2-13]][fig-2-13]
 
-- shortest path (*Geodesic path* \(d\))
-- *diamter* (\(d_{max}\)): longest shortest path in graph
-- *average path length* (\(\langle d \rangle\))
-- *cycle* 
-- *Eulerian path*: transverse each link exactly once
-- *Hamiltonian path*: visit each node exactly 
+- shortest path (**Geodesic path** \(d\))
+- **diamter** (\(d_{max}\)): longest shortest path in graph
+- **average path length** (\(\langle d \rangle\))
+- **cycle** 
+- **Eulerian path**: transverse each link exactly once
+- **Hamiltonian path**: visit each node exactly 
 
 
 ### Box 2-4 - Number of Shortest Parths Between Two Nodes
@@ -231,14 +231,14 @@ num of \(d_{ij}=2\) paths between \(i\) and \(j\) is
 
 ### Network Diameter
 
-*diameter* \(d_{max}\): max shortest path 
+**diameter** \(d_{max}\): max shortest path 
 
-for larger networks, determined using the *BFS algorithm*
+for larger networks, determined using the **BFS algorithm**
 
 
 ### Average Path Length
 
-*average path length* \(\langle d \rangle \)
+**average path length** \(\langle d \rangle \)
 
 \[ \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \tag{2.14} \]
 
@@ -251,7 +251,7 @@ for larger networks, determined using the *BFS algorithm*
 
 ## 02.09 Connectedness
 
-*bridge*
+**bridge**
 
 [![fig.2.15][fig-2-15]][fig-2-15]
 
@@ -262,7 +262,7 @@ for larger networks, determined using the *BFS algorithm*
 
 ## 02.10 Clustering Coefficient
 
-*clustering coefficient*
+**clustering coefficient**
 
 ([Watts, D.J., Strogatz, S.H., 1998])
 
@@ -270,7 +270,7 @@ for larger networks, determined using the *BFS algorithm*
 
 \(L_i\): num of links between the \(k_i\) neighbors of node \(i\) 
 
-\(C_i\) [0, 1]
+\(C_i\) \([0, 1]\)
 
 \[ C_i = 
     \begin{cases} 
@@ -282,7 +282,7 @@ for larger networks, determined using the *BFS algorithm*
 [![fig.2.16][fig-2-16]][fig-2-16]
 
 
-*average clustering coefficient* \( \langle C \rangle \)
+**average clustering coefficient** \( \langle C \rangle \)
 
 \[ \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \tag{2.16} \]
 
