@@ -148,54 +148,55 @@ Copyright (c) 2019 shumez
 <h2 id="01_introduction">01 Introduction<a class="headerlink" href="#01_introduction" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web"><img alt="fig.4.1" src="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web" /></a></p>
 <h2 id="02_power_laws_and_scale-free_networks">02 Power Laws and Scale-Free Networks<a class="headerlink" href="#02_power_laws_and_scale-free_networks" title="Permanent link">&para;</a></h2>
-<p>
+<div>
+<div class="MathJax_Preview">p_k \sim k^{-\gamma} \tag{4.1} </div>
 <script type="math/tex; mode=display">p_k \sim k^{-\gamma} \tag{4.1} </script>
-</p>
+</div>
 <p><strong>power law dist</strong> </p>
-<p><strong>degree exponent</strong> <script type="math/tex">\gamma</script>
-</p>
-<p>
+<p><strong>degree exponent</strong> <span><span class="MathJax_Preview">\gamma</span><script type="math/tex">\gamma</script></span></p>
+<div>
+<div class="MathJax_Preview">\log{p_k} \sim - \gamma \log{k} \tag{4.2}</div>
 <script type="math/tex; mode=display">\log{p_k} \sim - \gamma \log{k} \tag{4.2}</script>
-</p>
-<p>
-<script type="math/tex">\log{p_k}</script> depends linealy on <script type="math/tex">\log{k}</script>
-</p>
-<p>out-degree <script type="math/tex">k_{out}</script>, in-degree <script type="math/tex">k_{in}</script>
-</p>
-<p>
+</div>
+<p><span><span class="MathJax_Preview">\log{p_k}</span><script type="math/tex">\log{p_k}</script></span> depends linealy on <span><span class="MathJax_Preview">\log{k}</span><script type="math/tex">\log{k}</script></span></p>
+<p>out-degree <span><span class="MathJax_Preview">k_{out}</span><script type="math/tex">k_{out}</script></span>, in-degree <span><span class="MathJax_Preview">k_{in}</span><script type="math/tex">k_{in}</script></span></p>
+<div>
+<div class="MathJax_Preview">p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3}</div>
 <script type="math/tex; mode=display">p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3}</script>
-</p>
-<p>
+</div>
+<div>
+<div class="MathJax_Preview">p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4}</div>
 <script type="math/tex; mode=display">p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4}</script>
-</p>
-<p>
-<script type="math/tex">\gamma_{in}</script> and <script type="math/tex">\gamma_{out}</script>
-</p>
-<p>e.g., <script type="math/tex">\gamma_{in} \approx 2.1</script>, <script type="math/tex">\gamma_{out} \approx 2.45</script>
-</p>
+</div>
+<p><span><span class="MathJax_Preview">\gamma_{in}</span><script type="math/tex">\gamma_{in}</script></span> and <span><span class="MathJax_Preview">\gamma_{out}</span><script type="math/tex">\gamma_{out}</script></span></p>
+<p>e.g., <span><span class="MathJax_Preview">\gamma_{in} \approx 2.1</span><script type="math/tex">\gamma_{in} \approx 2.1</script></span>, <span><span class="MathJax_Preview">\gamma_{out} \approx 2.45</span><script type="math/tex">\gamma_{out} \approx 2.45</script></span></p>
 <p><strong>scale-free</strong> (<a href="https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail" title="Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512.">Barabási, A.L., Albert R., 1999</a>) defined as:</p>
 <p>A scale-free network is a network whose <strong>degree distribution follows a power law</strong></p>
 <h3 id="discrete_formalism">Discrete Formalism<a class="headerlink" href="#discrete_formalism" title="Permanent link">&para;</a></h3>
-<p>prob <script type="math/tex">p_k</script>, <script type="math/tex">k</script> links</p>
-<p>
+<p>prob <span><span class="MathJax_Preview">p_k</span><script type="math/tex">p_k</script></span>, <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> links</p>
+<div>
+<div class="MathJax_Preview">p_k = C k^{- \gamma} \tag{4.5}</div>
 <script type="math/tex; mode=display">p_k = C k^{- \gamma} \tag{4.5}</script>
-</p>
-<p>constant <script type="math/tex">C</script> is determined by the normalization cond</p>
-<p>
+</div>
+<p>constant <span><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> is determined by the normalization cond</p>
+<div>
+<div class="MathJax_Preview">\sum_{k=1}^\infty {p_k} = 1 \tag{4.6}</div>
 <script type="math/tex; mode=display">\sum_{k=1}^\infty {p_k} = 1 \tag{4.6}</script>
-</p>
-<p>
+</div>
+<div>
+<div class="MathJax_Preview">C \sum_{k=1}^\infty {k^{- \gamma}} = 1</div>
 <script type="math/tex; mode=display">C \sum_{k=1}^\infty {k^{- \gamma}} = 1</script>
-</p>
+</div>
 <p>hence</p>
-<p>
+<div>
+<div class="MathJax_Preview">C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}</div>
 <script type="math/tex; mode=display">C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}</script>
-</p>
-<p><strong>Riemann-zeta fn</strong> <script type="math/tex">\zeta(\gamma)</script>
-</p>
-<p>
+</div>
+<p><strong>Riemann-zeta fn</strong> <span><span class="MathJax_Preview">\zeta(\gamma)</span><script type="math/tex">\zeta(\gamma)</script></span></p>
+<div>
+<div class="MathJax_Preview">p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}</div>
 <script type="math/tex; mode=display">p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}</script>
-</p>
+</div>
 <h3 id="continuum_formalism">Continuum Formalism<a class="headerlink" href="#continuum_formalism" title="Permanent link">&para;</a></h3>
 <!-- link -->
 
