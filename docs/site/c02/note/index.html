@@ -188,7 +188,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/c02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-02-13 17:10:6
-Modified:   2019-04-05 16:59:3
+Modified:   2019-04-06 11:30:34
 -----
 Copyright (c) 2019 shumez
 -->
@@ -251,11 +251,13 @@ Copyright (c) 2019 shumez
 <script type="math/tex">k_1=2, k_2=3, k_3=2, k_4=1 </script>
 </p>
 <p>
-<script type="math/tex; mode=display"> L = \frac{1}{2} \sum_{i=1}^N k_i </script> (2.1)</p>
+<script type="math/tex; mode=display"> L = \frac{1}{2} \sum_{i=1}^N k_i \tag{2.1} </script>
+</p>
 <h3 id="average_degree">Average Degree<a class="headerlink" href="#average_degree" title="Permanent link">&para;</a></h3>
 <p>undirected</p>
 <p>
-<script type="math/tex; mode=display"> \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_j = \frac{2L}{N} </script> (2.2)</p>
+<script type="math/tex; mode=display"> \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_j = \frac{2L}{N} \tag{2.2} </script>
+</p>
 <p>directed</p>
 <ul>
 <li>
@@ -264,25 +266,31 @@ Copyright (c) 2019 shumez
 <script type="math/tex">k_i^{out}</script>: outgoing degree</li>
 </ul>
 <p>
-<script type="math/tex; mode=display"> k_i = k_i^{in} + k_i^{out} </script> (2.3)</p>
+<script type="math/tex; mode=display"> k_i = k_i^{in} + k_i^{out} \tag{2.3} </script>
+</p>
 <p>
-<script type="math/tex; mode=display"> L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} </script> (2.4)</p>
+<script type="math/tex; mode=display"> L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} \tag{2.4} </script>
+</p>
 <p>
-<script type="math/tex; mode=display"> \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} </script> (2.5)</p>
+<script type="math/tex; mode=display"> \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} \tag{2.5} </script>
+</p>
 <h3 id="degree_distribution">Degree Distribution<a class="headerlink" href="#degree_distribution" title="Permanent link">&para;</a></h3>
 <p>
 <script type="math/tex"> p_k </script>: <em>degree distribution</em>, a randomly selected node in the network has degree <script type="math/tex">k</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \sum_{k=1}^\infty p_k = 1 </script> (2.6)</p>
+<script type="math/tex; mode=display"> \sum_{k=1}^\infty p_k = 1 \tag{2.6} </script>
+</p>
 <p>
-<script type="math/tex; mode=display"> p_k = \frac{N_k}{N} </script> (2.7)</p>
+<script type="math/tex; mode=display"> p_k = \frac{N_k}{N} \tag{2.7} </script>
+</p>
 <ul>
 <li>
 <script type="math/tex">N_k</script>: num of degree-k nodes</li>
 </ul>
 <p>
-<script type="math/tex; mode=display"> \langle k \rangle = \sum_{k=0}^\infty kp_k </script> (2.8)</p>
+<script type="math/tex; mode=display"> \langle k \rangle = \sum_{k=0}^\infty kp_k \tag{2.8} </script>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-3.jpg" title="fig.2.3 Degree Distribution"><img alt="fig.2.3" src="http://networksciencebook.com/images/ch-02/figure-2-3.jpg" title="fig.2.3 Degree Distribution" /></a></p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-4.jpg" title="fig.2.4 Degree Distribution of a Real Network "><img alt="fig.2.4" src="http://networksciencebook.com/images/ch-02/figure-2-4.jpg" title="fig.2.4 Degree Distribution of a Real Network " /></a></p>
 <h2 id="0204_adjacency_matrix">02.04 Adjacency Matrix<a class="headerlink" href="#0204_adjacency_matrix" title="Permanent link">&para;</a></h2>
@@ -293,17 +301,20 @@ Copyright (c) 2019 shumez
 </p>
 <p>undirected</p>
 <p>
-<script type="math/tex; mode=display"> k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} </script> (2.9)</p>
+<script type="math/tex; mode=display"> k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} \tag{2.9} </script>
+</p>
 <p>directed</p>
 <p>
-<script type="math/tex; mode=display"> k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} </script>
-(2.10)</p>
+<script type="math/tex; mode=display"> k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} \tag{2.10} </script>
+</p>
 <p>
-<script type="math/tex; mode=display"> 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} </script> (2.11)</p>
+<script type="math/tex; mode=display"> 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} \tag{2.11} </script>
+</p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-5.jpg" title="fig.2.5 The Adjacency Matrix"><img alt="fig.2.5" src="http://networksciencebook.com/images/ch-02/figure-2-5.jpg" title="fig.2.5 The Adjacency Matrix" /></a></p>
 <h2 id="0205_real_networks_are_sparse">02.05 Real Networks are Sparse<a class="headerlink" href="#0205_real_networks_are_sparse" title="Permanent link">&para;</a></h2>
 <p>
-<script type="math/tex; mode=display"> L_{max} = \frac{N(N-1)}{2} </script> (2.12)</p>
+<script type="math/tex; mode=display"> L_{max} = \frac{N(N-1)}{2} \tag{2.12} </script>
+</p>
 <p>in a <em>complete graph</em> of size <script type="math/tex">N</script>
 </p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-6.jpg" title="fig.2.6 Complete Graph"><img alt="fig.2.6" src="http://networksciencebook.com/images/ch-02/figure-2-6.jpg" title="fig.2.6 Complete Graph" /></a></p>
@@ -372,8 +383,8 @@ Copyright (c) 2019 shumez
 <p><em>average path length</em> <script type="math/tex">\langle d \rangle </script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} </script>
-(2.14)</p>
+<script type="math/tex; mode=display"> \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \tag{2.14} </script>
+</p>
 <h3 id="box_2-5_-_breadth-first_search_algorithm">Box 2-5 - Breadth-First Search Algorithm<a class="headerlink" href="#box_2-5_-_breadth-first_search_algorithm" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm"><img alt="fig.2.14" src="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm" /></a></p>
 <h2 id="0209_connectedness">02.09 Connectedness<a class="headerlink" href="#0209_connectedness" title="Permanent link">&para;</a></h2>
@@ -384,25 +395,26 @@ Copyright (c) 2019 shumez
 <p><em>clustering coefficient</em></p>
 <p>(<a href="http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf" title="Watts, D.J. and Strogatz, S.H., 1998. Collective dynamics of ‘small-world’networks. nature, 393(6684), p.440.">Watts, D.J., Strogatz, S.H., 1998</a>)</p>
 <p>
-<script type="math/tex; mode=display"> C_i = \frac{2 L_i}{k_i (k_i - 1)} </script> (2.15)</p>
+<script type="math/tex; mode=display"> C_i = \frac{2 L_i}{k_i (k_i - 1)} \tag{2.15} </script>
+</p>
 <p>
 <script type="math/tex">L_i</script>: num of links between the <script type="math/tex">k_i</script> neighbors of node <script type="math/tex">i</script>
 </p>
 <p>
 <script type="math/tex">C_i</script> [0, 1]</p>
 <p>
-<script type="math/tex"> C_i = 
-    <script type="math/tex; mode=display">\begin{cases} 
-        0 & \\
-        1 & 
-    \end{cases}</script>
-</script>
+<script type="math/tex; mode=display"> C_i = 
+    \begin{cases} 
+        0  \\ 
+        1 
+    \end{cases} </script>
 </p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-16.jpg" title="fig.2.16 Clustering Coefficient"><img alt="fig.2.16" src="http://networksciencebook.com/images/ch-02/figure-2-16.jpg" title="fig.2.16 Clustering Coefficient" /></a></p>
 <p><em>average clustering coefficient</em> <script type="math/tex"> \langle C \rangle </script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i </script> (2.16)</p>
+<script type="math/tex; mode=display"> \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \tag{2.16} </script>
+</p>
 <p>(<a href="https://www.pnas.org/content/pnas/101/11/3747.full.pdf" title="Barrat, A., Barthelemy, M., Pastor-Satorras, R. and Vespignani, A., 2004. The architecture of complex weighted networks. Proceedings of the national academy of sciences, 101(11), pp.3747-3752.">Barrat, A., 2004</a>, <a href="https://arxiv.org/pdf/cond-mat/0408629.pdf" title="Onnela, J.P., Saramäki, J., Kertész, J. and Kaski, K., 2005. Intensity and coherence of motifs in weighted complex networks. Physical Review E, 71(6), p.065103.">Onnela, J.P., 2005</a>, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9599&amp;rep=rep1&amp;type=pdf" title="Zhang, B. and Horvath, S., 2005. A general framework for weighted gene co-expression network analysis. Statistical applications in genetics and molecular biology, 4(1).">Zhang, B., 2005</a>, <a href="https://arxiv.org/pdf/cond-mat/0411634.pdf" title="Holme, P., Park, S.M., Kim, B.J. and Edling, C.R., 2007. Korean university life in a network perspective: Dynamics of a large affiliation network. Physica A: Statistical Mechanics and its Applications, 373, pp.821-830.">Holme, P., 2007</a>)</p>
 <h2 id="0211_summary">02.11 Summary<a class="headerlink" href="#0211_summary" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-17.jpg" title="fig.2.17 Graphology "><img alt="fig.2.17" src="http://networksciencebook.com/images/ch-02/figure-2-17.jpg" title="fig.2.17 Graphology " /></a></p>

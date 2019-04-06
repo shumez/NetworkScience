@@ -130,7 +130,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/c04
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-28 19:54:5
-Modified:   2019-03-29 17:21:33
+Modified:   2019-04-06 12:14:32
 -----
 Copyright (c) 2019 shumez
 -->
@@ -148,28 +148,54 @@ Copyright (c) 2019 shumez
 <h2 id="01_introduction">01 Introduction<a class="headerlink" href="#01_introduction" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web"><img alt="fig.4.1" src="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web" /></a></p>
 <h2 id="02_power_laws_and_scale-free_networks">02 Power Laws and Scale-Free Networks<a class="headerlink" href="#02_power_laws_and_scale-free_networks" title="Permanent link">&para;</a></h2>
-<p><img alt="eq.4.1" src="https://latex.codecogs.com/gif.latex?p_k\sim&amp;space;k^{-\gamma}" title="eq.4.1" /></p>
+<p>
+<script type="math/tex; mode=display">p_k \sim k^{-\gamma} \tag{4.1} </script>
+</p>
 <p><strong>power law dist</strong> </p>
-<p><strong>degree exponent</strong> <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma" title="\gamma" /></p>
-<p><img alt="eq.4.2" src="https://latex.codecogs.com/gif.latex?\log{p_k}\sim-\gamma\log{k}" title="eq.4.2" /></p>
-<p><img alt="" src="https://latex.codecogs.com/gif.latex?\log{p_k}" title="\log{p_k}" /> depends linealy on <img alt="" src="https://latex.codecogs.com/gif.latex?\log{k}" title="\log{k}" /></p>
-<p>out-degree <img alt="" src="https://latex.codecogs.com/gif.latex?k_{out}" title="k_{out}" />, in-degree <img alt="" src="https://latex.codecogs.com/gif.latex?k_{in}" title="k_{in}" /></p>
-<p><img alt="eq.4.3" src="https://latex.codecogs.com/gif.latex?p_{k_{in}}\sim&amp;space;k^{-\gamma_{in}}" title="eq.4.3" /></p>
-<p><img alt="eq.4.4" src="https://latex.codecogs.com/gif.latex?p_{k_{out}}\sim&amp;space;k^{-\gamma_{out}}" title="eq.4.4" /></p>
-<p><img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{in}" title="\gamma_{in}" /> and <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{out}" title="\gamma_{out}" /> </p>
-<p>e.g., <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{in}\approx2.1" title="\gamma_{in}\approx2.1" />, <img alt="" src="https://latex.codecogs.com/gif.latex?\gamma_{out}\approx2.45" title="\gamma_{out}\approx2.45" /></p>
+<p><strong>degree exponent</strong> <script type="math/tex">\gamma</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\log{p_k} \sim - \gamma \log{k} \tag{4.2}</script>
+</p>
+<p>
+<script type="math/tex">\log{p_k}</script> depends linealy on <script type="math/tex">\log{k}</script>
+</p>
+<p>out-degree <script type="math/tex">k_{out}</script>, in-degree <script type="math/tex">k_{in}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4}</script>
+</p>
+<p>
+<script type="math/tex">\gamma_{in}</script> and <script type="math/tex">\gamma_{out}</script>
+</p>
+<p>e.g., <script type="math/tex">\gamma_{in} \approx 2.1</script>, <script type="math/tex">\gamma_{out} \approx 2.45</script>
+</p>
 <p><strong>scale-free</strong> (<a href="https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail" title="Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512.">Barabási, A.L., Albert R., 1999</a>) defined as:</p>
 <p>A scale-free network is a network whose <strong>degree distribution follows a power law</strong></p>
 <h3 id="discrete_formalism">Discrete Formalism<a class="headerlink" href="#discrete_formalism" title="Permanent link">&para;</a></h3>
-<p>prob <img alt="" src="https://latex.codecogs.com/gif.latex?p_k" title="p_k" />, <img alt="" src="https://latex.codecogs.com/gif.latex?k" title="k" /> links</p>
-<p><img alt="eq.4.5" src="https://latex.codecogs.com/gif.latex?p_k=Ck^{-\gamma}" title="eq.4.5" /></p>
-<p>constant <img alt="" src="https://latex.codecogs.com/gif.latex?C" title="C" /> is determined by the normalization cond</p>
-<p><img alt="eq.4.6" src="https://latex.codecogs.com/gif.latex?\sum_{k=1}^\imfty{p_k}=1" title="eq.4.6" /></p>
-<p><img alt="" src="https://latex.codecogs.com/gif.latex?C\sum_{k=1}^\infty{k^{-\gamma}}=1" title="C\sum_{k=1}^\infty{k^{-\gamma}}=1" /></p>
+<p>prob <script type="math/tex">p_k</script>, <script type="math/tex">k</script> links</p>
+<p>
+<script type="math/tex; mode=display">p_k = C k^{- \gamma} \tag{4.5}</script>
+</p>
+<p>constant <script type="math/tex">C</script> is determined by the normalization cond</p>
+<p>
+<script type="math/tex; mode=display">\sum_{k=1}^\infty {p_k} = 1 \tag{4.6}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">C \sum_{k=1}^\infty {k^{- \gamma}} = 1</script>
+</p>
 <p>hence</p>
-<p><img alt="eq.4.7" src="https://latex.codecogs.com/gif.latex?C=\frac{1}{\sum_{k=1}^\infty{k^{\gamma}}}=\frac{1}{\zeta(\gamma)}" title="eq.4.7" /></p>
-<p><strong>Riemann-zeta fn</strong> <img alt="" src="https://latex.codecogs.com/gif.latex?\zeta(\gamma)" title="\zeta(\gamma)" /></p>
-<p><img alt="eq.4.8" src="https://latex.codecogs.com/gif.latex?p_k=\frac{k^{-\gamma}}{\zeta(\gamma)}" title="eq.4.8" /></p>
+<p>
+<script type="math/tex; mode=display">C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}</script>
+</p>
+<p><strong>Riemann-zeta fn</strong> <script type="math/tex">\zeta(\gamma)</script>
+</p>
+<p>
+<script type="math/tex; mode=display">p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}</script>
+</p>
 <h3 id="continuum_formalism">Continuum Formalism<a class="headerlink" href="#continuum_formalism" title="Permanent link">&para;</a></h3>
 <!-- link -->
 
