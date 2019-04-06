@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-04-05 17:18:55
+Modified: 	2019-04-06 12:08:14
 -----
 Copyright (c) 2019 shumez
 -->
@@ -204,80 +204,83 @@ rewrite eq.3.8  as:
 
 ## 03.06 The Evolution of a Random Network
 
-the size of the largest conneted cluster w/i the network, ![][N_G] varies w/ ![][\langle&space;k\rangle]
+the size of the largest conneted cluster w/i the network, \(N_G\) varies w/ \(\langle k \rangle\)
 
-- for ![][p=0] we have ![][\langle&space;k\rangle=0], &there4; ![][N_G=1] and ![][\frac{N_G}{N}\rightarrow0] for large ![][N]
-- for ![][p=1] we have ![][\langle&space;k\rangle=N-1], complete graph, &there4; ![][N_G=N] and ![][\frac{N_G}{N}=1]
+- for \(p=0\) we have \(\langle k \rangle = 0\), &there4; \(N_G = 1\) and \(\frac{N_G}{N} \rightarrow 0 \) for large \(N\)
+- for \(p = 1\) we have \(\langle k \rangle = N-1\), complete graph, &there4; \(N_G = N\) and \(\frac{N_G}{N} = 1\)
 
 <!-- ![video.3.2][video_03_02] -->
 
 <iframe width="560" height="315" src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02" allowfullscreen></iframe>
 
-grow from ![][N_G=1] to ![][N_G=N] if ![][\langle&space;k\rangle] increase from ![][0] to ![][N-1]
+grow from \(N_G = 1\) to \(N_G = N\) if \(\langle k \rangle\) increase from \(0\) to \(N-1\)
 
 
 [Erdős P., Rényi A., 1960][1960RényiA_ErdősP] condition for teh emergence of the giant component is ([Erdős P., Rényi A., 1960][1960RényiA_ErdősP]):
 
-![eq.3.10][\langle&space;k\rangle=1]
+\[\langle k \rangle = 1 \tag{3.10}\]
 
-express eq.3.10 in terms of ![][p] using eq.3.3 ![eq.3.3][\langle&space;k\rangle=\frac{2\langle&space;L\rangle}{N}=p(N-1)]
+express eq.3.10 in terms of \(p\) using eq.3.3 \(\langle k \rangle = \frac{2 \langle L \rangle}{N} = p(N-1) \)
 
-![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{N}]
 
-the larger network, the smaller ![][p] is sufficient for the giant component
+\[ p_c=\frac{1}{N-1}\approx\frac{1}{N} \tag{3.11}\]
+
+the larger network, the smaller \(p\) is sufficient for the giant component
 
 4 regimes: 
 
-**Subcritical regime**: ![][0<\langle&space;k\rangle<1] (![][p<\frac{1}{N}])
+**Subcritical regime**: \(0 < \langle k \rangle < 1\) (\(p < \frac{1}{N}\))
 
-for ![][\langle&space;k\rangle<1], 
-![][N_G\sim\ln{N}]
+for \(\langle k \rangle < 1\), 
+\(N_G \sim \ln{N}\)
 
-&there4; ![][\frac{N_G}{N}\simeq\frac{\ln{N}}{N}\rightarrow0], ![][N\rightarrow\infty]
+&there4; \(\frac{N_G}{N} \simeq \frac{\ln{N}}{N} \rightarrow 0\), \([N \rightarrow \infty\)
 
 
-**Critical point**: ![][\langle&space;k\rangle=1] (![][p=\frac{1}{N}])
+**Critical point**: \(\langle k \rangle = 1\) (\(p = \frac{1}{N}\))
 
 size of the largest component is
-![][N_G\sim&space;N^{\frac{2}{3}}]
+\(N_G \sim N^{\frac{2}{3}}\)
 
-![][\frac{N_G}{N}\sim&space;N^{-\frac{1}{3}}] in the ![][N\rightarrow\infty] limit
+\(\frac{N_G}{N} \sim N^{-\frac{1}{3}}\) in the \(N \rightarrow \infty\) limit
 
-e.g., ![][N=7\times10^9] nodes
+e.g., \(N = 7 \times 10^9\) nodes
 
-for ![][\langle&space;k\rangle<1], 
-![][N_G\simeq\ln{N}=\ln{(7\times10^9)}\simeq22.7]
+for \(\langle k \rangle < 1\), 
+\(N_G \simeq \ln{N} = \ln{(7\times10^9)} \simeq 22.7\)
 
-for ![][\langle&space;k\rangle=1], 
-![][N_G\sim&space;N^{\frac{2}{3}}=(7\times10^9)^{\frac{2}{3}}\simeq3\times10^6]
+for \(\langle k \rangle = 1\), 
+\(N_G \sim N^{\frac{2}{3}} = (7 \times 10^9)^{\frac{2}{3}} \simeq 3\times10^6\)
 
 
 ![fig.3.7][fig_03_07]
 
 
-**Supercritical Regime**: ![][\langle&space;k\rangle>1] (![][p>\frac{1}{N}])
+**Supercritical Regime**: \(\langle k \rangle > 1\) (\(p > \frac{1}{N}\))
 
-![eq.3.12][\frac{N_G}{N}\sim\langle&space;k\rangle-1]
+
+\[\frac{N_G}{N} \sim \langle k \rangle-1 \tag{3.12}\]
 
 or
 
-![eq.3.13][N_G\sim(p-p_c)N]
 
-where ![][p_c] is given by eq.3.11 (![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{N}])
+\[N_G \sim (p-p_c)N \tag{3.13}\]
+
+where \(p_c\) is given by eq.3.11 (\(p_c = \frac{1}{N-1} \approx \frac{1}{N}\))
 
 
-**Connected Regime**: ![][\langle&space;k\rangle>\ln{N}] (![][p>\frac{\ln{N}}{N}])
+**Connected Regime**: \(\langle k \rangle > \ln{N}\) (\(p > \frac{\ln{N}}{N}\))
 
-![][N_G\simeq&space;N]
+\[N_G \simeq N\]
 
-![eq.3.14][\langle&space;k\rangle=\ln{N}]
+\[\langle k \rangle = \ln{N} \tag{3.14}\]
 
-![][\frac{\ln{N}}{N}\rightarrow0] for large ![][N]
+\(\frac{\ln{N}}{N} \rightarrow 0\) for large \(N\)
 
 
 ### Box 3-5 Network Evolution in Graph Theory
 
-![][p(N)] scales as ![][N^z] where ![][z] is tunable param ![][-\infty,0]
+\(p(N)\) scales as \(N^z\) where \(z\) is tunable param \([-\infty, 0]\)
 
 ![fig.3.8][fig_03_08]
 
@@ -285,10 +288,10 @@ where ![][p_c] is given by eq.3.11 (![eq.3.11][p_c=\frac{1}{N-1}\approx\frac{1}{
 ## 03.07 Real Networks are Supercritical
 
 
-- ![][\langle&space;k\rangle=1] 
-- ![][\langle&space;k\rangle>\ln{N}]
+- \(\langle k \rangle = 1\) 
+- \(\langle k \rangle > \ln{N}\)
 
-Network	                | ![][N]	| ![][L]	    | ![][\langle&space;K\rangle]| ![][\ln{N}]   |
+Network	                | \(N\)	| \(L\)	    | \(\langle K \rangle\)| \(\ln{N}\)   |
 ------------------------|----------:|--------------:|------:|------:|
 Internet	            | 192,244	| 609,066	    | 6.34	| 12.17 |
 Power Grid	            | 4,941	    | 6,594	        | 2.67	| 8.51  |
@@ -317,53 +320,55 @@ giant component coexist w/ many disconnected components
 - existenxe of these shord distances
 
 
-- ![][\langle&space;k\rangle] nodes at distance ![][d=1]
-- ![][\langle&space;k\rangle^2] nodes at distance ![][d=2]
-- ![][\langle&space;k\rangle^3] nodes at distance ![][d=3]
+- \(\langle k \rangle\) nodes at distance \(d = 1\)
+- \(\langle k \rangle^2\) nodes at distance \(d = 2\)
+- \(\langle k \rangle^3\) nodes at distance \(d = 3\)
 - ...
-- ![][\langle&space;k\rangle^d] nodes at distance ![][d]
+- \(\langle k \rangle^d\) nodes at distance \(d\)
 
 
-num of nodes up to distance ![][d]
+num of nodes up to distance \(d\)
 
-![eq.3.15][N(d)\approx1+\langle&space;k\rangle+\langle&space;k\rangle^2+\cdots+\langle&space;k\rangle^d=\frac{\langle&space;k\rangle^{d+1}-1}{\langle&space;k\rangle-1}]
 
-max distance ![][d_{max}] or the network's diameter
+\[ N(d) \approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d = \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}\tag{3.15}\]
 
-![eq.3.16][N(d_{max})\approx&space;N]
+max distance \(d_{max}\) or the network's diameter
 
-assuming the ![][\langle&space;k\rangle\gg1], 
+\[N(d_{max}) \approx N \tag{3.16}\]
 
-![eq.3.17][\langle&space;k\rangle^{d_{max}}\approx&space;N]
+assuming the \(\langle k \rangle \gg 1\), 
+
+\[\langle k \rangle^{d_{max}} \approx N \tag{3.17}\]
 
 &there4; the diamter of network follows
 
-![eq.3.18][d_{max}\approx\frac{\ln{N}}{\ln{k}}]
 
-- average distance between 2 randomly chosen nodes ![][\langle&space;d\rangle]
+\[d_{max} \approx \frac{\ln{N}}{\ln{k}} \tag{3.18}\]
+
+- average distance between 2 randomly chosen nodes \(\langle d \rangle\)
 
     the small world property is defined by
     
-    ![eq.3.19][\langle&space;d\rangle\approx\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]
+    \[\langle d \rangle \approx \frac{\ln{N}}{\ln{\langle k \rangle}} \tag{3.19}\]
 
-- ![][\ln{N}\ll&space;N], 
+- \(\ln{N} \ll N\), 
     *average path length or the diameter depends logarithmically on the system size*
 
-- ![][\frac{1}{\ln{\langle&space;k\rangle}}] imply the denser the network, the smaller the distance
+- \(\frac{1}{\ln{\langle k \rangle}}\) imply the denser the network, the smaller the distance
 
 - in real networks, systematic corrections to eq.3.19
 
 
 [![fig.3.11][fig_03_11]][fig_03_11]
 
-- 1D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N]
-- 2D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{2}}]
-- 3D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{3}}]
-- 4D: ![][d_{max}\sim\langle&space;d\rangle\sim&space;N^{\frac{1}{d}}]
+- 1D: \(d_{max} \sim \langle d \rangle \sim N\)
+- 2D: \(d_{max} \sim \langle d \rangle \sim N^{\frac{1}{2}}\)
+- 3D: \(d_{max} \sim \langle d \rangle \sim N^{\frac{1}{3}}\)
+- 4D: \(d_{max} \sim \langle d \rangle \sim N^{\frac{1}{d}}\)
 
-![][N\approx7\times10^9], ![][\langle&space;k\rangle\approx10^3]
+\(N \approx 7 \times 10^9\), \(\langle k \rangle \approx 10^3\)
 
-![][\langle&space;d\rangle\approx\frac{\ln{7\times10^9}}{\ln{10^3}}=3.28]
+\(\langle d \rangle \approx \frac{\ln{7\times10^9}}{\ln{10^3}} = 3.28\)
 
 ([de Sola Pool, I., Kochen, M., 1978][1978KochenM_deSolaPoolI] [20])
 
@@ -372,16 +377,16 @@ assuming the ![][\langle&space;k\rangle\gg1],
 
 **finite size scaling** ([Albert, R., 1999][1999BarabásiAL_JeongH_AlbertR])
 
-![][\langle&space;d\rangle\approx0.35+0.89\ln{N}]
+\(\langle d \rangle \approx 0.35 + 0.89 \ln{N}\)
 
-![][\langle&space;d\rangle\approx18.69] ([Lawrence, S., Giles, C.L., 1999][1999GilesCL_LawreneceS])
+\(\langle d \rangle \approx 18.69\) ([Lawrence, S., Giles, C.L., 1999][1999GilesCL_LawreneceS])
 
 *19 degrees of separation*
 
 
 ### 
 
-Network	| ![][N]| ![][L]| ![][\langle&space;k\rangle]| ![][\langle&space;d\rangle]| ![][d_{max}]| ![][\frac{\ln{N}}{\ln{\langle&space;k\rangle}}]
+Network	| \(N\)| \(L\)| \(\langle k \rangle\)| \(\langle d \rangle\)| \(d_{max}\)| \(\frac{\ln{N}}{\ln{\langle k \rangle}}\)
 --------|--:|--:|------:|------:|------:|----------:
 Internet	            | 192,244	| 609,066	    | 6.34	| 6.98	| 26	| 6.58
 WWW	                    | 325,729	| 1,497,134	    | 4.60	| 11.27	| 93	| 8.31
@@ -406,20 +411,20 @@ Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 5.61	| 14	| 7.14
 
 ## 03.09 Clustering Coefficient
 
-clustering coefficient ![][C_i], the density of the links in node ![][i]'s immediate neighborhood
+clustering coefficient \(C_i\), the density of the links in node \(i\)'s immediate neighborhood
 
-expected number of links ![][L_i] 
+expected number of links \(L_i\) 
 
-![eq.3.20][\langle&space;L_i\rangle=p\frac{k_i(k_i-1)}{2}]
+\[\langle\ L_i \rangle = p \frac{k_i(k_i-1)}{2} \tag{3.20}\]
 
 local clustering coefficient:
 
-![eq.3.21][C_i=\frac{2\langle&space;L_i\rangle}{k_i(k_i-1)}=p=\frac{\langle&space;k\rangle}{N}]
+\[C_i = \frac{2\langle L_i \rangle}{k_i(k_i - 1)} = p = \frac{\langle k \rangle}{N} \tag{3.21}\]
 
 
-plot ![][\frac{\langle&space;C\rangle}{\langle&space;k\rangle}] in fn of ![][N] 
+plot \(\frac{\langle C \rangle}{\langle k \rangle}\) in fn of \(N\) 
 
-![][\frac{\langle&space;C\rangle}{\langle&space;k\rangle}] NOT decrease as ![][N^{-1}]
+\(\frac{\langle C \rangle}{\langle k \rangle}\) NOT decrease as \(N^{-1}\)
 
 
 [![fig.3.13][fig_03_13]][fig_03_13]
@@ -430,9 +435,9 @@ plot ![][\frac{\langle&space;C\rangle}{\langle&space;k\rangle}] in fn of ![][N]
 [![fig.3.14][fig_03_14]][fig_03_14]
 
 - Small World Property
-    average distance depends logarithmically on ![][N]
+    average distance depends logarithmically on \(N\)
 - High Clustering
-    average clustering coef of real netw is higher than expected for a rand netw of similar ![][N] and ![][L]
+    average clustering coef of real netw is higher than expected for a rand netw of similar \(N\) and \(L\)
 
 **Watts-Strogatz model** (small-world model) 
 interpolate 
@@ -454,22 +459,22 @@ interpolate
 
 ## 03.16 Advanced Topic 3.E Fully Connected Regime
 
-![][(1-p)^{N_G}\approx(1-p)^N] in the ![][N_G\simeq&space;N]
+\((1-p)^{N_G} \approx (1-p)^N\) in the \(N_G \simeq N\)
 
 the num of isolated nodes is 
 
-![eq.3.40][I_N=N(1-p)^N=N\Big(1-\frac{N\cdot&space;p}{N}\Big)^N\approx&space;Ne^{-Np}]
+\[I_N = N (1-p)^N = N \Big(1 - \frac{N \cdot p}{N} \Big)^N \approx Ne^{-Np} \tag{3.40}\]
 
-for large ![][n],   
-![][(1-\frac{x}{n})^n\approx&space;e^{-x}]
+for large \(n\),   
+\((1 - \frac{x}{n})^n \approx e^{-x}\)
 
 only one node is disconnected
 
-![][I_N=1], eq.3.40, ![][Ne^{-Np}=1]
+\(I_N = 1\), eq.3.40, \(Ne^{-Np} = 1\)
 
-![eq.3.41][p=\frac{\ln{N}}{N}]
+\[p = \frac{\ln{N}}{N} \tag{3.41}\]
 
-leads to eq.3.14 ![eq.3.14][\langle&space;k\rangle=\ln{N}]
+leads to eq.3.14 \(\langle k \rangle = \ln{N}\)
 
 
 

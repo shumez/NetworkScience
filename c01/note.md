@@ -3,20 +3,20 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-12 08:46:1
-Modified: 	2019-02-12 20:08:37
+Modified: 	2019-04-06 11:22:55
 -----
 Copyright (c) 2019 shumez
 -->
 
-# [01] Introduction
+# 01 Introduction
 
-## [01-01] Vulnerability Due to Interconnectivity
+## 01.01 Vulnerability Due to Interconnectivity
 
-## [01-02] Network at the Heart of Complex Systems
+## 01.02 Network at the Heart of Complex Systems
 
 *complex system*
 
-## [01-03] Two Forces Helped the Emergence of Network Science
+## 01.03 Two Forces Helped the Emergence of Network Science
 
 random network ([Erdős, P., Rényi, A., 1959]), social network ([Granovetter., M. S., 1973]) 
 
@@ -27,7 +27,7 @@ random network ([Erdős, P., Rényi, A., 1959]), social network ([Granovetter., 
 ### The Universality of Network Characteristics
 
 
-## [01-04] The Characteristics of Network Science
+## 01.04 The Characteristics of Network Science
 
 ### Interdisciplinary Nature
 
@@ -45,7 +45,7 @@ formalism to deal with graphs from graph theory
 ### Computational Nature
 
 
-## [01-05] Societal Impact
+## 01.05 Societal Impact
 
 ### Economic Impact: From Web Search to Social Networking
 
@@ -55,7 +55,7 @@ formalism to deal with graphs from graph theory
 [Sporns, O., 2005]
 
 
-### [01-06] Scientific Impact
+### 01.06 Scientific Impact
 
 
 

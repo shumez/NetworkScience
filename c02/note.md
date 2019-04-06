@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-03-08 16:37:5
+Modified: 	2019-04-06 11:30:34
 -----
 Copyright (c) 2019 shumez
 -->
@@ -64,40 +64,40 @@ Copyright (c) 2019 shumez
 
 \(k_1=2, k_2=3, k_3=2, k_4=1 \)
 
-\[ L = \frac{1}{2} \sum_{i=1}^N k_i \] (2.1)
+\[ L = \frac{1}{2} \sum_{i=1}^N k_i \tag{2.1} \]
 
 
 ### Average Degree
 
 undirected
 
-\[ \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_j = \frac{2L}{N} \] (2.2)
+\[ \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_j = \frac{2L}{N} \tag{2.2} \]
 
 directed
 
 - \(k_i^{in}\): incoming degree
 - \(k_i^{out}\): outgoing degree
 
-\[ k_i = k_i^{in} + k_i^{out} \] (2.3)
+\[ k_i = k_i^{in} + k_i^{out} \tag{2.3} \]
 
 
-\[ L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} \] (2.4)
+\[ L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} \tag{2.4} \]
 
 
-\[ \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} \] (2.5)
+\[ \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} \tag{2.5} \]
 
 
 ### Degree Distribution
 
 \( p_k \): *degree distribution*, a randomly selected node in the network has degree \(k\)
 
-\[ \sum_{k=1}^\infty p_k = 1 \] (2.6)
+\[ \sum_{k=1}^\infty p_k = 1 \tag{2.6} \]
 
-\[ p_k = \frac{N_k}{N} \] (2.7)
+\[ p_k = \frac{N_k}{N} \tag{2.7} \]
 
 - \(N_k\): num of degree-k nodes
 
-\[ \langle k \rangle = \sum_{k=0}^\infty kp_k \] (2.8)
+\[ \langle k \rangle = \sum_{k=0}^\infty kp_k \tag{2.8} \]
 
 
 [![fig.2.3][fig-2-3]][fig-2-3]
@@ -116,16 +116,15 @@ directed
 
 undirected
 
-\[ k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} \] (2.9)
+\[ k_i = \sum_{j=1}^N A_{ji} = \sum_{j=1}^N A_{ji} \tag{2.9} \]
 
 
 directed
 
-\[ k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} \]
-(2.10)
+\[ k_i^{in} = \sum_{j=1}^N A_{ij}, \\ k_i^{out} = \sum_{j=1}^N A_{ji} \tag{2.10} \]
 
 
-\[ 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} \] (2.11)
+\[ 2L = \sum_{i=1}^N k_i^{in} = \sum_{i=1}^N k_i^{out} = \sum_{ij}^N A_{ij} \tag{2.11} \]
 
 [![fig.2.5][fig-2-5]][fig-2-5]
 
@@ -133,7 +132,7 @@ directed
 
 ## 02.05 Real Networks are Sparse
 
-\[ L_{max} = \frac{N(N-1)}{2} \] (2.12)
+\[ L_{max} = \frac{N(N-1)}{2} \tag{2.12} \]
 
 in a *complete graph* of size \(N\)
 
@@ -241,8 +240,7 @@ for larger networks, determined using the *BFS algorithm*
 
 *average path length* \(\langle d \rangle \)
 
-\[ \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \]
-(2.14)
+\[ \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \tag{2.14} \]
 
 
 ### Box 2-5 - Breadth-First Search Algorithm
@@ -266,20 +264,19 @@ for larger networks, determined using the *BFS algorithm*
 
 *clustering coefficient*
 
-([[Watts, D.J., Strogatz, S.H., 1998]])
+([Watts, D.J., Strogatz, S.H., 1998])
 
-\[ C_i = \frac{2 L_i}{k_i (k_i - 1)} \] (2.15)
+\[ C_i = \frac{2 L_i}{k_i (k_i - 1)} \tag{2.15} \]
 
 \(L_i\): num of links between the \(k_i\) neighbors of node \(i\) 
 
 \(C_i\) [0, 1]
 
-\( C_i = 
+\[ C_i = 
     \begin{cases} 
-        0 & \\
-        1 & 
-    \end{cases} 
-\)
+        0  \\ 
+        1 
+    \end{cases} \]
 
 
 [![fig.2.16][fig-2-16]][fig-2-16]
@@ -287,7 +284,7 @@ for larger networks, determined using the *BFS algorithm*
 
 *average clustering coefficient* \( \langle C \rangle \)
 
-\[ \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \] (2.16)
+\[ \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i \tag{2.16} \]
 
 ([Barrat, A., 2004], [Onnela, J.P., 2005], [Zhang, B., 2005], [Holme, P., 2007])
 
@@ -326,7 +323,7 @@ for larger networks, determined using the *BFS algorithm*
 
 
 
-
+##
 
 <!-- <style type="text/css">
 	img{width: 50%; float: right;}

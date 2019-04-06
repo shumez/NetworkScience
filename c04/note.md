@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-03-29 17:21:33
+Modified: 	2019-04-06 12:14:32
 -----
 Copyright (c) 2019 shumez
 -->
@@ -25,26 +25,26 @@ Copyright (c) 2019 shumez
 
 ## 02 Power Laws and Scale-Free Networks
 
-![eq.4.1][p_k\sim&space;k^{-\gamma}]
+\[p_k \sim k^{-\gamma} \tag{4.1} \]
 
 **power law dist** 
 
-**degree exponent** ![][\gamma]
+**degree exponent** \(\gamma\)
 
-![eq.4.2][\log{p_k}\sim-\gamma\log{k}]
+\[\log{p_k} \sim - \gamma \log{k} \tag{4.2}\]
 
-![][\log{p_k}] depends linealy on ![][\log{k}]
+\(\log{p_k}\) depends linealy on \(\log{k}\)
 
 
-out-degree ![][k_{out}], in-degree ![][k_{in}]
+out-degree \(k_{out}\), in-degree \(k_{in}\)
 
-![eq.4.3][p_{k_{in}}\sim&space;k^{-\gamma_{in}}]
+\[p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3}\]
 
-![eq.4.4][p_{k_{out}}\sim&space;k^{-\gamma_{out}}]
+\[p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4}\]
 
-![][\gamma_{in}] and ![][\gamma_{out}] 
+\(\gamma_{in}\) and \(\gamma_{out}\)
 
-e.g., ![][\gamma_{in}\approx2.1], ![][\gamma_{out}\approx2.45]
+e.g., \(\gamma_{in} \approx 2.1\), \(\gamma_{out} \approx 2.45\)
 
 
 **scale-free** ([Barabási, A.L., Albert R., 1999][1999AlbertR_BarabásiAL]) defined as:
@@ -54,23 +54,23 @@ A scale-free network is a network whose **degree distribution follows a power la
 
 ### Discrete Formalism
 
-prob ![][p_k], ![][k] links
+prob \(p_k\), \(k\) links
 
-![eq.4.5][p_k=Ck^{-\gamma}]
+\[p_k = C k^{- \gamma} \tag{4.5}\]
 
-constant ![][C] is determined by the normalization cond
+constant \(C\) is determined by the normalization cond
 
-![eq.4.6][\sum_{k=1}^\imfty{p_k}=1]
+\[\sum_{k=1}^\infty {p_k} = 1 \tag{4.6}\]
 
-![][C\sum_{k=1}^\infty{k^{-\gamma}}=1]
+\[C \sum_{k=1}^\infty {k^{- \gamma}} = 1\]
 
 hence
 
-![eq.4.7][C=\frac{1}{\sum_{k=1}^\infty{k^{\gamma}}}=\frac{1}{\zeta(\gamma)}]
+\[C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}\]
 
-**Riemann-zeta fn** ![][\zeta(\gamma)]
+**Riemann-zeta fn** \(\zeta(\gamma)\)
 
-![eq.4.8][p_k=\frac{k^{-\gamma}}{\zeta(\gamma)}]
+\[p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}\]
 
 
 ### Continuum Formalism
