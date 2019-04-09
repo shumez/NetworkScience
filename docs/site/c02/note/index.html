@@ -109,13 +109,13 @@
         
             <li><a class="toctree-l3" href="#shortest_path">Shortest Path</a></li>
         
-            <li><a class="toctree-l3" href="#box_2-4_-_number_of_shortest_parths_between_two_nodes">Box 2-4 - Number of Shortest Parths Between Two Nodes</a></li>
+            <li><a class="toctree-l3" href="#box_2-4_number_of_shortest_paths_between_two_nodes">Box 2-4: Number of Shortest Paths Between Two Nodes</a></li>
         
             <li><a class="toctree-l3" href="#network_diameter">Network Diameter</a></li>
         
             <li><a class="toctree-l3" href="#average_path_length">Average Path Length</a></li>
         
-            <li><a class="toctree-l3" href="#box_2-5_-_breadth-first_search_algorithm">Box 2-5 - Breadth-First Search Algorithm</a></li>
+            <li><a class="toctree-l3" href="#box_2-5_breadth-first_search_algorithm">Box 2-5: Breadth-First Search Algorithm</a></li>
         
         </ul>
     
@@ -124,7 +124,7 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#box_2-6_-_finding_the_connected_components_of_a_network">Box 2-6 - Finding the Connected Components of a Network</a></li>
+            <li><a class="toctree-l3" href="#box_2-6_finding_the_connected_components_of_a_network">Box 2-6: Finding the Connected Components of a Network</a></li>
         
         </ul>
     
@@ -188,7 +188,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/c02
 Author:     shumez <https://github.com/shumez>
 Created:    2019-02-13 17:10:6
-Modified:   2019-04-06 18:21:40
+Modified:   2019-04-09 11:24:45
 -----
 Copyright (c) 2019 shumez
 -->
@@ -196,36 +196,36 @@ Copyright (c) 2019 shumez
 <h1 id="02_graph_theory">02 Graph Theory<a class="headerlink" href="#02_graph_theory" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ol>
-<li><a href="#0201-The-Bridges-of-Königsberg">The Bridges of Königsberg</a></li>
-<li><a href="#0202-Networks-and-Graphs">Networks and Graphs</a></li>
-<li><a href="#0203-Degree,-Average-Degree-and-Degree-Distribution">Degree, Average Degree and Degree Distribution</a><ul>
-<li><a href="#Degree">Degree</a></li>
-<li><a href="#Average-Degree">Average Degree</a></li>
-<li><a href="#Degree-Distribution">Degree Distribution</a></li>
+<li><a href="#0201_the_bridges_of_königsberg">The Bridges of Königsberg</a></li>
+<li><a href="#0202_networks_and_graphs">Networks and Graphs</a></li>
+<li><a href="#0203_degree_average_degree_and_degree_distribution">Degree, Average Degree and Degree Distribution</a><ul>
+<li><a href="#degree">Degree</a></li>
+<li><a href="#average_degree">Average Degree</a></li>
+<li><a href="#degree_distribution">Degree Distribution</a></li>
 </ul>
 </li>
-<li><a href="#0204-Adjacency-Matrix">Adjacency Matrix</a></li>
-<li><a href="#0205-Real-Networks-are-Sparse">Real Networks are Sparse</a></li>
-<li><a href="#0206-Weighted-Networks">Weighted Networks</a><ul>
-<li><a href="#Metcalfe-Law---the-Value-of-a-Network">Metcalfe Law - the Value of a Network</a></li>
+<li><a href="#0204_adjacency_matrix">Adjacency Matrix</a></li>
+<li><a href="#0205_real_networks_are_sparse">Real Networks are Sparse</a></li>
+<li><a href="#0206_weighted_networks">Weighted Networks</a><ul>
+<li><a href="#metcalfe_law_the_value_of_a_network">Metcalfe Law: the Value of a Network</a></li>
 </ul>
 </li>
-<li><a href="#0207-Bipartite-Networks">Bipartite Networks</a></li>
-<li><a href="#0208-Paths-and-Distances">Paths and Distances</a><ul>
-<li><a href="#Shortest-Path">Shortest Path</a></li>
-<li><a href="#Box-2-4---Number-of-Shortest-Parths-Between-Two-Nodes">Box 2-4 - Number of Shortest Parths Between Two Nodes</a></li>
-<li><a href="#Network-Diameter">Network Diameter</a></li>
-<li><a href="#Average-Path-Length">Average Path Length</a></li>
-<li><a href="#Box-2-5-Breadth-First-Search-Algorithm">Box 2-5 - Breadth-First Search Algorithm</a></li>
+<li><a href="#0207_bipartite_networks">Bipartite Networks</a></li>
+<li><a href="#0208_paths_and_distances">Paths and Distances</a><ul>
+<li><a href="#shortest_path">Shortest Path</a></li>
+<li><a href="#box_2-4_number_of_shortest_paths_between_two_nodes">Box 2-4: Number of Shortest Paths Between Two Nodes</a></li>
+<li><a href="#network_diameter">Network Diameter</a></li>
+<li><a href="#average_path_length">Average Path Length</a></li>
+<li><a href="#box_2-5_breadth-first_search_algorithm">Box 2-5: Breadth-First Search Algorithm</a></li>
 </ul>
 </li>
-<li><a href="#0209-Connectedness">Connectedness</a><ul>
-<li><a href="#Box-2-6---Finding-the-Connected-Components-of-a-Network">Box 2-6 - Finding the Connected Components of a Network</a></li>
+<li><a href="#0209_connectedness">Connectedness</a><ul>
+<li><a href="#box_2-6_finding_the_connected_components_of_a_network">Box 2-6: Finding the Connected Components of a Network</a></li>
 </ul>
 </li>
-<li><a href="#0210-Clustering-Coefficient">Clustering Coefficient</a></li>
-<li><a href="#0211-Summary">Summary</a></li>
-<li><a href="#0212-Homework">Homework</a></li>
+<li><a href="#0210_clustering_coefficient">Clustering Coefficient</a></li>
+<li><a href="#0211_summary">Summary</a></li>
+<li><a href="#0212_homework">Homework</a></li>
 </ol>
 <h2 id="0201_the_bridges_of_konigsberg">02.01 The Bridges of Königsberg<a class="headerlink" href="#0201_the_bridges_of_konigsberg" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-1.jpg" title="fig.2.1 The Bridges of Königsberg"><img alt="fig-2-1" src="http://networksciencebook.com/images/ch-02/figure-2-1.jpg" title="fig.2.1 The Bridges of Königsberg" /></a></p>
@@ -296,7 +296,13 @@ Copyright (c) 2019 shumez
 <h2 id="0204_adjacency_matrix">02.04 Adjacency Matrix<a class="headerlink" href="#0204_adjacency_matrix" title="Permanent link">&para;</a></h2>
 <p><em>adjacenct matrix</em>: <script type="math/tex">N</script> rows, <script type="math/tex">N</script> cols</p>
 <p>
-<script type="math/tex; mode=display"> A_{ij} = \begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases} </script>
+<script type="math/tex; mode=display"> 
+    A_{ij} = 
+    \begin{cases} 
+        1 &\text{there is a link} \\ 
+        0 &\text{there is NOT} 
+    \end{cases} 
+</script>
 </p>
 <p>undirected</p>
 <p>
@@ -354,11 +360,15 @@ Copyright (c) 2019 shumez
 <li><strong>Eulerian path</strong>: transverse each link exactly once</li>
 <li><strong>Hamiltonian path</strong>: visit each node exactly </li>
 </ul>
-<h3 id="box_2-4_-_number_of_shortest_parths_between_two_nodes">Box 2-4 - Number of Shortest Parths Between Two Nodes<a class="headerlink" href="#box_2-4_-_number_of_shortest_parths_between_two_nodes" title="Permanent link">&para;</a></h3>
-<p>
-<script type="math/tex">N_{ij}</script> (num of shortest paths)
-<script type="math/tex">d_{ij}</script> (distance)
-<script type="math/tex">A_{ij}</script> (adjacency mat)</p>
+<h3 id="box_2-4_number_of_shortest_paths_between_two_nodes">Box 2-4: Number of Shortest Paths Between Two Nodes<a class="headerlink" href="#box_2-4_number_of_shortest_paths_between_two_nodes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<script type="math/tex">N_{ij}</script> (num of shortest paths)</li>
+<li>
+<script type="math/tex">d_{ij}</script> (distance)</li>
+<li>
+<script type="math/tex">A_{ij}</script> (adjacency mat)</li>
+</ul>
 <p>
 <script type="math/tex">d_{ij} = 1</script> if direct link, <script type="math/tex">A_{ij} = 1</script>
 </p>
@@ -382,14 +392,14 @@ Copyright (c) 2019 shumez
 <p><strong>average path length</strong> <script type="math/tex">\langle d \rangle </script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \tag{2.14} </script>
+<script type="math/tex; mode=display"> \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; \\i \neq j} \tag{2.14} </script>
 </p>
-<h3 id="box_2-5_-_breadth-first_search_algorithm">Box 2-5 - Breadth-First Search Algorithm<a class="headerlink" href="#box_2-5_-_breadth-first_search_algorithm" title="Permanent link">&para;</a></h3>
+<h3 id="box_2-5_breadth-first_search_algorithm">Box 2-5: Breadth-First Search Algorithm<a class="headerlink" href="#box_2-5_breadth-first_search_algorithm" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm"><img alt="fig.2.14" src="http://networksciencebook.com/images/ch-02/figure-2-14.jpg" title="fig.2.14 Applying the BFS Algorithm" /></a></p>
 <h2 id="0209_connectedness">02.09 Connectedness<a class="headerlink" href="#0209_connectedness" title="Permanent link">&para;</a></h2>
 <p><strong>bridge</strong></p>
 <p><a href="http://networksciencebook.com/images/ch-02/figure-2-15.jpg" title="fig.2.15 Connected and Disconnected Networks"><img alt="fig.2.15" src="http://networksciencebook.com/images/ch-02/figure-2-15.jpg" title="fig.2.15 Connected and Disconnected Networks" /></a></p>
-<h3 id="box_2-6_-_finding_the_connected_components_of_a_network">Box 2-6 - Finding the Connected Components of a Network<a class="headerlink" href="#box_2-6_-_finding_the_connected_components_of_a_network" title="Permanent link">&para;</a></h3>
+<h3 id="box_2-6_finding_the_connected_components_of_a_network">Box 2-6: Finding the Connected Components of a Network<a class="headerlink" href="#box_2-6_finding_the_connected_components_of_a_network" title="Permanent link">&para;</a></h3>
 <h2 id="0210_clustering_coefficient">02.10 Clustering Coefficient<a class="headerlink" href="#0210_clustering_coefficient" title="Permanent link">&para;</a></h2>
 <p><strong>clustering coefficient</strong></p>
 <p>(<a href="http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf" title="Watts, D.J. and Strogatz, S.H., 1998. Collective dynamics of ‘small-world’networks. nature, 393(6684), p.440.">Watts, D.J., Strogatz, S.H., 1998</a>)</p>

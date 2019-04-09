@@ -80,7 +80,7 @@
         
             <li><a class="toctree-l3" href="#box_3-1_defining_random_networks">Box 3-1 Defining Random Networks</a></li>
         
-            <li><a class="toctree-l3" href="#box_3-2_random_networks_-_a_brief_history">Box 3-2 Random Networks - a Brief History</a></li>
+            <li><a class="toctree-l3" href="#box_3-2_random_networks_a_brief_history">Box 3-2 Random Networks: a Brief History</a></li>
         
         </ul>
     
@@ -89,7 +89,7 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#box_3-3_binomial_distribution_-_mean_and_variance">Box 3-3 Binomial Distribution - Mean and Variance</a></li>
+            <li><a class="toctree-l3" href="#box_3-3_binomial_distribution_mean_and_variance">Box 3-3 Binomial Distribution: Mean and Variance</a></li>
         
         </ul>
     
@@ -132,7 +132,7 @@
         
             <li><a class="toctree-l3" href="#box_3-6_19_degrees_of_separation">Box 3-6 19 Degrees of Separation</a></li>
         
-            <li><a class="toctree-l3" href="#box_3-7_six_degrees_-_experimental_confirmation">Box 3-7 Six Degrees - Experimental Confirmation</a></li>
+            <li><a class="toctree-l3" href="#box_3-7_six_degrees_experimental_confirmation">Box 3-7 Six Degrees: Experimental Confirmation</a></li>
         
             <li><a class="toctree-l3" href="#box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW</a></li>
         
@@ -148,7 +148,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0310_summary_-_real_networks_are_not_random">03.10 Summary - Real Networks are Not Random</a></li>
+    <li class="toctree-l2"><a href="#0310_summary_real_networks_are_not_random">03.10 Summary: Real Networks are Not Random</a></li>
     
 
     <li class="toctree-l2"><a href="#0316_advanced_topic_3e_fully_connected_regime">03.16 Advanced Topic 3.E Fully Connected Regime</a></li>
@@ -199,7 +199,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/c03
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-06 20:27:3
-Modified:   2019-04-06 12:08:14
+Modified:   2019-04-09 11:13:1
 -----
 Copyright (c) 2019 shumez
 -->
@@ -207,45 +207,45 @@ Copyright (c) 2019 shumez
 <h1 id="03_random_networks">03 Random Networks<a class="headerlink" href="#03_random_networks" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ol>
-<li><a href="#0301-Introduction">Introduction</a></li>
-<li><a href="#0302-The-Random-Network-Model">The Random Network Model</a><ul>
-<li><a href="#Box-3-1-Defining-Random-Networks">Box 3-1 Defining Random Networks</a></li>
-<li><a href="#Box-3-2-Random-Networks---a-Brief-History">Box 3-2 Random Networks - a Brief History</a></li>
+<li><a href="#0301_introduction">Introduction</a></li>
+<li><a href="#0302_the_random_network_model">The Random Network Model</a><ul>
+<li><a href="#box_3-1_defining_random_networks">Box 3-1 Defining Random Networks</a></li>
+<li><a href="#box_3-2_random_networks_a_brief_history">Box 3-2 Random Networks: a Brief History</a></li>
 </ul>
 </li>
-<li><a href="#0303-Number-of-Links">Number of Links</a><ul>
-<li><a href="#Box-3-3-Binomial-Distribution---Mean-and-Variance">Box 3-3 Binomial Distribution - Mean and Variance</a></li>
+<li><a href="#0303_number_of_links">Number of Links</a><ul>
+<li><a href="#box_3-3_binomial_distribution_mean_and_variance">Box 3-3 Binomial Distribution: Mean and Variance</a></li>
 </ul>
 </li>
-<li><a href="#0304-Degree-Distribution">Degree Distribution</a><ul>
-<li><a href="#Binomial-Distribution">Binomial Distribution</a></li>
-<li><a href="#Poisson-Distribution">Poisson Distribution</a></li>
+<li><a href="#0304_degree_distribution">Degree Distribution</a><ul>
+<li><a href="#binomial_distribution">Binomial Distribution</a></li>
+<li><a href="#poisson_distribution">Poisson Distribution</a></li>
 </ul>
 </li>
-<li><a href="#0305-Real-Networks-are-Not-Poisson">Real Networks are Not Poisson</a><ul>
-<li><a href="#Box-3-4-Why-are-Hubs-Missing?">Box 3-4 Why are Hubs Missing?</a></li>
+<li><a href="#0305_real_networks_are_not_poisson">Real Networks are Not Poisson</a><ul>
+<li><a href="#box_3-4_why_are_hubs_missing">Box 3-4 Why are Hubs Missing?</a></li>
 </ul>
 </li>
-<li><a href="#0306-The-Evolution-of-a-Random-Network">The Evolution of a Random Network</a><ul>
-<li><a href="#Box-3-5-Network-Evolution-in-Graph-Theory">Box 3-5 Network Evolution in Graph Theory</a></li>
+<li><a href="#0306_the_evolution_of_a_random_network">The Evolution of a Random Network</a><ul>
+<li><a href="#box_3-5_network_evolution_in_graph_theory">Box 3-5 Network Evolution in Graph Theory</a></li>
 </ul>
 </li>
-<li><a href="#0307-Real-Networks-are-Supercritical">Real Networks are Supercritical</a></li>
-<li><a href="#0308-Small-Worlds">Small Worlds</a><ul>
-<li><a href="#Box-3-6-19-Degrees-of-Separation">Box 3-6 19 Degrees of Separation</a></li>
-<li><a href="#Box-3-7-Six-Degrees---Experimental-Confirmation">Box 3-7 Six Degrees - Experimental Confirmation</a></li>
-<li><a href="#Box-3-8-19-Degrees-of-the-WWW">Box 3-8 19 Degrees of the WWW</a></li>
+<li><a href="#0307_real_networks_are_supercritical">Real Networks are Supercritical</a></li>
+<li><a href="#0308_small_worlds">Small Worlds</a><ul>
+<li><a href="#box_3-6_19_degrees_of_separation">Box 3-6 19 Degrees of Separation</a></li>
+<li><a href="#box_3-7_six_degrees_experimental_confirmation">Box 3-7 Six Degrees: Experimental Confirmation</a></li>
+<li><a href="#box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW</a></li>
 </ul>
 </li>
-<li><a href="#0309-Clustering-Coefficient">Clustering Coefficient</a><ul>
-<li><a href="#Box-3-9-Watts-Strogatz-Model">Box 3-9 Watts-Strogatz Model</a></li>
+<li><a href="#0309_clustering_coefficient">Clustering Coefficient</a><ul>
+<li><a href="#box_3-9_watts-strogatz_model">Box 3-9 Watts-Strogatz Model</a></li>
 </ul>
 </li>
-<li><a href="#0310-Summary---Real-Networks-are-Not-Random">Summary - Real Networks are Not Random</a></li>
 <li>
-<ol>
-<li><a href="#0316-Advanced-Topic-3E-Fully-Connected-Regime">Advanced Topic 3.E Fully Connected Regime</a></li>
-</ol>
+<p><a href="#0310_summary_real_networks_are_not_random">Summary: Real Networks are Not Random</a></p>
+</li>
+<li>
+<p>16 <a href="#0316_Advanced_Topic_3E_Fully_Connected_Regime">Advanced Topic 3.E Fully Connected Regime</a></p>
 </li>
 </ol>
 <h2 id="0301_introduction">03.01 Introduction<a class="headerlink" href="#0301_introduction" title="Permanent link">&para;</a></h2>
@@ -277,7 +277,7 @@ Copyright (c) 2019 shumez
 </ul>
 <h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p><strong>random graph</strong> (<strong>random network</strong>, <strong>Erdős-Rényi network</strong>)</p>
-<h3 id="box_3-2_random_networks_-_a_brief_history">Box 3-2 Random Networks - a Brief History<a class="headerlink" href="#box_3-2_random_networks_-_a_brief_history" title="Permanent link">&para;</a></h3>
+<h3 id="box_3-2_random_networks_a_brief_history">Box 3-2 Random Networks: a Brief History<a class="headerlink" href="#box_3-2_random_networks_a_brief_history" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Anatol Rapoport</li>
 <li><em>Random graph theory</em> Pál Erdős and Alfréd Rényi</li>
@@ -317,7 +317,7 @@ Copyright (c) 2019 shumez
 <p>
 <script type="math/tex">p = .03</script>, <script type="math/tex">N = 100</script>
 </p>
-<h3 id="box_3-3_binomial_distribution_-_mean_and_variance">Box 3-3 Binomial Distribution - Mean and Variance<a class="headerlink" href="#box_3-3_binomial_distribution_-_mean_and_variance" title="Permanent link">&para;</a></h3>
+<h3 id="box_3-3_binomial_distribution_mean_and_variance">Box 3-3 Binomial Distribution: Mean and Variance<a class="headerlink" href="#box_3-3_binomial_distribution_mean_and_variance" title="Permanent link">&para;</a></h3>
 <p>
 <script type="math/tex; mode=display"> p_x = \binom{N}{x} p^x (1-p)^{N-x} </script>
 </p>
@@ -329,7 +329,14 @@ Copyright (c) 2019 shumez
 </p>
 <p>standard deviation</p>
 <p>
-<script type="math/tex; mode=display"> \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} </script>
+<script type="math/tex; mode=display"> 
+    \begin{align*}
+        \sigma_x 
+        &= \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} \\
+        &= [ p(1 - p) N ]^{\frac{1}{2}} 
+    \end{align*}
+    \tag{3.6} 
+</script>
 </p>
 <h2 id="0304_degree_distribution">03.04 Degree Distribution<a class="headerlink" href="#0304_degree_distribution" title="Permanent link">&para;</a></h2>
 <p>degree dist <script type="math/tex">p_k</script>, degree <script type="math/tex">k</script>
@@ -612,7 +619,14 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 <p>num of nodes up to distance <script type="math/tex">d</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> N(d) \approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d = \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}\tag{3.15}</script>
+<script type="math/tex; mode=display"> 
+    \begin{align*}
+        N(d) 
+        &\approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d \\
+        &= \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}
+    \end{align*}
+    \tag{3.15}
+</script>
 </p>
 <p>max distance <script type="math/tex">d_{max}</script> or the network's diameter</p>
 <p>
@@ -792,7 +806,7 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 </tr>
 </tbody>
 </table>
-<h3 id="box_3-7_six_degrees_-_experimental_confirmation">Box 3-7 Six Degrees - Experimental Confirmation<a class="headerlink" href="#box_3-7_six_degrees_-_experimental_confirmation" title="Permanent link">&para;</a></h3>
+<h3 id="box_3-7_six_degrees_experimental_confirmation">Box 3-7 Six Degrees: Experimental Confirmation<a class="headerlink" href="#box_3-7_six_degrees_experimental_confirmation" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-12.jpg" title="Fig.3.12 Six Degrees? From Milgram to Facebook"><img alt="fig.3.12" src="http://networksciencebook.com/images/ch-03/figure-3-12.jpg" title="Fig.3.12 Six Degrees? From Milgram to Facebook" /></a></p>
 <h3 id="box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW<a class="headerlink" href="#box_3-8_19_degrees_of_the_www" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW"><img alt="fig.box.3.8" src="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW" /></a></p>
@@ -805,7 +819,15 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 </p>
 <p>local clustering coefficient:</p>
 <p>
-<script type="math/tex; mode=display">C_i = \frac{2\langle L_i \rangle}{k_i(k_i - 1)} = p = \frac{\langle k \rangle}{N} \tag{3.21}</script>
+<script type="math/tex; mode=display">
+    \begin{align*}
+        C_i 
+        &= \frac{2\langle L_i \rangle}{k_i(k_i - 1)} \\
+        &= p \\
+        &= \frac{\langle k \rangle}{N}
+    \end{align*} 
+    \tag{3.21}
+</script>
 </p>
 <p>plot <script type="math/tex">\frac{\langle C \rangle}{\langle k \rangle}</script> in fn of <script type="math/tex">N</script>
 </p>
@@ -824,21 +846,35 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 </li>
 </ul>
 <p><strong>Watts-Strogatz model</strong> (small-world model) 
-interpolate 
-- Regular lattice: 
-    - High clustering
-    - Small-world property(-)
-- Random netw: 
-    - Low clustering
-    - Small-world property(+)</p>
-<h2 id="0310_summary_-_real_networks_are_not_random">03.10 Summary - Real Networks are Not Random<a class="headerlink" href="#0310_summary_-_real_networks_are_not_random" title="Permanent link">&para;</a></h2>
+interpolate </p>
+<ul>
+<li>Regular lattice: <ul>
+<li>High clustering</li>
+<li>Small-world property(-)</li>
+</ul>
+</li>
+<li>Random netw: <ul>
+<li>Low clustering</li>
+<li>Small-world property(+)</li>
+</ul>
+</li>
+</ul>
+<h2 id="0310_summary_real_networks_are_not_random">03.10 Summary: Real Networks are Not Random<a class="headerlink" href="#0310_summary_real_networks_are_not_random" title="Permanent link">&para;</a></h2>
 <h2 id="0316_advanced_topic_3e_fully_connected_regime">03.16 Advanced Topic 3.E Fully Connected Regime<a class="headerlink" href="#0316_advanced_topic_3e_fully_connected_regime" title="Permanent link">&para;</a></h2>
 <p>
 <script type="math/tex">(1-p)^{N_G} \approx (1-p)^N</script> in the <script type="math/tex">N_G \simeq N</script>
 </p>
 <p>the num of isolated nodes is </p>
 <p>
-<script type="math/tex; mode=display">I_N = N (1-p)^N = N \Big(1 - \frac{N \cdot p}{N} \Big)^N \approx Ne^{-Np} \tag{3.40}</script>
+<script type="math/tex; mode=display">
+    \begin{align*}
+        I_N 
+        &= N (1-p)^N \\
+        &= N \Big(1 - \frac{N \cdot p}{N} \Big)^N \\&
+        \approx Ne^{-Np}
+    \end{align*} 
+    \tag{3.40}
+</script>
 </p>
 <p>for large <script type="math/tex">n</script>, <br />
 <script type="math/tex">(1 - \frac{x}{n})^n \approx e^{-x}</script>
