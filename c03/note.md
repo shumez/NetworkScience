@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-04-06 12:08:14
+Modified: 	2019-04-09 11:13:1
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,28 +12,30 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-01. [Introduction](#0301-Introduction)
-02. [The Random Network Model](#0302-The-Random-Network-Model)
-    * [Box 3-1 Defining Random Networks](#Box-3-1-Defining-Random-Networks)
-    * [Box 3-2 Random Networks - a Brief History](#Box-3-2-Random-Networks---a-Brief-History)
-03. [Number of Links](#0303-Number-of-Links)
-    * [Box 3-3 Binomial Distribution - Mean and Variance](#Box-3-3-Binomial-Distribution---Mean-and-Variance)
-04. [Degree Distribution](#0304-Degree-Distribution)
-    * [Binomial Distribution](#Binomial-Distribution)
-    * [Poisson Distribution](#Poisson-Distribution)
-05. [Real Networks are Not Poisson](#0305-Real-Networks-are-Not-Poisson)
-    * [Box 3-4 Why are Hubs Missing?](#Box-3-4-Why-are-Hubs-Missing?)
-06. [The Evolution of a Random Network](#0306-The-Evolution-of-a-Random-Network)
-    * [Box 3-5 Network Evolution in Graph Theory](#Box-3-5-Network-Evolution-in-Graph-Theory)
-07. [Real Networks are Supercritical](#0307-Real-Networks-are-Supercritical)
-08. [Small Worlds](#0308-Small-Worlds)
-    * [Box 3-6 19 Degrees of Separation](#Box-3-6-19-Degrees-of-Separation)
-    * [Box 3-7 Six Degrees - Experimental Confirmation](#Box-3-7-Six-Degrees---Experimental-Confirmation)
-    * [Box 3-8 19 Degrees of the WWW](#Box-3-8-19-Degrees-of-the-WWW)
-09. [Clustering Coefficient](#0309-Clustering-Coefficient)
-    * [Box 3-9 Watts-Strogatz Model](#Box-3-9-Watts-Strogatz-Model)
-10. [Summary - Real Networks are Not Random](#0310-Summary---Real-Networks-are-Not-Random)
-- 16. [Advanced Topic 3.E Fully Connected Regime](#0316-Advanced-Topic-3E-Fully-Connected-Regime)
+01. [Introduction](#0301_introduction)
+02. [The Random Network Model](#0302_the_random_network_model)
+    * [Box 3-1 Defining Random Networks](#box_3-1_defining_random_networks)
+    * [Box 3-2 Random Networks: a Brief History](#box_3-2_random_networks_a_brief_history)
+03. [Number of Links](#0303_number_of_links)
+    * [Box 3-3 Binomial Distribution: Mean and Variance](#box_3-3_binomial_distribution_mean_and_variance)
+04. [Degree Distribution](#0304_degree_distribution)
+    * [Binomial Distribution](#binomial_distribution)
+    * [Poisson Distribution](#poisson_distribution)
+05. [Real Networks are Not Poisson](#0305_real_networks_are_not_poisson)
+    * [Box 3-4 Why are Hubs Missing?](#box_3-4_why_are_hubs_missing)
+06. [The Evolution of a Random Network](#0306_the_evolution_of_a_random_network)
+    * [Box 3-5 Network Evolution in Graph Theory](#box_3-5_network_evolution_in_graph_theory)
+07. [Real Networks are Supercritical](#0307_real_networks_are_supercritical)
+08. [Small Worlds](#0308_small_worlds)
+    * [Box 3-6 19 Degrees of Separation](#box_3-6_19_degrees_of_separation)
+    * [Box 3-7 Six Degrees: Experimental Confirmation](#box_3-7_six_degrees_experimental_confirmation)
+    * [Box 3-8 19 Degrees of the WWW](#box_3-8_19_degrees_of_the_www)
+09. [Clustering Coefficient](#0309_clustering_coefficient)
+    * [Box 3-9 Watts-Strogatz Model](#box_3-9_watts-strogatz_model)
+10. [Summary: Real Networks are Not Random](#0310_summary_real_networks_are_not_random)
+
+
+* 16 [Advanced Topic 3.E Fully Connected Regime](#0316_Advanced_Topic_3E_Fully_Connected_Regime)
 
 
 ## 03.01 Introduction
@@ -59,7 +61,7 @@ Copyright (c) 2019 shumez
 **random graph** (**random network**, **Erdős-Rényi network**)
 
 
-### Box 3-2 Random Networks - a Brief History
+### Box 3-2 Random Networks: a Brief History
 
 - Anatol Rapoport
 - *Random graph theory* Pál Erdős and Alfréd Rényi
@@ -100,7 +102,7 @@ from \(\langle k \rangle = 0\) to \(\langle k\rangle = N-1\)
 \(p = .03\), \(N = 100\)
 
 
-### Box 3-3 Binomial Distribution - Mean and Variance
+### Box 3-3 Binomial Distribution: Mean and Variance
 
 \[ p_x = \binom{N}{x} p^x (1-p)^{N-x} \]
 
@@ -111,7 +113,14 @@ from \(\langle k \rangle = 0\) to \(\langle k\rangle = N-1\)
 
 standard deviation
 
-\[ \sigma_x = \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} = [ p(1 - p) N ]^{\frac{1}{2}} \tag{3.6} \]
+\[ 
+    \begin{align*}
+        \sigma_x 
+        &= \big( \langle x^2 \rangle - \langle x \rangle^2 \big)^{\frac{1}{2}} \\
+        &= [ p(1 - p) N ]^{\frac{1}{2}} 
+    \end{align*}
+    \tag{3.6} 
+\]
 
 
 
@@ -330,7 +339,14 @@ giant component coexist w/ many disconnected components
 num of nodes up to distance \(d\)
 
 
-\[ N(d) \approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d = \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}\tag{3.15}\]
+\[ 
+    \begin{align*}
+        N(d) 
+        &\approx 1 + \langle k \rangle + \langle k \rangle^2 + \cdots + \langle k \rangle^d \\
+        &= \frac{\langle k \rangle^{d+1} - 1}{\langle k \rangle - 1}
+    \end{align*}
+    \tag{3.15}
+\]
 
 max distance \(d_{max}\) or the network's diameter
 
@@ -400,7 +416,7 @@ E. Coli Metabolism	    | 1,039	    | 5,802	        | 5.58	| 2.98	| 8	    | 4.04
 Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 5.61	| 14	| 7.14
 
 
-### Box 3-7 Six Degrees - Experimental Confirmation
+### Box 3-7 Six Degrees: Experimental Confirmation
 
 [![fig.3.12][fig_03_12]][fig_03_12]
 
@@ -419,7 +435,15 @@ expected number of links \(L_i\)
 
 local clustering coefficient:
 
-\[C_i = \frac{2\langle L_i \rangle}{k_i(k_i - 1)} = p = \frac{\langle k \rangle}{N} \tag{3.21}\]
+\[
+    \begin{align*}
+        C_i 
+        &= \frac{2\langle L_i \rangle}{k_i(k_i - 1)} \\
+        &= p \\
+        &= \frac{\langle k \rangle}{N}
+    \end{align*} 
+    \tag{3.21}
+\]
 
 
 plot \(\frac{\langle C \rangle}{\langle k \rangle}\) in fn of \(N\) 
@@ -441,6 +465,7 @@ plot \(\frac{\langle C \rangle}{\langle k \rangle}\) in fn of \(N\)
 
 **Watts-Strogatz model** (small-world model) 
 interpolate 
+
 - Regular lattice: 
     - High clustering
     - Small-world property(-)
@@ -449,7 +474,7 @@ interpolate
     - Small-world property(+)
 
 
-## 03.10 Summary - Real Networks are Not Random
+## 03.10 Summary: Real Networks are Not Random
 
 
 
@@ -463,7 +488,15 @@ interpolate
 
 the num of isolated nodes is 
 
-\[I_N = N (1-p)^N = N \Big(1 - \frac{N \cdot p}{N} \Big)^N \approx Ne^{-Np} \tag{3.40}\]
+\[
+    \begin{align*}
+        I_N 
+        &= N (1-p)^N \\
+        &= N \Big(1 - \frac{N \cdot p}{N} \Big)^N \\&
+        \approx Ne^{-Np}
+    \end{align*} 
+    \tag{3.40}
+\]
 
 for large \(n\),   
 \((1 - \frac{x}{n})^n \approx e^{-x}\)

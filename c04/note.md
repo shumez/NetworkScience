@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-06 12:14:32
+Modified: 	2019-04-09 11:26:55
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,10 +12,10 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-01. [Introduction](#01-Introduction)
-02. [Power Laws and Scale-Free Networks](#02-Power-Laws-and-Scale-Free-Networks)
-    * [Discrete Formalism](#Discrete-Formalism)
-    * [Continuum Formalism](#Continuum-Formalism)
+01. [Introduction](#01_introduction)
+02. [Power Laws and Scale-Free Networks](#02_power_laws_and_scale_free_networks)
+    * [Discrete Formalism](#discrete_formalism)
+    * [Continuum Formalism](#continuum_formalism)
 
 
 ## 01 Introduction

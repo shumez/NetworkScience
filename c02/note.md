@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-04-06 18:21:40
+Modified: 	2019-04-09 11:24:45
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,28 +12,28 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-01. [The Bridges of Königsberg](#0201-The-Bridges-of-Königsberg)
-02. [Networks and Graphs](#0202-Networks-and-Graphs)
-03. [Degree, Average Degree and Degree Distribution](#0203-Degree,-Average-Degree-and-Degree-Distribution)
-    * [Degree](#Degree)
-    * [Average Degree](#Average-Degree)
-    * [Degree Distribution](#Degree-Distribution)
-04. [Adjacency Matrix](#0204-Adjacency-Matrix)
-05. [Real Networks are Sparse](#0205-Real-Networks-are-Sparse)
-06. [Weighted Networks](#0206-Weighted-Networks)
-    * [Metcalfe Law - the Value of a Network](#Metcalfe-Law---the-Value-of-a-Network)
-07. [Bipartite Networks](#0207-Bipartite-Networks)
-08. [Paths and Distances](#0208-Paths-and-Distances)
-    * [Shortest Path](#Shortest-Path)
-    * [Box 2-4 - Number of Shortest Parths Between Two Nodes](#Box-2-4---Number-of-Shortest-Parths-Between-Two-Nodes)
-    * [Network Diameter](#Network-Diameter)
-    * [Average Path Length](#Average-Path-Length)
-    * [Box 2-5 - Breadth-First Search Algorithm](#Box-2-5-Breadth-First-Search-Algorithm)
-09. [Connectedness](#0209-Connectedness)
-    * [Box 2-6 - Finding the Connected Components of a Network](#Box-2-6---Finding-the-Connected-Components-of-a-Network)
-10. [Clustering Coefficient](#0210-Clustering-Coefficient)
-11. [Summary](#0211-Summary)
-12. [Homework](#0212-Homework)
+01. [The Bridges of Königsberg](#0201_the_bridges_of_königsberg)
+02. [Networks and Graphs](#0202_networks_and_graphs)
+03. [Degree, Average Degree and Degree Distribution](#0203_degree_average_degree_and_degree_distribution)
+    * [Degree](#degree)
+    * [Average Degree](#average_degree)
+    * [Degree Distribution](#degree_distribution)
+04. [Adjacency Matrix](#0204_adjacency_matrix)
+05. [Real Networks are Sparse](#0205_real_networks_are_sparse)
+06. [Weighted Networks](#0206_weighted_networks)
+    * [Metcalfe Law: the Value of a Network](#metcalfe_law_the_value_of_a_network)
+07. [Bipartite Networks](#0207_bipartite_networks)
+08. [Paths and Distances](#0208_paths_and_distances)
+    * [Shortest Path](#shortest_path)
+    * [Box 2-4: Number of Shortest Paths Between Two Nodes](#box_2-4_number_of_shortest_paths_between_two_nodes)
+    * [Network Diameter](#network_diameter)
+    * [Average Path Length](#average_path_length)
+    * [Box 2-5: Breadth-First Search Algorithm](#box_2-5_breadth-first_search_algorithm)
+09. [Connectedness](#0209_connectedness)
+    * [Box 2-6: Finding the Connected Components of a Network](#box_2-6_finding_the_connected_components_of_a_network)
+10. [Clustering Coefficient](#0210_clustering_coefficient)
+11. [Summary](#0211_summary)
+12. [Homework](#0212_homework)
 
 
 
@@ -111,7 +111,13 @@ directed
 
 *adjacenct matrix*: \(N\) rows, \(N\) cols
 
-\[ A_{ij} = \begin{cases} 1 &\text{there is a link} \\ 0 &\text{there is not} \end{cases} \]
+\[ 
+    A_{ij} = 
+    \begin{cases} 
+        1 &\text{there is a link} \\ 
+        0 &\text{there is NOT} 
+    \end{cases} 
+\]
 
 
 undirected
@@ -208,11 +214,11 @@ directed, \( d_{ij} \neq d_{ji} \)
 - **Hamiltonian path**: visit each node exactly 
 
 
-### Box 2-4 - Number of Shortest Parths Between Two Nodes
+### Box 2-4: Number of Shortest Paths Between Two Nodes
 
-\(N_{ij}\) (num of shortest paths)
-\(d_{ij}\) (distance)
-\(A_{ij}\) (adjacency mat)
+- \(N_{ij}\) (num of shortest paths)
+- \(d_{ij}\) (distance)
+- \(A_{ij}\) (adjacency mat)
 
 
 \(d_{ij} = 1\) if direct link, \(A_{ij} = 1\)
@@ -240,10 +246,10 @@ for larger networks, determined using the **BFS algorithm**
 
 **average path length** \(\langle d \rangle \)
 
-\[ \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; i \neq j} \tag{2.14} \]
+\[ \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; \\i \neq j} \tag{2.14} \]
 
 
-### Box 2-5 - Breadth-First Search Algorithm
+### Box 2-5: Breadth-First Search Algorithm
 
 [![fig.2.14][fig-2-14]][fig-2-14]
 
@@ -256,7 +262,7 @@ for larger networks, determined using the **BFS algorithm**
 [![fig.2.15][fig-2-15]][fig-2-15]
 
 
-### Box 2-6 - Finding the Connected Components of a Network
+### Box 2-6: Finding the Connected Components of a Network
 
 
 
