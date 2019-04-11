@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-11 15:58:32
+Modified: 	2019-04-11 16:30:54
 -----
 Copyright (c) 2019 shumez
 -->
@@ -13,7 +13,7 @@ Copyright (c) 2019 shumez
 ## Contents
 
 * [04.01. Introduction](#0401_introduction)
-* [04.02. Power Laws and Scale-Free Networks](#0402_power_laws_and_scale_free_networks)
+* [04.02. Power Laws and Scale-Free Networks](#0402_power_laws_and_scale-free_networks)
     * [04.02.01. Discrete Formalism](#040201_discrete_formalism)
     * [04.02.02. Continuum Formalism](#040202_continuum_formalism)
 
@@ -24,11 +24,15 @@ Copyright (c) 2019 shumez
 
 **scale-free network**
 
-## 04.02 Power Laws and Scale-Free Networks
+## 04.02. Power Laws and Scale-Free Networks
 
-\[p_k \sim k^{-\gamma} \tag{4.1} \]
+[fig.4.2][fig_04_02] indicates
 
-**power law dist** 
+\[
+    p_k \sim k^{-\gamma} \tag{4.1} 
+\]
+
+eq.4.1: **power law dist** 
 
 **degree exponent** \(\gamma\)
 
@@ -36,6 +40,12 @@ Copyright (c) 2019 shumez
 
 \(\log{p_k}\) depends linealy on \(\log{k}\)
 
+
+[![fig.4.2][fig_04_02]][fig_04_02]
+
+* \(γ_{in} = 2.1\) 
+* \(γ_{out} = 2.45\)
+* \(〈k_{in}〉 = 〈k_{out}〉 = 4.60 \)
 
 out-degree \(k_{out}\), in-degree \(k_{in}\)
 
@@ -57,21 +67,34 @@ A scale-free network is a network whose **degree distribution follows a power la
 
 prob \(p_k\), \(k\) links
 
-\[p_k = C k^{- \gamma} \tag{4.5}\]
+\[
+    p_k = C k^{- \gamma} \tag{4.5}
+\]
 
 constant \(C\) is determined by the normalization cond
 
-\[\sum_{k=1}^\infty {p_k} = 1 \tag{4.6}\]
+\[
+    \sum_{k=1}^\infty {p_k} = 1 \tag{4.6}
+\]
 
-\[C \sum_{k=1}^\infty {k^{- \gamma}} = 1\]
+\[
+    C \sum_{k=1}^\infty {k^{- \gamma}} = 1
+\]
 
 hence
 
-\[C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}\]
+\[
+    C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}
+\]
 
-**Riemann-zeta fn** \(\zeta(\gamma)\)
+**[Riemann-zeta fn]** \(\zeta(\gamma) = \sum_{k=1}^\infty{\frac{1}{k^{\gamma}}}\)
 
-\[p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}\]
+for \(k>0\), the discrete power-law dist:
+
+\[
+    p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}
+\]
+
 
 
 ### 04.02.02. Continuum Formalism
@@ -87,9 +110,11 @@ hence
 <!-- link -->
 [1999AlbertR_BarabásiAL]: https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail "Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512."
 
+[Riemann-zeta fn]: https://en.wikipedia.org/wiki/Riemann_zeta_function
 
 <!-- figure -->
 [fig_04_01]: http://networksciencebook.com/images/ch-04/figure-4-1.jpg "Fig.4.1 The Topology of the World Wide Web"
+[fig_04_02]: http://networksciencebook.com/images/ch-04/figure-4-2.jpg "Fig.4.2 The Degree Distribution of the WWW"
 
 
 <!-- eq -->
@@ -121,6 +146,6 @@ hence
 [p_k=\frac{k^{-\gamma}}{\zeta(\gamma)}]: https://latex.codecogs.com/gif.latex?p_k=\frac{k^{-\gamma}}{\zeta(\gamma)} "eq.4.8"
 
 
-<!-- <style type="text/css">
-	img{width: 50%; float: right;}
-</style> -->
+<style type="text/css">
+	img{width: 51%; float: right;}
+</style>
