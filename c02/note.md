@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-04-11 15:24:39
+Modified: 	2019-04-11 15:40:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,22 +12,22 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-* [02.01. The Bridges of Königsberg](#0201_the_bridges_of_königsberg)
+* [02.01. The Bridges of Königsberg](#0201_the_bridges_of_konigsberg)
 * [02.02. Networks and Graphs](#0202_networks_and_graphs)
 * [02.03. Degree, Average Degree and Degree Distribution](#0203_degree_average_degree_and_degree_distribution)
-    * [02.03.01. Degree](#degree)
-    * [02.03.02. Average Degree](#average_degree)
-    * [02.03.03. Degree Distribution](#degree_distribution)
+    * [02.03.01. Degree](#020301_degree)
+    * [02.03.02. Average Degree](#020302average_degree)
+    * [02.03.03. Degree Distribution](#020303_degree_distribution)
 * [02.04. Adjacency Matrix](#0204_adjacency_matrix)
 * [02.05. Real Networks are Sparse](#0205_real_networks_are_sparse)
 * [02.06. Weighted Networks](#0206_weighted_networks)
-    * [02.06.01. Metcalfe Law: the Value of a Network](#metcalfe_law_the_value_of_a_network)
+    * [02.06.01. Metcalfe Law: the Value of a Network](#020601_metcalfe_law_the_value_of_a_network)
 * [02.07. Bipartite Networks](#0207_bipartite_networks)
 * [02.08. Paths and Distances](#0208_paths_and_distances)
     * [02.08.01. Shortest Path](#shortest_path)
     * [Box 2-4: Number of Shortest Paths Between Two Nodes](#box_2-4_number_of_shortest_paths_between_two_nodes)
-    * [02.08.02. Network Diameter](#network_diameter)
-    * [02.08.03. Average Path Length](#average_path_length)
+    * [02.08.02. Network Diameter](#020802_network_diameter)
+    * [02.08.03. Average Path Length](#020803_average_path_length)
     * [Box 2-5: Breadth-First Search Algorithm](#box_2-5_breadth-first_search_algorithm)
 * [02.09. Connectedness](#0209_connectedness)
     * [Box 2-6: Finding the Connected Components of a Network](#box_2-6_finding_the_connected_components_of_a_network)
@@ -37,7 +37,7 @@ Copyright (c) 2019 shumez
 
 
 
-## 02.01 The Bridges of Königsberg
+## 02.01. The Bridges of Königsberg
 
 [![fig-2-1][fig-2-1]][fig-2-1]
 
@@ -45,7 +45,7 @@ Copyright (c) 2019 shumez
 
 
 
-## 02.02 Networks and Graphs
+## 02.02. Networks and Graphs
 
 - $N$ *num of nodes*, *size* of the network
 - \(L\) *num of links*, (2, 4)
@@ -54,11 +54,11 @@ Copyright (c) 2019 shumez
 
 <!-- <iframe src="http://networksciencebook.com/images/ch-02/video-2-1.m4v"> -->
 
-## 02.03 Degree, Average Degree and Degree Distribution
+## 02.03. Degree, Average Degree and Degree Distribution
 
 *degree*
 
-### Degree
+### 02.03.01. Degree
 
 \(k_i\): degree of \(i\)-th node 
 
@@ -67,7 +67,7 @@ Copyright (c) 2019 shumez
 \[ L = \frac{1}{2} \sum_{i=1}^N k_i \tag{2.1} \]
 
 
-### Average Degree
+### 02.03.02. Average Degree
 
 undirected
 
@@ -87,7 +87,7 @@ directed
 \[ \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in} = \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out} = \frac{L}{N} \tag{2.5} \]
 
 
-### Degree Distribution
+### 02.03.03. Degree Distribution
 
 \( p_k \): *degree distribution*, a randomly selected node in the network has degree \(k\)
 
@@ -107,7 +107,7 @@ directed
 
 
 
-## 02.04 Adjacency Matrix
+## 02.04. Adjacency Matrix
 
 *adjacenct matrix*: \(N\) rows, \(N\) cols
 
@@ -136,7 +136,7 @@ directed
 
 
 
-## 02.05 Real Networks are Sparse
+## 02.05. Real Networks are Sparse
 
 \[ L_{max} = \frac{N(N-1)}{2} \tag{2.12} \]
 
@@ -150,12 +150,12 @@ real networks
 
 
 
-## 02.06 Weighted Networks
+## 02.06. Weighted Networks
 
 \[ A_{ij} = w_{ij} \]
 
 
-### Metcalfe Law: the Value of a Network
+### 02.06.01. Metcalfe Law: the Value of a Network
 
 **Metcalfe's law**:
 
@@ -167,7 +167,7 @@ val \(\propto N^2 \)
 
 
 
-## 02.07 Bipartite Networks
+## 02.07. Bipartite Networks
 
 
 **bipartite graph** (**bigraph**) :
@@ -186,7 +186,7 @@ NO U-U / V-V links
 
 
 
-## 02.08 Paths and Distances
+## 02.08. Paths and Distances
 
 
 **path length**: num of links the path contains
@@ -195,7 +195,7 @@ NO U-U / V-V links
 [![fig.2.12][fig-2-12]][fig-2-12]
 
 
-### Shortest Path
+### 02.08.01. Shortest Path
 
 **distance**: \(d_{ij}\) shortest path 
 
@@ -235,14 +235,14 @@ num of \(d_{ij}=2\) paths between \(i\) and \(j\) is
 \[ N_{ij}^{(d)} = A_{ij}^d \]
 
 
-### Network Diameter
+### 02.08.02. Network Diameter
 
 **diameter** \(d_{max}\): max shortest path 
 
 for larger networks, determined using the **BFS algorithm**
 
 
-### Average Path Length
+### 02.08.03. Average Path Length
 
 **average path length** \(\langle d \rangle \)
 
@@ -255,7 +255,7 @@ for larger networks, determined using the **BFS algorithm**
 
 
 
-## 02.09 Connectedness
+## 02.09. Connectedness
 
 **bridge**
 
@@ -266,7 +266,7 @@ for larger networks, determined using the **BFS algorithm**
 
 
 
-## 02.10 Clustering Coefficient
+## 02.10. Clustering Coefficient
 
 **clustering coefficient**
 
@@ -296,7 +296,7 @@ for larger networks, determined using the **BFS algorithm**
 
 
 
-## 02.11 Summary
+## 02.11. Summary
 
 [![fig.2.17][fig-2-17]][fig-2-17]
 
@@ -317,7 +317,7 @@ for larger networks, determined using the **BFS algorithm**
 
 
 
-## 02.12 Homework
+## 02.12. Homework
 
 
 
@@ -330,10 +330,6 @@ for larger networks, determined using the **BFS algorithm**
 
 
 ##
-
-<!-- <style type="text/css">
-	img{width: 50%; float: right;}
-</style> -->
 
 
 [Network Science]: http://networksciencebook.com/ "Albert-László Barabási, Network Science"
@@ -417,3 +413,7 @@ for larger networks, determined using the **BFS algorithm**
 [fig-2-18]: http://networksciencebook.com/images/ch-02/figure-2-18.jpg "Characterizing a Real Network"
 
 [02-12]: http://networksciencebook.com/chapter/2#homework2 "Homework"
+
+<style type="text/css">
+	img{width: 51%; float: right;}
+</style>
