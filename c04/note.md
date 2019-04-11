@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-11 16:30:54
+Modified: 	2019-04-11 16:52:20
 -----
 Copyright (c) 2019 shumez
 -->
@@ -99,10 +99,35 @@ for \(k>0\), the discrete power-law dist:
 
 ### 04.02.02. Continuum Formalism
 
+\[
+    p(k) = C k^{- \gamma} \tag{4.9}
+\]
+
+normalization condition
+
+\[
+    \int_{C_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.10}
+\]
+
+eq.4.9  
+obtain
+
+\[
+    C = \frac{1}{\int_{k_{min}}^\infty{k^{-\gamma} \mathrm{d}k}} = (\gamma - 1) k_{min}^{\gamma - 1} \tag{4.11}
+\]
+
+
+\[
+    p(k) = (\gamma - 1) k_{min}^{\gamma - 1} k^{-\gamma} \tag{4.12}
+\]
 
 
 
+\[
+    \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13}
+\]
 
+radaomly chosen node has degree \([k_1, k_2]\)
 
 
 ## 
