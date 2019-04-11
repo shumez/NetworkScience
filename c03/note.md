@@ -3,45 +3,44 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-04-09 11:13:1
+Modified: 	2019-04-11 15:46:32
 -----
 Copyright (c) 2019 shumez
 -->
 
-# 03 Random Networks
+# 03. Random Networks
 
 ## Contents
 
-01. [Introduction](#0301_introduction)
-02. [The Random Network Model](#0302_the_random_network_model)
+* [03.01. Introduction](#0301_introduction)
+* [03.02. The Random Network Model](#0302_the_random_network_model)
     * [Box 3-1 Defining Random Networks](#box_3-1_defining_random_networks)
     * [Box 3-2 Random Networks: a Brief History](#box_3-2_random_networks_a_brief_history)
-03. [Number of Links](#0303_number_of_links)
+* [03.03. Number of Links](#0303_number_of_links)
     * [Box 3-3 Binomial Distribution: Mean and Variance](#box_3-3_binomial_distribution_mean_and_variance)
-04. [Degree Distribution](#0304_degree_distribution)
-    * [Binomial Distribution](#binomial_distribution)
-    * [Poisson Distribution](#poisson_distribution)
-05. [Real Networks are Not Poisson](#0305_real_networks_are_not_poisson)
+* [03.04. Degree Distribution](#0304_degree_distribution)
+    * [03.04.01. Binomial Distribution](#030401_binomial_distribution)
+    * [03.04.02. Poisson Distribution](#030402_poisson_distribution)
+* [03.05. Real Networks are Not Poisson](#0305_real_networks_are_not_poisson)
     * [Box 3-4 Why are Hubs Missing?](#box_3-4_why_are_hubs_missing)
-06. [The Evolution of a Random Network](#0306_the_evolution_of_a_random_network)
+* [03.06. The Evolution of a Random Network](#0306_the_evolution_of_a_random_network)
     * [Box 3-5 Network Evolution in Graph Theory](#box_3-5_network_evolution_in_graph_theory)
-07. [Real Networks are Supercritical](#0307_real_networks_are_supercritical)
-08. [Small Worlds](#0308_small_worlds)
+* [03.07. Real Networks are Supercritical](#0307_real_networks_are_supercritical)
+* [03.08. Small Worlds](#0308_small_worlds)
     * [Box 3-6 19 Degrees of Separation](#box_3-6_19_degrees_of_separation)
     * [Box 3-7 Six Degrees: Experimental Confirmation](#box_3-7_six_degrees_experimental_confirmation)
     * [Box 3-8 19 Degrees of the WWW](#box_3-8_19_degrees_of_the_www)
-09. [Clustering Coefficient](#0309_clustering_coefficient)
+* [03.09. Clustering Coefficient](#0309_clustering_coefficient)
     * [Box 3-9 Watts-Strogatz Model](#box_3-9_watts-strogatz_model)
-10. [Summary: Real Networks are Not Random](#0310_summary_real_networks_are_not_random)
+* [03.10. Summary: Real Networks are Not Random](#0310_summary_real_networks_are_not_random)
+* ...
+* [03.16. Advanced Topic 3.E Fully Connected Regime](#0316_Advanced_Topic_3E_Fully_Connected_Regime)
 
 
-* 16 [Advanced Topic 3.E Fully Connected Regime](#0316_Advanced_Topic_3E_Fully_Connected_Regime)
+## 03.01. Introduction
 
 
-## 03.01 Introduction
-
-
-## 03.02 The Random Network Model
+## 03.02. The Random Network Model
 
 \(N\) nodes, connected w/ probability \(p\) 
 
@@ -68,7 +67,7 @@ Copyright (c) 2019 shumez
 - Edgar Nelson Gilbert 
 
 
-## 03.03 Number of Links
+## 03.03. Number of Links
 
 - prob that \(L\) of attempts to connect \(\frac{N(N-1)}{2}\) pairs of nodes have result in link, is \(p^L\)
 - prob that the remaining \(\frac{N(N-1)}{2}\) pairs of nodes have  not resulted in a link is
@@ -124,7 +123,7 @@ standard deviation
 
 
 
-## 03.04 Degree Distribution
+## 03.04. Degree Distribution
 
 degree dist \(p_k\), degree \(k\)
 
@@ -140,7 +139,7 @@ degree dist \(p_k\), degree \(k\)
 [![fig.3.4][fig_03_04]][fig_03_04]
 
 
-### Binomial Distribution
+### 03.04.01. Binomial Distribution
 
 prob that node \(i\) has \(k\) links is product of 3 terms:
 
@@ -155,7 +154,7 @@ average degree \(\langle k \rangle\)
 second moment \(\langle k^2 \rangle\) & variance \(\sigma_k\)
 
 
-### Poisson Distribution
+### 03.04.02. Poisson Distribution
 
 sparse networks: \(\langle k \rangle \ll N\)
 
@@ -175,7 +174,7 @@ eq.3.7 is approx'd by Poisson dist
 > For larger networks (N = 103, 104) the degree distribution becomes indistinguishable from the Poisson prediction (3.8), shown as a continuous grey line. Therefore for large N the degree distribution is independent of the network size. In the figure we averaged over 1,000 independently generated random networks to decrease the noise.
 
 
-## 03.05 Real Networks are Not Poisson
+## 03.05. Real Networks are Not Poisson
 
 social network
 \(\langle k \rangle \approx 1000\), \(N \approx 7 \times10^9\) of individuals
@@ -211,7 +210,7 @@ rewrite eq.3.8  as:
 [![figure.3.6][fig_03_06]][fig_03_06]
 
 
-## 03.06 The Evolution of a Random Network
+## 03.06. The Evolution of a Random Network
 
 the size of the largest conneted cluster w/i the network, \(N_G\) varies w/ \(\langle k \rangle\)
 
@@ -294,7 +293,7 @@ where \(p_c\) is given by eq.3.11 (\(p_c = \frac{1}{N-1} \approx \frac{1}{N}\))
 ![fig.3.8][fig_03_08]
 
 
-## 03.07 Real Networks are Supercritical
+## 03.07. Real Networks are Supercritical
 
 
 - \(\langle k \rangle = 1\) 
@@ -316,7 +315,7 @@ giant component coexist w/ many disconnected components
 [![Fig.3.9][fig_03_09]][fig_03_09]
 
 
-## 03.08 Small Worlds
+## 03.08. Small Worlds
 
 **small world phenomenon** aka, **six degrees of separation**
 
@@ -425,7 +424,7 @@ Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 5.61	| 14	| 7.14
 [![fig.box.3.8][fig_box_3_8]][fig_box_3_8]
 
 
-## 03.09 Clustering Coefficient
+## 03.09. Clustering Coefficient
 
 clustering coefficient \(C_i\), the density of the links in node \(i\)'s immediate neighborhood
 
@@ -474,7 +473,7 @@ interpolate
     - Small-world property(+)
 
 
-## 03.10 Summary: Real Networks are Not Random
+## 03.10. Summary: Real Networks are Not Random
 
 
 
@@ -482,7 +481,7 @@ interpolate
 
 
 
-## 03.16 Advanced Topic 3.E Fully Connected Regime
+## 03.16. Advanced Topic 3.E Fully Connected Regime
 
 \((1-p)^{N_G} \approx (1-p)^N\) in the \(N_G \simeq N\)
 
