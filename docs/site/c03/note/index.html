@@ -71,10 +71,10 @@
     <li class="toctree-l2"><a href="#contents">Contents</a></li>
     
 
-    <li class="toctree-l2"><a href="#0301_introduction">03.01 Introduction</a></li>
+    <li class="toctree-l2"><a href="#0301_introduction">03.01. Introduction</a></li>
     
 
-    <li class="toctree-l2"><a href="#0302_the_random_network_model">03.02 The Random Network Model</a></li>
+    <li class="toctree-l2"><a href="#0302_the_random_network_model">03.02. The Random Network Model</a></li>
     
         <ul>
         
@@ -85,7 +85,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0303_number_of_links">03.03 Number of Links</a></li>
+    <li class="toctree-l2"><a href="#0303_number_of_links">03.03. Number of Links</a></li>
     
         <ul>
         
@@ -94,18 +94,18 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0304_degree_distribution">03.04 Degree Distribution</a></li>
+    <li class="toctree-l2"><a href="#0304_degree_distribution">03.04. Degree Distribution</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#binomial_distribution">Binomial Distribution</a></li>
+            <li><a class="toctree-l3" href="#030401_binomial_distribution">03.04.01. Binomial Distribution</a></li>
         
-            <li><a class="toctree-l3" href="#poisson_distribution">Poisson Distribution</a></li>
+            <li><a class="toctree-l3" href="#030402_poisson_distribution">03.04.02. Poisson Distribution</a></li>
         
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0305_real_networks_are_not_poisson">03.05 Real Networks are Not Poisson</a></li>
+    <li class="toctree-l2"><a href="#0305_real_networks_are_not_poisson">03.05. Real Networks are Not Poisson</a></li>
     
         <ul>
         
@@ -114,7 +114,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0306_the_evolution_of_a_random_network">03.06 The Evolution of a Random Network</a></li>
+    <li class="toctree-l2"><a href="#0306_the_evolution_of_a_random_network">03.06. The Evolution of a Random Network</a></li>
     
         <ul>
         
@@ -123,10 +123,10 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0307_real_networks_are_supercritical">03.07 Real Networks are Supercritical</a></li>
+    <li class="toctree-l2"><a href="#0307_real_networks_are_supercritical">03.07. Real Networks are Supercritical</a></li>
     
 
-    <li class="toctree-l2"><a href="#0308_small_worlds">03.08 Small Worlds</a></li>
+    <li class="toctree-l2"><a href="#0308_small_worlds">03.08. Small Worlds</a></li>
     
         <ul>
         
@@ -139,7 +139,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0309_clustering_coefficient">03.09 Clustering Coefficient</a></li>
+    <li class="toctree-l2"><a href="#0309_clustering_coefficient">03.09. Clustering Coefficient</a></li>
     
         <ul>
         
@@ -148,10 +148,10 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0310_summary_real_networks_are_not_random">03.10 Summary: Real Networks are Not Random</a></li>
+    <li class="toctree-l2"><a href="#0310_summary_real_networks_are_not_random">03.10. Summary: Real Networks are Not Random</a></li>
     
 
-    <li class="toctree-l2"><a href="#0316_advanced_topic_3e_fully_connected_regime">03.16 Advanced Topic 3.E Fully Connected Regime</a></li>
+    <li class="toctree-l2"><a href="#0316_advanced_topic_3e_fully_connected_regime">03.16. Advanced Topic 3.E Fully Connected Regime</a></li>
     
 
     </ul>
@@ -199,57 +199,54 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/c03
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-06 20:27:3
-Modified:   2019-04-09 11:13:1
+Modified:   2019-04-11 15:46:32
 -----
 Copyright (c) 2019 shumez
 -->
 
-<h1 id="03_random_networks">03 Random Networks<a class="headerlink" href="#03_random_networks" title="Permanent link">&para;</a></h1>
+<h1 id="03_random_networks">03. Random Networks<a class="headerlink" href="#03_random_networks" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
-<ol>
-<li><a href="#0301_introduction">Introduction</a></li>
-<li><a href="#0302_the_random_network_model">The Random Network Model</a><ul>
+<ul>
+<li><a href="#0301_introduction">03.01. Introduction</a></li>
+<li><a href="#0302_the_random_network_model">03.02. The Random Network Model</a><ul>
 <li><a href="#box_3-1_defining_random_networks">Box 3-1 Defining Random Networks</a></li>
 <li><a href="#box_3-2_random_networks_a_brief_history">Box 3-2 Random Networks: a Brief History</a></li>
 </ul>
 </li>
-<li><a href="#0303_number_of_links">Number of Links</a><ul>
+<li><a href="#0303_number_of_links">03.03. Number of Links</a><ul>
 <li><a href="#box_3-3_binomial_distribution_mean_and_variance">Box 3-3 Binomial Distribution: Mean and Variance</a></li>
 </ul>
 </li>
-<li><a href="#0304_degree_distribution">Degree Distribution</a><ul>
-<li><a href="#binomial_distribution">Binomial Distribution</a></li>
-<li><a href="#poisson_distribution">Poisson Distribution</a></li>
+<li><a href="#0304_degree_distribution">03.04. Degree Distribution</a><ul>
+<li><a href="#030401_binomial_distribution">03.04.01. Binomial Distribution</a></li>
+<li><a href="#030402_poisson_distribution">03.04.02. Poisson Distribution</a></li>
 </ul>
 </li>
-<li><a href="#0305_real_networks_are_not_poisson">Real Networks are Not Poisson</a><ul>
+<li><a href="#0305_real_networks_are_not_poisson">03.05. Real Networks are Not Poisson</a><ul>
 <li><a href="#box_3-4_why_are_hubs_missing">Box 3-4 Why are Hubs Missing?</a></li>
 </ul>
 </li>
-<li><a href="#0306_the_evolution_of_a_random_network">The Evolution of a Random Network</a><ul>
+<li><a href="#0306_the_evolution_of_a_random_network">03.06. The Evolution of a Random Network</a><ul>
 <li><a href="#box_3-5_network_evolution_in_graph_theory">Box 3-5 Network Evolution in Graph Theory</a></li>
 </ul>
 </li>
-<li><a href="#0307_real_networks_are_supercritical">Real Networks are Supercritical</a></li>
-<li><a href="#0308_small_worlds">Small Worlds</a><ul>
+<li><a href="#0307_real_networks_are_supercritical">03.07. Real Networks are Supercritical</a></li>
+<li><a href="#0308_small_worlds">03.08. Small Worlds</a><ul>
 <li><a href="#box_3-6_19_degrees_of_separation">Box 3-6 19 Degrees of Separation</a></li>
 <li><a href="#box_3-7_six_degrees_experimental_confirmation">Box 3-7 Six Degrees: Experimental Confirmation</a></li>
 <li><a href="#box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW</a></li>
 </ul>
 </li>
-<li><a href="#0309_clustering_coefficient">Clustering Coefficient</a><ul>
+<li><a href="#0309_clustering_coefficient">03.09. Clustering Coefficient</a><ul>
 <li><a href="#box_3-9_watts-strogatz_model">Box 3-9 Watts-Strogatz Model</a></li>
 </ul>
 </li>
-<li>
-<p><a href="#0310_summary_real_networks_are_not_random">Summary: Real Networks are Not Random</a></p>
-</li>
-<li>
-<p>16 <a href="#0316_Advanced_Topic_3E_Fully_Connected_Regime">Advanced Topic 3.E Fully Connected Regime</a></p>
-</li>
-</ol>
-<h2 id="0301_introduction">03.01 Introduction<a class="headerlink" href="#0301_introduction" title="Permanent link">&para;</a></h2>
-<h2 id="0302_the_random_network_model">03.02 The Random Network Model<a class="headerlink" href="#0302_the_random_network_model" title="Permanent link">&para;</a></h2>
+<li><a href="#0310_summary_real_networks_are_not_random">03.10. Summary: Real Networks are Not Random</a></li>
+<li>...</li>
+<li><a href="#0316_Advanced_Topic_3E_Fully_Connected_Regime">03.16. Advanced Topic 3.E Fully Connected Regime</a></li>
+</ul>
+<h2 id="0301_introduction">03.01. Introduction<a class="headerlink" href="#0301_introduction" title="Permanent link">&para;</a></h2>
+<h2 id="0302_the_random_network_model">03.02. The Random Network Model<a class="headerlink" href="#0302_the_random_network_model" title="Permanent link">&para;</a></h2>
 <p>
 <script type="math/tex">N</script> nodes, connected w/ probability <script type="math/tex">p</script>
 </p>
@@ -283,7 +280,7 @@ Copyright (c) 2019 shumez
 <li><em>Random graph theory</em> Pál Erdős and Alfréd Rényi</li>
 <li>Edgar Nelson Gilbert </li>
 </ul>
-<h2 id="0303_number_of_links">03.03 Number of Links<a class="headerlink" href="#0303_number_of_links" title="Permanent link">&para;</a></h2>
+<h2 id="0303_number_of_links">03.03. Number of Links<a class="headerlink" href="#0303_number_of_links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>prob that <script type="math/tex">L</script> of attempts to connect <script type="math/tex">\frac{N(N-1)}{2}</script> pairs of nodes have result in link, is <script type="math/tex">p^L</script>
 </li>
@@ -338,7 +335,7 @@ Copyright (c) 2019 shumez
     \tag{3.6} 
 </script>
 </p>
-<h2 id="0304_degree_distribution">03.04 Degree Distribution<a class="headerlink" href="#0304_degree_distribution" title="Permanent link">&para;</a></h2>
+<h2 id="0304_degree_distribution">03.04. Degree Distribution<a class="headerlink" href="#0304_degree_distribution" title="Permanent link">&para;</a></h2>
 <p>degree dist <script type="math/tex">p_k</script>, degree <script type="math/tex">k</script>
 </p>
 <table>
@@ -390,7 +387,7 @@ Copyright (c) 2019 shumez
 </tbody>
 </table>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-4.jpg" title="Fig.3.4 Binomial vs. Poisson Degree Distribution"><img alt="fig.3.4" src="http://networksciencebook.com/images/ch-03/figure-3-4.jpg" title="Fig.3.4 Binomial vs. Poisson Degree Distribution" /></a></p>
-<h3 id="binomial_distribution">Binomial Distribution<a class="headerlink" href="#binomial_distribution" title="Permanent link">&para;</a></h3>
+<h3 id="030401_binomial_distribution">03.04.01. Binomial Distribution<a class="headerlink" href="#030401_binomial_distribution" title="Permanent link">&para;</a></h3>
 <p>prob that node <script type="math/tex">i</script> has <script type="math/tex">k</script> links is product of 3 terms:</p>
 <ol>
 <li>prob that <script type="math/tex">k</script> of its links are present / <script type="math/tex">p^k</script>
@@ -409,7 +406,7 @@ Copyright (c) 2019 shumez
 <p>average degree <script type="math/tex">\langle k \rangle</script>
 second moment <script type="math/tex">\langle k^2 \rangle</script> &amp; variance <script type="math/tex">\sigma_k</script>
 </p>
-<h3 id="poisson_distribution">Poisson Distribution<a class="headerlink" href="#poisson_distribution" title="Permanent link">&para;</a></h3>
+<h3 id="030402_poisson_distribution">03.04.02. Poisson Distribution<a class="headerlink" href="#030402_poisson_distribution" title="Permanent link">&para;</a></h3>
 <p>sparse networks: <script type="math/tex">\langle k \rangle \ll N</script>
 </p>
 <p>eq.3.7 is approx'd by Poisson dist</p>
@@ -425,7 +422,7 @@ For a small network (N = 102) the degree distribution deviates significantly fro
 <p>Large Networks: Poisson
 For larger networks (N = 103, 104) the degree distribution becomes indistinguishable from the Poisson prediction (3.8), shown as a continuous grey line. Therefore for large N the degree distribution is independent of the network size. In the figure we averaged over 1,000 independently generated random networks to decrease the noise.</p>
 </blockquote>
-<h2 id="0305_real_networks_are_not_poisson">03.05 Real Networks are Not Poisson<a class="headerlink" href="#0305_real_networks_are_not_poisson" title="Permanent link">&para;</a></h2>
+<h2 id="0305_real_networks_are_not_poisson">03.05. Real Networks are Not Poisson<a class="headerlink" href="#0305_real_networks_are_not_poisson" title="Permanent link">&para;</a></h2>
 <p>social network
 <script type="math/tex">\langle k \rangle \approx 1000</script>, <script type="math/tex">N \approx 7 \times10^9</script> of individuals</p>
 <p>
@@ -456,7 +453,7 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 </p>
 <h3 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-6.jpg" title="Fig.3.6 Degree Distribution of Real Networks "><img alt="figure.3.6" src="http://networksciencebook.com/images/ch-03/figure-3-6.jpg" title="Fig.3.6 Degree Distribution of Real Networks " /></a></p>
-<h2 id="0306_the_evolution_of_a_random_network">03.06 The Evolution of a Random Network<a class="headerlink" href="#0306_the_evolution_of_a_random_network" title="Permanent link">&para;</a></h2>
+<h2 id="0306_the_evolution_of_a_random_network">03.06. The Evolution of a Random Network<a class="headerlink" href="#0306_the_evolution_of_a_random_network" title="Permanent link">&para;</a></h2>
 <p>the size of the largest conneted cluster w/i the network, <script type="math/tex">N_G</script> varies w/ <script type="math/tex">\langle k \rangle</script>
 </p>
 <ul>
@@ -526,7 +523,7 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 <script type="math/tex">p(N)</script> scales as <script type="math/tex">N^z</script> where <script type="math/tex">z</script> is tunable param <script type="math/tex">[-\infty, 0]</script>
 </p>
 <p><img alt="fig.3.8" src="http://networksciencebook.com/images/ch-03/figure-3-8.jpg" title="Fig.3.8 Evolution of a Random Graph " /></p>
-<h2 id="0307_real_networks_are_supercritical">03.07 Real Networks are Supercritical<a class="headerlink" href="#0307_real_networks_are_supercritical" title="Permanent link">&para;</a></h2>
+<h2 id="0307_real_networks_are_supercritical">03.07. Real Networks are Supercritical<a class="headerlink" href="#0307_real_networks_are_supercritical" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <script type="math/tex">\langle k \rangle = 1</script>
@@ -594,7 +591,7 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 <p>most real networks are in the supercritical regime</p>
 <p>giant component coexist w/ many disconnected components</p>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-9.jpg" title="Fig.3.9 Most Real Networks are Supercritical"><img alt="Fig.3.9" src="http://networksciencebook.com/images/ch-03/figure-3-9.jpg" title="Fig.3.9 Most Real Networks are Supercritical" /></a></p>
-<h2 id="0308_small_worlds">03.08 Small Worlds<a class="headerlink" href="#0308_small_worlds" title="Permanent link">&para;</a></h2>
+<h2 id="0308_small_worlds">03.08. Small Worlds<a class="headerlink" href="#0308_small_worlds" title="Permanent link">&para;</a></h2>
 <p><strong>small world phenomenon</strong> aka, <strong>six degrees of separation</strong></p>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-10.jpg" title="Fig.3.10 Six Deegree of Separation"><img alt="fig.3.10" src="http://networksciencebook.com/images/ch-03/figure-3-10.jpg" title="Fig.3.10 Six Deegree of Separation" /></a></p>
 <p><em>the distance between two randomly chosen nodes in a network is short</em></p>
@@ -810,7 +807,7 @@ for <script type="math/tex">\langle k \rangle = 1000</script>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-3-12.jpg" title="Fig.3.12 Six Degrees? From Milgram to Facebook"><img alt="fig.3.12" src="http://networksciencebook.com/images/ch-03/figure-3-12.jpg" title="Fig.3.12 Six Degrees? From Milgram to Facebook" /></a></p>
 <h3 id="box_3-8_19_degrees_of_the_www">Box 3-8 19 Degrees of the WWW<a class="headerlink" href="#box_3-8_19_degrees_of_the_www" title="Permanent link">&para;</a></h3>
 <p><a href="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW"><img alt="fig.box.3.8" src="http://networksciencebook.com/images/ch-03/figure-box-3-8.jpg" title="19 Degrees of the WWW" /></a></p>
-<h2 id="0309_clustering_coefficient">03.09 Clustering Coefficient<a class="headerlink" href="#0309_clustering_coefficient" title="Permanent link">&para;</a></h2>
+<h2 id="0309_clustering_coefficient">03.09. Clustering Coefficient<a class="headerlink" href="#0309_clustering_coefficient" title="Permanent link">&para;</a></h2>
 <p>clustering coefficient <script type="math/tex">C_i</script>, the density of the links in node <script type="math/tex">i</script>'s immediate neighborhood</p>
 <p>expected number of links <script type="math/tex">L_i</script>
 </p>
@@ -859,8 +856,8 @@ interpolate </p>
 </ul>
 </li>
 </ul>
-<h2 id="0310_summary_real_networks_are_not_random">03.10 Summary: Real Networks are Not Random<a class="headerlink" href="#0310_summary_real_networks_are_not_random" title="Permanent link">&para;</a></h2>
-<h2 id="0316_advanced_topic_3e_fully_connected_regime">03.16 Advanced Topic 3.E Fully Connected Regime<a class="headerlink" href="#0316_advanced_topic_3e_fully_connected_regime" title="Permanent link">&para;</a></h2>
+<h2 id="0310_summary_real_networks_are_not_random">03.10. Summary: Real Networks are Not Random<a class="headerlink" href="#0310_summary_real_networks_are_not_random" title="Permanent link">&para;</a></h2>
+<h2 id="0316_advanced_topic_3e_fully_connected_regime">03.16. Advanced Topic 3.E Fully Connected Regime<a class="headerlink" href="#0316_advanced_topic_3e_fully_connected_regime" title="Permanent link">&para;</a></h2>
 <p>
 <script type="math/tex">(1-p)^{N_G} \approx (1-p)^N</script> in the <script type="math/tex">N_G \simeq N</script>
 </p>
