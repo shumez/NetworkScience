@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-11 16:54:10
+Modified: 	2019-04-11 18:00:54
 -----
 Copyright (c) 2019 shumez
 -->
@@ -17,6 +17,7 @@ Copyright (c) 2019 shumez
     * [04.02.01. Discrete Formalism](#040201_discrete_formalism)
     * [04.02.02. Continuum Formalism](#040202_continuum_formalism)
     * [Box 4-1 The 80/20 Rule and the Top One Percent](#box_4-1_the_8020_rule_and_the_top_one_percent)
+* [04.03. Hubs](#0403_hubs)
 
 
 ## 04.01. Introduction
@@ -133,7 +134,24 @@ radaomly chosen node has degree \([k_1, k_2]\)
 
 ### Box 4-1 The 80/20 Rule and the Top One Percent
 
+<!-- [![fig.4.3][fig_04_03]][fig_04_03] -->
 
+## 04.03. Hubs
+
+* for small \(k\), 
+* for \(k\) in the vicinity of \(\langle k \rangle\), 
+* for large \(k\), 
+
+prob (node with \(k=100\))   
+\(p_{100}\approx 10^{-94}\) in Poisson dist  
+\(p_{100} \approx 4 \times 10^{-4}\) in power law
+
+\[
+    N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14}
+\]
+
+
+[![fig.4.4][fig_04_04]][fig_04_04]
 
 
 
@@ -150,6 +168,8 @@ radaomly chosen node has degree \([k_1, k_2]\)
 <!-- figure -->
 [fig_04_01]: http://networksciencebook.com/images/ch-04/figure-4-1.jpg "Fig.4.1 The Topology of the World Wide Web"
 [fig_04_02]: http://networksciencebook.com/images/ch-04/figure-4-2.jpg "Fig.4.2 The Degree Distribution of the WWW"
+[fig_04_03]: http://networksciencebook.com/images/ch-04/figure-4-3.jpg "Fig.4.3 Vilfredo Federico Damaso Pareto (1848 – 1923) "
+[fig_04_04]: http://networksciencebook.com/images/ch-04/figure-4-4.jpg "Fig.4.4 Poisson vs. Power-law Distributions"
 
 
 <!-- eq -->
