@@ -3,27 +3,27 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-09 11:26:55
+Modified: 	2019-04-11 15:49:4
 -----
 Copyright (c) 2019 shumez
 -->
 
-# 04 The Scale-Free Property
+# 04. The Scale-Free Property
 
 ## Contents
 
-01. [Introduction](#01_introduction)
-02. [Power Laws and Scale-Free Networks](#02_power_laws_and_scale_free_networks)
-    * [Discrete Formalism](#discrete_formalism)
-    * [Continuum Formalism](#continuum_formalism)
+* [04.01. Introduction](#0401_introduction)
+* [04.02. Power Laws and Scale-Free Networks](#0402_power_laws_and_scale_free_networks)
+    * [04.02.01. Discrete Formalism](#040201_discrete_formalism)
+    * [04.02.02. Continuum Formalism](#040202_continuum_formalism)
 
 
-## 01 Introduction
+## 04.01. Introduction
 
 [![fig.4.1][fig_04_01]][fig_04_01]
 
 
-## 02 Power Laws and Scale-Free Networks
+## 04.02 Power Laws and Scale-Free Networks
 
 \[p_k \sim k^{-\gamma} \tag{4.1} \]
 
@@ -52,7 +52,7 @@ e.g., \(\gamma_{in} \approx 2.1\), \(\gamma_{out} \approx 2.45\)
 A scale-free network is a network whose **degree distribution follows a power law**
 
 
-### Discrete Formalism
+### 04.02.01. Discrete Formalism
 
 prob \(p_k\), \(k\) links
 
@@ -73,7 +73,7 @@ hence
 \[p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}\]
 
 
-### Continuum Formalism
+### 04.02.02. Continuum Formalism
 
 
 
@@ -81,7 +81,7 @@ hence
 
 
 
-
+## 
 
 <!-- link -->
 [1999AlbertR_BarabásiAL]: https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail "Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512."
