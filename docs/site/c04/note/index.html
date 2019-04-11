@@ -79,13 +79,24 @@
     <li class="toctree-l2"><a href="#0401_introduction">04.01. Introduction</a></li>
     
 
-    <li class="toctree-l2"><a href="#0402_power_laws_and_scale-free_networks">04.02 Power Laws and Scale-Free Networks</a></li>
+    <li class="toctree-l2"><a href="#0402_power_laws_and_scale-free_networks">04.02. Power Laws and Scale-Free Networks</a></li>
     
         <ul>
         
             <li><a class="toctree-l3" href="#040201_discrete_formalism">04.02.01. Discrete Formalism</a></li>
         
             <li><a class="toctree-l3" href="#040202_continuum_formalism">04.02.02. Continuum Formalism</a></li>
+        
+            <li><a class="toctree-l3" href="#box_4-1_the_8020_rule_and_the_top_one_percent">Box 4-1 The 80/20 Rule and the Top One Percent</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#0403_hubs">04.03. Hubs</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#040301_the_largest_hub">04.03.01. The Largest Hub</a></li>
         
         </ul>
     
@@ -130,7 +141,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/c04
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-28 19:54:5
-Modified:   2019-04-11 15:49:4
+Modified:   2019-04-11 18:02:28
 -----
 Copyright (c) 2019 shumez
 -->
@@ -139,19 +150,28 @@ Copyright (c) 2019 shumez
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="#0401_introduction">04.01. Introduction</a></li>
-<li><a href="#0402_power_laws_and_scale_free_networks">04.02. Power Laws and Scale-Free Networks</a><ul>
+<li><a href="#0402_power_laws_and_scale-free_networks">04.02. Power Laws and Scale-Free Networks</a><ul>
 <li><a href="#040201_discrete_formalism">04.02.01. Discrete Formalism</a></li>
 <li><a href="#040202_continuum_formalism">04.02.02. Continuum Formalism</a></li>
+<li><a href="#box_4-1_the_8020_rule_and_the_top_one_percent">Box 4-1 The 80/20 Rule and the Top One Percent</a></li>
+</ul>
+</li>
+<li><a href="#0403_hubs">04.03. Hubs</a><ul>
+<li><a href="#040301_the_largest_hub">04.03.01. The Largest Hub</a></li>
 </ul>
 </li>
 </ul>
 <h2 id="0401_introduction">04.01. Introduction<a class="headerlink" href="#0401_introduction" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web"><img alt="fig.4.1" src="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web" /></a></p>
-<h2 id="0402_power_laws_and_scale-free_networks">04.02 Power Laws and Scale-Free Networks<a class="headerlink" href="#0402_power_laws_and_scale-free_networks" title="Permanent link">&para;</a></h2>
+<p><strong>scale-free network</strong></p>
+<h2 id="0402_power_laws_and_scale-free_networks">04.02. Power Laws and Scale-Free Networks<a class="headerlink" href="#0402_power_laws_and_scale-free_networks" title="Permanent link">&para;</a></h2>
+<p><a href="http://networksciencebook.com/images/ch-04/figure-4-2.jpg" title="Fig.4.2 The Degree Distribution of the WWW">fig.4.2</a> indicates</p>
 <p>
-<script type="math/tex; mode=display">p_k \sim k^{-\gamma} \tag{4.1} </script>
+<script type="math/tex; mode=display">
+    p_k \sim k^{-\gamma} \tag{4.1} 
+</script>
 </p>
-<p><strong>power law dist</strong> </p>
+<p>eq.4.1: <strong>power law dist</strong> </p>
 <p><strong>degree exponent</strong> <script type="math/tex">\gamma</script>
 </p>
 <p>
@@ -160,6 +180,18 @@ Copyright (c) 2019 shumez
 <p>
 <script type="math/tex">\log{p_k}</script> depends linealy on <script type="math/tex">\log{k}</script>
 </p>
+<p><a href="http://networksciencebook.com/images/ch-04/figure-4-2.jpg" title="Fig.4.2 The Degree Distribution of the WWW"><img alt="fig.4.2" src="http://networksciencebook.com/images/ch-04/figure-4-2.jpg" title="Fig.4.2 The Degree Distribution of the WWW" /></a></p>
+<ul>
+<li>
+<script type="math/tex">γ_{in} = 2.1</script>
+</li>
+<li>
+<script type="math/tex">γ_{out} = 2.45</script>
+</li>
+<li>
+<script type="math/tex">〈k_{in}〉 = 〈k_{out}〉 = 4.60 </script>
+</li>
+</ul>
 <p>out-degree <script type="math/tex">k_{out}</script>, in-degree <script type="math/tex">k_{in}</script>
 </p>
 <p>
@@ -178,25 +210,85 @@ Copyright (c) 2019 shumez
 <h3 id="040201_discrete_formalism">04.02.01. Discrete Formalism<a class="headerlink" href="#040201_discrete_formalism" title="Permanent link">&para;</a></h3>
 <p>prob <script type="math/tex">p_k</script>, <script type="math/tex">k</script> links</p>
 <p>
-<script type="math/tex; mode=display">p_k = C k^{- \gamma} \tag{4.5}</script>
+<script type="math/tex; mode=display">
+    p_k = C k^{- \gamma} \tag{4.5}
+</script>
 </p>
 <p>constant <script type="math/tex">C</script> is determined by the normalization cond</p>
 <p>
-<script type="math/tex; mode=display">\sum_{k=1}^\infty {p_k} = 1 \tag{4.6}</script>
+<script type="math/tex; mode=display">
+    \sum_{k=1}^\infty {p_k} = 1 \tag{4.6}
+</script>
 </p>
 <p>
-<script type="math/tex; mode=display">C \sum_{k=1}^\infty {k^{- \gamma}} = 1</script>
+<script type="math/tex; mode=display">
+    C \sum_{k=1}^\infty {k^{- \gamma}} = 1
+</script>
 </p>
 <p>hence</p>
 <p>
-<script type="math/tex; mode=display">C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}</script>
+<script type="math/tex; mode=display">
+    C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}
+</script>
 </p>
-<p><strong>Riemann-zeta fn</strong> <script type="math/tex">\zeta(\gamma)</script>
+<p><strong><a href="https://en.wikipedia.org/wiki/Riemann_zeta_function">Riemann-zeta fn</a></strong> <script type="math/tex">\zeta(\gamma) = \sum_{k=1}^\infty{\frac{1}{k^{\gamma}}}</script>
 </p>
+<p>for <script type="math/tex">k>0</script>, the discrete power-law dist:</p>
 <p>
-<script type="math/tex; mode=display">p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}</script>
+<script type="math/tex; mode=display">
+    p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}
+</script>
 </p>
 <h3 id="040202_continuum_formalism">04.02.02. Continuum Formalism<a class="headerlink" href="#040202_continuum_formalism" title="Permanent link">&para;</a></h3>
+<p>
+<script type="math/tex; mode=display">
+    p(k) = C k^{- \gamma} \tag{4.9}
+</script>
+</p>
+<p>normalization condition</p>
+<p>
+<script type="math/tex; mode=display">
+    \int_{C_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.10}
+</script>
+</p>
+<p>eq.4.9<br />
+obtain</p>
+<p>
+<script type="math/tex; mode=display">
+    C = \frac{1}{\int_{k_{min}}^\infty{k^{-\gamma} \mathrm{d}k}} = (\gamma - 1) k_{min}^{\gamma - 1} \tag{4.11}
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+    p(k) = (\gamma - 1) k_{min}^{\gamma - 1} k^{-\gamma} \tag{4.12}
+</script>
+</p>
+<p>
+<script type="math/tex; mode=display">
+    \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13}
+</script>
+</p>
+<p>radaomly chosen node has degree <script type="math/tex">[k_1, k_2]</script>
+</p>
+<h3 id="box_4-1_the_8020_rule_and_the_top_one_percent">Box 4-1 The 80/20 Rule and the Top One Percent<a class="headerlink" href="#box_4-1_the_8020_rule_and_the_top_one_percent" title="Permanent link">&para;</a></h3>
+<!-- [![fig.4.3][fig_04_03]][fig_04_03] -->
+
+<h2 id="0403_hubs">04.03. Hubs<a class="headerlink" href="#0403_hubs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>for small <script type="math/tex">k</script>, </li>
+<li>for <script type="math/tex">k</script> in the vicinity of <script type="math/tex">\langle k \rangle</script>, </li>
+<li>for large <script type="math/tex">k</script>, </li>
+</ul>
+<p>prob (node with <script type="math/tex">k=100</script>) <br />
+<script type="math/tex">p_{100}\approx 10^{-94}</script> in Poisson dist<br />
+<script type="math/tex">p_{100} \approx 4 \times 10^{-4}</script> in power law</p>
+<p>
+<script type="math/tex; mode=display">
+    N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14}
+</script>
+</p>
+<p><a href="http://networksciencebook.com/images/ch-04/figure-4-4.jpg" title="Fig.4.4 Poisson vs. Power-law Distributions"><img alt="fig.4.4" src="http://networksciencebook.com/images/ch-04/figure-4-4.jpg" title="Fig.4.4 Poisson vs. Power-law Distributions" /></a></p>
+<h3 id="040301_the_largest_hub">04.03.01. The Largest Hub<a class="headerlink" href="#040301_the_largest_hub" title="Permanent link">&para;</a></h3>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <!-- link -->
 
@@ -208,9 +300,9 @@ Copyright (c) 2019 shumez
 
 <!-- Discrete Formalism -->
 
-<!-- <style type="text/css">
-    img{width: 50%; float: right;}
-</style> -->
+<style type="text/css">
+    img{width: 51%; float: right;}
+</style>
               
             </div>
           </div>
