@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-11 16:52:20
+Modified: 	2019-04-11 16:54:10
 -----
 Copyright (c) 2019 shumez
 -->
@@ -16,6 +16,7 @@ Copyright (c) 2019 shumez
 * [04.02. Power Laws and Scale-Free Networks](#0402_power_laws_and_scale-free_networks)
     * [04.02.01. Discrete Formalism](#040201_discrete_formalism)
     * [04.02.02. Continuum Formalism](#040202_continuum_formalism)
+    * [Box 4-1 The 80/20 Rule and the Top One Percent](#box_4-1_the_8020_rule_and_the_top_one_percent)
 
 
 ## 04.01. Introduction
@@ -128,6 +129,15 @@ obtain
 \]
 
 radaomly chosen node has degree \([k_1, k_2]\)
+
+
+### Box 4-1 The 80/20 Rule and the Top One Percent
+
+
+
+
+
+
 
 
 ## 
