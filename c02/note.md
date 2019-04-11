@@ -3,37 +3,37 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-04-09 11:24:45
+Modified: 	2019-04-11 15:24:39
 -----
 Copyright (c) 2019 shumez
 -->
 
-# 02 Graph Theory
+# 02. Graph Theory
 
 ## Contents
 
-01. [The Bridges of Königsberg](#0201_the_bridges_of_königsberg)
-02. [Networks and Graphs](#0202_networks_and_graphs)
-03. [Degree, Average Degree and Degree Distribution](#0203_degree_average_degree_and_degree_distribution)
-    * [Degree](#degree)
-    * [Average Degree](#average_degree)
-    * [Degree Distribution](#degree_distribution)
-04. [Adjacency Matrix](#0204_adjacency_matrix)
-05. [Real Networks are Sparse](#0205_real_networks_are_sparse)
-06. [Weighted Networks](#0206_weighted_networks)
-    * [Metcalfe Law: the Value of a Network](#metcalfe_law_the_value_of_a_network)
-07. [Bipartite Networks](#0207_bipartite_networks)
-08. [Paths and Distances](#0208_paths_and_distances)
-    * [Shortest Path](#shortest_path)
+* [02.01. The Bridges of Königsberg](#0201_the_bridges_of_königsberg)
+* [02.02. Networks and Graphs](#0202_networks_and_graphs)
+* [02.03. Degree, Average Degree and Degree Distribution](#0203_degree_average_degree_and_degree_distribution)
+    * [02.03.01. Degree](#degree)
+    * [02.03.02. Average Degree](#average_degree)
+    * [02.03.03. Degree Distribution](#degree_distribution)
+* [02.04. Adjacency Matrix](#0204_adjacency_matrix)
+* [02.05. Real Networks are Sparse](#0205_real_networks_are_sparse)
+* [02.06. Weighted Networks](#0206_weighted_networks)
+    * [02.06.01. Metcalfe Law: the Value of a Network](#metcalfe_law_the_value_of_a_network)
+* [02.07. Bipartite Networks](#0207_bipartite_networks)
+* [02.08. Paths and Distances](#0208_paths_and_distances)
+    * [02.08.01. Shortest Path](#shortest_path)
     * [Box 2-4: Number of Shortest Paths Between Two Nodes](#box_2-4_number_of_shortest_paths_between_two_nodes)
-    * [Network Diameter](#network_diameter)
-    * [Average Path Length](#average_path_length)
+    * [02.08.02. Network Diameter](#network_diameter)
+    * [02.08.03. Average Path Length](#average_path_length)
     * [Box 2-5: Breadth-First Search Algorithm](#box_2-5_breadth-first_search_algorithm)
-09. [Connectedness](#0209_connectedness)
+* [02.09. Connectedness](#0209_connectedness)
     * [Box 2-6: Finding the Connected Components of a Network](#box_2-6_finding_the_connected_components_of_a_network)
-10. [Clustering Coefficient](#0210_clustering_coefficient)
-11. [Summary](#0211_summary)
-12. [Homework](#0212_homework)
+* [02.10. Clustering Coefficient](#0210_clustering_coefficient)
+* [02.11. Summary](#0211_summary)
+* [02.12. Homework](#0212_homework)
 
 
 
