@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-11 15:49:4
+Modified: 	2019-04-11 15:58:32
 -----
 Copyright (c) 2019 shumez
 -->
@@ -22,6 +22,7 @@ Copyright (c) 2019 shumez
 
 [![fig.4.1][fig_04_01]][fig_04_01]
 
+**scale-free network**
 
 ## 04.02 Power Laws and Scale-Free Networks
 
