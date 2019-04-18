@@ -7,23 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
   <title>04 The Scale-Free Property - Network Science</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "04 The Scale-Free Property";
-    var mkdocs_page_input_path = "c04/note.md";
-    var mkdocs_page_url = "/NetworkScience/c04/note/";
+    var mkdocs_page_input_path = "NetworkScience/04/note.md";
+    var mkdocs_page_url = "/NetworkScience/NetworkScience/04/note/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
@@ -36,9 +36,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Network Science</a>
+        <a href="../../.." class="icon icon-home"> Network Science</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -50,22 +50,22 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../..">Home</a>
+    <a class="" href="../../..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../c01/note/">01 Introduction</a>
+    <a class="" href="../../01/note/">01 Introduction</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../c02/note/">02 Graph Theory</a>
+    <a class="" href="../../02/note/">02 Graph Theory</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../c03/note/">03 Random Networks</a>
+    <a class="" href="../../03/note/">03 Random Networks</a>
 	    </li>
           
             <li class="toctree-l1 current">
@@ -114,7 +114,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Network Science</a>
+        <a href="../../..">Network Science</a>
       </nav>
 
       
@@ -122,7 +122,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+    <li><a href="../../..">Docs</a> &raquo;</li>
     
       
     
@@ -138,15 +138,15 @@
               
                 <!--
 Filename:   note.md
-Project:    /Users/shume/Developer/NetworkScience/c04
+Project:    /Users/shume/Developer/NetworkScience/NetworkScience/04
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-28 19:54:5
-Modified:   2019-04-11 18:02:28
+Modified:   2019-04-18 11:33:33
 -----
 Copyright (c) 2019 shumez
 -->
 
-<h1 id="04_the_scale-free_property">04. The Scale-Free Property<a class="headerlink" href="#04_the_scale-free_property" title="Permanent link">&para;</a></h1>
+<h1 id="04_the_scale-free_property"><a href="http://networksciencebook.com/chapter/4">04. The Scale-Free Property</a><a class="headerlink" href="#04_the_scale-free_property" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="#0401_introduction">04.01. Introduction</a></li>
@@ -167,15 +167,13 @@ Copyright (c) 2019 shumez
 <h2 id="0402_power_laws_and_scale-free_networks">04.02. Power Laws and Scale-Free Networks<a class="headerlink" href="#0402_power_laws_and_scale-free_networks" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-2.jpg" title="Fig.4.2 The Degree Distribution of the WWW">fig.4.2</a> indicates</p>
 <p>
-<script type="math/tex; mode=display">
-    p_k \sim k^{-\gamma} \tag{4.1} 
-</script>
+<script type="math/tex; mode=display"> p_k \sim k^{-\gamma} \tag{4.1} </script>
 </p>
 <p>eq.4.1: <strong>power law dist</strong> </p>
 <p><strong>degree exponent</strong> <script type="math/tex">\gamma</script>
 </p>
 <p>
-<script type="math/tex; mode=display">\log{p_k} \sim - \gamma \log{k} \tag{4.2}</script>
+<script type="math/tex; mode=display"> \log{p_k} \sim - \gamma \log{k} \tag{4.2} </script>
 </p>
 <p>
 <script type="math/tex">\log{p_k}</script> depends linealy on <script type="math/tex">\log{k}</script>
@@ -195,10 +193,10 @@ Copyright (c) 2019 shumez
 <p>out-degree <script type="math/tex">k_{out}</script>, in-degree <script type="math/tex">k_{in}</script>
 </p>
 <p>
-<script type="math/tex; mode=display">p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3}</script>
+<script type="math/tex; mode=display"> p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3} </script>
 </p>
 <p>
-<script type="math/tex; mode=display">p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4}</script>
+<script type="math/tex; mode=display"> p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4} </script>
 </p>
 <p>
 <script type="math/tex">\gamma_{in}</script> and <script type="math/tex">\gamma_{out}</script>
@@ -210,63 +208,43 @@ Copyright (c) 2019 shumez
 <h3 id="040201_discrete_formalism">04.02.01. Discrete Formalism<a class="headerlink" href="#040201_discrete_formalism" title="Permanent link">&para;</a></h3>
 <p>prob <script type="math/tex">p_k</script>, <script type="math/tex">k</script> links</p>
 <p>
-<script type="math/tex; mode=display">
-    p_k = C k^{- \gamma} \tag{4.5}
-</script>
+<script type="math/tex; mode=display"> p_k = C k^{- \gamma} \tag{4.5} </script>
 </p>
 <p>constant <script type="math/tex">C</script> is determined by the normalization cond</p>
 <p>
-<script type="math/tex; mode=display">
-    \sum_{k=1}^\infty {p_k} = 1 \tag{4.6}
-</script>
+<script type="math/tex; mode=display"> \sum_{k=1}^\infty {p_k} = 1 \tag{4.6} </script>
 </p>
 <p>
-<script type="math/tex; mode=display">
-    C \sum_{k=1}^\infty {k^{- \gamma}} = 1
-</script>
+<script type="math/tex; mode=display"> C \sum_{k=1}^\infty {k^{- \gamma}} = 1 </script>
 </p>
 <p>hence</p>
 <p>
-<script type="math/tex; mode=display">
-    C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}
-</script>
+<script type="math/tex; mode=display"> C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7} </script>
 </p>
 <p><strong><a href="https://en.wikipedia.org/wiki/Riemann_zeta_function">Riemann-zeta fn</a></strong> <script type="math/tex">\zeta(\gamma) = \sum_{k=1}^\infty{\frac{1}{k^{\gamma}}}</script>
 </p>
 <p>for <script type="math/tex">k>0</script>, the discrete power-law dist:</p>
 <p>
-<script type="math/tex; mode=display">
-    p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}
-</script>
+<script type="math/tex; mode=display"> p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8} </script>
 </p>
 <h3 id="040202_continuum_formalism">04.02.02. Continuum Formalism<a class="headerlink" href="#040202_continuum_formalism" title="Permanent link">&para;</a></h3>
 <p>
-<script type="math/tex; mode=display">
-    p(k) = C k^{- \gamma} \tag{4.9}
-</script>
+<script type="math/tex; mode=display"> p(k) = C k^{- \gamma} \tag{4.9} </script>
 </p>
 <p>normalization condition</p>
 <p>
-<script type="math/tex; mode=display">
-    \int_{C_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.10}
-</script>
+<script type="math/tex; mode=display"> \int_{C_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.10} </script>
 </p>
 <p>eq.4.9<br />
 obtain</p>
 <p>
-<script type="math/tex; mode=display">
-    C = \frac{1}{\int_{k_{min}}^\infty{k^{-\gamma} \mathrm{d}k}} = (\gamma - 1) k_{min}^{\gamma - 1} \tag{4.11}
-</script>
+<script type="math/tex; mode=display"> C = \frac{1}{\int_{k_{min}}^\infty{k^{-\gamma} \mathrm{d}k}} = (\gamma - 1) k_{min}^{\gamma - 1} \tag{4.11} </script>
 </p>
 <p>
-<script type="math/tex; mode=display">
-    p(k) = (\gamma - 1) k_{min}^{\gamma - 1} k^{-\gamma} \tag{4.12}
-</script>
+<script type="math/tex; mode=display"> p(k) = (\gamma - 1) k_{min}^{\gamma - 1} k^{-\gamma} \tag{4.12} </script>
 </p>
 <p>
-<script type="math/tex; mode=display">
-    \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13}
-</script>
+<script type="math/tex; mode=display"> \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13} </script>
 </p>
 <p>radaomly chosen node has degree <script type="math/tex">[k_1, k_2]</script>
 </p>
@@ -283,12 +261,51 @@ obtain</p>
 <script type="math/tex">p_{100}\approx 10^{-94}</script> in Poisson dist<br />
 <script type="math/tex">p_{100} \approx 4 \times 10^{-4}</script> in power law</p>
 <p>
-<script type="math/tex; mode=display">
-    N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14}
-</script>
+<script type="math/tex; mode=display"> N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} </script>
 </p>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-4.jpg" title="Fig.4.4 Poisson vs. Power-law Distributions"><img alt="fig.4.4" src="http://networksciencebook.com/images/ch-04/figure-4-4.jpg" title="Fig.4.4 Poisson vs. Power-law Distributions" /></a></p>
 <h3 id="040301_the_largest_hub">04.03.01. The Largest Hub<a class="headerlink" href="#040301_the_largest_hub" title="Permanent link">&para;</a></h3>
+<p>WWW is estimated to be <script type="math/tex">N \approx 10^{12}</script> nodes<br />
+Earth;s population about <script type="math/tex">N \approx 7 \times 10^9</script>
+<br />
+human cell <script type="math/tex">N \approx 20000</script> genes</p>
+<p>maximum degree <script type="math/tex">k_{max}</script>
+<strong>natural cutoff</strong> of the degree dist <script type="math/tex">p_k</script>
+</p>
+<p>exponential dist</p>
+<p>
+<script type="math/tex; mode=display"> p(k)  = Ce^{- \lambda k} </script>
+</p>
+<p>minimum degree <script type="math/tex">k_{min}</script>
+</p>
+<p>
+<script type="math/tex; mode=display"> \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} </script>
+<script type="math/tex; mode=display"> 
+    \begin{align*} 
+        \int_{k_{min}}^\infty{C e^{- \lambda k}} 
+        &= \Big[ - \frac{1}{\lambda} C e^{- \lambda k} \Big]_{k_{min}}^\infty \\
+        &= [ - \frac{1}{\lambda} C e^{- \lambda\infty}] - [ - \frac{1}{\lambda} C e^{- \lambda k_{min}}] \\
+        &= 0 + \frac{1}{\lambda} C e^{- \lambda k_{min}} &= 1 \\
+        C &= \lambda e^{\lambda k_{min}}
+    \end{align*} 
+    \tag{4.15.1}
+</script>
+</p>
+<p>provide <script type="math/tex"> C = \lambda e^{\lambda k_{min}} </script>
+</p>
+<p>
+<script type="math/tex">k_{max}</script> is <script type="math/tex">\frac{1}{N}</script>:</p>
+<p>
+<script type="math/tex; mode=display"> \int_{k_{min}}^\infty{p(k) \mathrm{d}k} = \frac{1}{N} \tag{4.16} </script>
+</p>
+<p>eq.4.16 yields</p>
+<p>
+<script type="math/tex; mode=display"> k_{max} = k_{min} + \frac{\ln{N}}{\lambda} \tag{4.17} </script>
+</p>
+<p>
+<script type="math/tex">\ln{N}</script>
+</p>
+<p><a href="http://networksciencebook.com/images/ch-04/figure-4-5.jpg" title="Fig.4.5 Hubs are Large in Scale-free Networks "><img alt="fig.4.5" src="http://networksciencebook.com/images/ch-04/figure-4-5.jpg" title="Fig.4.5 Hubs are Large in Scale-free Networks " /></a></p>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <!-- link -->
 
@@ -311,7 +328,7 @@ obtain</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../../c03/note/" class="btn btn-neutral" title="03 Random Networks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../03/note/" class="btn btn-neutral" title="03 Random Networks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -340,16 +357,16 @@ obtain</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../c03/note/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../03/note/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
       <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
-      <script src="../../search/main.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
 
 </body>
 </html>
