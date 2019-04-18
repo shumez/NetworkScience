@@ -3,12 +3,12 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-11 18:00:54
+Modified: 	2019-04-18 11:20:3
 -----
 Copyright (c) 2019 shumez
 -->
 
-# 04. The Scale-Free Property
+# [04. The Scale-Free Property][c04]
 
 ## Contents
 
@@ -18,6 +18,7 @@ Copyright (c) 2019 shumez
     * [04.02.02. Continuum Formalism](#040202_continuum_formalism)
     * [Box 4-1 The 80/20 Rule and the Top One Percent](#box_4-1_the_8020_rule_and_the_top_one_percent)
 * [04.03. Hubs](#0403_hubs)
+    * [04.03.01. The Largest Hub](#040301_the_largest_hub)
 
 
 ## 04.01. Introduction
@@ -30,15 +31,13 @@ Copyright (c) 2019 shumez
 
 [fig.4.2][fig_04_02] indicates
 
-\[
-    p_k \sim k^{-\gamma} \tag{4.1} 
-\]
+\[ p_k \sim k^{-\gamma} \tag{4.1} \]
 
 eq.4.1: **power law dist** 
 
 **degree exponent** \(\gamma\)
 
-\[\log{p_k} \sim - \gamma \log{k} \tag{4.2}\]
+\[ \log{p_k} \sim - \gamma \log{k} \tag{4.2} \]
 
 \(\log{p_k}\) depends linealy on \(\log{k}\)
 
@@ -51,9 +50,9 @@ eq.4.1: **power law dist**
 
 out-degree \(k_{out}\), in-degree \(k_{in}\)
 
-\[p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3}\]
+\[ p_{k_{in}} \sim k^{- \gamma_{in}} \tag{4.3} \]
 
-\[p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4}\]
+\[ p_{k_{out}} \sim k^{- \gamma_{out}} \tag{4.4} \]
 
 \(\gamma_{in}\) and \(\gamma_{out}\)
 
@@ -69,65 +68,45 @@ A scale-free network is a network whose **degree distribution follows a power la
 
 prob \(p_k\), \(k\) links
 
-\[
-    p_k = C k^{- \gamma} \tag{4.5}
-\]
+\[ p_k = C k^{- \gamma} \tag{4.5} \]
 
 constant \(C\) is determined by the normalization cond
 
-\[
-    \sum_{k=1}^\infty {p_k} = 1 \tag{4.6}
-\]
+\[ \sum_{k=1}^\infty {p_k} = 1 \tag{4.6} \]
 
-\[
-    C \sum_{k=1}^\infty {k^{- \gamma}} = 1
-\]
+\[ C \sum_{k=1}^\infty {k^{- \gamma}} = 1 \]
 
 hence
 
-\[
-    C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7}
-\]
+\[ C = \frac{1}{\sum_{k=1}^\infty {k^{\gamma}}} = \frac{1}{\zeta(\gamma)} \tag{4.7} \]
 
 **[Riemann-zeta fn]** \(\zeta(\gamma) = \sum_{k=1}^\infty{\frac{1}{k^{\gamma}}}\)
 
 for \(k>0\), the discrete power-law dist:
 
-\[
-    p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8}
-\]
+\[ p_k = \frac{k^{- \gamma}}{\zeta(\gamma)} \tag{4.8} \]
 
 
 
 ### 04.02.02. Continuum Formalism
 
-\[
-    p(k) = C k^{- \gamma} \tag{4.9}
-\]
+\[ p(k) = C k^{- \gamma} \tag{4.9} \]
 
 normalization condition
 
-\[
-    \int_{C_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.10}
-\]
+\[ \int_{C_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.10} \]
 
 eq.4.9  
 obtain
 
-\[
-    C = \frac{1}{\int_{k_{min}}^\infty{k^{-\gamma} \mathrm{d}k}} = (\gamma - 1) k_{min}^{\gamma - 1} \tag{4.11}
-\]
+\[ C = \frac{1}{\int_{k_{min}}^\infty{k^{-\gamma} \mathrm{d}k}} = (\gamma - 1) k_{min}^{\gamma - 1} \tag{4.11} \]
 
 
-\[
-    p(k) = (\gamma - 1) k_{min}^{\gamma - 1} k^{-\gamma} \tag{4.12}
-\]
+\[ p(k) = (\gamma - 1) k_{min}^{\gamma - 1} k^{-\gamma} \tag{4.12} \]
 
 
 
-\[
-    \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13}
-\]
+\[ \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13} \]
 
 radaomly chosen node has degree \([k_1, k_2]\)
 
@@ -146,21 +125,58 @@ prob (node with \(k=100\))
 \(p_{100}\approx 10^{-94}\) in Poisson dist  
 \(p_{100} \approx 4 \times 10^{-4}\) in power law
 
-\[
-    N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14}
-\]
+\[ N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} \]
 
 
 [![fig.4.4][fig_04_04]][fig_04_04]
 
 
+### 04.03.01. The Largest Hub
+
+WWW is estimated to be \(N \approx 10^{12}\) nodes  
+Earth;s population about \(N \approx 7 \times 10^9\)  
+human cell \(N \approx 20000\) genes
+
+maximum degree \(k_{max}\) **natural cutoff** of the degree dist \(p_k\)
+
+exponential dist
+
+\[ p(k)  = Ce^{- \lambda k} \]
+
+minimum degree \(k_{min}\) 
+
+\[ \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} \]
+\[ 
+    \begin{align*} 
+        \int_{k_{min}}^\infty{C e^{- \lambda k}} 
+        &= \Big[ - \frac{1}{\lambda} C e^{- \lambda k} \Big]_{k_{min}}^\infty \\
+        &= [ - \frac{1}{\lambda} C e^{- \lambda\infty}] - [ - \frac{1}{\lambda} C e^{- \lambda k_{min}}] \\
+        &= 0 + \frac{1}{\lambda} C e^{- \lambda k_{min}} &= 1 \\
+        C &= \lambda e^{\lambda k_{min}}
+    \end{align*} 
+    \tag{4.15.1}
+\]
+
+provide \( C = \lambda e^{\lambda k_{min}} \)
+
+\(k_{max}\) is \(\frac{1}{N}\):
+
+\[ \int_{k_{min}}^\infty{p(k) \mathrm{d}k} = \frac{1}{N} \tag{4.16} \]
+
+eq.4.16 yields
+
+\[ k_{max} = k_{min} + \frac{\ln{N}}{\lambda} \tag{4.17} \]
+
+\(\ln{N}\)
 
 
+[![fig.4.5][fig_04_05]][fig_04_05]
 
 
 ## 
 
 <!-- link -->
+[c04]: http://networksciencebook.com/chapter/4
 [1999AlbertR_BarabásiAL]: https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail "Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512."
 
 [Riemann-zeta fn]: https://en.wikipedia.org/wiki/Riemann_zeta_function
@@ -170,6 +186,7 @@ prob (node with \(k=100\))
 [fig_04_02]: http://networksciencebook.com/images/ch-04/figure-4-2.jpg "Fig.4.2 The Degree Distribution of the WWW"
 [fig_04_03]: http://networksciencebook.com/images/ch-04/figure-4-3.jpg "Fig.4.3 Vilfredo Federico Damaso Pareto (1848 – 1923) "
 [fig_04_04]: http://networksciencebook.com/images/ch-04/figure-4-4.jpg "Fig.4.4 Poisson vs. Power-law Distributions"
+[fig_04_05]: http://networksciencebook.com/images/ch-04/figure-4-5.jpg "Fig.4.5 Hubs are Large in Scale-free Networks "
 
 
 <!-- eq -->

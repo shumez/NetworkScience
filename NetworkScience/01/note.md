@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-12 08:46:1
-Modified: 	2019-04-09 11:47:54
+Modified: 	2019-04-11 15:16:34
 -----
 Copyright (c) 2019 shumez
 -->
@@ -12,20 +12,20 @@ Copyright (c) 2019 shumez
 
 ## Contents
 
-01. [Vulnerability Due to Interconnectivity](#0101_vulnerability_due_to_interconnectivity)
-02. [Network at the Heart of Complex Systems](#0102_network_at_the_heart_of_complex_systems)
-03. [Two Forces Helped the Emergence of Network Science](#0103_two_forces_helped_the_emergence_of_network_science)
-    * [The Emergence of Network Maps](#the_emergence_of_network_maps)
-    * [The Universality of Network Characteristics](#the_universality_of_network_characteristics)
-04. [The Characteristics of Network Science](#0104_the_characteristics_of_network_science)
-    * [Interdisciplinary Nature](#interdisciplinary_nature)
-    * [Empirical, Data Driven Nature](#empirical_data_driven_nature)
-    * [Quantitative and Mathematical Nature](#quantitative_and_mathematical_nature)
-    * [Computational Nature](#computational_nature)
-05. [Societal Impact](#0105_societal_impact)
-    * [Economic Impact: From Web Search to Social Networking](#economic_impact_from_web_search_to_social_networking)
-    * [Neuroscience: Mapping the Brain](#neuroscience_mapping_the_brain)
-06. [Scientific Impact](#0106_scientific_impact)
+* [01.01. Vulnerability Due to Interconnectivity](#0101_vulnerability_due_to_interconnectivity)
+* [01.02. Network at the Heart of Complex Systems](#0102_network_at_the_heart_of_complex_systems)
+* [01.03. Two Forces Helped the Emergence of Network Science](#0103_two_forces_helped_the_emergence_of_network_science)
+    * [01.03.01. The Emergence of Network Maps](#the_emergence_of_network_maps)
+    * [01.03.02. The Universality of Network Characteristics](#the_universality_of_network_characteristics)
+* [01.04. The Characteristics of Network Science](#0104_the_characteristics_of_network_science)
+    * [01.04.01. Interdisciplinary Nature](#interdisciplinary_nature)
+    * [01.04.02. Empirical, Data Driven Nature](#empirical_data_driven_nature)
+    * [01.04.03. Quantitative and Mathematical Nature](#quantitative_and_mathematical_nature)
+    * [01.04.04. Computational Nature](#computational_nature)
+* [01.05. Societal Impact](#0105_societal_impact)
+    * [01.05.01. Economic Impact: From Web Search to Social Networking](#economic_impact_from_web_search_to_social_networking)
+    * [01.05.02. Neuroscience: Mapping the Brain](#neuroscience_mapping_the_brain)
+* [01.06. Scientific Impact](#0106_scientific_impact)
 
 
 

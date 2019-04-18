@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/c03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-04-11 15:46:32
+Modified: 	2019-04-11 20:23:6
 -----
 Copyright (c) 2019 shumez
 -->
@@ -349,22 +349,22 @@ num of nodes up to distance \(d\)
 
 max distance \(d_{max}\) or the network's diameter
 
-\[N(d_{max}) \approx N \tag{3.16}\]
+\[ N(d_{max}) \approx N \tag{3.16} \]
 
 assuming the \(\langle k \rangle \gg 1\), 
 
-\[\langle k \rangle^{d_{max}} \approx N \tag{3.17}\]
+\[ \langle k \rangle^{d_{max}} \approx N \tag{3.17} \]
 
 &there4; the diamter of network follows
 
 
-\[d_{max} \approx \frac{\ln{N}}{\ln{k}} \tag{3.18}\]
+\[ d_{max} \approx \frac{\ln{N}}{\ln{k}} \tag{3.18} \]
 
 - average distance between 2 randomly chosen nodes \(\langle d \rangle\)
 
     the small world property is defined by
     
-    \[\langle d \rangle \approx \frac{\ln{N}}{\ln{\langle k \rangle}} \tag{3.19}\]
+    \[ \langle d \rangle \approx \frac{\ln{N}}{\ln{\langle k \rangle}} \tag{3.19} \]
 
 - \(\ln{N} \ll N\), 
     *average path length or the diameter depends logarithmically on the system size*
@@ -430,7 +430,7 @@ clustering coefficient \(C_i\), the density of the links in node \(i\)'s immedia
 
 expected number of links \(L_i\) 
 
-\[\langle\ L_i \rangle = p \frac{k_i(k_i-1)}{2} \tag{3.20}\]
+\[ \langle\ L_i \rangle = p \frac{k_i(k_i-1)}{2} \tag{3.20} \]
 
 local clustering coefficient:
 
@@ -504,7 +504,7 @@ only one node is disconnected
 
 \(I_N = 1\), eq.3.40, \(Ne^{-Np} = 1\)
 
-\[p = \frac{\ln{N}}{N} \tag{3.41}\]
+\[ p = \frac{\ln{N}}{N} \tag{3.41} \]
 
 leads to eq.3.14 \(\langle k \rangle = \ln{N}\)
 
