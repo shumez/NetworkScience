@@ -1,9 +1,9 @@
 <!--
 Filename: 	note.md
-Project: 	/Users/shume/Developer/NetworkScience/c04
+Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-18 11:20:3
+Modified: 	2019-04-25 21:55:27
 -----
 Copyright (c) 2019 shumez
 -->
@@ -24,6 +24,10 @@ Copyright (c) 2019 shumez
 ## 04.01. Introduction
 
 [![fig.4.1][fig_04_01]][fig_04_01]
+
+scale-free vs. random network
+
+* highly connected; hubs forbidden vs. small-degree, few hubs w/ large number of links
 
 **scale-free network**
 
