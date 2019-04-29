@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-29 15:36:42
+Modified: 	2019-04-29 16:14:4
 -----
 Copyright (c) 2019 shumez
 -->
@@ -129,7 +129,9 @@ radaomly chosen node has degree \([k_1, k_2]\)
 
 ## 04.03. Hubs
 
-* for small \(k\), 
+high-\(k\) region of \(p_k\)
+
+* for small \(k\), power law is above the Poisson fn
 * for \(k\) in the vicinity of \(\langle k \rangle\), 
 * for large \(k\), 
 
