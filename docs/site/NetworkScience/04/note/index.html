@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>04 The Scale-Free Property - Network Science</title>
+  <title>04. The Scale-Free Property - Network Science</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "04 The Scale-Free Property";
+    var mkdocs_page_name = "04. The Scale-Free Property";
     var mkdocs_page_input_path = "NetworkScience/04/note.md";
     var mkdocs_page_url = "/NetworkScience/NetworkScience/04/note/";
   </script>
@@ -55,52 +55,59 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../01/note/">01 Introduction</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../02/note/">02 Graph Theory</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../03/note/">03 Random Networks</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">04 The Scale-Free Property</a>
+    <span class="caption-text">Network Science</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../01/note/">01. Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../02/note/">02. Graph Theory</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../03/note/">03. Random Networks</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">04. The Scale-Free Property</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#contents">Contents</a></li>
+    <li class="toctree-l3"><a href="#contents">Contents</a></li>
     
 
-    <li class="toctree-l2"><a href="#0401_introduction">04.01. Introduction</a></li>
+    <li class="toctree-l3"><a href="#0401_introduction">04.01. Introduction</a></li>
     
 
-    <li class="toctree-l2"><a href="#0402_power_laws_and_scale-free_networks">04.02. Power Laws and Scale-Free Networks</a></li>
+    <li class="toctree-l3"><a href="#0402_power_laws_and_scale-free_networks">04.02. Power Laws and Scale-Free Networks</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#040201_discrete_formalism">04.02.01. Discrete Formalism</a></li>
+            <li><a class="toctree-l4" href="#040201_discrete_formalism">04.02.01. Discrete Formalism</a></li>
         
-            <li><a class="toctree-l3" href="#040202_continuum_formalism">04.02.02. Continuum Formalism</a></li>
+            <li><a class="toctree-l4" href="#040202_continuum_formalism">04.02.02. Continuum Formalism</a></li>
         
-            <li><a class="toctree-l3" href="#box_4-1_the_8020_rule_and_the_top_one_percent">Box 4-1 The 80/20 Rule and the Top One Percent</a></li>
+            <li><a class="toctree-l4" href="#box_4-1_the_8020_rule_and_the_top_one_percent">Box 4-1 The 80/20 Rule and the Top One Percent</a></li>
         
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0403_hubs">04.03. Hubs</a></li>
+    <li class="toctree-l3"><a href="#0403_hubs">04.03. Hubs</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#040301_the_largest_hub">04.03.01. The Largest Hub</a></li>
+            <li><a class="toctree-l4" href="#040301_the_largest_hub">04.03.01. The Largest Hub</a></li>
         
         </ul>
     
 
+    </ul>
+                </li>
     </ul>
 	    </li>
           
@@ -125,8 +132,12 @@
     <li><a href="../../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Network Science &raquo;</li>
+        
+      
     
-    <li>04 The Scale-Free Property</li>
+    <li>04. The Scale-Free Property</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -141,7 +152,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/NetworkScience/04
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-28 19:54:5
-Modified:   2019-04-18 11:33:33
+Modified:   2019-04-29 16:14:4
 -----
 Copyright (c) 2019 shumez
 -->
@@ -163,6 +174,10 @@ Copyright (c) 2019 shumez
 </ul>
 <h2 id="0401_introduction">04.01. Introduction<a class="headerlink" href="#0401_introduction" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web"><img alt="fig.4.1" src="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web" /></a></p>
+<p>scale-free vs. random network</p>
+<ul>
+<li>highly connected; hubs forbidden vs. small-degree, few hubs w/ large number of links</li>
+</ul>
 <p><strong>scale-free network</strong></p>
 <h2 id="0402_power_laws_and_scale-free_networks">04.02. Power Laws and Scale-Free Networks<a class="headerlink" href="#0402_power_laws_and_scale-free_networks" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-2.jpg" title="Fig.4.2 The Degree Distribution of the WWW">fig.4.2</a> indicates</p>
@@ -176,18 +191,15 @@ Copyright (c) 2019 shumez
 <script type="math/tex; mode=display"> \log{p_k} \sim - \gamma \log{k} \tag{4.2} </script>
 </p>
 <p>
-<script type="math/tex">\log{p_k}</script> depends linealy on <script type="math/tex">\log{k}</script>
+<script type="math/tex"> \log{p_k} </script> depends linealy on <script type="math/tex"> \log{k} </script>
 </p>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-2.jpg" title="Fig.4.2 The Degree Distribution of the WWW"><img alt="fig.4.2" src="http://networksciencebook.com/images/ch-04/figure-4-2.jpg" title="Fig.4.2 The Degree Distribution of the WWW" /></a></p>
 <ul>
 <li>
-<script type="math/tex">γ_{in} = 2.1</script>
+<script type="math/tex"> γ_{in} = 2.1 </script>, <script type="math/tex"> γ_{out} = 2.45 </script>
 </li>
 <li>
-<script type="math/tex">γ_{out} = 2.45</script>
-</li>
-<li>
-<script type="math/tex">〈k_{in}〉 = 〈k_{out}〉 = 4.60 </script>
+<script type="math/tex"> \langle k_{in} \rangle = \langle k_{out} \rangle = 4.60 </script>
 </li>
 </ul>
 <p>out-degree <script type="math/tex">k_{out}</script>, in-degree <script type="math/tex">k_{in}</script>
@@ -214,6 +226,7 @@ Copyright (c) 2019 shumez
 <p>
 <script type="math/tex; mode=display"> \sum_{k=1}^\infty {p_k} = 1 \tag{4.6} </script>
 </p>
+<p>using eq.4.5, </p>
 <p>
 <script type="math/tex; mode=display"> C \sum_{k=1}^\infty {k^{- \gamma}} = 1 </script>
 </p>
@@ -231,12 +244,20 @@ Copyright (c) 2019 shumez
 <p>
 <script type="math/tex; mode=display"> p(k) = C k^{- \gamma} \tag{4.9} </script>
 </p>
-<p>normalization condition</p>
+<p>using normalization condition</p>
 <p>
 <script type="math/tex; mode=display"> \int_{C_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.10} </script>
 </p>
 <p>eq.4.9<br />
 obtain</p>
+<p>
+<script type="math/tex; mode=display"> 
+    \begin{align*}
+        \int_{k_{\min}}^\infty{p(k)} \mathrm{d}k &= \int_{k_{\min}}^\infty{Ck^{-\gamma}} \mathrm{d}k \\
+        1 &= C \int_{k_{\min}}^\infty{k^{-\gamma}} \mathrm{d}k 
+    \end{align*}
+</script>
+</p>
 <p>
 <script type="math/tex; mode=display"> C = \frac{1}{\int_{k_{min}}^\infty{k^{-\gamma} \mathrm{d}k}} = (\gamma - 1) k_{min}^{\gamma - 1} \tag{4.11} </script>
 </p>
@@ -252,8 +273,10 @@ obtain</p>
 <!-- [![fig.4.3][fig_04_03]][fig_04_03] -->
 
 <h2 id="0403_hubs">04.03. Hubs<a class="headerlink" href="#0403_hubs" title="Permanent link">&para;</a></h2>
+<p>high-<script type="math/tex">k</script> region of <script type="math/tex">p_k</script>
+</p>
 <ul>
-<li>for small <script type="math/tex">k</script>, </li>
+<li>for small <script type="math/tex">k</script>, power law is above the Poisson fn</li>
 <li>for <script type="math/tex">k</script> in the vicinity of <script type="math/tex">\langle k \rangle</script>, </li>
 <li>for large <script type="math/tex">k</script>, </li>
 </ul>
@@ -328,7 +351,7 @@ human cell <script type="math/tex">N \approx 20000</script> genes</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../../03/note/" class="btn btn-neutral" title="03 Random Networks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../03/note/" class="btn btn-neutral" title="03. Random Networks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>02 Graph Theory - Network Science</title>
+  <title>02. Graph Theory - Network Science</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "02 Graph Theory";
+    var mkdocs_page_name = "02. Graph Theory";
     var mkdocs_page_input_path = "NetworkScience/02/note.md";
     var mkdocs_page_url = "/NetworkScience/NetworkScience/02/note/";
   </script>
@@ -55,100 +55,107 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../01/note/">01 Introduction</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">02 Graph Theory</a>
+    <span class="caption-text">Network Science</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../01/note/">01. Introduction</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">02. Graph Theory</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#contents">Contents</a></li>
+    <li class="toctree-l3"><a href="#contents">Contents</a></li>
     
 
-    <li class="toctree-l2"><a href="#0201_the_bridges_of_konigsberg">02.01. The Bridges of Königsberg</a></li>
+    <li class="toctree-l3"><a href="#0201_the_bridges_of_konigsberg">02.01. The Bridges of Königsberg</a></li>
     
 
-    <li class="toctree-l2"><a href="#0202_networks_and_graphs">02.02. Networks and Graphs</a></li>
+    <li class="toctree-l3"><a href="#0202_networks_and_graphs">02.02. Networks and Graphs</a></li>
     
 
-    <li class="toctree-l2"><a href="#0203_degree_average_degree_and_degree_distribution">02.03. Degree, Average Degree and Degree Distribution</a></li>
+    <li class="toctree-l3"><a href="#0203_degree_average_degree_and_degree_distribution">02.03. Degree, Average Degree and Degree Distribution</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#020301_degree">02.03.01. Degree</a></li>
+            <li><a class="toctree-l4" href="#020301_degree">02.03.01. Degree</a></li>
         
-            <li><a class="toctree-l3" href="#020302_average_degree">02.03.02. Average Degree</a></li>
+            <li><a class="toctree-l4" href="#020302_average_degree">02.03.02. Average Degree</a></li>
         
-            <li><a class="toctree-l3" href="#020303_degree_distribution">02.03.03. Degree Distribution</a></li>
+            <li><a class="toctree-l4" href="#020303_degree_distribution">02.03.03. Degree Distribution</a></li>
         
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0204_adjacency_matrix">02.04. Adjacency Matrix</a></li>
+    <li class="toctree-l3"><a href="#0204_adjacency_matrix">02.04. Adjacency Matrix</a></li>
     
 
-    <li class="toctree-l2"><a href="#0205_real_networks_are_sparse">02.05. Real Networks are Sparse</a></li>
+    <li class="toctree-l3"><a href="#0205_real_networks_are_sparse">02.05. Real Networks are Sparse</a></li>
     
 
-    <li class="toctree-l2"><a href="#0206_weighted_networks">02.06. Weighted Networks</a></li>
+    <li class="toctree-l3"><a href="#0206_weighted_networks">02.06. Weighted Networks</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#020601_metcalfe_law_the_value_of_a_network">02.06.01. Metcalfe Law: the Value of a Network</a></li>
+            <li><a class="toctree-l4" href="#020601_metcalfe_law_the_value_of_a_network">02.06.01. Metcalfe Law: the Value of a Network</a></li>
         
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0207_bipartite_networks">02.07. Bipartite Networks</a></li>
+    <li class="toctree-l3"><a href="#0207_bipartite_networks">02.07. Bipartite Networks</a></li>
     
 
-    <li class="toctree-l2"><a href="#0208_paths_and_distances">02.08. Paths and Distances</a></li>
+    <li class="toctree-l3"><a href="#0208_paths_and_distances">02.08. Paths and Distances</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#020801_shortest_path">02.08.01. Shortest Path</a></li>
+            <li><a class="toctree-l4" href="#020801_shortest_path">02.08.01. Shortest Path</a></li>
         
-            <li><a class="toctree-l3" href="#box_2-4_number_of_shortest_paths_between_two_nodes">Box 2-4: Number of Shortest Paths Between Two Nodes</a></li>
+            <li><a class="toctree-l4" href="#box_2-4_number_of_shortest_paths_between_two_nodes">Box 2-4: Number of Shortest Paths Between Two Nodes</a></li>
         
-            <li><a class="toctree-l3" href="#020802_network_diameter">02.08.02. Network Diameter</a></li>
+            <li><a class="toctree-l4" href="#020802_network_diameter">02.08.02. Network Diameter</a></li>
         
-            <li><a class="toctree-l3" href="#020803_average_path_length">02.08.03. Average Path Length</a></li>
+            <li><a class="toctree-l4" href="#020803_average_path_length">02.08.03. Average Path Length</a></li>
         
-            <li><a class="toctree-l3" href="#box_2-5_breadth-first_search_algorithm">Box 2-5: Breadth-First Search Algorithm</a></li>
+            <li><a class="toctree-l4" href="#box_2-5_breadth-first_search_algorithm">Box 2-5: Breadth-First Search Algorithm</a></li>
         
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0209_connectedness">02.09. Connectedness</a></li>
+    <li class="toctree-l3"><a href="#0209_connectedness">02.09. Connectedness</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#box_2-6_finding_the_connected_components_of_a_network">Box 2-6: Finding the Connected Components of a Network</a></li>
+            <li><a class="toctree-l4" href="#box_2-6_finding_the_connected_components_of_a_network">Box 2-6: Finding the Connected Components of a Network</a></li>
         
         </ul>
     
 
-    <li class="toctree-l2"><a href="#0210_clustering_coefficient">02.10. Clustering Coefficient</a></li>
+    <li class="toctree-l3"><a href="#0210_clustering_coefficient">02.10. Clustering Coefficient</a></li>
     
 
-    <li class="toctree-l2"><a href="#0211_summary">02.11. Summary</a></li>
+    <li class="toctree-l3"><a href="#0211_summary">02.11. Summary</a></li>
     
 
-    <li class="toctree-l2"><a href="#0212_homework">02.12. Homework</a></li>
+    <li class="toctree-l3"><a href="#0212_homework">02.12. Homework</a></li>
     
 
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../03/note/">03 Random Networks</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../04/note/">04 The Scale-Free Property</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../03/note/">03. Random Networks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../04/note/">04. The Scale-Free Property</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -172,8 +179,12 @@
     <li><a href="../../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Network Science &raquo;</li>
+        
+      
     
-    <li>02 Graph Theory</li>
+    <li>02. Graph Theory</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -448,10 +459,10 @@ Copyright (c) 2019 shumez
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../03/note/" class="btn btn-neutral float-right" title="03 Random Networks">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../03/note/" class="btn btn-neutral float-right" title="03. Random Networks">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../01/note/" class="btn btn-neutral" title="01 Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../01/note/" class="btn btn-neutral" title="01. Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
