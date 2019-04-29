@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-25 22:28:16
+Modified: 	2019-04-29 15:13:17
 -----
 Copyright (c) 2019 shumez
 -->
@@ -76,6 +76,8 @@ prob \(p_k\), \(k\) links
 constant \(C\) is determined by the normalization cond
 
 \[ \sum_{k=1}^\infty {p_k} = 1 \tag{4.6} \]
+
+using eq.4.5, 
 
 \[ C \sum_{k=1}^\infty {k^{- \gamma}} = 1 \]
 
