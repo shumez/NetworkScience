@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-25 21:55:27
+Modified: 	2019-04-25 22:28:16
 -----
 Copyright (c) 2019 shumez
 -->
@@ -43,14 +43,13 @@ eq.4.1: **power law dist**
 
 \[ \log{p_k} \sim - \gamma \log{k} \tag{4.2} \]
 
-\(\log{p_k}\) depends linealy on \(\log{k}\)
+\( \log{p_k} \) depends linealy on \( \log{k} \)
 
 
 [![fig.4.2][fig_04_02]][fig_04_02]
 
-* \(γ_{in} = 2.1\) 
-* \(γ_{out} = 2.45\)
-* \(〈k_{in}〉 = 〈k_{out}〉 = 4.60 \)
+* \( γ_{in} = 2.1 \), \( γ_{out} = 2.45 \)
+* \( \langle k_{in} \rangle = \langle k_{out} \rangle = 4.60 \)
 
 out-degree \(k_{out}\), in-degree \(k_{in}\)
 
