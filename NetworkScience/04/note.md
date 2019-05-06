@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-04-29 16:14:4
+Modified: 	2019-05-06 15:47:32
 -----
 Copyright (c) 2019 shumez
 -->
@@ -139,6 +139,8 @@ prob (node with \(k=100\))
 \(p_{100}\approx 10^{-94}\) in Poisson dist  
 \(p_{100} \approx 4 \times 10^{-4}\) in power law
 
+if WWW be random network w/ \(\langle k \rangle = 4.6\), size \(N\approx10^{12}\)
+
 \[ N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} \]
 
 
@@ -160,6 +162,7 @@ exponential dist
 minimum degree \(k_{min}\) 
 
 \[ \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} \]
+
 \[ 
     \begin{align*} 
         \int_{k_{min}}^\infty{C e^{- \lambda k}} 
@@ -184,7 +187,7 @@ eq.4.16 yields
 \(\ln{N}\)
 
 
-[![fig.4.5][fig_04_05]][fig_04_05]
+[![fig.4.5][fig0405]][fig0405]
 
 
 ## 
@@ -200,7 +203,8 @@ eq.4.16 yields
 [fig_04_02]: http://networksciencebook.com/images/ch-04/figure-4-2.jpg "Fig.4.2 The Degree Distribution of the WWW"
 [fig_04_03]: http://networksciencebook.com/images/ch-04/figure-4-3.jpg "Fig.4.3 Vilfredo Federico Damaso Pareto (1848 – 1923) "
 [fig_04_04]: http://networksciencebook.com/images/ch-04/figure-4-4.jpg "Fig.4.4 Poisson vs. Power-law Distributions"
-[fig_04_05]: http://networksciencebook.com/images/ch-04/figure-4-5.jpg "Fig.4.5 Hubs are Large in Scale-free Networks "
+[fig0405]: http://networksciencebook.com/images/ch-04/figure-4-5.jpg "Fig.4.5 Hubs are Large in Scale-free Networks "
+[fig0405]: https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png
 
 
 <!-- eq -->
