@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-20 14:34:10
+Modified: 	2019-05-20 16:16:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -165,16 +165,16 @@ minimum degree \(k_{min}\)
 
 \[ 
     \begin{align*} 
-        \int_{k_{min}}^\infty{C e^{- \lambda k}} 
-        &= \Big[ - \frac{1}{\lambda} C e^{- \lambda k} \Big]_{k_{min}}^\infty \\
-        &= [ - \frac{1}{\lambda} C e^{- \lambda\infty}] - [ - \frac{1}{\lambda} C e^{- \lambda k_{min}}] \\
-        &= 0 + \frac{1}{\lambda} C e^{- \lambda k_{min}} &= 1 \\
-        C &= \lambda e^{\lambda k_{min}}
+        \int_{k_{min}}^\infty{C e^{- \lambda k} dk} &= 1 \\
+        \Bigg[ - \frac{1}{\lambda} C e^{- \lambda k} \Bigg]_{k_{min}}^\infty &= 1 \\
+        \Bigg( -\frac{1}{\lambda} C e^{- \lambda\times\infty} \Bigg) - \Bigg( -\frac{1}{\lambda} C e^{- \lambda k_{min}} \Bigg) &= 1 \\
+        0 + \frac{1}{\lambda} C e^{- \lambda k_{min}} &= 1 \\
+        \Rightarrow C &= \lambda e^{\lambda k_{min}}
     \end{align*} 
     \tag{4.15.1}
 \]
 
-provide \( C = \lambda e^{\lambda k_{min}} \)
+eq.4.15 provide \( C = \lambda e^{\lambda k_{min}} \)
 
 \(k_{max}\) is \(\frac{1}{N}\):
 
