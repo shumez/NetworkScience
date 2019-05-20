@@ -3,22 +3,22 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-06 15:47:32
+Modified: 	2019-05-20 14:34:10
 -----
 Copyright (c) 2019 shumez
 -->
 
-# [04. The Scale-Free Property][c04]
+# [04. The Scale-Free Property][04]
 
 ## Contents
 
-* [04.01. Introduction](#0401_introduction)
-* [04.02. Power Laws and Scale-Free Networks](#0402_power_laws_and_scale-free_networks)
-    * [04.02.01. Discrete Formalism](#040201_discrete_formalism)
-    * [04.02.02. Continuum Formalism](#040202_continuum_formalism)
-    * [Box 4-1 The 80/20 Rule and the Top One Percent](#box_4-1_the_8020_rule_and_the_top_one_percent)
-* [04.03. Hubs](#0403_hubs)
-    * [04.03.01. The Largest Hub](#040301_the_largest_hub)
+* [04.01. Introduction][0401]
+* [04.02. Power Laws and Scale-Free Networks][0402]
+    * [04.02.01. Discrete Formalism][040201]
+    * [04.02.02. Continuum Formalism][040202]
+    * [Box 4-1 The 80/20 Rule and the Top One Percent][box0401]
+* [04.03. Hubs][0403]
+    * [04.03.01. The Largest Hub][040301]
 
 
 ## 04.01. Introduction
@@ -192,8 +192,17 @@ eq.4.16 yields
 
 ## 
 
+[04]: http://networksciencebook.com/chapter/4
+[0401]: #0401_introduction
+[0402]: #0402_power_laws_and_scale-free_networks
+[040201]: #040201_discrete_formalism
+[040202]: #040202_continuum_formalism
+[box0401]: #box_4-1_the_8020_rule_and_the_top_one_percent
+[0403]: #0403_hubs
+[040301]: #040301_the_largest_hub
+
 <!-- link -->
-[c04]: http://networksciencebook.com/chapter/4
+
 [1999AlbertR_BarabásiAL]: https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail "Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512."
 
 [Riemann-zeta fn]: https://en.wikipedia.org/wiki/Riemann_zeta_function
