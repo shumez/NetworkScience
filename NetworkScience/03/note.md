@@ -1,40 +1,40 @@
 <!--
 Filename: 	note.md
-Project: 	/Users/shume/Developer/NetworkScience/c03
+Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-04-11 20:23:6
+Modified: 	2019-05-20 14:48:14
 -----
 Copyright (c) 2019 shumez
 -->
 
-# 03. Random Networks
+# [03. Random Networks][03]
 
 ## Contents
 
-* [03.01. Introduction](#0301_introduction)
-* [03.02. The Random Network Model](#0302_the_random_network_model)
-    * [Box 3-1 Defining Random Networks](#box_3-1_defining_random_networks)
-    * [Box 3-2 Random Networks: a Brief History](#box_3-2_random_networks_a_brief_history)
-* [03.03. Number of Links](#0303_number_of_links)
-    * [Box 3-3 Binomial Distribution: Mean and Variance](#box_3-3_binomial_distribution_mean_and_variance)
-* [03.04. Degree Distribution](#0304_degree_distribution)
-    * [03.04.01. Binomial Distribution](#030401_binomial_distribution)
-    * [03.04.02. Poisson Distribution](#030402_poisson_distribution)
-* [03.05. Real Networks are Not Poisson](#0305_real_networks_are_not_poisson)
-    * [Box 3-4 Why are Hubs Missing?](#box_3-4_why_are_hubs_missing)
-* [03.06. The Evolution of a Random Network](#0306_the_evolution_of_a_random_network)
-    * [Box 3-5 Network Evolution in Graph Theory](#box_3-5_network_evolution_in_graph_theory)
-* [03.07. Real Networks are Supercritical](#0307_real_networks_are_supercritical)
-* [03.08. Small Worlds](#0308_small_worlds)
-    * [Box 3-6 19 Degrees of Separation](#box_3-6_19_degrees_of_separation)
-    * [Box 3-7 Six Degrees: Experimental Confirmation](#box_3-7_six_degrees_experimental_confirmation)
-    * [Box 3-8 19 Degrees of the WWW](#box_3-8_19_degrees_of_the_www)
-* [03.09. Clustering Coefficient](#0309_clustering_coefficient)
-    * [Box 3-9 Watts-Strogatz Model](#box_3-9_watts-strogatz_model)
-* [03.10. Summary: Real Networks are Not Random](#0310_summary_real_networks_are_not_random)
+* [03.01. Introduction][0301]
+* [03.02. The Random Network Model][0302]
+    * [Box 3-1 Defining Random Networks][box0301]
+    * [Box 3-2 Random Networks: a Brief History][box0302]
+* [03.03. Number of Links][0303]
+    * [Box 3-3 Binomial Distribution: Mean and Variance][box0303]
+* [03.04. Degree Distribution][0304]
+    * [03.04.01. Binomial Distribution][030401]
+    * [03.04.02. Poisson Distribution][030402]
+* [03.05. Real Networks are Not Poisson][0305]
+    * [Box 3-4 Why are Hubs Missing?][box0304]
+* [03.06. The Evolution of a Random Network][0306]
+    * [Box 3-5 Network Evolution in Graph Theory][box0305]
+* [03.07. Real Networks are Supercritical][0307]
+* [03.08. Small Worlds][0308]
+    * [Box 3-6 19 Degrees of Separation][box0306]
+    * [Box 3-7 Six Degrees: Experimental Confirmation][box0307]
+    * [Box 3-8 19 Degrees of the WWW][box0308]
+* [03.09. Clustering Coefficient][0309]
+    * [Box 3-9 Watts-Strogatz Model][box0309]
+* [03.10. Summary: Real Networks are Not Random][0310]
 * ...
-* [03.16. Advanced Topic 3.E Fully Connected Regime](#0316_Advanced_Topic_3E_Fully_Connected_Regime)
+* [03.16. Advanced Topic 3.E Fully Connected Regime][0316]
 
 
 ## 03.01. Introduction
@@ -512,6 +512,31 @@ leads to eq.3.14 \(\langle k \rangle = \ln{N}\)
 
 
 ##
+[03]: http://networksciencebook.com/chapter/3
+[0301]: #0301_introduction
+[0302]: #0302_the_random_network_model
+[box0301]: #box_3-1_defining_random_networks
+[box0302]: #box_3-2_random_networks_a_brief_history
+[0303]: #0303_number_of_links
+[box0303]: #box_3-3_binomial_distribution_mean_and_variance
+[0304]: #0304_degree_distribution
+[030401]: #030401_binomial_distribution
+[030402]: #030402_poisson_distribution
+[0305]: #0305_real_networks_are_not_poisson
+[box0304]: #box_3-4_why_are_hubs_missing
+[0306]: #0306_the_evolution_of_a_random_network
+[box0305]: #box_3-5_network_evolution_in_graph_theory
+[0307]: #0307_real_networks_are_supercritical
+[0308]: #0308_small_worlds
+[box0306]: #box_3-6_19_degrees_of_separation
+[box0307]: #box_3-7_six_degrees_experimental_confirmation
+[box0308]: #box_3-8_19_degrees_of_the_www
+[0309]: #0309_clustering_coefficient
+[box0309]: #box_3-9_watts-strogatz_model
+[0310]: #0310_summary_real_networks_are_not_random
+
+
+[0316]: #0316_Advanced_Topic_3E_Fully_Connected_Regime
 
 <!-- link -->
 ###
@@ -720,11 +745,6 @@ leads to eq.3.14 \(\langle k \rangle = \ln{N}\)
 [I_N=1]: https://latex.codecogs.com/gif.latex?I_N=1 "I_N=1"
 [Ne^{-Np}=1]: https://latex.codecogs.com/gif.latex?Ne^{-Np}=1 "Ne^{-Np}=1"
 [p=\frac{\ln{N}}{N}]: https://latex.codecogs.com/gif.latex?p=\frac{\ln{N}}{N} "p=\frac{\ln{N}}{N}"
-
-
-
-
-
 
 <!-- 
 https://latex.codecogs.com/gif.latex?\inline&space;
