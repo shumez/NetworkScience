@@ -7,23 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>04. The Scale-Free Property - Network Science</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "04. The Scale-Free Property";
-    var mkdocs_page_input_path = "NetworkScience/04/note.md";
-    var mkdocs_page_url = "/NetworkScience/NetworkScience/04/note/";
+    var mkdocs_page_input_path = "NetworkScience/04/index.md";
+    var mkdocs_page_url = "/NetworkScience/NetworkScience/04/";
   </script>
   
-  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
@@ -36,9 +36,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> Network Science</a>
+        <a href="../.." class="icon icon-home"> Network Science</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -50,7 +50,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../..">Home</a>
+    <a class="" href="../..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -59,19 +59,19 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../">Intro</a>
+    <a class="" href="../">Intro</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../01/note/">01. Introduction</a>
+    <a class="" href="../01/">01. Introduction</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../02/note/">02. Graph Theory</a>
+    <a class="" href="../02/">02. Graph Theory</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../03/note/">03. Random Networks</a>
+    <a class="" href="../03/">03. Random Networks</a>
                 </li>
                 <li class=" current">
                     
@@ -121,7 +121,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">Network Science</a>
+        <a href="../..">Network Science</a>
       </nav>
 
       
@@ -129,7 +129,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../../..">Docs</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
         
@@ -152,7 +152,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/NetworkScience/04
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-28 19:54:5
-Modified:   2019-04-29 16:14:4
+Modified:   2019-05-20 14:34:10
 -----
 Copyright (c) 2019 shumez
 -->
@@ -283,6 +283,8 @@ obtain</p>
 <p>prob (node with <script type="math/tex">k=100</script>) <br />
 <script type="math/tex">p_{100}\approx 10^{-94}</script> in Poisson dist<br />
 <script type="math/tex">p_{100} \approx 4 \times 10^{-4}</script> in power law</p>
+<p>if WWW be random network w/ <script type="math/tex">\langle k \rangle = 4.6</script>, size <script type="math/tex">N\approx10^{12}</script>
+</p>
 <p>
 <script type="math/tex; mode=display"> N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} </script>
 </p>
@@ -303,6 +305,8 @@ human cell <script type="math/tex">N \approx 20000</script> genes</p>
 </p>
 <p>
 <script type="math/tex; mode=display"> \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} </script>
+</p>
+<p>
 <script type="math/tex; mode=display"> 
     \begin{align*} 
         \int_{k_{min}}^\infty{C e^{- \lambda k}} 
@@ -328,7 +332,7 @@ human cell <script type="math/tex">N \approx 20000</script> genes</p>
 <p>
 <script type="math/tex">\ln{N}</script>
 </p>
-<p><a href="http://networksciencebook.com/images/ch-04/figure-4-5.jpg" title="Fig.4.5 Hubs are Large in Scale-free Networks "><img alt="fig.4.5" src="http://networksciencebook.com/images/ch-04/figure-4-5.jpg" title="Fig.4.5 Hubs are Large in Scale-free Networks " /></a></p>
+<p><a href="https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png"><img alt="fig.4.5" src="https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png" /></a></p>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <!-- link -->
 
@@ -351,7 +355,7 @@ human cell <script type="math/tex">N \approx 20000</script> genes</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../../03/note/" class="btn btn-neutral" title="03. Random Networks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../03/" class="btn btn-neutral" title="03. Random Networks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -380,16 +384,16 @@ human cell <script type="math/tex">N \approx 20000</script> genes</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../03/note/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../03/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
     </span>
 </div>
-    <script>var base_url = '../../..';</script>
-    <script src="../../../js/theme.js" defer></script>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
       <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
-      <script src="../../../search/main.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>
