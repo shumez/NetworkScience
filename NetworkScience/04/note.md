@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-20 16:16:41
+Modified: 	2019-05-20 16:44:29
 -----
 Copyright (c) 2019 shumez
 -->
@@ -19,6 +19,7 @@ Copyright (c) 2019 shumez
     * [Box 4-1 The 80/20 Rule and the Top One Percent][box0401]
 * [04.03. Hubs][0403]
     * [04.03.01. The Largest Hub][040301]
+* [04.12. Advanced Topic 3.B Plotting Power-laws][0412]
 
 
 ## 04.01. Introduction
@@ -189,6 +190,11 @@ eq.4.16 yields
 
 [![fig.4.5][fig0405]][fig0405]
 
+\[ k_{max} = k_{min} N^{\frac{1}{\gamma-1}} \tag{4.18} \]
+
+
+## 04.12. Advanced Topic 3.B Plotting Power-laws
+
 
 ## 
 
@@ -200,6 +206,8 @@ eq.4.16 yields
 [box0401]: #box_4-1_the_8020_rule_and_the_top_one_percent
 [0403]: #0403_hubs
 [040301]: #040301_the_largest_hub
+
+[0412]: #0412_advanced_topic_3B_plotting_power-laws
 
 <!-- link -->
 
