@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-20 16:44:29
+Modified: 	2019-05-27 16:30:43
 -----
 Copyright (c) 2019 shumez
 -->
@@ -24,7 +24,7 @@ Copyright (c) 2019 shumez
 
 ## 04.01. Introduction
 
-[![fig.4.1][fig_04_01]][fig_04_01]
+[![fig.4.1][fig0401]][fig0401]
 
 scale-free vs. random network
 
@@ -34,7 +34,7 @@ scale-free vs. random network
 
 ## 04.02. Power Laws and Scale-Free Networks
 
-[fig.4.2][fig_04_02] indicates
+[fig.4.2][fig0402] indicates
 
 \[ p_k \sim k^{-\gamma} \tag{4.1} \]
 
@@ -47,7 +47,7 @@ eq.4.1: **power law dist**
 \( \log{p_k} \) depends linealy on \( \log{k} \)
 
 
-[![fig.4.2][fig_04_02]][fig_04_02]
+[![fig.4.2][fig0402]][fig0402]
 
 * \( γ_{in} = 2.1 \), \( γ_{out} = 2.45 \)
 * \( \langle k_{in} \rangle = \langle k_{out} \rangle = 4.60 \)
@@ -133,7 +133,7 @@ radaomly chosen node has degree \([k_1, k_2]\)
 high-\(k\) region of \(p_k\)
 
 * for small \(k\), power law is above the Poisson fn
-* for \(k\) in the vicinity of \(\langle k \rangle\), 
+* for \(k\) in the vicinity of \(\langle k \rangle\), \(k \approx \langle k \rangle\)
 * for large \(k\), 
 
 prob (node with \(k=100\))   
@@ -142,10 +142,10 @@ prob (node with \(k=100\))
 
 if WWW be random network w/ \(\langle k \rangle = 4.6\), size \(N\approx10^{12}\)
 
-\[ N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} \]
+\[ N_{k \ge 100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} \]
 
 
-[![fig.4.4][fig_04_04]][fig_04_04]
+[![fig.4.4][fig0404]][fig0404]
 
 
 ### 04.03.01. The Largest Hub
@@ -164,6 +164,8 @@ minimum degree \(k_{min}\)
 
 \[ \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} \]
 
+&because;
+
 \[ 
     \begin{align*} 
         \int_{k_{min}}^\infty{C e^{- \lambda k} dk} &= 1 \\
@@ -175,7 +177,8 @@ minimum degree \(k_{min}\)
     \tag{4.15.1}
 \]
 
-eq.4.15 provide \( C = \lambda e^{\lambda k_{min}} \)
+eq.4.15 provide 
+\[ C = \lambda e^{\lambda k_{min}} \]
 
 \(k_{max}\) is \(\frac{1}{N}\):
 
@@ -216,10 +219,10 @@ eq.4.16 yields
 [Riemann-zeta fn]: https://en.wikipedia.org/wiki/Riemann_zeta_function
 
 <!-- figure -->
-[fig_04_01]: http://networksciencebook.com/images/ch-04/figure-4-1.jpg "Fig.4.1 The Topology of the World Wide Web"
-[fig_04_02]: http://networksciencebook.com/images/ch-04/figure-4-2.jpg "Fig.4.2 The Degree Distribution of the WWW"
-[fig_04_03]: http://networksciencebook.com/images/ch-04/figure-4-3.jpg "Fig.4.3 Vilfredo Federico Damaso Pareto (1848 – 1923) "
-[fig_04_04]: http://networksciencebook.com/images/ch-04/figure-4-4.jpg "Fig.4.4 Poisson vs. Power-law Distributions"
+[fig0401]: http://networksciencebook.com/images/ch-04/figure-4-1.jpg "Fig.4.1 The Topology of the World Wide Web"
+[fig0402]: http://networksciencebook.com/images/ch-04/figure-4-2.jpg "Fig.4.2 The Degree Distribution of the WWW"
+[fig0403]: http://networksciencebook.com/images/ch-04/figure-4-3.jpg "Fig.4.3 Vilfredo Federico Damaso Pareto (1848 – 1923) "
+[fig0404]: http://networksciencebook.com/images/ch-04/figure-4-4.jpg "Fig.4.4 Poisson vs. Power-law Distributions"
 [fig0405]: http://networksciencebook.com/images/ch-04/figure-4-5.jpg "Fig.4.5 Hubs are Large in Scale-free Networks "
 [fig0405]: https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png
 
