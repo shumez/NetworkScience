@@ -155,7 +155,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/NetworkScience/04
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-28 19:54:5
-Modified:   2019-05-20 16:44:29
+Modified:   2019-05-27 16:30:43
 -----
 Copyright (c) 2019 shumez
 -->
@@ -281,7 +281,8 @@ obtain</p>
 </p>
 <ul>
 <li>for small <script type="math/tex">k</script>, power law is above the Poisson fn</li>
-<li>for <script type="math/tex">k</script> in the vicinity of <script type="math/tex">\langle k \rangle</script>, </li>
+<li>for <script type="math/tex">k</script> in the vicinity of <script type="math/tex">\langle k \rangle</script>, <script type="math/tex">k \approx \langle k \rangle</script>
+</li>
 <li>for large <script type="math/tex">k</script>, </li>
 </ul>
 <p>prob (node with <script type="math/tex">k=100</script>) <br />
@@ -290,7 +291,7 @@ obtain</p>
 <p>if WWW be random network w/ <script type="math/tex">\langle k \rangle = 4.6</script>, size <script type="math/tex">N\approx10^{12}</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> N_{k≥100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} </script>
+<script type="math/tex; mode=display"> N_{k \ge 100} = 10^{12} \sum_{k=100}^\infty{\frac{(4.6)^k}{k!} e^{-4.6}} \simeq 10^{-82} \tag{4.14} </script>
 </p>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-4.jpg" title="Fig.4.4 Poisson vs. Power-law Distributions"><img alt="fig.4.4" src="http://networksciencebook.com/images/ch-04/figure-4-4.jpg" title="Fig.4.4 Poisson vs. Power-law Distributions" /></a></p>
 <h3 id="040301_the_largest_hub">04.03.01. The Largest Hub<a class="headerlink" href="#040301_the_largest_hub" title="Permanent link">&para;</a></h3>
@@ -310,6 +311,7 @@ human cell <script type="math/tex">N \approx 20000</script> genes</p>
 <p>
 <script type="math/tex; mode=display"> \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} </script>
 </p>
+<p>&because;</p>
 <p>
 <script type="math/tex; mode=display"> 
     \begin{align*} 
@@ -322,7 +324,8 @@ human cell <script type="math/tex">N \approx 20000</script> genes</p>
     \tag{4.15.1}
 </script>
 </p>
-<p>eq.4.15 provide <script type="math/tex"> C = \lambda e^{\lambda k_{min}} </script>
+<p>eq.4.15 provide 
+<script type="math/tex; mode=display"> C = \lambda e^{\lambda k_{min}} </script>
 </p>
 <p>
 <script type="math/tex">k_{max}</script> is <script type="math/tex">\frac{1}{N}</script>:</p>
