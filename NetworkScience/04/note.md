@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-27 16:30:43
+Modified: 	2019-05-30 14:25:40
 -----
 Copyright (c) 2019 shumez
 -->
@@ -121,7 +121,7 @@ obtain
 
 \[ \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13} \]
 
-radaomly chosen node has degree \([k_1, k_2]\)
+randamly chosen node has degree \([k_1, k_2]\)
 
 
 ### Box 4-1 The 80/20 Rule and the Top One Percent
