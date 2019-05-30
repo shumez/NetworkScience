@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-30 14:25:40
+Modified: 	2019-05-30 15:37:10
 -----
 Copyright (c) 2019 shumez
 -->
@@ -20,6 +20,10 @@ Copyright (c) 2019 shumez
 * [04.03. Hubs][0403]
     * [04.03.01. The Largest Hub][040301]
 * [04.12. Advanced Topic 3.B Plotting Power-laws][0412]
+    * [04.12.01. Use a Log-Log Plot][041201]
+    * [04.12.02. Avoid Linear Binning][041202]
+    * [04.12.03. Use Logarithmic Binning][041203]
+    * [04.12.04. Use Cumulative Distribution][041204]
 
 
 ## 04.01. Introduction
@@ -195,12 +199,24 @@ eq.4.16 yields
 
 \[ k_{max} = k_{min} N^{\frac{1}{\gamma-1}} \tag{4.18} \]
 
+[![Fig.4.6][fig0406]][fig0406]
+
 
 ## 04.12. Advanced Topic 3.B Plotting Power-laws
 
+### 04.12.01. Use a Log-Log Plot
+
+### 04.12.02. Avoid Linear Binning
+
+### 04.12.03. Use Logarithmic Binning
+
+### 04.12.04. Use Cumulative Distribution
+
+
+
 
 ## 
-
+<!-- toc -->
 [04]: http://networksciencebook.com/chapter/4
 [0401]: #0401_introduction
 [0402]: #0402_power_laws_and_scale-free_networks
@@ -225,6 +241,7 @@ eq.4.16 yields
 [fig0404]: http://networksciencebook.com/images/ch-04/figure-4-4.jpg "Fig.4.4 Poisson vs. Power-law Distributions"
 [fig0405]: http://networksciencebook.com/images/ch-04/figure-4-5.jpg "Fig.4.5 Hubs are Large in Scale-free Networks "
 [fig0405]: https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png
+[fig0406]: http://networksciencebook.com/images/ch-04/figure-4-6.jpg "Fig.4.6 Random vs. Scale-free Networks"
 
 
 <!-- eq -->
