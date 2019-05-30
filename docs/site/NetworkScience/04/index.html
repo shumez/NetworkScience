@@ -106,7 +106,22 @@
         </ul>
     
 
+    <li class="toctree-l3"><a href="#0404_the_meaning_of_scale-free">04.04. The Meaning of Scale-Free</a></li>
+    
+
     <li class="toctree-l3"><a href="#0412_advanced_topic_3b_plotting_power-laws">04.12. Advanced Topic 3.B Plotting Power-laws</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#041201_use_a_log-log_plot">04.12.01. Use a Log-Log Plot</a></li>
+        
+            <li><a class="toctree-l4" href="#041202_avoid_linear_binning">04.12.02. Avoid Linear Binning</a></li>
+        
+            <li><a class="toctree-l4" href="#041203_use_logarithmic_binning">04.12.03. Use Logarithmic Binning</a></li>
+        
+            <li><a class="toctree-l4" href="#041204_use_cumulative_distribution">04.12.04. Use Cumulative Distribution</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -155,7 +170,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/NetworkScience/04
 Author:     shumez <https://github.com/shumez>
 Created:    2019-03-28 19:54:5
-Modified:   2019-05-27 16:30:43
+Modified:   2019-05-30 15:58:31
 -----
 Copyright (c) 2019 shumez
 -->
@@ -174,7 +189,14 @@ Copyright (c) 2019 shumez
 <li><a href="#040301_the_largest_hub">04.03.01. The Largest Hub</a></li>
 </ul>
 </li>
-<li><a href="#0412_advanced_topic_3B_plotting_power-laws">04.12. Advanced Topic 3.B Plotting Power-laws</a></li>
+<li><a href="#0404_the_meaning_of_scale-free">04.04. The Meaning of Scale-Free</a></li>
+<li><a href="#0412_advanced_topic_3B_plotting_power-laws">04.12. Advanced Topic 3.B Plotting Power-laws</a><ul>
+<li><a href="#041201_use_a_log-log_plot">04.12.01. Use a Log-Log Plot</a></li>
+<li><a href="#041202_avoid_linear_binning">04.12.02. Avoid Linear Binning</a></li>
+<li><a href="#041203_use_logarithmic_binning">04.12.03. Use Logarithmic Binning</a></li>
+<li><a href="#041204_use_cumulative_distribution">04.12.04. Use Cumulative Distribution</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="0401_introduction">04.01. Introduction<a class="headerlink" href="#0401_introduction" title="Permanent link">&para;</a></h2>
 <p><a href="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web"><img alt="fig.4.1" src="http://networksciencebook.com/images/ch-04/figure-4-1.jpg" title="Fig.4.1 The Topology of the World Wide Web" /></a></p>
@@ -271,7 +293,7 @@ obtain</p>
 <p>
 <script type="math/tex; mode=display"> \int_{k_1}^{k_2}{p(k)} \mathrm{d}k \tag{4.13} </script>
 </p>
-<p>radaomly chosen node has degree <script type="math/tex">[k_1, k_2]</script>
+<p>randamly chosen node has degree <script type="math/tex">[k_1, k_2]</script>
 </p>
 <h3 id="box_4-1_the_8020_rule_and_the_top_one_percent">Box 4-1 The 80/20 Rule and the Top One Percent<a class="headerlink" href="#box_4-1_the_8020_rule_and_the_top_one_percent" title="Permanent link">&para;</a></h3>
 <!-- [![fig.4.3][fig_04_03]][fig_04_03] -->
@@ -299,52 +321,79 @@ obtain</p>
 Earth;s population about <script type="math/tex">N \approx 7 \times 10^9</script>
 <br />
 human cell <script type="math/tex">N \approx 20000</script> genes</p>
-<p>maximum degree <script type="math/tex">k_{max}</script>
+<p>maximum degree <script type="math/tex">k_{\max}</script>
 <strong>natural cutoff</strong> of the degree dist <script type="math/tex">p_k</script>
 </p>
 <p>exponential dist</p>
 <p>
 <script type="math/tex; mode=display"> p(k)  = Ce^{- \lambda k} </script>
 </p>
-<p>minimum degree <script type="math/tex">k_{min}</script>
+<p>minimum degree <script type="math/tex">k_{\min}</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} </script>
+<script type="math/tex; mode=display"> \int_{k_{\min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} </script>
 </p>
 <p>&because;</p>
 <p>
 <script type="math/tex; mode=display"> 
     \begin{align*} 
-        \int_{k_{min}}^\infty{C e^{- \lambda k} dk} &= 1 \\
-        \Bigg[ - \frac{1}{\lambda} C e^{- \lambda k} \Bigg]_{k_{min}}^\infty &= 1 \\
-        \Bigg( -\frac{1}{\lambda} C e^{- \lambda\times\infty} \Bigg) - \Bigg( -\frac{1}{\lambda} C e^{- \lambda k_{min}} \Bigg) &= 1 \\
-        0 + \frac{1}{\lambda} C e^{- \lambda k_{min}} &= 1 \\
-        \Rightarrow C &= \lambda e^{\lambda k_{min}}
+        \int_{k_{\min}}^\infty{C e^{- \lambda k} dk} &= 1 \\
+        \Bigg[ - \frac{1}{\lambda} C e^{- \lambda k} \Bigg]_{k_{\min}}^\infty &= 1 \\
+        \Bigg( -\frac{1}{\lambda} C e^{- \lambda\times\infty} \Bigg) - \Bigg( -\frac{1}{\lambda} C e^{- \lambda k_{\min}} \Bigg) &= 1 \\
+        0 + \frac{1}{\lambda} C e^{- \lambda k_{\min}} &= 1 \\
+        \Rightarrow C &= \lambda e^{\lambda k_{\min}}
     \end{align*} 
     \tag{4.15.1}
 </script>
 </p>
 <p>eq.4.15 provide 
-<script type="math/tex; mode=display"> C = \lambda e^{\lambda k_{min}} </script>
+<script type="math/tex; mode=display"> C = \lambda e^{\lambda k_{\min}} </script>
 </p>
 <p>
-<script type="math/tex">k_{max}</script> is <script type="math/tex">\frac{1}{N}</script>:</p>
+<script type="math/tex">k_{\max}</script> is <script type="math/tex">\frac{1}{N}</script>:</p>
 <p>
-<script type="math/tex; mode=display"> \int_{k_{min}}^\infty{p(k) \mathrm{d}k} = \frac{1}{N} \tag{4.16} </script>
+<script type="math/tex; mode=display"> \int_{k_{\min}}^\infty{p(k) \mathrm{d}k} = \frac{1}{N} \tag{4.16} </script>
 </p>
 <p>eq.4.16 yields</p>
 <p>
-<script type="math/tex; mode=display"> k_{max} = k_{min} + \frac{\ln{N}}{\lambda} \tag{4.17} </script>
+<script type="math/tex; mode=display"> k_{\max} = k_{\min} + \frac{\ln{N}}{\lambda} \tag{4.17} </script>
 </p>
 <p>
 <script type="math/tex">\ln{N}</script>
 </p>
 <p><a href="https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png"><img alt="fig.4.5" src="https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png" /></a></p>
 <p>
-<script type="math/tex; mode=display"> k_{max} = k_{min} N^{\frac{1}{\gamma-1}} \tag{4.18} </script>
+<script type="math/tex; mode=display"> k_{\max} = k_{\min} N^{\frac{1}{\gamma-1}} \tag{4.18} </script>
+</p>
+<p><a href="http://networksciencebook.com/images/ch-04/figure-4-6.jpg" title="Fig.4.6 Random vs. Scale-free Networks"><img alt="Fig.4.6" src="http://networksciencebook.com/images/ch-04/figure-4-6.jpg" title="Fig.4.6 Random vs. Scale-free Networks" /></a></p>
+<h2 id="0404_the_meaning_of_scale-free">04.04. The Meaning of Scale-Free<a class="headerlink" href="#0404_the_meaning_of_scale-free" title="Permanent link">&para;</a></h2>
+<p>
+<script type="math/tex">n</script>^{th} moment of the degree distribution</p>
+<p>
+<script type="math/tex; mode=display"> \langle k^n \rangle = \sum_{k_{\min}}^\infty{k^n p_k} \approx \int_{k_{\min}}^\infty{k^n p(k)}dk \tag{4.19} </script>
+</p>
+<ul>
+<li>
+<script type="math/tex">n=1</script>: 1st moment is average <script type="math/tex">\langle k \rangle</script>
+</li>
+<li>
+<script type="math/tex">n=2</script>: 2nd moment, <script type="math/tex">\langle k^2 \rangle</script>,<br />
+    calculate <script type="math/tex">\sigma2 = \langle k^2 \rangle - \langle k \rangle ^2</script>
+</li>
+<li>
+<script type="math/tex">n=3</script>: 3rd moment, <script type="math/tex">\langle k^3 \rangle</script>, </li>
+</ul>
+<p>
+<script type="math/tex; mode=display"> \langle k^n \rangle = \int_{k_{\min}}^{k_{\max}}{k^n p(k) dk} = C \frac{k_{\max}^{n - \gamma + 1} - k_{\min}^{n - \gamma + 1}}{n - \gamma + 1} \tag{4.20} </script>
 </p>
 <h2 id="0412_advanced_topic_3b_plotting_power-laws">04.12. Advanced Topic 3.B Plotting Power-laws<a class="headerlink" href="#0412_advanced_topic_3b_plotting_power-laws" title="Permanent link">&para;</a></h2>
+<h3 id="041201_use_a_log-log_plot">04.12.01. Use a Log-Log Plot<a class="headerlink" href="#041201_use_a_log-log_plot" title="Permanent link">&para;</a></h3>
+<h3 id="041202_avoid_linear_binning">04.12.02. Avoid Linear Binning<a class="headerlink" href="#041202_avoid_linear_binning" title="Permanent link">&para;</a></h3>
+<h3 id="041203_use_logarithmic_binning">04.12.03. Use Logarithmic Binning<a class="headerlink" href="#041203_use_logarithmic_binning" title="Permanent link">&para;</a></h3>
+<h3 id="041204_use_cumulative_distribution">04.12.04. Use Cumulative Distribution<a class="headerlink" href="#041204_use_cumulative_distribution" title="Permanent link">&para;</a></h3>
 <h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<!-- toc -->
+
 <!-- link -->
 
 <!-- figure -->
