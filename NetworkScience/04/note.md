@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-30 15:37:10
+Modified: 	2019-05-30 15:58:31
 -----
 Copyright (c) 2019 shumez
 -->
@@ -19,6 +19,7 @@ Copyright (c) 2019 shumez
     * [Box 4-1 The 80/20 Rule and the Top One Percent][box0401]
 * [04.03. Hubs][0403]
     * [04.03.01. The Largest Hub][040301]
+* [04.04. The Meaning of Scale-Free][0404]
 * [04.12. Advanced Topic 3.B Plotting Power-laws][0412]
     * [04.12.01. Use a Log-Log Plot][041201]
     * [04.12.02. Avoid Linear Binning][041202]
@@ -158,48 +159,63 @@ WWW is estimated to be \(N \approx 10^{12}\) nodes
 Earth;s population about \(N \approx 7 \times 10^9\)  
 human cell \(N \approx 20000\) genes
 
-maximum degree \(k_{max}\) **natural cutoff** of the degree dist \(p_k\)
+maximum degree \(k_{\max}\) **natural cutoff** of the degree dist \(p_k\)
 
 exponential dist
 
 \[ p(k)  = Ce^{- \lambda k} \]
 
-minimum degree \(k_{min}\) 
+minimum degree \(k_{\min}\) 
 
-\[ \int_{k_{min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} \]
+\[ \int_{k_{\min}}^\infty{p(k)} \mathrm{d}k = 1 \tag{4.15} \]
 
 &because;
 
 \[ 
     \begin{align*} 
-        \int_{k_{min}}^\infty{C e^{- \lambda k} dk} &= 1 \\
-        \Bigg[ - \frac{1}{\lambda} C e^{- \lambda k} \Bigg]_{k_{min}}^\infty &= 1 \\
-        \Bigg( -\frac{1}{\lambda} C e^{- \lambda\times\infty} \Bigg) - \Bigg( -\frac{1}{\lambda} C e^{- \lambda k_{min}} \Bigg) &= 1 \\
-        0 + \frac{1}{\lambda} C e^{- \lambda k_{min}} &= 1 \\
-        \Rightarrow C &= \lambda e^{\lambda k_{min}}
+        \int_{k_{\min}}^\infty{C e^{- \lambda k} dk} &= 1 \\
+        \Bigg[ - \frac{1}{\lambda} C e^{- \lambda k} \Bigg]_{k_{\min}}^\infty &= 1 \\
+        \Bigg( -\frac{1}{\lambda} C e^{- \lambda\times\infty} \Bigg) - \Bigg( -\frac{1}{\lambda} C e^{- \lambda k_{\min}} \Bigg) &= 1 \\
+        0 + \frac{1}{\lambda} C e^{- \lambda k_{\min}} &= 1 \\
+        \Rightarrow C &= \lambda e^{\lambda k_{\min}}
     \end{align*} 
     \tag{4.15.1}
 \]
 
 eq.4.15 provide 
-\[ C = \lambda e^{\lambda k_{min}} \]
+\[ C = \lambda e^{\lambda k_{\min}} \]
 
-\(k_{max}\) is \(\frac{1}{N}\):
+\(k_{\max}\) is \(\frac{1}{N}\):
 
-\[ \int_{k_{min}}^\infty{p(k) \mathrm{d}k} = \frac{1}{N} \tag{4.16} \]
+\[ \int_{k_{\min}}^\infty{p(k) \mathrm{d}k} = \frac{1}{N} \tag{4.16} \]
 
 eq.4.16 yields
 
-\[ k_{max} = k_{min} + \frac{\ln{N}}{\lambda} \tag{4.17} \]
+\[ k_{\max} = k_{\min} + \frac{\ln{N}}{\lambda} \tag{4.17} \]
 
 \(\ln{N}\)
 
 
 [![fig.4.5][fig0405]][fig0405]
 
-\[ k_{max} = k_{min} N^{\frac{1}{\gamma-1}} \tag{4.18} \]
+\[ k_{\max} = k_{\min} N^{\frac{1}{\gamma-1}} \tag{4.18} \]
 
 [![Fig.4.6][fig0406]][fig0406]
+
+
+## 04.04. The Meaning of Scale-Free
+
+\(n\)^{th} moment of the degree distribution
+
+\[ \langle k^n \rangle = \sum_{k_{\min}}^\infty{k^n p_k} \approx \int_{k_{\min}}^\infty{k^n p(k)}dk \tag{4.19} \]
+
+* \(n=1\): 1st moment is average \(\langle k \rangle\)
+* \(n=2\): 2nd moment, \(\langle k^2 \rangle\),  
+    calculate \(\sigma2 = \langle k^2 \rangle - \langle k \rangle ^2\)
+* \(n=3\): 3rd moment, \(\langle k^3 \rangle\), 
+
+
+\[ \langle k^n \rangle = \int_{k_{\min}}^{k_{\max}}{k^n p(k) dk} = C \frac{k_{\max}^{n - \gamma + 1} - k_{\min}^{n - \gamma + 1}}{n - \gamma + 1} \tag{4.20} \]
 
 
 ## 04.12. Advanced Topic 3.B Plotting Power-laws
@@ -225,8 +241,13 @@ eq.4.16 yields
 [box0401]: #box_4-1_the_8020_rule_and_the_top_one_percent
 [0403]: #0403_hubs
 [040301]: #040301_the_largest_hub
+[0404]: #0404_the_meaning_of_scale-free
 
 [0412]: #0412_advanced_topic_3B_plotting_power-laws
+[041201]: #041201_use_a_log-log_plot
+[041202]: #041202_avoid_linear_binning
+[041203]: #041203_use_logarithmic_binning
+[041204]: #041204_use_cumulative_distribution
 
 <!-- link -->
 
