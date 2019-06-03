@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-03 14:58:11
+Modified: 	2019-06-03 15:15:25
 -----
 Copyright (c) 2019 shumez
 -->
@@ -16,15 +16,55 @@ Copyright (c) 2019 shumez
 * [04.02. Power Laws and Scale-Free Networks][0402]
     * [04.02.01. Discrete Formalism][040201]
     * [04.02.02. Continuum Formalism][040202]
-    * [Box 4-1 The 80/20 Rule and the Top One Percent][box0401]
+    * [Box 04.01. The 80/20 Rule and the Top One Percent][box0401]
 * [04.03. Hubs][0403]
     * [04.03.01. The Largest Hub][040301]
 * [04.04. The Meaning of Scale-Free][0404]
+* [04.05. Universality][0405]
+    * [04.05.01. Plotting the Degree Distribution][040501]
+    * [04.05.02. Measuring the Degree Exponent][040502]
+    * [04.05.03. The Shape of p~k~ for Real Networks][040503]
+    * [Box 04.02. Timeline: Scale-Free Networks][box0402]
+    * [Box 04.03. Not All Network Are Scale-Free][box0403]
+* [04.06. Ultra-Small Property][0406]
+    * [04.06.01. Anomalous Regime (γ = 2)][040601]
+    * [04.06.02. Ultra-Small World (2 ‹ γ ‹ 3)][040602]
+    * [04.06.03. Critical Point (γ = 3)][040603]
+    * [04.06.04. Small World (γ > 3)][040604]
+    * [Box 04.04. We Are Always Close to the Hubs][box0404]
+* [04.07. The Role of the Degree Exponent][0407]
+    * [Box 04.05. The γ Dependent Properties of Scale-Free Networks][box0405]
+    * [04.07.01. Anomalous Regime (γ≤ 2)][040701]
+    * [04.07.02. Scale-Free Regime (2 ‹ γ ‹ 3)][040702]
+    * [04.07.03. Random Network Regime (γ › 3)][040703]
+    * [Box 04.06. Why Scale-Free Networks With γ ‹ 2 Do Not Exist][box0406]
+* [04.08. Generating Networks with Arbitrary Degree Distribution][0408]
+    * [04.08.01. Configuration Model][040801]
+    * [Box 04.07. Generating a Degree Sequence with Power-Law Distribution][box0407]
+    * [04.08.02. Degree-Preserving Randomization][040802]
+    * [04.08.03. Hidden Parameter Model][040803]
+    * [Box 04.08. Testing the Small-Word Property][box0408]
+* [04.09. Summary][0409]
+    * [04.09.01. Exponentially Bounded Networks][040901]
+    * [04.09.02. Fat Tailed Networks][040902]
+    * [Box 04.09. At a Glance: Scale-Free Networks][box0409]
+* [04.10. Homework][0410]
+* [04.11. Advanced Topic 3.A Power Laws][0411]
+    * [04.11.01. Exponentially Bounded Distributions][041101]
+    * [04.11.02. Fat Tailed Distributions][041102]
+    * [04.11.03. Crossover Distribution (Log-Normal, Stretched Exponential)][041103]
 * [04.12. Advanced Topic 3.B Plotting Power-laws][0412]
     * [04.12.01. Use a Log-Log Plot][041201]
     * [04.12.02. Avoid Linear Binning][041202]
     * [04.12.03. Use Logarithmic Binning][041203]
     * [04.12.04. Use Cumulative Distribution][041204]
+    * [Box 04.10. Degree Distribution of Real Networks][box0410]
+* [04.13. Advanced Topic 3.C Estimating the Degree Exponent][0413]
+    * [04.13.01. Fitting Procedure][041301]
+    * [04.13.02. Goodness-of-fit][041302]
+    * [04.13.03. Fitting Real Distributions][041303]
+    * [04.13.04. Systematic Fitting Issues][041304]
+* [04.14. Bibliography][0414]
 
 
 ## [04.01. Introduction][4.1]
@@ -252,6 +292,7 @@ eq.4.16 yields
 [4.1]: http://networksciencebook.com/chapter/4#introduction4
 [4.2]: http://networksciencebook.com/chapter/4#power-laws
 [4.3]: http://networksciencebook.com/chapter/4#hubs
+[4.4]: http://networksciencebook.com/chapter/4#scale-free
 
 
 <!-- ref -->
