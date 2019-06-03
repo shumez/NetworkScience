@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-06-03 16:33:52
+Modified: 	2019-06-03 16:37:58
 -----
 Copyright (c) 2019 shumez
 -->
@@ -214,7 +214,7 @@ directed, \( d_{ij} \neq d_{ji} \)
 - **Hamiltonian path**: visit each node exactly 
 
 
-### Box 2-4: Number of Shortest Paths Between Two Nodes
+### Box 02.04. Number of Shortest Paths Between Two Nodes
 
 - \(N_{ij}\) (num of shortest paths)
 - \(d_{ij}\) (distance)
@@ -249,7 +249,7 @@ for larger networks, determined using the **BFS algorithm**
 \[ \langle d \rangle = \frac{1}{N(N-1)} \sum_{i,j = 1,N; \\i \neq j} \tag{2.14} \]
 
 
-### Box 2-5: Breadth-First Search Algorithm
+### Box 02.05. Breadth-First Search Algorithm
 
 [![fig.2.14][fig-2-14]][fig-2-14]
 
@@ -262,7 +262,7 @@ for larger networks, determined using the **BFS algorithm**
 [![fig.2.15][fig-2-15]][fig-2-15]
 
 
-### Box 2-6: Finding the Connected Components of a Network
+### Box 02.06. Finding the Connected Components of a Network
 
 
 
