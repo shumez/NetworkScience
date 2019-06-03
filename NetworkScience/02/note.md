@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/02
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-02-13 17:10:6
-Modified: 	2019-05-20 15:26:13
+Modified: 	2019-06-03 16:33:52
 -----
 Copyright (c) 2019 shumez
 -->
@@ -25,12 +25,12 @@ Copyright (c) 2019 shumez
 * [02.07. Bipartite Networks][0207]
 * [02.08. Paths and Distances][0208]
     * [02.08.01. Shortest Path][020801]
-    * [Box 2-4: Number of Shortest Paths Between Two Nodes][box0204]
+    * [Box 02.04. Number of Shortest Paths Between Two Nodes][box0204]
     * [02.08.02. Network Diameter][020802]
     * [02.08.03. Average Path Length][020803]
-    * [Box 2-5: Breadth-First Search Algorithm][box0205]
+    * [Box 02.05. Breadth-First Search Algorithm][box0205]
 * [02.09. Connectedness][0209]
-    * [Box 2-6: Finding the Connected Components of a Network][box0206]
+    * [Box 02.06. Finding the Connected Components of a Network][box0206]
 * [02.10. Clustering Coefficient][0210]
 * [02.11. Summary][0211]
 * [02.12. Homework][0212]
@@ -347,12 +347,12 @@ for larger networks, determined using the **BFS algorithm**
 [0207]: #0207_bipartite_networks
 [0208]: #0208_paths_and_distances
 [020801]: #020801_shortest_path
-[box0204]: #box_2-4_number_of_shortest_paths_between_two_nodes
+[box0204]: #box_0204_number_of_shortest_paths_between_two_nodes
 [020802]: #020802_network_diameter
 [020803]: #020803_average_path_length
-[box0205]: #box_2-5_breadth-first_search_algorithm
+[box0205]: #box_0205_breadth-first_search_algorithm
 [0209]: #0209_connectedness
-[box0206]: #box_2-6_finding_the_connected_components_of_a_network
+[box0206]: #box_0206_finding_the_connected_components_of_a_network
 [0210]: #0210_clustering_coefficient
 [0211]: #0211_summary
 [0212]: #0212_homework
