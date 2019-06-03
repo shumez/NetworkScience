@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/03
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-06 20:27:3
-Modified: 	2019-06-03 16:32:17
+Modified: 	2019-06-03 16:42:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -44,7 +44,7 @@ Copyright (c) 2019 shumez
 
 \(N\) nodes, connected w/ probability \(p\) 
 
-### Box 3-1 Defining Random Networks
+### Box 03.01. Defining Random Networks
 
 - \(G(N,L)\) model :
     - \(N\) labeled node are connedted with \(L\) randomly placed links
@@ -60,7 +60,7 @@ Copyright (c) 2019 shumez
 **random graph** (**random network**, **Erdős-Rényi network**)
 
 
-### Box 3-2 Random Networks: a Brief History
+### Box 03.02. Random Networks: a Brief History
 
 - Anatol Rapoport
 - *Random graph theory* Pál Erdős and Alfréd Rényi
@@ -101,7 +101,7 @@ from \(\langle k \rangle = 0\) to \(\langle k\rangle = N-1\)
 \(p = .03\), \(N = 100\)
 
 
-### Box 3-3 Binomial Distribution: Mean and Variance
+### Box 03.03. Binomial Distribution: Mean and Variance
 
 \[ p_x = \binom{N}{x} p^x (1-p)^{N-x} \]
 
@@ -190,7 +190,7 @@ for \(\langle k \rangle = 1000\) \(\sigma_k = 31.62\)
 *in a large random network the degree of most nodes is in the narrow vicinity of* \(\langle k \rangle\)
 
 
-### Box 3-4 Why are Hubs Missing?
+### Box 03.04. Why are Hubs Missing?
 
 \(\frac{1}{k!}\)
 
@@ -217,9 +217,9 @@ the size of the largest conneted cluster w/i the network, \(N_G\) varies w/ \(\l
 - for \(p=0\) we have \(\langle k \rangle = 0\), &there4; \(N_G = 1\) and \(\frac{N_G}{N} \rightarrow 0 \) for large \(N\)
 - for \(p = 1\) we have \(\langle k \rangle = N-1\), complete graph, &there4; \(N_G = N\) and \(\frac{N_G}{N} = 1\)
 
-<!-- ![video.3.2][video_03_02] -->
+![video.3.2][vid0302]
 
-<iframe width="560" height="315" src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="http://networksciencebook.com/images/ch-03/video-3-2.m4v" id="video_03_02" allowfullscreen></iframe> -->
 
 grow from \(N_G = 1\) to \(N_G = N\) if \(\langle k \rangle\) increase from \(0\) to \(N-1\)
 
@@ -286,7 +286,7 @@ where \(p_c\) is given by eq.3.11 (\(p_c = \frac{1}{N-1} \approx \frac{1}{N}\))
 \(\frac{\ln{N}}{N} \rightarrow 0\) for large \(N\)
 
 
-### Box 3-5 Network Evolution in Graph Theory
+### Box 03.05. Network Evolution in Graph Theory
 
 \(p(N)\) scales as \(N^z\) where \(z\) is tunable param \([-\infty, 0]\)
 
@@ -388,7 +388,7 @@ assuming the \(\langle k \rangle \gg 1\),
 ([de Sola Pool, I., Kochen, M., 1978][1978KochenM_deSolaPoolI] [20])
 
 
-### Box 3-6 19 Degrees of Separation
+### Box 03.06. 19 Degrees of Separation
 
 **finite size scaling** ([Albert, R., 1999][1999BarabásiAL_JeongH_AlbertR])
 
@@ -415,12 +415,12 @@ E. Coli Metabolism	    | 1,039	    | 5,802	        | 5.58	| 2.98	| 8	    | 4.04
 Protein Interactions	| 2,018	    | 2,930	        | 2.90	| 5.61	| 14	| 7.14
 
 
-### Box 3-7 Six Degrees: Experimental Confirmation
+### Box 03.07. Six Degrees: Experimental Confirmation
 
 [![fig.3.12][fig_03_12]][fig_03_12]
 
 
-### Box 3-8 19 Degrees of the WWW
+### Box 03.08. 19 Degrees of the WWW
 [![fig.box.3.8][fig_box_3_8]][fig_box_3_8]
 
 
@@ -453,7 +453,7 @@ plot \(\frac{\langle C \rangle}{\langle k \rangle}\) in fn of \(N\)
 [![fig.3.13][fig_03_13]][fig_03_13]
 
 
-### Box 3-9 Watts-Strogatz Model
+### Box 03.09. Watts-Strogatz Model
 
 [![fig.3.14][fig_03_14]][fig_03_14]
 
@@ -567,7 +567,7 @@ leads to eq.3.14 \(\langle k \rangle = \ln{N}\)
 
 <!-- video -->
 ###
-[video_03_02]: http://networksciencebook.com/images/ch-03/video-3-2.m4v "Video.3.2 Evolution of a Random Network"
+[vid0302]: http://networksciencebook.com/images/ch-03/video-3-2.m4v "Video.3.2 Evolution of a Random Network"
 
 
 <!-- eq -->
