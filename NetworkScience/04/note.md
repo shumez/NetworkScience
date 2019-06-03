@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-03 15:15:25
+Modified: 	2019-06-03 16:13:56
 -----
 Copyright (c) 2019 shumez
 -->
@@ -245,17 +245,27 @@ eq.4.16 yields
 
 ## [04.04. The Meaning of Scale-Free][4.4]
 
-\(n\)^{th} moment of the degree distribution
+\(n\)^th^ moment of the degree distribution is def'd as
 
 \[ \langle k^n \rangle = \sum_{k_{\min}}^\infty{k^n p_k} \approx \int_{k_{\min}}^\infty{k^n p(k)}dk \tag{4.19} \]
 
+lower moments:  
+
 * \(n=1\): 1st moment is average \(\langle k \rangle\)
 * \(n=2\): 2nd moment, \(\langle k^2 \rangle\),  
-    calculate \(\sigma2 = \langle k^2 \rangle - \langle k \rangle ^2\)
-* \(n=3\): 3rd moment, \(\langle k^3 \rangle\), 
+    * calculate variance \(\sigma^2 = \langle k^2 \rangle - \langle k \rangle ^2\)
+    * standard deviation \(\sigma\)
+* \(n=3\): 3rd moment, \(\langle k^3 \rangle\), determine **[skewness]** of distribution: how symmetric is \(p_k\) around the average \(\langle k \rangle\)
 
+for scale-free network 
 
 \[ \langle k^n \rangle = \int_{k_{\min}}^{k_{\max}}{k^n p(k) dk} = C \frac{k_{\max}^{n - \gamma + 1} - k_{\min}^{n - \gamma + 1}}{n - \gamma + 1} \tag{4.20} \]
+
+while \(k_{\min}\) is fixed, \(k_{\max}\) increases w the system size  
+\(k_{\max} \to \infty\)
+
+* if \(n - \gamma + 1 ≤ 0 \), \(k_{\max}^{n - \gamma + 1} \to 0\), \(\langle k^n \rangle \to \text{finite}\)
+* if \(n - \gamma + 1> 0\), \(\langle k^n \rangle \to \infty\)
 
 
 ## 04.12. Advanced Topic 3.B Plotting Power-laws
@@ -309,6 +319,8 @@ eq.4.16 yields
 [fig0405]: https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png
 [fig0406]: http://networksciencebook.com/images/ch-04/figure-4-6.jpg "Fig.4.6 Random vs. Scale-free Networks"
 
+<!-- term -->
+[skewness]: #0404 "歪み, 歪度"
 
 <!-- eq -->
 
