@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-03 16:13:56
+Modified: 	2019-06-03 16:20:45
 -----
 Copyright (c) 2019 shumez
 -->
@@ -266,6 +266,12 @@ while \(k_{\min}\) is fixed, \(k_{\max}\) increases w the system size
 
 * if \(n - \gamma + 1 ≤ 0 \), \(k_{\max}^{n - \gamma + 1} \to 0\), \(\langle k^n \rangle \to \text{finite}\)
 * if \(n - \gamma + 1> 0\), \(\langle k^n \rangle \to \infty\)
+
+many scale-free netw \(\gamma \in (2,3)\),  
+\(\langle k \rangle \to \text{finite}\), \(\langle k^2 \rangle, \langle k^3 \rangle \to \infty\)
+
+* **Random netw have a scale**
+* **Scale-free netw lack a scale** 
 
 
 ## 04.12. Advanced Topic 3.B Plotting Power-laws
