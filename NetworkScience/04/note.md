@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-05-30 15:58:31
+Modified: 	2019-06-03 14:58:11
 -----
 Copyright (c) 2019 shumez
 -->
@@ -27,7 +27,7 @@ Copyright (c) 2019 shumez
     * [04.12.04. Use Cumulative Distribution][041204]
 
 
-## 04.01. Introduction
+## [04.01. Introduction][4.1]
 
 [![fig.4.1][fig0401]][fig0401]
 
@@ -37,7 +37,7 @@ scale-free vs. random network
 
 **scale-free network**
 
-## 04.02. Power Laws and Scale-Free Networks
+## [04.02. Power Laws and Scale-Free Networks][4.2]
 
 [fig.4.2][fig0402] indicates
 
@@ -133,7 +133,7 @@ randamly chosen node has degree \([k_1, k_2]\)
 
 <!-- [![fig.4.3][fig_04_03]][fig_04_03] -->
 
-## 04.03. Hubs
+## [04.03. Hubs][4.3]
 
 high-\(k\) region of \(p_k\)
 
@@ -203,7 +203,7 @@ eq.4.16 yields
 [![Fig.4.6][fig0406]][fig0406]
 
 
-## 04.04. The Meaning of Scale-Free
+## [04.04. The Meaning of Scale-Free][4.4]
 
 \(n\)^{th} moment of the degree distribution
 
@@ -249,8 +249,12 @@ eq.4.16 yields
 [041203]: #041203_use_logarithmic_binning
 [041204]: #041204_use_cumulative_distribution
 
-<!-- link -->
+[4.1]: http://networksciencebook.com/chapter/4#introduction4
+[4.2]: http://networksciencebook.com/chapter/4#power-laws
+[4.3]: http://networksciencebook.com/chapter/4#hubs
 
+
+<!-- ref -->
 [1999AlbertR_BarabásiAL]: https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail "Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512."
 
 [Riemann-zeta fn]: https://en.wikipedia.org/wiki/Riemann_zeta_function
