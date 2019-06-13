@@ -152,12 +152,12 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#networks_expand_through_the_addition_of_new_nodes">Networks Expand Through the Addition of New Nodes</a>
+          <a class="toctree-l4" href="#050201_networks_expand_through_the_addition_of_new_nodes">05.02.01. Networks Expand Through the Addition of New Nodes</a>
         </li>
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#nodes_prefer_to_link_to_the_more_connected_nodes">Nodes Prefer to Link to the More Connected Nodes</a>
+          <a class="toctree-l4" href="#050202_nodes_prefer_to_link_to_the_more_connected_nodes">05.02.02. Nodes Prefer to Link to the More Connected Nodes</a>
         </li>
     
     </ul>
@@ -245,12 +245,12 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#model_a">Model A</a>
+          <a class="toctree-l4" href="#050601_model_a">05.06.01. Model A</a>
         </li>
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#model_b">Model B</a>
+          <a class="toctree-l4" href="#050602_model_b">05.06.02. Model B</a>
         </li>
     
     </ul>
@@ -283,12 +283,12 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#sublinear_preferential_attachment_0_1">Sublinear Preferential Attachment (0 &lt; α &lt; 1)</a>
+          <a class="toctree-l4" href="#050801_sublinear_preferential_attachment_0_1">05.08.01. Sublinear Preferential Attachment (0 &lt; α &lt; 1)</a>
         </li>
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#superlinear_preferential_attachment_1">Superlinear Preferential Attachment (α &gt; 1)</a>
+          <a class="toctree-l4" href="#050802_superlinear_preferential_attachment_1">05.08.02. Superlinear Preferential Attachment (α &gt; 1)</a>
         </li>
     
     </ul>
@@ -310,12 +310,12 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#local_mechanisms">Local Mechanisms</a>
+          <a class="toctree-l4" href="#050901_local_mechanisms">05.09.01. Local Mechanisms</a>
         </li>
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#optimization">Optimization</a>
+          <a class="toctree-l4" href="#050902_optimization">05.09.02. Optimization</a>
         </li>
     
     </ul>
@@ -337,12 +337,12 @@
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#diameter">Diameter</a>
+          <a class="toctree-l4" href="#051001_diameter">05.10.01. Diameter</a>
         </li>
     
       
         <li class="toctree-l3">
-          <a class="toctree-l4" href="#clustering_coefficient">Clustering coefficient</a>
+          <a class="toctree-l4" href="#051002_clustering_coefficient">05.10.02. Clustering coefficient</a>
         </li>
     
     </ul>
@@ -428,7 +428,7 @@ Filename:   note.md
 Project:    /Users/shume/Developer/NetworkScience/NetworkScience/05
 Author:     shumez <https://github.com/shumez>
 Created:    2019-06-13 11:51:8
-Modified:   2019-06-13 11:57:57
+Modified:   2019-06-13 13:54:19
 -----
 Copyright (c) 2019 shumez
 -->
@@ -436,13 +436,55 @@ Copyright (c) 2019 shumez
 <h1 id="05_the_barabasi-albert_model">05. The Barabási-Albert Model<a class="headerlink" href="#05_the_barabasi-albert_model" title="Permanent link">&para;</a></h1>
 <h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
-<li>[][0501]</li>
-<li>[][0502]</li>
+<li><a href="#0501_introduction">05.01. Introduction</a></li>
+<li><a href="#0502_growth_and_preferential_attachment">05.02. Growth and Preferential Attachment</a><ul>
+<li><a href="#050201_networks_expand_through_the_addition_of_new_nodes">05.02.01. Networks Expand Through the Addition of New Nodes</a></li>
+<li><a href="#050202_nodes_prefer_to_link_to_the_more_connected_nodes">05.02.02. Nodes Prefer to Link to the More Connected Nodes</a></li>
+</ul>
+</li>
+<li><a href="#0503_the_barabasi-albert_model">05.03. The Barabási-Albert Model</a><ul>
+<li><a href="#box_0501_the_mathematical_definition_of_the_barabasi-albert_model">Box 05.01. The Mathematical Definition of the Barabási-Albert Model</a></li>
+</ul>
+</li>
+<li><a href="#0504_degree_dynamics">05.04. Degree Dynamics</a><ul>
+<li><a href="#box_0502_time_in_networks">Box 05.02. Time in Networks</a></li>
+</ul>
+</li>
+<li><a href="#0505_degree_distribution">05.05. Degree Distribution</a><ul>
+<li><a href="#box_0503_continuum_theory">Box 05.03. Continuum Theory</a></li>
+</ul>
+</li>
+<li><a href="#0506_the_absence_of_growth_or_preferential_attachment">05.06. The Absence of Growth or Preferential Attachment</a><ul>
+<li><a href="#050601_model_a">05.06.01. Model A</a></li>
+<li><a href="#050602_model_b">05.06.02. Model B</a></li>
+</ul>
+</li>
+<li><a href="#0507_measuring_preferential_attachment">05.07. Measuring Preferential Attachment</a></li>
+<li><a href="#0508_non-linear_preferential_attachment">05.08. Non-linear Preferential Attachment</a><ul>
+<li><a href="#050801_sublinear_preferential_attachment_0_1">05.08.01. Sublinear Preferential Attachment (0 &lt; α &lt; 1)</a></li>
+<li><a href="#050802_superlinear_preferential_attachment_1">05.08.02. Superlinear Preferential Attachment (α &gt; 1)</a></li>
+</ul>
+</li>
+<li><a href="#0509_the_origins_of_preferential_attachment">05.09. The Origins of Preferential Attachment</a><ul>
+<li><a href="#050901_local_mechanisms">05.09.01. Local Mechanisms</a></li>
+<li><a href="#050902_optimization">05.09.02. Optimization</a></li>
+</ul>
+</li>
+<li><a href="#0510_diameter_and_clustering_coefficient">05.10. Diameter and Clustering Coefficient</a><ul>
+<li><a href="#051001_diameter">05.10.01. Diameter</a></li>
+<li><a href="#051002_clustering_coefficient">05.10.02. Clustering coefficient</a></li>
+</ul>
+</li>
+<li><a href="#0511_summary">05.11. Summary</a><ul>
+<li><a href="#box_0505_at_a_glance_barabasi-albert_model">Box 05.05. At a Glance: Barabási-Albert Model</a></li>
+</ul>
+</li>
+<li><a href="#0512_homework">05.12. Homework</a></li>
 </ul>
 <h2 id="0501_introduction">05.01. Introduction<a class="headerlink" href="#0501_introduction" title="Permanent link">&para;</a></h2>
 <h2 id="0502_growth_and_preferential_attachment">05.02. Growth and Preferential Attachment<a class="headerlink" href="#0502_growth_and_preferential_attachment" title="Permanent link">&para;</a></h2>
-<h3 id="networks_expand_through_the_addition_of_new_nodes">Networks Expand Through the Addition of New Nodes<a class="headerlink" href="#networks_expand_through_the_addition_of_new_nodes" title="Permanent link">&para;</a></h3>
-<h3 id="nodes_prefer_to_link_to_the_more_connected_nodes">Nodes Prefer to Link to the More Connected Nodes<a class="headerlink" href="#nodes_prefer_to_link_to_the_more_connected_nodes" title="Permanent link">&para;</a></h3>
+<h3 id="050201_networks_expand_through_the_addition_of_new_nodes">05.02.01. Networks Expand Through the Addition of New Nodes<a class="headerlink" href="#050201_networks_expand_through_the_addition_of_new_nodes" title="Permanent link">&para;</a></h3>
+<h3 id="050202_nodes_prefer_to_link_to_the_more_connected_nodes">05.02.02. Nodes Prefer to Link to the More Connected Nodes<a class="headerlink" href="#050202_nodes_prefer_to_link_to_the_more_connected_nodes" title="Permanent link">&para;</a></h3>
 <h2 id="0503_the_barabasi-albert_model">05.03. The Barabási-Albert Model<a class="headerlink" href="#0503_the_barabasi-albert_model" title="Permanent link">&para;</a></h2>
 <h3 id="box_0501_the_mathematical_definition_of_the_barabasi-albert_model">Box 05.01. The Mathematical Definition of the Barabási-Albert Model<a class="headerlink" href="#box_0501_the_mathematical_definition_of_the_barabasi-albert_model" title="Permanent link">&para;</a></h3>
 <h2 id="0504_degree_dynamics">05.04. Degree Dynamics<a class="headerlink" href="#0504_degree_dynamics" title="Permanent link">&para;</a></h2>
@@ -450,18 +492,18 @@ Copyright (c) 2019 shumez
 <h2 id="0505_degree_distribution">05.05. Degree Distribution<a class="headerlink" href="#0505_degree_distribution" title="Permanent link">&para;</a></h2>
 <h3 id="box_0503_continuum_theory">Box 05.03. Continuum Theory<a class="headerlink" href="#box_0503_continuum_theory" title="Permanent link">&para;</a></h3>
 <h2 id="0506_the_absence_of_growth_or_preferential_attachment">05.06. The Absence of Growth or Preferential Attachment<a class="headerlink" href="#0506_the_absence_of_growth_or_preferential_attachment" title="Permanent link">&para;</a></h2>
-<h3 id="model_a">Model A<a class="headerlink" href="#model_a" title="Permanent link">&para;</a></h3>
-<h3 id="model_b">Model B<a class="headerlink" href="#model_b" title="Permanent link">&para;</a></h3>
+<h3 id="050601_model_a">05.06.01. Model A<a class="headerlink" href="#050601_model_a" title="Permanent link">&para;</a></h3>
+<h3 id="050602_model_b">05.06.02. Model B<a class="headerlink" href="#050602_model_b" title="Permanent link">&para;</a></h3>
 <h2 id="0507_measuring_preferential_attachment">05.07. Measuring Preferential Attachment<a class="headerlink" href="#0507_measuring_preferential_attachment" title="Permanent link">&para;</a></h2>
 <h2 id="0508_non-linear_preferential_attachment">05.08. Non-linear Preferential Attachment<a class="headerlink" href="#0508_non-linear_preferential_attachment" title="Permanent link">&para;</a></h2>
-<h3 id="sublinear_preferential_attachment_0_1">Sublinear Preferential Attachment (0 &lt; α &lt; 1)<a class="headerlink" href="#sublinear_preferential_attachment_0_1" title="Permanent link">&para;</a></h3>
-<h3 id="superlinear_preferential_attachment_1">Superlinear Preferential Attachment (α &gt; 1)<a class="headerlink" href="#superlinear_preferential_attachment_1" title="Permanent link">&para;</a></h3>
+<h3 id="050801_sublinear_preferential_attachment_0_1">05.08.01. Sublinear Preferential Attachment (0 &lt; α &lt; 1)<a class="headerlink" href="#050801_sublinear_preferential_attachment_0_1" title="Permanent link">&para;</a></h3>
+<h3 id="050802_superlinear_preferential_attachment_1">05.08.02. Superlinear Preferential Attachment (α &gt; 1)<a class="headerlink" href="#050802_superlinear_preferential_attachment_1" title="Permanent link">&para;</a></h3>
 <h2 id="0509_the_origins_of_preferential_attachment">05.09. The Origins of Preferential Attachment<a class="headerlink" href="#0509_the_origins_of_preferential_attachment" title="Permanent link">&para;</a></h2>
-<h3 id="local_mechanisms">Local Mechanisms<a class="headerlink" href="#local_mechanisms" title="Permanent link">&para;</a></h3>
-<h3 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">&para;</a></h3>
+<h3 id="050901_local_mechanisms">05.09.01. Local Mechanisms<a class="headerlink" href="#050901_local_mechanisms" title="Permanent link">&para;</a></h3>
+<h3 id="050902_optimization">05.09.02. Optimization<a class="headerlink" href="#050902_optimization" title="Permanent link">&para;</a></h3>
 <h2 id="0510_diameter_and_clustering_coefficient">05.10. Diameter and Clustering Coefficient<a class="headerlink" href="#0510_diameter_and_clustering_coefficient" title="Permanent link">&para;</a></h2>
-<h3 id="diameter">Diameter<a class="headerlink" href="#diameter" title="Permanent link">&para;</a></h3>
-<h3 id="clustering_coefficient">Clustering coefficient<a class="headerlink" href="#clustering_coefficient" title="Permanent link">&para;</a></h3>
+<h3 id="051001_diameter">05.10.01. Diameter<a class="headerlink" href="#051001_diameter" title="Permanent link">&para;</a></h3>
+<h3 id="051002_clustering_coefficient">05.10.02. Clustering coefficient<a class="headerlink" href="#051002_clustering_coefficient" title="Permanent link">&para;</a></h3>
 <h2 id="0511_summary">05.11. Summary<a class="headerlink" href="#0511_summary" title="Permanent link">&para;</a></h2>
 <h3 id="box_0505_at_a_glance_barabasi-albert_model">Box 05.05. At a Glance: Barabási-Albert Model<a class="headerlink" href="#box_0505_at_a_glance_barabasi-albert_model" title="Permanent link">&para;</a></h3>
 <h2 id="0512_homework">05.12. Homework<a class="headerlink" href="#0512_homework" title="Permanent link">&para;</a></h2>
