@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>05. The Barabási-Albert Model - Network Science</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "05. The Barab\u00e1si-Albert Model";
+    var mkdocs_page_input_path = "NetworkScience/05/index.md";
+    var mkdocs_page_url = "/NetworkScience/NetworkScience/05/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Network Science</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">Home</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Network Science</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../">Intro</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../01/">01. Introduction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../02/">02. Graph Theory</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../03/">03. Random Networks</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../04/">04. The Scale-Free Property</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l2 page current">
+      <a class="current" href="./">
+        05. The Barabási-Albert Model
+          <span class="toctree-expand"></span>
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l2 current with-children">
+    <a href="#contents">
+      Contents
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0501_introduction">
+      05.01. Introduction
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0502_growth_and_preferential_attachment">
+      05.02. Growth and Preferential Attachment
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#networks_expand_through_the_addition_of_new_nodes">Networks Expand Through the Addition of New Nodes</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#nodes_prefer_to_link_to_the_more_connected_nodes">Nodes Prefer to Link to the More Connected Nodes</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0503_the_barabasi-albert_model">
+      05.03. The Barabási-Albert Model
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#box_0501_the_mathematical_definition_of_the_barabasi-albert_model">Box 05.01. The Mathematical Definition of the Barabási-Albert Model</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0504_degree_dynamics">
+      05.04. Degree Dynamics
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#box_0502_time_in_networks">Box 05.02. Time in Networks</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0505_degree_distribution">
+      05.05. Degree Distribution
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#box_0503_continuum_theory">Box 05.03. Continuum Theory</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0506_the_absence_of_growth_or_preferential_attachment">
+      05.06. The Absence of Growth or Preferential Attachment
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#model_a">Model A</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#model_b">Model B</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0507_measuring_preferential_attachment">
+      05.07. Measuring Preferential Attachment
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0508_non-linear_preferential_attachment">
+      05.08. Non-linear Preferential Attachment
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#sublinear_preferential_attachment_0_1">Sublinear Preferential Attachment (0 &lt; α &lt; 1)</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#superlinear_preferential_attachment_1">Superlinear Preferential Attachment (α &gt; 1)</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0509_the_origins_of_preferential_attachment">
+      05.09. The Origins of Preferential Attachment
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#local_mechanisms">Local Mechanisms</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#optimization">Optimization</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0510_diameter_and_clustering_coefficient">
+      05.10. Diameter and Clustering Coefficient
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#diameter">Diameter</a>
+        </li>
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#clustering_coefficient">Clustering coefficient</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0511_summary">
+      05.11. Summary
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l2">
+    <ul class="subnav-l2 toc-hidden">
+    
+      
+        <li class="toctree-l3">
+          <a class="toctree-l4" href="#box_0505_at_a_glance_barabasi-albert_model">Box 05.05. At a Glance: Barabási-Albert Model</a>
+        </li>
+    
+    </ul>
+  </li>
+
+      
+
+  <li class="toctree-l2">
+    <a href="#0512_homework">
+      05.12. Homework
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+
+  
+        
+      </ul>
+    </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Network Science</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Network Science &raquo;</li>
+        
+      
+    
+    <li>05. The Barabási-Albert Model</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!--
+Filename:   note.md
+Project:    /Users/shume/Developer/NetworkScience/NetworkScience/05
+Author:     shumez <https://github.com/shumez>
+Created:    2019-06-13 11:51:8
+Modified:   2019-06-13 11:57:57
+-----
+Copyright (c) 2019 shumez
+-->
+
+<h1 id="05_the_barabasi-albert_model">05. The Barabási-Albert Model<a class="headerlink" href="#05_the_barabasi-albert_model" title="Permanent link">&para;</a></h1>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[][0501]</li>
+<li>[][0502]</li>
+</ul>
+<h2 id="0501_introduction">05.01. Introduction<a class="headerlink" href="#0501_introduction" title="Permanent link">&para;</a></h2>
+<h2 id="0502_growth_and_preferential_attachment">05.02. Growth and Preferential Attachment<a class="headerlink" href="#0502_growth_and_preferential_attachment" title="Permanent link">&para;</a></h2>
+<h3 id="networks_expand_through_the_addition_of_new_nodes">Networks Expand Through the Addition of New Nodes<a class="headerlink" href="#networks_expand_through_the_addition_of_new_nodes" title="Permanent link">&para;</a></h3>
+<h3 id="nodes_prefer_to_link_to_the_more_connected_nodes">Nodes Prefer to Link to the More Connected Nodes<a class="headerlink" href="#nodes_prefer_to_link_to_the_more_connected_nodes" title="Permanent link">&para;</a></h3>
+<h2 id="0503_the_barabasi-albert_model">05.03. The Barabási-Albert Model<a class="headerlink" href="#0503_the_barabasi-albert_model" title="Permanent link">&para;</a></h2>
+<h3 id="box_0501_the_mathematical_definition_of_the_barabasi-albert_model">Box 05.01. The Mathematical Definition of the Barabási-Albert Model<a class="headerlink" href="#box_0501_the_mathematical_definition_of_the_barabasi-albert_model" title="Permanent link">&para;</a></h3>
+<h2 id="0504_degree_dynamics">05.04. Degree Dynamics<a class="headerlink" href="#0504_degree_dynamics" title="Permanent link">&para;</a></h2>
+<h3 id="box_0502_time_in_networks">Box 05.02. Time in Networks<a class="headerlink" href="#box_0502_time_in_networks" title="Permanent link">&para;</a></h3>
+<h2 id="0505_degree_distribution">05.05. Degree Distribution<a class="headerlink" href="#0505_degree_distribution" title="Permanent link">&para;</a></h2>
+<h3 id="box_0503_continuum_theory">Box 05.03. Continuum Theory<a class="headerlink" href="#box_0503_continuum_theory" title="Permanent link">&para;</a></h3>
+<h2 id="0506_the_absence_of_growth_or_preferential_attachment">05.06. The Absence of Growth or Preferential Attachment<a class="headerlink" href="#0506_the_absence_of_growth_or_preferential_attachment" title="Permanent link">&para;</a></h2>
+<h3 id="model_a">Model A<a class="headerlink" href="#model_a" title="Permanent link">&para;</a></h3>
+<h3 id="model_b">Model B<a class="headerlink" href="#model_b" title="Permanent link">&para;</a></h3>
+<h2 id="0507_measuring_preferential_attachment">05.07. Measuring Preferential Attachment<a class="headerlink" href="#0507_measuring_preferential_attachment" title="Permanent link">&para;</a></h2>
+<h2 id="0508_non-linear_preferential_attachment">05.08. Non-linear Preferential Attachment<a class="headerlink" href="#0508_non-linear_preferential_attachment" title="Permanent link">&para;</a></h2>
+<h3 id="sublinear_preferential_attachment_0_1">Sublinear Preferential Attachment (0 &lt; α &lt; 1)<a class="headerlink" href="#sublinear_preferential_attachment_0_1" title="Permanent link">&para;</a></h3>
+<h3 id="superlinear_preferential_attachment_1">Superlinear Preferential Attachment (α &gt; 1)<a class="headerlink" href="#superlinear_preferential_attachment_1" title="Permanent link">&para;</a></h3>
+<h2 id="0509_the_origins_of_preferential_attachment">05.09. The Origins of Preferential Attachment<a class="headerlink" href="#0509_the_origins_of_preferential_attachment" title="Permanent link">&para;</a></h2>
+<h3 id="local_mechanisms">Local Mechanisms<a class="headerlink" href="#local_mechanisms" title="Permanent link">&para;</a></h3>
+<h3 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permanent link">&para;</a></h3>
+<h2 id="0510_diameter_and_clustering_coefficient">05.10. Diameter and Clustering Coefficient<a class="headerlink" href="#0510_diameter_and_clustering_coefficient" title="Permanent link">&para;</a></h2>
+<h3 id="diameter">Diameter<a class="headerlink" href="#diameter" title="Permanent link">&para;</a></h3>
+<h3 id="clustering_coefficient">Clustering coefficient<a class="headerlink" href="#clustering_coefficient" title="Permanent link">&para;</a></h3>
+<h2 id="0511_summary">05.11. Summary<a class="headerlink" href="#0511_summary" title="Permanent link">&para;</a></h2>
+<h3 id="box_0505_at_a_glance_barabasi-albert_model">Box 05.05. At a Glance: Barabási-Albert Model<a class="headerlink" href="#box_0505_at_a_glance_barabasi-albert_model" title="Permanent link">&para;</a></h3>
+<h2 id="0512_homework">05.12. Homework<a class="headerlink" href="#0512_homework" title="Permanent link">&para;</a></h2>
+<h2 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<!-- toc -->
+
+<!-- ref -->
+
+<!-- fig -->
+
+<!-- term -->
+
+<style type="text/css">
+    img{width: 51%; float: right;}
+</style>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../04/" class="btn btn-neutral" title="04. The Scale-Free Property"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright &copy; 2018 - 2019 <a href="https://github.com/shumez">shumez</a>
+</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../04/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
