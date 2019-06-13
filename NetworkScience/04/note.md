@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-03 16:20:45
+Modified: 	2019-06-10 16:04:31
 -----
 Copyright (c) 2019 shumez
 -->
@@ -169,7 +169,7 @@ obtain
 randamly chosen node has degree \([k_1, k_2]\)
 
 
-### Box 4-1 The 80/20 Rule and the Top One Percent
+### Box 04.01. The 80/20 Rule and the Top One Percent
 
 <!-- [![fig.4.3][fig_04_03]][fig_04_03] -->
 
@@ -274,18 +274,51 @@ many scale-free netw \(\gamma \in (2,3)\),
 * **Scale-free netw lack a scale** 
 
 
+## 04.05. Universality
+### 04.05.01. Plotting the Degree Distribution
+### 04.05.02. Measuring the Degree Exponent
+### 04.05.03. The Shape of p~k~ for Real Networks
+### Box 04.02. Timeline: Scale-Free Networks
+### Box 04.03. Not All Network Are Scale-Free]
+## 04.06. Ultra-Small Property
+### 04.06.01. Anomalous Regime (γ = 2)
+### 04.06.02. Ultra-Small World (2 ‹ γ ‹ 3)
+### 04.06.03. Critical Point (γ = 3)
+### 04.06.04. Small World (γ > 3)
+### Box 04.04. We Are Always Close to the Hubs
+## 04.07. The Role of the Degree Exponent
+### Box 04.05. The γ Dependent Properties of Scale-Free Networks
+### 04.07.01. Anomalous Regime (γ ≤ 2)
+### 04.07.02. Scale-Free Regime (2 < γ < 3)
+### 04.07.03. Random Network Regime (γ < 3)
+### Box 04.06. Why Scale-Free Networks With γ < 2 Do Not Exist
+## 04.08. Generating Networks with Arbitrary Degree Distribution
+### 04.08.01. Configuration Model
+### Box 04.07. Generating a Degree Sequence with Power-Law Distribution
+### 04.08.02. Degree-Preserving Randomization
+### 04.08.03. Hidden Parameter Model
+### Box 04.08. Testing the Small-Word Property
+## 04.09. Summary
+### 04.09.01. Exponentially Bounded Networks
+### 04.09.02. Fat Tailed Networks
+### Box 04.09. At a Glance: Scale-Free Networks
+## 04.10. Homework
+## 04.11. Advanced Topic 3.A Power Laws
+### 04.11.01. Exponentially Bounded Distributions
+### 04.11.02. Fat Tailed Distributions
+### 04.11.03. Crossover Distribution (Log-Normal, Stretched Exponential)
+### Box 04.10. Degree Distribution of Real Networks
 ## 04.12. Advanced Topic 3.B Plotting Power-laws
-
 ### 04.12.01. Use a Log-Log Plot
-
 ### 04.12.02. Avoid Linear Binning
-
 ### 04.12.03. Use Logarithmic Binning
-
 ### 04.12.04. Use Cumulative Distribution
-
-
-
+## 04.13. Advanced Topic 3.C Estimating the Degree Exponent
+### 04.13.01. Fitting Procedure
+### 04.13.02. Goodness-of-fit
+### 04.13.03. Fitting Real Distributions
+### 04.13.04. Systematic Fitting Issues
+## 04.14. Bibliography
 
 ## 
 <!-- toc -->
@@ -294,16 +327,58 @@ many scale-free netw \(\gamma \in (2,3)\),
 [0402]: #0402_power_laws_and_scale-free_networks
 [040201]: #040201_discrete_formalism
 [040202]: #040202_continuum_formalism
-[box0401]: #box_4-1_the_8020_rule_and_the_top_one_percent
+[box0401]: #box_0401_the_8020_rule_and_the_top_one_percent
 [0403]: #0403_hubs
 [040301]: #040301_the_largest_hub
 [0404]: #0404_the_meaning_of_scale-free
-
+[0405]: #0405_universality
+[040501]: #040501_plotting_the_degree_distribution
+[040502]: #040502_measuring_the_degree_exponent
+[040503]: #040503_the_shape_of_pk_for_real_networks
+[box0402]: #box_0402_timeline_scale-free_networks
+[box0403]: #box_0403_not_all_network_are_scale-freebox
+[0406]: #0406_ultra-small_property
+[040601]: #040601_anomalous_regime_2
+[040602]: #040602_ultra-small_world_2_3
+[040603]: #040603_critical_point_3
+[040604]: #040604_small_world_3
+[box0404]: #box_0404_we_are_always_close_to_the_hubs
+[0407]: #0407_the_role_of_the_degree_exponent
+[box0405]: #box_0405_the_dependent_properties_of_scale-free_networks
+[040701]: #040701_anomalous_regime_2
+[040702]: #040702_scale-free_regime_2_3
+[040703]: #040703_random_network_regime_3
+[box0406]: #box_0406_why_scale-free_networks_with_2_do_not_exist
+[0408]: #0408_generating_networks_with_arbitrary_degree_distribution
+[040801]: #040801_configuration_model
+[box0407]: #box_0407_generating_a_degree_sequence_with_power-law_distribution
+[040802]: #040802_degree-preserving_randomization
+[040803]: #040803_hidden_parameter_model
+[box0408]: #box_0408_testing_the_small-word_property
+[0409]: #0409_summary
+[040901]: #040901_exponentially_bounded_networks
+[040902]: #040902_fat_tailed_networks
+[box0409]: #box_0409_at_a_glance_scale-free_networks
+[0410]: #0410_homework
+[0411]: #0411_advanced_topic_3a_power_laws
+[041101]: #041101_exponentially_bounded_distributions
+[041102]: #041102_fat_tailed_distributions
+[041103]: #041103_crossover_distribution_log-normal_stretched_exponential
+[box0410]: #box_0410_degree_distribution_of_real_networks
 [0412]: #0412_advanced_topic_3B_plotting_power-laws
 [041201]: #041201_use_a_log-log_plot
 [041202]: #041202_avoid_linear_binning
 [041203]: #041203_use_logarithmic_binning
 [041204]: #041204_use_cumulative_distribution
+[0413]: #0413_advanced_topic_3c_estimating_the_degree_exponent
+[041301]: #041301_fitting_procedure
+[041302]: #041302_goodness-of-fit
+[041303]: #041303_fitting_real_distributions
+[041304]: #041304_systematic_fitting_issues
+[0414]: #0414_bibliography
+
+
+
 
 [4.1]: http://networksciencebook.com/chapter/4#introduction4
 [4.2]: http://networksciencebook.com/chapter/4#power-laws
