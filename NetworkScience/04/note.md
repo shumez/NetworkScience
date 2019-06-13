@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-10 16:04:31
+Modified: 	2019-06-13 11:39:46
 -----
 Copyright (c) 2019 shumez
 -->
@@ -247,7 +247,7 @@ eq.4.16 yields
 
 \(n\)^th^ moment of the degree distribution is def'd as
 
-\[ \langle k^n \rangle = \sum_{k_{\min}}^\infty{k^n p_k} \approx \int_{k_{\min}}^\infty{k^n p(k)}dk \tag{4.19} \]
+\[ \langle k^n \rangle = \sum_{k_{\min}}^\infty{k^n p_k} \approx \int\limits_{k_{\min}}^\infty{k^n p(k)}dk \tag{4.19} \]
 
 lower moments:  
 
@@ -259,7 +259,7 @@ lower moments:
 
 for scale-free network 
 
-\[ \langle k^n \rangle = \int_{k_{\min}}^{k_{\max}}{k^n p(k) dk} = C \frac{k_{\max}^{n - \gamma + 1} - k_{\min}^{n - \gamma + 1}}{n - \gamma + 1} \tag{4.20} \]
+\[ \langle k^n \rangle = \int\limits_{k_{\min}}^{k_{\max}}{k^n p(k) dk} = C \frac{k_{\max}^{n - \gamma + 1} - k_{\min}^{n - \gamma + 1}}{n - \gamma + 1} \tag{4.20} \]
 
 while \(k_{\min}\) is fixed, \(k_{\max}\) increases w the system size  
 \(k_{\max} \to \infty\)
@@ -271,7 +271,21 @@ many scale-free netw \(\gamma \in (2,3)\),
 \(\langle k \rangle \to \text{finite}\), \(\langle k^2 \rangle, \langle k^3 \rangle \to \infty\)
 
 * **Random netw have a scale**
+
+\(\sigma_k = \langle k \rangle^{\frac{1}{2}}\)
+
+in range \(k = \langle k \rangle \pm \langle k \rangle^{\frac{1}{2}}\)
+
 * **Scale-free netw lack a scale** 
+
+power-law degreee dist w \(\gamma < 3\)   
+1st moment: finite  
+2nd moment: infinite
+
+e.g., WWW sample  
+\(\langle k \rangle = 4.60\), \(\gamma\approx2.1\)
+
+[![Fig.4.7][fig0407]][fig0407]
 
 
 ## 04.05. Universality
@@ -319,6 +333,8 @@ many scale-free netw \(\gamma \in (2,3)\),
 ### 04.13.03. Fitting Real Distributions
 ### 04.13.04. Systematic Fitting Issues
 ## 04.14. Bibliography
+
+
 
 ## 
 <!-- toc -->
@@ -378,8 +394,6 @@ many scale-free netw \(\gamma \in (2,3)\),
 [0414]: #0414_bibliography
 
 
-
-
 [4.1]: http://networksciencebook.com/chapter/4#introduction4
 [4.2]: http://networksciencebook.com/chapter/4#power-laws
 [4.3]: http://networksciencebook.com/chapter/4#hubs
@@ -399,37 +413,11 @@ many scale-free netw \(\gamma \in (2,3)\),
 [fig0405]: http://networksciencebook.com/images/ch-04/figure-4-5.jpg "Fig.4.5 Hubs are Large in Scale-free Networks "
 [fig0405]: https://raw.githubusercontent.com/shumez/NetworkScience/master/NetworkScience/04/fig/fig0405.png
 [fig0406]: http://networksciencebook.com/images/ch-04/figure-4-6.jpg "Fig.4.6 Random vs. Scale-free Networks"
+[fig0407]: http://networksciencebook.com/images/ch-04/figure-4-7.jpg "Fig.4.7 Lack of an Internal Scale"
 
 <!-- term -->
 [skewness]: #0404 "歪み, 歪度"
 
-<!-- eq -->
-
-<!-- 02 -->
-[p_k\sim&space;k^{-\gamma}]: https://latex.codecogs.com/gif.latex?p_k\sim&space;k^{-\gamma} "eq.4.1"
-[\log{p_k}\sim-\gamma\log{k}]: https://latex.codecogs.com/gif.latex?\log{p_k}\sim-\gamma\log{k} "eq.4.2" 
-[\gamma]: https://latex.codecogs.com/gif.latex?\gamma "\gamma"
-[\log{p_k}]: https://latex.codecogs.com/gif.latex?\log{p_k} "\log{p_k}"
-[\log{k}]: https://latex.codecogs.com/gif.latex?\log{k} "\log{k}"
-[k_{out}]: https://latex.codecogs.com/gif.latex?k_{out} "k_{out}"
-[k_{in}]: https://latex.codecogs.com/gif.latex?k_{in} "k_{in}"
-[p_{k_{in}}\sim&space;k^{-\gamma_{in}}]: https://latex.codecogs.com/gif.latex?p_{k_{in}}\sim&space;k^{-\gamma_{in}} "eq.4.3" 
-[p_{k_{out}}\sim&space;k^{-\gamma_{out}}]: https://latex.codecogs.com/gif.latex?p_{k_{out}}\sim&space;k^{-\gamma_{out}} "eq.4.4"
-[\gamma_{in}]: https://latex.codecogs.com/gif.latex?\gamma_{in} "\gamma_{in}"
-[\gamma_{out}]: https://latex.codecogs.com/gif.latex?\gamma_{out} "\gamma_{out}"
-[\gamma_{in}\approx2.1]: https://latex.codecogs.com/gif.latex?\gamma_{in}\approx2.1 "\gamma_{in}\approx2.1"
-[\gamma_{out}\approx2.45]: https://latex.codecogs.com/gif.latex?\gamma_{out}\approx2.45 "\gamma_{out}\approx2.45"
-
-<!-- Discrete Formalism -->
-[p_k]: https://latex.codecogs.com/gif.latex?p_k "p_k"
-[k]: https://latex.codecogs.com/gif.latex?k "k"
-[p_k=Ck^{-\gamma}]: https://latex.codecogs.com/gif.latex?p_k=Ck^{-\gamma} "eq.4.5"
-[C]: https://latex.codecogs.com/gif.latex?C "C"
-[\sum_{k=1}^\imfty{p_k}=1]: https://latex.codecogs.com/gif.latex?\sum_{k=1}^\imfty{p_k}=1 "eq.4.6"
-[C\sum_{k=1}^\infty{k^{-\gamma}}=1]: https://latex.codecogs.com/gif.latex?C\sum_{k=1}^\infty{k^{-\gamma}}=1 "C\sum_{k=1}^\infty{k^{-\gamma}}=1"
-[C=\frac{1}{\sum_{k=1}^\infty{k^{\gamma}}}=\frac{1}{\zeta(\gamma)}]: https://latex.codecogs.com/gif.latex?C=\frac{1}{\sum_{k=1}^\infty{k^{\gamma}}}=\frac{1}{\zeta(\gamma)} "eq.4.7"
-[\zeta(\gamma)]: https://latex.codecogs.com/gif.latex?\zeta(\gamma) "\zeta(\gamma)"
-[p_k=\frac{k^{-\gamma}}{\zeta(\gamma)}]: https://latex.codecogs.com/gif.latex?p_k=\frac{k^{-\gamma}}{\zeta(\gamma)} "eq.4.8"
 
 
 <style type="text/css">
