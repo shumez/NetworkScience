@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-17 15:59:56
+Modified: 	2019-06-17 16:08:26
 -----
 Copyright (c) 2019 shumez
 -->
@@ -299,7 +299,7 @@ e.g., WWW sample
 
 ### 04.05.01. Plotting the Degree Distribution
 
-
+log-log plot
 
 ### 04.05.02. Measuring the Degree Exponent
 ### 04.05.03. The Shape of p~k~ for Real Networks
