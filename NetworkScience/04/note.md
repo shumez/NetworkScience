@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-17 15:30:32
+Modified: 	2019-06-17 15:59:56
 -----
 Copyright (c) 2019 shumez
 -->
@@ -290,8 +290,17 @@ e.g., WWW sample
 [![Fig.4.8][fig0408]][fig0408]
 
 
-## 04.05. Universality
+## [04.05. Universality][4.5]
+
+[![Fig.4.9][fig0409]][fig0409]
+
+[![Fig.4.10][fig0410]][fig0410]
+
+
 ### 04.05.01. Plotting the Degree Distribution
+
+
+
 ### 04.05.02. Measuring the Degree Exponent
 ### 04.05.03. The Shape of p~k~ for Real Networks
 ### Box 04.02. Timeline: Scale-Free Networks
@@ -413,6 +422,7 @@ e.g., WWW sample
 [4.2]: http://networksciencebook.com/chapter/4#power-laws
 [4.3]: http://networksciencebook.com/chapter/4#hubs
 [4.4]: http://networksciencebook.com/chapter/4#scale-free
+[4.5]: http://networksciencebook.com/chapter/4#universality
 
 
 <!-- ref -->
@@ -430,6 +440,8 @@ e.g., WWW sample
 [fig0406]: http://networksciencebook.com/images/ch-04/figure-4-6.jpg "Fig.4.6 Random vs. Scale-free Networks"
 [fig0407]: http://networksciencebook.com/images/ch-04/figure-4-7.jpg "Fig.4.7 Lack of an Internal Scale"
 [fig0408]: http://networksciencebook.com/images/ch-04/figure-4-8.jpg "Fig.4.8 Standard Deviation is Large in Real Networks"
+[fig0409]: http://networksciencebook.com/images/ch-04/figure-4-9.jpg "Fig.4.9 The topology of the Internet"
+[fig0410]: http://networksciencebook.com/images/ch-04/figure-4-10.jpg "Fig.4.10 Many Real Networks are Scale-free"
 
 <!-- term -->
 [skewness]: #0404 "歪み, 歪度"
