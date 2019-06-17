@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-17 16:08:26
+Modified: 	2019-06-17 16:16:59
 -----
 Copyright (c) 2019 shumez
 -->
@@ -302,6 +302,9 @@ e.g., WWW sample
 log-log plot
 
 ### 04.05.02. Measuring the Degree Exponent
+
+[ADVANCED TOPICS 4.C][]
+
 ### 04.05.03. The Shape of p~k~ for Real Networks
 ### Box 04.02. Timeline: Scale-Free Networks
 ### Box 04.03. Not All Network Are Scale-Free]
