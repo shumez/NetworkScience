@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-17 16:16:59
+Modified: 	2019-06-17 16:25:14
 -----
 Copyright (c) 2019 shumez
 -->
@@ -305,7 +305,10 @@ log-log plot
 
 [ADVANCED TOPICS 4.C][]
 
-### 04.05.03. The Shape of p~k~ for Real Networks
+### 04.05.03. The Shape of \(p_k\) for Real Networks
+
+
+
 ### Box 04.02. Timeline: Scale-Free Networks
 ### Box 04.03. Not All Network Are Scale-Free]
 ## 04.06. Ultra-Small Property
@@ -368,7 +371,7 @@ log-log plot
 [0405]: #0405_universality
 [040501]: #040501_plotting_the_degree_distribution
 [040502]: #040502_measuring_the_degree_exponent
-[040503]: #040503_the_shape_of_pk_for_real_networks
+[040503]: #040503_the_shape_of_p_k_for_real_networks
 [box0402]: #box_0402_timeline_scale-free_networks
 [box0403]: #box_0403_not_all_network_are_scale-freebox
 
