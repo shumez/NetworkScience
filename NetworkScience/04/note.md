@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 16:10:58
+Modified: 	2019-06-24 16:14:38
 -----
 Copyright (c) 2019 shumez
 -->
@@ -348,11 +348,12 @@ degree exponent \(\gamma\)
 ### 04.06.01. Anomalous Regime (\(\gamma = 2\))
 
 
-### 04.06.02. Ultra-Small World (\(2 < \gamma < 3\))
+
+### 04.06.02. Ultra-Small World (\(2 \lt \gamma \lt 3\))
 
 ### 04.06.03. Critical Point (\(\gamma = 3\))
 
-### 04.06.04. Small World (\(\gamma > 3\))
+### 04.06.04. Small World (\(\gamma \gt 3\))
 ### Box 04.04. We Are Always Close to the Hubs
 ## 04.07. The Role of the Degree Exponent
 ### Box 04.05. The γ Dependent Properties of Scale-Free Networks
@@ -414,9 +415,9 @@ degree exponent \(\gamma\)
 
 [0406]: #0406_ultra-small_property
 [040601]: #040601_anomalous_regime_gamma_2
-[040602]: #040602_ultra-small_world_2_3
+[040602]: #040602_ultra-small_world_2_lt_gamma_lt_3
 [040603]: #040603_critical_point_3
-[040604]: #040604_small_world_3
+[040604]: #040604_small_world_gamma_gt_3
 [box0404]: #box_0404_we_are_always_close_to_the_hubs
 
 [0407]: #0407_the_role_of_the_degree_exponent
