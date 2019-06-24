@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 15:49:35
+Modified: 	2019-06-24 15:52:22
 -----
 Copyright (c) 2019 shumez
 -->
@@ -313,6 +313,7 @@ log-log plot
 ### Box 04.02. Timeline: Scale-Free Networks
 
 [![Fig.Box.4.2][figbox0402]][figbox0402]
+<!-- <img src="http://networksciencebook.com/images/ch-04/figure-box-4-2.jpg" style="width:100%"> -->
 
 
 ### Box 04.03. Not All Network Are Scale-Free
