@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 16:14:38
+Modified: 	2019-06-24 16:26:45
 -----
 Copyright (c) 2019 shumez
 -->
@@ -347,7 +347,9 @@ degree exponent \(\gamma\)
 
 ### 04.06.01. Anomalous Regime (\(\gamma = 2\))
 
+according to eq.4.18 for \(\gamma = 2\)
 
+\(k_{\max} \sim N\)
 
 ### 04.06.02. Ultra-Small World (\(2 \lt \gamma \lt 3\))
 
