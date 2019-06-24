@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 16:36:1
+Modified: 	2019-06-24 17:00:36
 -----
 Copyright (c) 2019 shumez
 -->
@@ -345,24 +345,24 @@ degree exponent \(\gamma\)
 \]
 
 
-### 04.06.01. Anomalous Regime (\(\gamma = 2\))
+### 04.06.01. Anomalous Regime (\(γ = 2\))
 
 according to eq.4.18 for \(\gamma = 2\)
 
 \(k_{\max} \sim N\)
 
-### 04.06.02. Ultra-Small World (\(2 \lt \gamma \lt 3\))
+### 04.06.02. Ultra-Small World (\(2 < γ < 3\))
 
-### 04.06.03. Critical Point (\(\gamma = 3\))
+### 04.06.03. Critical Point (\(γ = 3\))
 
-### 04.06.04. Small World (\(\gamma \gt 3\))
+### 04.06.04. Small World (\(γ > 3\))
 ### Box 04.04. We Are Always Close to the Hubs
 ## 04.07. The Role of the Degree Exponent
-### Box 04.05. The \(\gamma\) Dependent Properties of Scale-Free Networks
-### 04.07.01. Anomalous Regime (\(\gamma \le 2\))
-### 04.07.02. Scale-Free Regime (\(2 \lt \gamma \lt 3\))
-### 04.07.03. Random Network Regime (\(\gamma \gt 3\))
-### Box 04.06. Why Scale-Free Networks With \(\gamma \lt 2\) Do Not Exist
+### Box 04.05. The \(γ\) Dependent Properties of Scale-Free Networks
+### 04.07.01. Anomalous Regime (\(γ ≤ 2\))
+### 04.07.02. Scale-Free Regime (\(2 < γ < 3\))
+### 04.07.03. Random Network Regime (\(γ > 3\))
+### Box 04.06. Why Scale-Free Networks With \(γ < 2\) Do Not Exist
 ## 04.08. Generating Networks with Arbitrary Degree Distribution
 ### 04.08.01. Configuration Model
 ### Box 04.07. Generating a Degree Sequence with Power-Law Distribution
