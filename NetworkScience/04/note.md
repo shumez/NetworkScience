@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 15:53:54
+Modified: 	2019-06-24 16:08:22
 -----
 Copyright (c) 2019 shumez
 -->
@@ -327,9 +327,28 @@ NOT all real networks are scale-free
 - power grid
 
 
+## [04.06. Ultra-Small Property][4.6]
 
-## 04.06. Ultra-Small Property
+hubs affect the small world property?
+
+average distance \(\langle d \rangle\),  
+system size \(N\),  
+degree exponent \(\gamma\) 
+
+\[
+    \langle d \rangle \sim \begin{cases}
+        \text{const.} & \gamma = 2 \\
+        \ln{\ln{N}} & 2 < \gamma < 3 \\
+        \frac{\ln{N}}{\ln{\ln{N}}} & \gamma = 3 \\
+        \ln{N} & \gamma > 3
+    \end{cases} \tag{4.22}
+\]
+
+
 ### 04.06.01. Anomalous Regime (γ = 2)
+
+
+
 ### 04.06.02. Ultra-Small World (2 ‹ γ ‹ 3)
 ### 04.06.03. Critical Point (γ = 3)
 ### 04.06.04. Small World (γ > 3)
@@ -446,7 +465,7 @@ NOT all real networks are scale-free
 [4.3]: http://networksciencebook.com/chapter/4#hubs
 [4.4]: http://networksciencebook.com/chapter/4#scale-free
 [4.5]: http://networksciencebook.com/chapter/4#universality
-
+[4.6]: http://networksciencebook.com/chapter/4#ultra-small
 
 <!-- ref -->
 [1999AlbertR_BarabásiAL]: https://arxiv.org/pdf/cond-mat/9910332.pdf%3Forigin%3Dpublication_detail "Barabási, A.L. and Albert, R., 1999. Emergence of scaling in random networks. science, 286(5439), pp.509-512."
