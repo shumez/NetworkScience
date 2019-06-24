@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-17 16:25:14
+Modified: 	2019-06-24 15:30:24
 -----
 Copyright (c) 2019 shumez
 -->
@@ -301,6 +301,8 @@ e.g., WWW sample
 
 log-log plot
 
+[05.14.](../05/#0514_advanced_topic_4b_nonlinear_preferential_attachment)
+
 ### 04.05.02. Measuring the Degree Exponent
 
 [ADVANCED TOPICS 4.C][]
@@ -310,7 +312,7 @@ log-log plot
 
 
 ### Box 04.02. Timeline: Scale-Free Networks
-### Box 04.03. Not All Network Are Scale-Free]
+### Box 04.03. Not All Network Are Scale-Free
 ## 04.06. Ultra-Small Property
 ### 04.06.01. Anomalous Regime (γ = 2)
 ### 04.06.02. Ultra-Small World (2 ‹ γ ‹ 3)
