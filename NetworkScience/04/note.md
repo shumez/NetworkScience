@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 15:30:24
+Modified: 	2019-06-24 15:33:41
 -----
 Copyright (c) 2019 shumez
 -->
@@ -301,7 +301,7 @@ e.g., WWW sample
 
 log-log plot
 
-[05.14.](../05/#0514_advanced_topic_4b_nonlinear_preferential_attachment)
+[05.14. ADVANCED TOPICS 4.B](../05/#0514_advanced_topic_4b_nonlinear_preferential_attachment)
 
 ### 04.05.02. Measuring the Degree Exponent
 
