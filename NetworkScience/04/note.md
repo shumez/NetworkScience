@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 15:52:22
+Modified: 	2019-06-24 15:53:54
 -----
 Copyright (c) 2019 shumez
 -->
@@ -324,6 +324,9 @@ NOT all real networks are scale-free
 
 - atoms in cystalline / amorphpus matrials
 - neural network  of *C. elegans* ([Amaral, L.A.N., et al., 2000][2000_StanleyHEugene_ScalaAntonio_AmaralLuisANunes])
+- power grid
+
+
 
 ## 04.06. Ultra-Small Property
 ### 04.06.01. Anomalous Regime (γ = 2)
