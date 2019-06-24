@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/05
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-06-13 11:51:8
-Modified: 	2019-06-13 13:54:19
+Modified: 	2019-06-24 16:58:5
 -----
 Copyright (c) 2019 shumez
 -->
@@ -27,8 +27,8 @@ Copyright (c) 2019 shumez
 	* [05.06.02. Model B][050602]
 * [05.07. Measuring Preferential Attachment][0507]
 * [05.08. Non-linear Preferential Attachment][0508]
-	* [05.08.01. Sublinear Preferential Attachment (0 < α < 1)][050801]
-	* [05.08.02. Superlinear Preferential Attachment (α > 1)][050802]
+	* [05.08.01. Sublinear Preferential Attachment (\(0 < α < 1\))][050801]
+	* [05.08.02. Superlinear Preferential Attachment (\(α > 1\))][050802]
 * [05.09. The Origins of Preferential Attachment][0509]
 	* [05.09.01. Local Mechanisms][050901]
 	* [05.09.02. Optimization][050902]
@@ -55,8 +55,8 @@ Copyright (c) 2019 shumez
 ### 05.06.02. Model B
 ## 05.07. Measuring Preferential Attachment
 ## 05.08. Non-linear Preferential Attachment
-### 05.08.01. Sublinear Preferential Attachment (0 < α < 1)
-### 05.08.02. Superlinear Preferential Attachment (α > 1)
+### 05.08.01. Sublinear Preferential Attachment (\(0 < α < 1\))
+### 05.08.02. Superlinear Preferential Attachment (\(α > 1\))
 ## 05.09. The Origins of Preferential Attachment
 ### 05.09.01. Local Mechanisms
 ### 05.09.02. Optimization
