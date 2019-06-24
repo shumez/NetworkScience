@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 15:34:26
+Modified: 	2019-06-24 15:40:43
 -----
 Copyright (c) 2019 shumez
 -->
@@ -310,8 +310,11 @@ log-log plot
 ### 04.05.03. The Shape of \(p_k\) for Real Networks
 
 
-
 ### Box 04.02. Timeline: Scale-Free Networks
+
+[![Fig.Box.4.2][figbox0402]][figbox0402]
+
+
 ### Box 04.03. Not All Network Are Scale-Free
 ## 04.06. Ultra-Small Property
 ### 04.06.01. Anomalous Regime (γ = 2)
@@ -450,6 +453,7 @@ log-log plot
 [fig0408]: http://networksciencebook.com/images/ch-04/figure-4-8.jpg "Fig.4.8 Standard Deviation is Large in Real Networks"
 [fig0409]: http://networksciencebook.com/images/ch-04/figure-4-9.jpg "Fig.4.9 The topology of the Internet"
 [fig0410]: http://networksciencebook.com/images/ch-04/figure-4-10.jpg "Fig.4.10 Many Real Networks are Scale-free"
+[figbox0402]: http://networksciencebook.com/images/ch-04/figure-box-4-2.jpg
 
 <!-- term -->
 [skewness]: #0404 "歪み, 歪度"
