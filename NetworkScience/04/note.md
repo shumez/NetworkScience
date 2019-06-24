@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 15:40:43
+Modified: 	2019-06-24 15:49:35
 -----
 Copyright (c) 2019 shumez
 -->
@@ -316,6 +316,14 @@ log-log plot
 
 
 ### Box 04.03. Not All Network Are Scale-Free
+
+[![Fig.4.11][fig0411]][fig0411]
+
+NOT all real networks are scale-free
+
+- atoms in cystalline / amorphpus matrials
+- neural network  of *C. elegans* ([Amaral, L.A.N., et al., 2000][2000_StanleyHEugene_ScalaAntonio_AmaralLuisANunes])
+
 ## 04.06. Ultra-Small Property
 ### 04.06.01. Anomalous Regime (γ = 2)
 ### 04.06.02. Ultra-Small World (2 ‹ γ ‹ 3)
@@ -441,6 +449,8 @@ log-log plot
 
 [Riemann-zeta fn]: https://en.wikipedia.org/wiki/Riemann_zeta_function
 
+[2000_StanleyHEugene_ScalaAntonio_AmaralLuisANunes]: https://www.pnas.org/content/97/21/11149.full "Amaral, L.A.N., Scala, A., Barthelemy, M. and Stanley, H.E., 2000. Classes of small-world networks. Proceedings of the national academy of sciences, 97(21), pp.11149-11152."
+
 <!-- figure -->
 [fig0401]: http://networksciencebook.com/images/ch-04/figure-4-1.jpg "Fig.4.1 The Topology of the World Wide Web"
 [fig0402]: http://networksciencebook.com/images/ch-04/figure-4-2.jpg "Fig.4.2 The Degree Distribution of the WWW"
@@ -454,6 +464,7 @@ log-log plot
 [fig0409]: http://networksciencebook.com/images/ch-04/figure-4-9.jpg "Fig.4.9 The topology of the Internet"
 [fig0410]: http://networksciencebook.com/images/ch-04/figure-4-10.jpg "Fig.4.10 Many Real Networks are Scale-free"
 [figbox0402]: http://networksciencebook.com/images/ch-04/figure-box-4-2.jpg
+[fig0411]: http://networksciencebook.com/images/ch-04/figure-4-11.jpg
 
 <!-- term -->
 [skewness]: #0404 "歪み, 歪度"
