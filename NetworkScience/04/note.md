@@ -3,7 +3,7 @@ Filename: 	note.md
 Project: 	/Users/shume/Developer/NetworkScience/NetworkScience/04
 Author: 	shumez <https://github.com/shumez>
 Created: 	2019-03-28 19:54:5
-Modified: 	2019-06-24 17:00:36
+Modified: 	2019-07-01 14:34:27
 -----
 Copyright (c) 2019 shumez
 -->
@@ -345,13 +345,22 @@ degree exponent \(\gamma\)
 \]
 
 
+<!-- [![Fig.4.12][fig0412]][fig0412] -->
+<img src="http://networksciencebook.com/images/ch-04/figure-4-12.jpg" style="width: 100%">
+
 ### 04.06.01. Anomalous Regime (\(γ = 2\))
 
 according to eq.4.18 for \(\gamma = 2\)
 
 \(k_{\max} \sim N\)
 
+
 ### 04.06.02. Ultra-Small World (\(2 < γ < 3\))
+
+eq.4.22
+
+\(\ln{\ln{N}}\)
+
 
 ### 04.06.03. Critical Point (\(γ = 3\))
 
@@ -492,6 +501,7 @@ according to eq.4.18 for \(\gamma = 2\)
 [fig0410]: http://networksciencebook.com/images/ch-04/figure-4-10.jpg "Fig.4.10 Many Real Networks are Scale-free"
 [figbox0402]: http://networksciencebook.com/images/ch-04/figure-box-4-2.jpg
 [fig0411]: http://networksciencebook.com/images/ch-04/figure-4-11.jpg
+[fig0412]: http://networksciencebook.com/images/ch-04/figure-4-12.jpg
 
 <!-- term -->
 [skewness]: #0404 "歪み, 歪度"
